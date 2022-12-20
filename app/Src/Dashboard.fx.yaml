@@ -1,0 +1,329 @@
+"Dashboard As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |-
+        =ClearCollect(
+            BlogsPerMonth,
+            DropColumns(
+                AddColumns(
+                    GroupBy(
+                        AddColumns(
+                            SortByColumns(
+                                Blog,
+                                "Created",
+                                Ascending
+                            ),
+                            "dates",
+                            Text(
+                                ThisRecord.Month,
+                                "mmmm"
+                            )
+                        ),
+                        "dates",
+                        "GroupDate"
+                    ),
+                    "counts",
+                    CountRows(GroupDate)
+                ),
+                "GroupDate"
+            )
+        );
+        ClearCollect(TopFiveUsers, FirstN(SortByColumns(User, "Points", Descending), 5));
+        ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));
+        ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 5));
+
+    RectQuickActionBar5 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =73
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Canvas5 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar5.Y + RectQuickActionBar5.Height
+        ZIndex: =3
+
+        DataCard11 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            CompositeLineChart1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                Title2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =25
+                    Text: ="Blogs Per Month"
+                    Width: =400
+                    X: =147
+                    Y: =40
+                    ZIndex: =2
+
+                LineChart1 As lineChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =BlogsPerMonth
+                    Size: =11
+                    X: =147
+                    Y: =70
+                    ZIndex: =3
+
+                Legend1 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =80
+                    ItemColorSet: =LineChart1.ItemColorSet
+                    Items: =LineChart1.SeriesLabels
+                    Width: =320
+                    X: =187
+                    Y: =480
+                    ZIndex: =4
+
+            CompositeColumnChart1 As group:
+                Height: =5
+                Width: =5
+                X: =60
+                Y: =60
+                ZIndex: =5
+
+                Title3 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =25
+                    Text: ="Top Five Users"
+                    Width: =400
+                    X: =807
+                    Y: =40
+                    ZIndex: =6
+
+                ColumnChart1 As barChart:
+                    BorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =TopFiveUsers
+                    X: =807
+                    Y: =70
+                    ZIndex: =7
+
+                Legend2 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =80
+                    ItemColorSet: =ColumnChart1.ItemColorSet
+                    Items: =ColumnChart1.SeriesLabels
+                    Width: =320
+                    X: =847
+                    Y: =480
+                    ZIndex: =8
+
+        DataCard12 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            CompositeColumnChart2 As group:
+                Height: =5
+                Width: =5
+                X: =60
+                Y: =60
+                ZIndex: =5
+
+                Title5 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =25
+                    Text: ="Top Five Communities"
+                    Width: =400
+                    X: =847
+                    Y: =40
+                    ZIndex: =6
+
+                ColumnChart2 As barChart:
+                    BorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =TopFiveCommunities
+                    X: =847
+                    Y: =70
+                    ZIndex: =7
+
+                Legend4 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =80
+                    ItemColorSet: =ColumnChart2.ItemColorSet
+                    Items: =ColumnChart2.SeriesLabels
+                    Width: =320
+                    X: =887
+                    Y: =480
+                    ZIndex: =8
+
+            CompositePieChart3 As group:
+                Height: =5
+                Width: =5
+                X: =60
+                Y: =60
+                ZIndex: =9
+
+                Title8 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =25
+                    Text: ="Population of Guilds"
+                    Width: =400
+                    X: =147
+                    Y: =40
+                    ZIndex: =10
+
+                PieChart3 As pieChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =Guild
+                    X: =147
+                    Y: =70
+                    ZIndex: =11
+
+                Legend6 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =200
+                    ItemColorSet: =PieChart3.ItemColorSet
+                    Items: =PieChart3.SeriesLabels
+                    Size: =16
+                    Width: =400
+                    X: =147
+                    Y: =470
+                    ZIndex: =12
+
+        DataCard16 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =2
+            ZIndex: =3
+
+            CompositePieChart5 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                Title10 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =25
+                    Text: ="Top Five Popular Guilds"
+                    Width: =400
+                    X: =865
+                    Y: =40
+                    ZIndex: =2
+
+                PieChart5 As pieChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =TopFivePopularGuilds
+                    X: =865
+                    Y: =70
+                    ZIndex: =3
+
+                Legend8 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =200
+                    ItemColorSet: =PieChart5.ItemColorSet
+                    Items: =PieChart5.SeriesLabels
+                    Size: =16
+                    Width: =400
+                    X: =865
+                    Y: =470
+                    ZIndex: =4
+
+            DataTable1 As dataTable.datatable:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderStyle: =BorderStyle.Solid
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.'Open Sans'
+                FontWeight: =FontWeight.Normal
+                HeadingColor: =RGBA(255, 255, 255, 1)
+                HeadingFill: =RGBA(0, 51, 102, 1)
+                HeadingFont: =Font.'Open Sans'
+                HeadingFontWeight: =FontWeight.Normal
+                HeadingSize: =13
+                Height: =430
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, .2)
+                InputFill: =RGBA(255, 255, 255, 1)
+                InvertedColor: =RGBA(255, 255, 255, 1)
+                Items: =TopFiveUsers
+                LinkColor: =RGBA(0, 134, 208, 1)
+                PrimaryColor1: =RGBA(0, 51, 102, 1)
+                PrimaryColor2: =RGBA(0, 89, 178, 1)
+                PrimaryColor3: =RGBA(153, 205, 255, 1)
+                SelectedColor: =RGBA(0, 0, 0, 1)
+                SelectedFill: =RGBA(0, 51, 102, .2)
+                Size: =13
+                Width: =642
+                X: =87
+                Y: =65
+                ZIndex: =5
+
+                Name_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Name"
+                    FieldName: ="Name"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.Name
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =13
+
+                Points_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Points"
+                    FieldName: ="Points"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.Points
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =14
+
+    Component1_4 As Component1:
+        ZIndex: =6
+

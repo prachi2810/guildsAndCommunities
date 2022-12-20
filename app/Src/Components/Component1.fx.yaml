@@ -1,0 +1,129 @@
+Component1 As CanvasComponent:
+    Blog: =App.ActiveScreen
+    Dashboard: =App.ActiveScreen
+    Fill: =RGBA(0, 51, 102, 1)
+    Height: =75
+    HomeScreen: =App.ActiveScreen
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    Image1 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =75
+        Image: =logo
+        Width: =75
+        ZIndex: =1
+
+    Button1 As button:
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(Component1.HomeScreen)
+        Size: =15
+        Text: ="Home"
+        Width: =78
+        X: =100
+        ZIndex: =3
+
+    Button2 As button:
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(Component1.Blog)
+        Size: =15
+        Text: ="Blog"
+        Width: =78
+        X: =178
+        ZIndex: =4
+
+    Button2_1 As button:
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com/:b:/p/s_shendkar/EVNcHRqT01BCj_VZFqWRNg8Bo9ScxRyNfJ-lHuL2sYxb3g?e=CU9PgT
+            ")
+        Size: =15
+        Text: ="FAQs"
+        Width: =78
+        X: =405
+        ZIndex: =5
+
+    Button2_2 As button:
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com/:b:/p/s_shendkar/EXGI9soBrqdLoaS_KDlGcTIBHIp8T8fy0osWF5Ft2HDRvA?e=OfKjNN
+            "
+            )
+        Size: =15
+        Text: ="White Paper"
+        Width: =149
+        X: =256
+        ZIndex: =6
+
+    Button2_3 As button:
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:p:/p/p_tolsankar/Eab9JQSuFR9FmzSzK1ypztwBU1hPasrLLLKk15ay6hi7Iw?e=hCMMdC
+            ")
+        Size: =15
+        Text: ="Templates"
+        Width: =128
+        X: =483
+        ZIndex: =7
+
+    Button13 As button:
+        BorderThickness: =0
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(Component1.Dashboard)
+        Size: =15
+        Text: ="Dashboard"
+        Width: =135
+        X: =611
+        ZIndex: =8
+

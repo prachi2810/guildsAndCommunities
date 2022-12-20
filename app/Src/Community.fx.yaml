@@ -1,0 +1,321 @@
+"Community As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: =Set(communities,LookUp(Community_1,Guild= data.Title))
+
+    RectQuickActionBar2 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =177
+        Width: =Parent.Width
+        ZIndex: =1
+
+    Canvas2 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar2.Y + RectQuickActionBar2.Height
+        ZIndex: =3
+
+        DataCard7 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+    RectQuickActionBar1_2 As rectangle:
+        BorderColor: =RGBA(49, 3, 51, 1)
+        Fill: =RGBA(0, 13, 75, 1)
+        Height: =175
+        Width: =1335
+        ZIndex: =5
+
+    Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar1_2.Y + RectQuickActionBar1_2.Height
+        ZIndex: =6
+
+        DataCard2_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =292
+            Width: =1366
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Image3_1 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =239
+                Image: =data.Image1
+                Width: =270
+                X: =2
+                Y: =14
+                ZIndex: =1
+
+            Label19 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =163
+                Overflow: =Overflow.Scroll
+                Size: =18
+                Text: =data.'Full Description'
+                Width: =1046
+                X: =272
+                Y: =14
+                ZIndex: =7
+
+            Label7 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =46
+                Size: =18
+                Text: |-
+                    ="Trend Setters :"
+                Width: =209
+                X: =270
+                Y: =177
+                ZIndex: =8
+
+            Label8_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =30
+                Size: =18
+                Text: |-
+                    ="Torch Bearers :"
+                Width: =207
+                X: =272
+                Y: =240
+                ZIndex: =9
+
+            Label9 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =30
+                Size: =18
+                Text: =data.'Torch Bearers'
+                Width: =885
+                X: =454
+                Y: =240
+                ZIndex: =10
+
+            Label27 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =46
+                Size: =18
+                Text: =data.'Trend Setters'
+                Width: =622
+                X: =465
+                Y: =177
+                ZIndex: =11
+
+        DataCard3_1 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =287
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Rectangle5 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =254
+                Width: =361
+                X: =36
+                Y: =33
+                ZIndex: =1
+
+            Label20 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =59
+                OnSelect: =Launch(communities.'Know More')
+                Size: =15
+                Text: =communities.Guild
+                Width: =339
+                X: =47
+                Y: =73
+                ZIndex: =2
+
+            Rectangle6 As rectangle:
+                BorderColor: =RGBA(0, 0, 0, 1)
+                BorderThickness: =1
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =254
+                Width: =345
+                X: =520
+                Y: =26
+                ZIndex: =5
+
+            Icon2_1 As icon.Link:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =44
+                Icon: =Icon.Link
+                OnSelect: =Launch(communities.'Know More')
+                Width: =41
+                X: =196
+                Y: =171
+                ZIndex: =11
+
+            Button1_1 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Semibold
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                OnSelect: =Launch(communities.'Link To Join')
+                Size: =15
+                Text: ="Request to Join"
+                X: =125
+                Y: =219
+                ZIndex: =15
+
+            Label10 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Size: =15
+                Text: ="Please reach out to"
+                Width: =260
+                X: =58
+                Y: =33
+                ZIndex: =16
+
+            Label10_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Size: =15
+                Text: ="Please reach out to"
+                Width: =260
+                X: =562
+                Y: =49
+                ZIndex: =18
+
+            Label6_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =57
+                Size: =13
+                Text: =communities.Guild
+                Width: =289
+                X: =562
+                Y: =89
+                ZIndex: =19
+
+            Label14 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =69
+                Size: =18
+                Text: ="Know More about Community"
+                Width: =289
+                X: =562
+                Y: =132
+                ZIndex: =20
+
+            Icon2_2 As icon.Link:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =44
+                Icon: =Icon.Link
+                OnSelect: =Launch(communities.'Know More')
+                Width: =41
+                X: =720
+                Y: =171
+                ZIndex: =21
+
+            Button1_2 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(56, 96, 178, 1)
+                FontWeight: =FontWeight.Semibold
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                OnSelect: =Launch(communities.'Link To Join')
+                Size: =15
+                Text: ="Request to Join"
+                X: =601
+                Y: =219
+                ZIndex: =22
+
+            Label14_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =69
+                Size: =18
+                Text: ="Know More about Community"
+                Width: =289
+                X: =58
+                Y: =132
+                ZIndex: =23
+
+    Label12 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =50
+        Size: =28
+        Text: =data.Title
+        Width: =830
+        X: =24
+        Y: =110
+        ZIndex: =7
+
+    Label13 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: ="57 Members"
+        X: =12
+        Y: =56
+        ZIndex: =8
+
+    Icon18 As icon.ArrowLeft:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =56
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Home)
+        Width: =46
+        X: =12
+        ZIndex: =10
+

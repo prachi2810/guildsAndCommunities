@@ -1,0 +1,11 @@
+detailBlog2 As screen:
+    Fill: =RGBA(232, 232, 232, 1)
+
+    HtmlText3 As htmlViewer:
+        Height: =550
+        HtmlText: =data.Content
+        Width: =1356
+        X: =4
+        Y: =78
+        ZIndex: =1
+

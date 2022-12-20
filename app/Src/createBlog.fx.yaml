@@ -1,0 +1,277 @@
+"createBlog As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+
+    RectQuickActionBar4 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName3 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =88
+        Size: =18
+        Text: ="Write a new blog"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Canvas4 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar4.Y + RectQuickActionBar4.Height
+        ZIndex: =3
+
+        DataCard10 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =752
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Label11 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Size: =13
+                Text: ="Title "
+                X: =78
+                Y: =70
+                ZIndex: =1
+
+            Label11_1 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Size: =13
+                Text: ="Content"
+                X: =78
+                Y: =147
+                ZIndex: =2
+
+            content As richTextEditor:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Default: ="Enter some <strong>rich text</strong> here."
+                Height: =295
+                Width: =470
+                X: =207
+                Y: =147
+                ZIndex: =3
+
+            title As text:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="Text input"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =13
+                Width: =470
+                X: =207
+                Y: =70
+                ZIndex: =4
+
+            Dropdown2 As dropdown:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Items: |
+                    =Community_1
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                SelectionFill: =RGBA(0, 51, 102, 1)
+                Size: =13
+                X: =902
+                Y: =70
+                ZIndex: =5
+
+            Label23 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Size: =13
+                Text: ="Community"
+                X: =725
+                Y: =70
+                ZIndex: =6
+
+    Button6 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =48
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |
+            =If(LookUp(User, Email=User().Email, true), 
+                Patch(User,LookUp(User, Email=User().Email), { Points: LookUp(User, Email=User().Email).Points + 100 }),
+                Patch(User,Defaults(User), {
+                    Title: User().FullName,
+                    Name: User().FullName,
+                    Email: User().Email,
+                    Points: 100
+                })
+            );
+            Patch(Community_1, LookUp(Community_1, Title=Dropdown2.Selected.Title), {
+                Blogs: LookUp(Community_1, Title=Dropdown2.Selected.Title).Blogs + 1
+            });
+            Patch(Blog,Defaults(Blog),{
+                Title:title.Text,
+                Content:content.HtmlText,
+                Image:Image8.Image,
+                Tags: Dropdown2.Selected.Title
+            });
+            Notify("Blog Successfully Posted!");
+            Navigate(allBlogs)
+        Size: =15
+        Text: ="Submit"
+        X: =603
+        Y: =642
+        ZIndex: =4
+
+    Form2 As form:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =5
+        DataSource: =Blog
+        Height: =291
+        Item: =Defaults(Blog)
+        Width: =351
+        X: =896
+        Y: =234
+        ZIndex: =5
+
+        Image_DataCard2 As typedDataCard.addLargePictureCard:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DataField: ="Image"
+            Default: =ThisItem.Image
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Blog],DataSourceInfo.DisplayName,"Image")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =232
+            Required: =false
+            Update: =Image8.Image
+            Width: =349
+            X: =0
+            Y: =0
+            ZIndex: =6
+
+            DataCardKey7 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =34
+                Size: =13
+                Text: =
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            Image8 As image:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                CalculateOriginalDimensions: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                Height: =AddPicture2.Height
+                Image: =If(IsBlank(AddPicture2.Media), Parent.Default, AddPicture2.Media)
+                Tooltip: =Parent.DisplayName
+                Width: =AddPicture2.Width
+                X: =AddPicture2.X
+                Y: =AddPicture2.Y
+                ZIndex: =2
+
+            AddPicture2 As addMedia:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChangePictureText: =""
+                Color: =RGBA(0, 0, 0, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =265
+                Text: ="Add an Image"
+                Width: =291
+                X: =30
+                ZIndex: =3
+
+            ErrorMessage7 As label:
+                AutoHeight: =true
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =Image8.Y + Image8.Height
+                ZIndex: =4
+
+            StarVisible7 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey7.Height
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey7.Y
+                ZIndex: =5
+
+    Label25 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =13
+        Text: ="Image"
+        X: =725
+        Y: =234
+        ZIndex: =6
+
+    Icon15 As icon.ArrowLeft:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(allBlogs)
+        X: =27
+        Y: =12
+        ZIndex: =7
+

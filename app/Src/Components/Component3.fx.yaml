@@ -1,0 +1,130 @@
+Component3 As CanvasComponent:
+    Fill: =RGBA(0, 0, 0, 0)
+    Height: =740
+    Width: =App.Width
+    X: =0
+    Y: =0
+    ZIndex: =1
+
+    TextInput1 As text:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            ="Learning is not only about skills and competencies, it is also about recognizing the human element, and nurturing the relationships.We at Zensar, strongly believe in building relationships and helping each other grow, collaborate and set highest standards of the best learning practices. And this is the foundation of our recently launched initiative.
+            
+            - Guilds and Communities."
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =207
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Italic: =true
+        LineHeight: =1.7
+        Mode: =TextMode.MultiLine
+        Size: =17
+        Width: =1366
+        ZIndex: =1
+
+    Image5 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =316
+        Image: ='MicrosoftTeams-image (2)'
+        Width: =478
+        Y: =324
+        ZIndex: =2
+
+    TextInput2 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: |-
+            ="Zensar Guild is a closed group of specialists, leaders of a domain, technology or role. Entry to this group is restricted to certain members, who share some pre-defined credential, only! They are the Torch bearers and Trend setters of their respective areas  
+            
+            Community is an open group, sharing a common interest in a specific domain, technology or a role. Anybody who is interested in the domain/ technology, that the community is formed for, can be a part of it
+            "
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        Height: =263
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Mode: =TextMode.MultiLine
+        Size: =17
+        Width: =888
+        X: =478
+        Y: =350
+        ZIndex: =3
+
+    TextInput3 As text:
+        Align: =Align.Center
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: ="ABOUT"
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        FocusedBorderThickness: =4
+        FontWeight: =FontWeight.Bold
+        Height: =59
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =28
+        Width: =1366
+        Y: =225
+        ZIndex: =4
+
+    Icon2 As icon.HorizontalLine:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =0
+        Icon: =Icon.HorizontalLine
+        Width: =1366
+        Y: =194
+        ZIndex: =5
+
+    Label2 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =72
+        Size: =28
+        Text: ="   Explore More Communities                                           Upcoming Events"
+        Width: =1366
+        Y: =668
+        ZIndex: =6
+
+    Button3 As button:
+        BorderThickness: =0
+        Color: =RGBA(0, 134, 208, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com/personal/s_shendkar_zensar_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fs%5Fshendkar%5Fzensar%5Fcom%2FDocuments%2FG%26C%20microsite%20%281%29%2Epdf&parent=%2Fpersonal%2Fs%5Fshendkar%5Fzensar%5Fcom%2FDocuments&ct=1670489457516&or=Teams%2DHL&ga=1")
+        Size: =15
+        Text: ="Know More"
+        X: =1174
+        Y: =573
+        ZIndex: =7
+

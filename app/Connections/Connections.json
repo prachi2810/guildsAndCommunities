@@ -1,0 +1,123 @@
+{
+  "55bd11ce-1540-4e1d-8336-43032c5b7e78": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1613/1.0.1613.3125/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "55bd11ce-1540-4e1d-8336-43032c5b7e78"
+  },
+  "59bc595d-2c49-4295-b900-697078d27880": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://zensar.sharepoint.com/sites/GuildsandCommunities": {
+        "dataSources": {
+          "Activity": {
+            "tableName": "ef214d2d-8a3b-4f81-bfad-abb5b0d71e46"
+          },
+          "Blog": {
+            "tableName": "e906b85c-c7f1-49c6-8521-2726ca9cfc69"
+          },
+          "Blog_1": {
+            "tableName": "e906b85c-c7f1-49c6-8521-2726ca9cfc69"
+          },
+          "Comment": {
+            "tableName": "debaacae-cb2b-4d75-bf53-16470368f1e2"
+          },
+          "Community_1": {
+            "tableName": "e3e59fbf-0c7d-4482-bbea-7239f2499602"
+          },
+          "Community_2": {
+            "tableName": "e3e59fbf-0c7d-4482-bbea-7239f2499602"
+          },
+          "Guild": {
+            "tableName": "fd2f121a-49eb-4e79-80ba-02382fec8763"
+          },
+          "Guild List": {
+            "tableName": "0438bbd6-0960-493d-9481-98d832abc437"
+          },
+          "Guild List_1": {
+            "tableName": "0438bbd6-0960-493d-9481-98d832abc437"
+          },
+          "Guild List1": {
+            "tableName": "7377be33-b418-4672-8378-5f286eee7424"
+          },
+          "Like": {
+            "tableName": "6a813ec4-e80b-4b16-a85e-06e7f84b5852"
+          },
+          "User": {
+            "tableName": "e1f12d43-e289-4b40-905c-e56517a00822"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Guild List1",
+      "Guild List",
+      "Guild List_1",
+      "Event",
+      "Guild",
+      "Community_1",
+      "Blog",
+      "Blog_1",
+      "Activity",
+      "Comment",
+      "Like",
+      "User",
+      "Community_2"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "59bc595d-2c49-4295-b900-697078d27880"
+  },
+  "e55f7f25-74ca-48aa-bbfc-87ca82df5358": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/juanq/gateway/greyhound/3000.150.11/1.0.1613.3116/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://zensar.sharepoint.com/sites/GuildsandCommunities": {
+        "dataSources": {
+          "Event": {
+            "tableName": "e362d165-87fa-4b6a-b8c4-8145b1200c19"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Event"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "e55f7f25-74ca-48aa-bbfc-87ca82df5358"
+  }
+}
