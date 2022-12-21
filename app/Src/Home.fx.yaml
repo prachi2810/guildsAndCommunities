@@ -383,7 +383,7 @@
                     Height: =60
                     OnSelect: |-
                         =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                        Navigate(EventForm);
+                        Navigate(Screen1);
                         //Set(calendarpop,true);
                     Size: =17 * MonthDayGallery1_1.TemplateWidth / 91
                     TabIndex: =0
@@ -580,6 +580,9 @@
                 Y: =40
                 ZIndex: =3
 
+    Component6_1 As Component6:
+        ZIndex: =13
+
     Group1 As group:
         Height: =5
         Width: =5
@@ -666,7 +669,4 @@
             X: =835
             Y: =275
             ZIndex: =12
-
-    Component6_1 As Component6:
-        ZIndex: =19
 
