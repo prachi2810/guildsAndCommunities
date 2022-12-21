@@ -11,7 +11,7 @@
         {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: "Blog"},
         {Title:"Case Study",Screen:createBlog, Id:2, ParentTab: "Blog"},
         {Title:"E-Learning",Screen:createBlog, Id:2, ParentTab: "Blog"},
-        {Title:"Customer Testomonial",Screen:createBlog, Id:2, ParentTab: "Blog"}
+        {Title:"Customer Testomonial",Screen:createBlog, Id:2, ParentTab: "Blog"},
         
         
         {Title:"FAQs",Screen:detailBlog, Id:3, ParentTab: ""},
