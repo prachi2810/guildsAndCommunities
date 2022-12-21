@@ -1,6 +1,6 @@
 Component6 As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
-    FlexibleHeight: =Label29.Text
+    FlexibleHeight: =
     Height: =100
     Width: =App.Width
     X: =0
@@ -10,7 +10,7 @@ Component6 As CanvasComponent:
     Rectangle8 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
         DisplayMode: =DisplayMode.Disabled
-        Fill: =RGBA(0, 51, 102, 1)
+        Fill: =RGBA(0, 36, 71, 1)
         Height: =70
         Width: =App.Width
         ZIndex: =1
@@ -70,16 +70,6 @@ Component6 As CanvasComponent:
                 Width: =20
                 X: =170
                 ZIndex: =2
-
-    Label29 As label:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Size: =13
-        Text: =If(CountRows(Filter(Gallery12.AllItems,Id=varTabSelected))=0,70,App.Height)
-        X: =1204
-        Y: =15
-        ZIndex: =3
 
     Image1_1 As image:
         BorderColor: =RGBA(0, 89, 178, 1)

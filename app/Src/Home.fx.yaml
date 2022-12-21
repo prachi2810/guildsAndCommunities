@@ -4,10 +4,14 @@
         =/*resets calendar view and date selection to today*/
         ClearCollect(colHorizontalMenu,
         
-        {Title:"Home",Screen:Blank(), Id:1, ParentTab: ""},
+        {Title:"Home",Screen:Home, Id:1, ParentTab: ""},
         
-        {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: ""},
+        {Title:"Insights",Screen:allBlogs, Id:2, ParentTab: ""},
         {Title:"White Paper",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: "Blog"},
+        {Title:"Case Study",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        {Title:"E-Learning",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        {Title:"Customer Testomonial",Screen:createBlog, Id:2, ParentTab: "Blog"}
         
         
         {Title:"FAQs",Screen:detailBlog, Id:3, ParentTab: ""},
