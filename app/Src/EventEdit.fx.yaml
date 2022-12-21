@@ -464,8 +464,14 @@ EventEdit As screen:
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =
-                
+            =Patch(Event,LookUp(Event,ID=data.ID),{
+                Title:DataCardValue12,
+                Description:DataCardValue13,
+                Name:DataCardValue14,
+                Date:DataCardValue15,
+                Attachments:DataCardValue16
+            
+            });
         Size: =15
         Text: ="Edit"
         Width: =185
