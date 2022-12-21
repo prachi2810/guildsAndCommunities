@@ -1,11 +1,11 @@
 Admin As screen:
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+    OnVisible: =ClearCollect(EventStatus, Filter('Event Track Details_6',Status="Pending"));
 
     "Gallery13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =705
-        Items: ='Event Track Details_5'
+        Items: =EventStatus
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)

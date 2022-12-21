@@ -1,23 +1,13 @@
-"Screen1 As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+"EventDetails As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
     OnVisible: =Set(events,LookUp(Event,Date=_dateSelected))
 
     RectQuickActionBar9 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
         Fill: =RGBA(0, 51, 102, 1)
-        Height: =88
+        Height: =70
         Width: =Parent.Width
         ZIndex: =1
-
-    LblAppName4 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =88
-        Size: =18
-        Text: ="[Title]"
-        Width: =Parent.Width
-        ZIndex: =2
 
     Canvas6 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -38,15 +28,15 @@
             Y: =0
             ZIndex: =1
 
-            "Gallery5 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            "Gallery5 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Items: =Filter(Event,Date=_dateSelected)
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
-                TemplateSize: =Min(160, Self.Height - 60)
+                TemplateSize: =Min(168, Self.Height - 60)
                 ZIndex: =1
 
-                Image28 As image:
+                Image22 As image:
                     BorderColor: =RGBA(0, 89, 178, 1)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
@@ -57,7 +47,7 @@
                     Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
                     ZIndex: =1
 
-                Title15 As label:
+                Title6 As label:
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FontWeight: =FontWeight.Semibold
@@ -70,12 +60,12 @@
                     Size: =20
                     Text: =ThisItem.Title
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Parent.TemplateWidth - Image28.Width - 104
-                    X: =Image28.X + Image28.Width + 24
-                    Y: =44
+                    Width: =Parent.TemplateWidth - Image22.Width - 104
+                    X: =Image22.X + Image22.Width + 16
+                    Y: =16
                     ZIndex: =2
 
-                Subtitle6 As label:
+                Subtitle3 As label:
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Height: =Self.Size * 1.8
@@ -87,39 +77,51 @@
                     Size: =18
                     Text: =ThisItem.ID
                     VerticalAlign: =VerticalAlign.Top
-                    Width: =Title15.Width
-                    X: =Title15.X
-                    Y: =Title15.Y + Title15.Height + 4
+                    Width: =Title6.Width
+                    X: =Title6.X
+                    Y: =Title6.Y + Title6.Height + 2
                     ZIndex: =3
 
-                NextArrow8 As icon.ChevronRight:
-                    AccessibleLabel: =Self.Tooltip
-                    BorderColor: =RGBA(0, 89, 178, 1)
-                    Color: =RGBA(0, 89, 178, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(244, 244, 244, 1)
-                    Height: =60
-                    Icon: =Icon.ChevronRight
+                Body1 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =Self.Size * 4
                     OnSelect: =Select(Parent)
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    TabIndex: =0
-                    Tooltip: ="View item details"
-                    Width: =60
-                    X: =Parent.TemplateWidth - Self.Width - 5
-                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =ThisItem.Name
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Subtitle3.Width
+                    X: =Subtitle3.X
+                    Y: =Subtitle3.Y + Subtitle3.Height + 4
                     ZIndex: =4
 
-                Separator9 As rectangle:
+                Separator2 As rectangle:
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Fill: =RGBA(0, 89, 178, 1)
                     Height: =1
                     OnSelect: =Select(Parent)
                     Width: =Parent.TemplateWidth
                     Y: =Parent.TemplateHeight - 1
-                    ZIndex: =5
+                    ZIndex: =6
+
+                Icon17 As icon.Edit:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 89, 178, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =49
+                    Icon: =Icon.Edit
+                    OnSelect: |-
+                        =Select(Parent);
+                        Navigate(EventEdit);
+                    Width: =58
+                    X: =582
+                    Y: =52
+                    ZIndex: =7
 
     Button9 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -129,9 +131,14 @@
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(EventForm)
         Size: =15
         Text: ="Create Event"
         X: =822
         Y: =100
         ZIndex: =4
+
+    Component6_2 As Component6:
+        Height: =70
+        ZIndex: =5
 
