@@ -926,7 +926,14 @@
                   "PressedBorderColor",
                   "HoverBorderColor",
                   "FocusedBorderColor",
-                  "OnSelect",
+                  {
+                    "AFDDataSourceName": "",
+                    "AutoRuleBindingEnabled": false,
+                    "AutoRuleBindingString": "Select(Parent)",
+                    "InvariantPropertyName": "OnSelect",
+                    "IsLockable": false,
+                    "NameMapSourceSchema": "?"
+                  },
                   "ZIndex",
                   "BorderThickness",
                   "FocusedBorderThickness",
@@ -1100,7 +1107,7 @@
                   },
                   {
                     "Category": "Behavior",
-                    "InvariantScript": "Select(Parent)",
+                    "InvariantScript": "Select(Parent);",
                     "Property": "OnSelect",
                     "RuleProviderType": "Unknown"
                   }
@@ -1189,7 +1196,8 @@
                 "InvariantPropertyName": "TemplatePadding",
                 "IsLockable": false,
                 "NameMapSourceSchema": "?"
-              }
+              },
+              "Visible"
             ],
             "ControlUniqueId": "16",
             "HasDynamicProperties": false,
@@ -1355,6 +1363,12 @@
                 "InvariantScript": "0",
                 "Property": "TemplatePadding",
                 "RuleProviderType": "Unknown"
+              },
+              {
+                "Category": "Design",
+                "InvariantScript": "true",
+                "Property": "Visible",
+                "RuleProviderType": "Unknown"
               }
             ],
             "StyleName": "defaultGalleryStyle",
@@ -1440,7 +1454,8 @@
             "InvariantPropertyName": "ShowScrollbar",
             "IsLockable": false,
             "NameMapSourceSchema": "?"
-          }
+          },
+          "Visible"
         ],
         "ControlUniqueId": "14",
         "HasDynamicProperties": false,
@@ -1600,6 +1615,12 @@
             "InvariantScript": "false",
             "Property": "ShowScrollbar",
             "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "true",
+            "Property": "Visible",
+            "RuleProviderType": "Unknown"
           }
         ],
         "StyleName": "defaultGalleryStyle",
@@ -1692,7 +1713,7 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "If(\r\n    CountRows(\r\n        Filter(\r\n            Gallery12.AllItems,\r\n            Id = varTabSelected\r\n        )\r\n    ) = 0,\r\n    70,\r\n    App.Height\r\n)",
+            "InvariantScript": "If(CountRows(Filter(Gallery12.AllItems,Id=varTabSelected))=0,70,App.Height)",
             "Property": "Text",
             "RuleProviderType": "Unknown"
           },
@@ -1966,7 +1987,7 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638072081492100603",
+    "LastModifiedTimestamp": "638072090269781619",
     "Name": "Component6",
     "Rules": [
       {
@@ -1983,9 +2004,9 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "70",
+        "InvariantScript": "Self.FlexibleHeight",
         "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -2041,7 +2062,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638072081492100603",
+  "LastModifiedTimestamp": "638072090269781619",
   "Name": "abc5859afff742348a300a44f7269761",
   "OverridableProperties": {},
   "Version": "638071924152698425"
