@@ -1,5 +1,6 @@
-"'Event Form' As screen":
+EventForm As screen:
     Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: =true
 
     Icon7 As icon.Cancel:
         BorderColor: =RGBA(0, 89, 178, 1)
