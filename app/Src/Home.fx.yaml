@@ -51,7 +51,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =RectQuickActionBar1.Y + RectQuickActionBar1.Height
+        Y: =70
         ZIndex: =3
 
         DataCard8 As dataCard.blankCard:
@@ -355,7 +355,7 @@
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Fill: =RGBA(0, 51, 102, 1)
                     Height: =3 * Title3_1.Size
-                    OnSelect: |
+                    OnSelect: |-
                         =Select(Parent);
                         Navigate(EventForm)
                     Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title3_1.Visible)
