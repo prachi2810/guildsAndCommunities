@@ -2,6 +2,27 @@
     BackgroundImage: =
     OnVisible: |-
         =/*resets calendar view and date selection to today*/
+        ClearCollect(colHorizontalMenu,
+        
+        {Title:"Home",Screen:Blank(), Id:1, ParentTab: ""},
+        
+        {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: ""},
+        {Title:"White Paper",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        
+        
+        {Title:"FAQs",Screen:detailBlog, Id:3, ParentTab: ""},
+        
+        
+        {Title:"Templates",Screen:Community, Id:4, ParentTab: ""},
+        
+        
+        {Title:"Dashboard",Screen:Dashboard, Id:5, ParentTab: ""}
+        
+        );
+        
+        Set(varMenuPrimaryColor, RGBA(4, 42, 61, 1));
+        Set(varMenuSecondaryColor, RGBA(4, 166, 235, 1));
+        Set(varTabSelected, 1);
         Set(_dateSelected, Today());
         Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
@@ -339,7 +360,8 @@
                     Height: =3 * Title3_1.Size
                     OnSelect: |-
                         =
-                        Select(Parent)
+                        Select(Parent);
+                        Navigate('Event Form');
                     Visible: =And(DateAdd(_firstDayInView, ThisItem.Value) = _dateSelected, Title3_1.Visible)
                     Width: =Self.Height
                     X: =MonthDayGallery1_1.TemplateWidth/2 - Self.Width/2
@@ -365,7 +387,8 @@
                     Height: =60
                     OnSelect: |-
                         =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                        Navigate('Event Form')
+                        //Navigate('Event Form');
+                        Set(calendarpop,true);
                     Size: =17 * MonthDayGallery1_1.TemplateWidth / 91
                     TabIndex: =0
                     Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,Days))
@@ -561,13 +584,6 @@
                 Y: =40
                 ZIndex: =3
 
-    Component1_1 As Component1:
-        Blog: =allBlogs
-        Dashboard: =Dashboard
-        Height: =73
-        Width: =1366
-        ZIndex: =4
-
     Group1 As group:
         Height: =5
         Width: =5
@@ -655,28 +671,74 @@
             Y: =275
             ZIndex: =12
 
-    Group2 As group:
+    Component6_1 As Component6:
+        ZIndex: =19
+
+    Group3 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =15
+        ZIndex: =19
 
         Rectangle2 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             Fill: =RGBA(0, 51, 102, 1)
             Height: =768
+            OnSelect: =true
             Visible: =calendarpop
             Width: =1366
             ZIndex: =13
 
         Rectangle3 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =625
+            Fill: =RGBA(250, 250, 250, 1)
+            Height: =768
             Visible: =calendarpop
-            Width: =1164
-            X: =125
-            Y: =75
+            Width: =1255
+            X: =54
             ZIndex: =14
+
+        Icon17 As icon.EmojiSmile:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.EmojiSmile
+            Visible: =calendarpop
+            X: =227
+            Y: =277
+            ZIndex: =15
+
+        Icon19 As icon.EmojiHappy:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.EmojiHappy
+            Visible: =calendarpop
+            X: =430
+            Y: =277
+            ZIndex: =16
+
+        Icon20 As icon.EmojiNeutral:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.EmojiNeutral
+            Visible: =calendarpop
+            X: =667
+            Y: =275
+            ZIndex: =17
+
+        Icon21 As icon.Cancel:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.Cancel
+            OnSelect: =Set(calendarpop,false)
+            X: =1245
+            ZIndex: =18
 

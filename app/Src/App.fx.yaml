@@ -1,3 +1,25 @@
 App As appinfo:
     BackEnabled: =false
+    OnStart: |-
+        =ClearCollect(colHorizontalMenu,
+        
+        {Title:"Home",Screen:Blank(), Id:1, ParentTab: ""},
+        
+        {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: ""},
+        {Title:"White Paper",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        
+        
+        {Title:"FAQs",Screen:detailBlog, Id:3, ParentTab: ""},
+        
+        
+        {Title:"Templates",Screen:Community, Id:4, ParentTab: ""},
+        
+        
+        {Title:"Dashboard",Screen:Dashboard, Id:5, ParentTab: ""}
+        
+        );
+        
+        Set(varMenuPrimaryColor, RGBA(4, 42, 61, 1));
+        Set(varMenuSecondaryColor, RGBA(4, 166, 235, 1));
+        Set(varTabSelected, 1);
 
