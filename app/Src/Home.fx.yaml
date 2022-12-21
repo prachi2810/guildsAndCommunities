@@ -383,8 +383,8 @@
                     Height: =60
                     OnSelect: |-
                         =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                        //Navigate('Event Form');
-                        Set(calendarpop,true);
+                        Navigate(EventForm);
+                        //Set(calendarpop,true);
                     Size: =17 * MonthDayGallery1_1.TemplateWidth / 91
                     TabIndex: =0
                     Text: =Day(DateAdd(_firstDayInView,ThisItem.Value,Days))
