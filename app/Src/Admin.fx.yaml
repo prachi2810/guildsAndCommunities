@@ -1,20 +1,31 @@
 Admin As screen:
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =ClearCollect(EventStatus,Filter('Event Track Details',Status="Pending"));
+    OnVisible: =ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
 
-    "Gallery6 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+    "Gallery13 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
-        Height: =711
-        Items: =EventStatus
+        Height: =705
+        Items: ='Event Track Details_5'
         Layout: =Layout.Vertical
         TemplatePadding: =0
-        TemplateSize: =Min(168, Self.Height - 60)
-        Width: =1307
+        TemplateSize: =Min(160, Self.Height - 60)
+        Width: =1301
         X: =40
         Y: =40
         ZIndex: =1
 
-        Title15 As label:
+        Image29 As image:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =128
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title17 As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             FontWeight: =FontWeight.Semibold
@@ -27,12 +38,12 @@ Admin As screen:
             Size: =20
             Text: =ThisItem.Title
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =16
-            ZIndex: =1
+            Width: =Parent.TemplateWidth - Image29.Width - 104
+            X: =Image29.X + Image29.Width + 24
+            Y: =44
+            ZIndex: =2
 
-        Subtitle10 As label:
+        Subtitle12 As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             Height: =Self.Size * 1.8
@@ -44,29 +55,12 @@ Admin As screen:
             Size: =18
             Text: =ThisItem.ID
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =Title15.Y + Title15.Height + 2
-            ZIndex: =2
-
-        Body2 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =Self.Size * 4
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =16
-            Text: =ThisItem.'DynamicID '
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =Subtitle10.Y + Subtitle10.Height + 4
+            Width: =Title17.Width
+            X: =Title17.X
+            Y: =Title17.Y + Title17.Height + 4
             ZIndex: =3
 
-        NextArrow8 As icon.ChevronRight:
+        NextArrow10 As icon.ChevronRight:
             AccessibleLabel: =Self.Tooltip
             BorderColor: =RGBA(0, 89, 178, 1)
             Color: =RGBA(0, 89, 178, 1)
@@ -86,7 +80,7 @@ Admin As screen:
             Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
             ZIndex: =4
 
-        Separator9 As rectangle:
+        Separator11 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             Fill: =RGBA(0, 89, 178, 1)
             Height: =1
