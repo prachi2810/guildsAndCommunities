@@ -97,7 +97,8 @@
             Icon: =Icon.Trash
             OnSelect: |-
                 =Select(Parent);
-                Remove(Event,ThisItem)
+                Remove(Event,ThisItem);
+                Notify("Event Deleted Successfully")
             X: =576
             Y: =92
             ZIndex: =7
