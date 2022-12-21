@@ -43,7 +43,7 @@ EventEdit As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
+                Default: =data.Title
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -131,7 +131,7 @@ EventEdit As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
+                Default: =data.Description
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -219,7 +219,7 @@ EventEdit As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
+                Default: =data.Name
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -306,7 +306,7 @@ EventEdit As screen:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 CalendarHeaderFill: =RGBA(0, 51, 102, 1)
                 Color: =RGBA(0, 0, 0, 1)
-                DefaultDate: =Parent.Default
+                DefaultDate: =data.Date
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -400,7 +400,7 @@ EventEdit As screen:
                 ItemFill: =RGBA(0, 51, 102, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =Parent.Default
+                Items: =data.Attachments
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
                 PaddingRight: =5
