@@ -62,17 +62,20 @@ Component6 As CanvasComponent:
 
             Icon22 As icon.ChevronDown:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 36, 71, 1)
+                FocusedBorderThickness: =0
                 Height: =70
+                HoverColor: =ColorFade(RGBA(4, 166, 235, 1), 20%)
                 Icon: =Icon.ChevronDown
                 OnSelect: |-
                     =Select(Parent);
                     If(varTabSelected=ThisItem.Id,Set(varTabSelected,0),Set(varTabSelected,ThisItem.Id));
                 Visible: =IsBlank(ThisItem.ParentTab) && CountRows(Filter(colHorizontalMenu, Id = ThisItem.Id)) > 1
                 Width: =20
-                X: =170
+                X: =180
                 ZIndex: =2
 
     Image1_1 As image:

@@ -21,7 +21,7 @@ Component3 As CanvasComponent:
         DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
         Font: =Font.'Segoe UI'
-        Height: =207
+        Height: =204
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
@@ -29,7 +29,9 @@ Component3 As CanvasComponent:
         LineHeight: =1.7
         Mode: =TextMode.MultiLine
         Size: =17
-        Width: =1366
+        Width: =1304
+        X: =30
+        Y: =20
         ZIndex: =1
 
     Image5 As image:
@@ -83,7 +85,7 @@ Component3 As CanvasComponent:
         HoverFill: =RGBA(153, 205, 255, 1)
         Size: =28
         Width: =1366
-        Y: =225
+        Y: =245
         ZIndex: =4
 
     Icon2 As icon.HorizontalLine:
