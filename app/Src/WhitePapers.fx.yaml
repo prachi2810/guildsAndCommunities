@@ -15,7 +15,7 @@
         Height: =88
         Size: =18
         Text: ="White Papers"
-        Width: =1266
+        Width: =1075
         X: =100
         ZIndex: =2
 
@@ -27,7 +27,7 @@
         Fill: =RGBA(255, 255, 255, 1)
         Icon: =Icon.Home
         OnSelect: =Navigate(Home);
-        X: =15
+        X: =36
         Y: =12
         ZIndex: =4
 
@@ -131,11 +131,12 @@
             BorderColor: =RGBA(0, 18, 107, 1)
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =30
             OnSelect: =Select(Parent)
             Size: =13
             Text: =ThisItem.'Modified By'.DisplayName
             X: =99
-            Y: =54
+            Y: =60
             ZIndex: =6
 
         Icon4_2 As icon.Trash:
@@ -158,7 +159,7 @@
     PdfViewer1 As pdfViewer:
         Document: =varDocumentCurrent
         Height: =575
-        X: =695
+        X: =691
         Y: =125
         ZIndex: =6
 
@@ -174,7 +175,7 @@
         OnSelect: =Navigate(FileUpload)
         Size: =15
         Text: ="Add Paper"
-        X: =1175
+        X: =1160
         Y: =24
         ZIndex: =7
 

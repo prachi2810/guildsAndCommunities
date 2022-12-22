@@ -7,7 +7,7 @@
         {Title:"Home",Screen:Home, Id:1, ParentTab: ""},
         
         {Title:"Insights",Screen:allBlogs, Id:2, ParentTab: ""},
-        {Title:"White Paper",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        {Title:"White Paper",Screen:WhitePapers, Id:2, ParentTab: "Blog"},
         {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: "Blog"},
         {Title:"Case Study",Screen:createBlog, Id:2, ParentTab: "Blog"},
         {Title:"E-learning",Screen:createBlog, Id:2, ParentTab: "Blog"},
