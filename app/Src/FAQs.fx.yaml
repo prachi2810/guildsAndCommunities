@@ -5,11 +5,11 @@ FAQs As screen:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =768
+        Height: =685
         Overflow: =Overflow.Scroll
         Size: =25
         Text: |-
-            ="                                             Guilds and Communities –FAQ
+            ="                                             
             1)How can one be a part of any Guild or Community?
             Currently, since we are in the early stages of this initiative, you will be included in the Guild or the Communities launched by your respective SGO/VBU, based on nominations from your SGO/VBU Leaders. There will be meetings, townhalls conducted, during which these details will be communicated to you, and the process to join the groups will also be shared with you then.
             
@@ -34,5 +34,18 @@ FAQs As screen:
             8)Can I nominate myself as a Torch Bearer or a Trendsetter?
             The nomination of any member as a Torch Bearer or Trendsetter is done by the Pole Star or the Trinity. Any individual can not do this for themselves.In case you want to becomea Torch Bearer or Trendsetter of any Guild or Community you are a member of, please reach out to the Trinity of your respective Guild/Community."
         Width: =1362
+        Y: =82
         ZIndex: =1
+
+    Label14 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =82
+        Size: =30
+        Text: ="Guilds and Communities –FAQ"
+        Width: =1366
+        ZIndex: =2
 
