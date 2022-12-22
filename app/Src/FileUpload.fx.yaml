@@ -30,6 +30,7 @@ FileUpload As screen:
                  }
              );
              Refresh(white_papers);
+             Reset(DataCardValue8_1);
              Navigate(WhitePapers);
              Refresh(white_papers);
              
