@@ -58,7 +58,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =239
-                Image: =data.Image1
+                Image: ='Rohan Kudav'
                 Width: =270
                 X: =2
                 Y: =14
@@ -68,87 +68,211 @@
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =163
-                Overflow: =Overflow.Scroll
+                Height: =239
                 Size: =18
                 Text: =data.'Full Description'
-                Width: =1046
+                Width: =1026
                 X: =272
-                Y: =14
+                Y: =36
                 ZIndex: =7
 
-            Label7 As label:
-                BorderColor: =RGBA(0, 18, 107, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =46
-                Size: =18
-                Text: |-
-                    ="Trend Setters :"
-                Width: =209
-                X: =270
-                Y: =177
-                ZIndex: =8
-
-            Label8_1 As label:
-                BorderColor: =RGBA(0, 18, 107, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =30
-                Size: =18
-                Text: |-
-                    ="Torch Bearers :"
-                Width: =207
-                X: =272
-                Y: =240
-                ZIndex: =9
-
-            Label9 As label:
-                BorderColor: =RGBA(0, 18, 107, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =30
-                Size: =18
-                Text: =data.'Torch Bearers'
-                Width: =885
-                X: =454
-                Y: =240
-                ZIndex: =10
-
-            Label27 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =46
-                Size: =18
-                Text: =data.'Trend Setters'
-                Width: =622
-                X: =465
-                Y: =177
-                ZIndex: =11
-
-        DataCard3_1 As dataCard.blankCard:
+        DataCard23 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =287
+            Height: =328
             Width: =1366
             X: =0
             Y: =1
-            ZIndex: =2
+            ZIndex: =5
 
-            Rectangle5 As rectangle:
+            Label5_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =49
+                Size: =25
+                Text: ="Meet Our Core Team"
+                Width: =677
+                X: =324
+                ZIndex: =13
+
+            Image3_2 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =152
+                Image: ='Anand V'
+                Width: =182
+                X: =42
+                Y: =97
+                ZIndex: =14
+
+            Label6_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =42
+                Size: =15
+                Text: ="Anand Vishyampan"
+                Width: =231
+                X: =40
+                Y: =245
+                ZIndex: =15
+
+            Image4_1 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =148
+                Image: ='sanjeev korupolu'
+                Width: =150
+                X: =922
+                Y: =97
+                ZIndex: =16
+
+            Image5_1 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =148
+                Image: ='Harshal Jawale'
+                Width: =167
+                X: =507
+                Y: =97
+                ZIndex: =17
+
+            Label6_4 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =42
+                Size: =15
+                Text: ="Harshal Jawale"
+                Width: =248
+                X: =519
+                Y: =245
+                ZIndex: =18
+
+            Label6_5 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =42
+                Size: =15
+                Text: ="Sanjeev Korupolu"
+                Width: =186
+                X: =922
+                Y: =245
+                ZIndex: =19
+
+        DataCard25 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =319
+            Width: =1366
+            X: =0
+            Y: =2
+            ZIndex: =7
+
+            Image10_1 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =172
+                Image: ='baishali roy'
+                Width: =162
+                X: =70
+                Y: =20
+                ZIndex: =1
+
+            Image10_2 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =182
+                Image: ='jayakanth abhimanyu'
+                Width: =155
+                X: =516
+                Y: =10
+                ZIndex: =2
+
+            Image10_3 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =172
+                Image: ='soundarya cholkar'
+                Width: =165
+                X: =941
+                Y: =10
+                ZIndex: =3
+
+            Label9_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =15
+                Text: ="Baishali Roy"
+                X: =82
+                Y: =199
+                ZIndex: =4
+
+            Label9_2 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =15
+                Text: ="Soundarya Cholkar"
+                X: =949
+                Y: =199
+                ZIndex: =5
+
+            Label9_3 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =85
+                Size: =15
+                Text: ="Jayakanth Abhimanyu"
+                Width: =162
+                X: =516
+                Y: =177
+                ZIndex: =6
+
+        DataCard26 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =3
+            ZIndex: =8
+
+            Rectangle5_3 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =254
                 Width: =361
-                X: =36
-                Y: =33
+                X: =40
+                Y: =16
                 ZIndex: =1
 
-            Label20 As label:
+            Label20_3 As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -157,21 +281,21 @@
                 Size: =15
                 Text: =communities.Guild
                 Width: =339
-                X: =47
-                Y: =73
+                X: =76
+                Y: =58
                 ZIndex: =2
 
-            Rectangle6 As rectangle:
+            Rectangle6_3 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =254
                 Width: =345
-                X: =520
-                Y: =26
-                ZIndex: =5
+                X: =541
+                Y: =16
+                ZIndex: =3
 
-            Icon2_1 As icon.Link:
+            Icon2_7 As icon.Link:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 18, 107, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -180,11 +304,11 @@
                 Icon: =Icon.Link
                 OnSelect: =Launch(communities.'Know More')
                 Width: =41
-                X: =196
-                Y: =171
-                ZIndex: =11
+                X: =212
+                Y: =157
+                ZIndex: =4
 
-            Button1_1 As button:
+            Button1_7 As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -195,33 +319,33 @@
                 OnSelect: =Launch(communities.'Link To Join')
                 Size: =15
                 Text: ="Request to Join"
-                X: =125
-                Y: =219
-                ZIndex: =15
+                X: =132
+                Y: =210
+                ZIndex: =5
 
-            Label10 As label:
+            Label10_6 As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =15
                 Text: ="Please reach out to"
                 Width: =260
-                X: =58
-                Y: =33
-                ZIndex: =16
+                X: =67
+                Y: =16
+                ZIndex: =6
 
-            Label10_1 As label:
+            Label10_7 As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =15
                 Text: ="Please reach out to"
                 Width: =260
-                X: =562
-                Y: =49
-                ZIndex: =18
+                X: =583
+                Y: =16
+                ZIndex: =7
 
-            Label6_1 As label:
+            Label6_6 As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -229,11 +353,11 @@
                 Size: =13
                 Text: =communities.Guild
                 Width: =289
-                X: =562
-                Y: =89
-                ZIndex: =19
+                X: =581
+                Y: =61
+                ZIndex: =8
 
-            Label14 As label:
+            Label14_6 As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -241,11 +365,11 @@
                 Size: =18
                 Text: ="Know More about Community"
                 Width: =289
-                X: =562
-                Y: =132
-                ZIndex: =20
+                X: =581
+                Y: =119
+                ZIndex: =9
 
-            Icon2_2 As icon.Link:
+            Icon2_8 As icon.Link:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 18, 107, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -254,11 +378,11 @@
                 Icon: =Icon.Link
                 OnSelect: =Launch(communities.'Know More')
                 Width: =41
-                X: =720
-                Y: =171
-                ZIndex: =21
+                X: =739
+                Y: =157
+                ZIndex: =10
 
-            Button1_2 As button:
+            Button1_8 As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
@@ -269,11 +393,11 @@
                 OnSelect: =Launch(communities.'Link To Join')
                 Size: =15
                 Text: ="Request to Join"
-                X: =601
-                Y: =219
-                ZIndex: =22
+                X: =620
+                Y: =210
+                ZIndex: =11
 
-            Label14_1 As label:
+            Label14_7 As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -281,9 +405,9 @@
                 Size: =18
                 Text: ="Know More about Community"
                 Width: =289
-                X: =58
-                Y: =132
-                ZIndex: =23
+                X: =76
+                Y: =117
+                ZIndex: =12
 
     Label12 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -318,4 +442,15 @@
         Width: =46
         X: =12
         ZIndex: =10
+
+    Label9 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Size: =15
+        Text: ="Baishali Roy"
+        X: =40
+        Y: =40
+        ZIndex: =11
 
