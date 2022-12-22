@@ -22,7 +22,14 @@
                 "NameMapSourceSchema": "?"
               },
               "Role",
-              "Color",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Color",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "DisabledColor",
               "PressedColor",
               "HoverColor",
@@ -106,7 +113,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "RGBA(0, 0, 0, 1)",
+                "InvariantScript": "RGBA(255, 255, 255, 1)",
                 "Property": "Color",
                 "RuleProviderType": "Unknown"
               },
@@ -346,7 +353,14 @@
                 "NameMapSourceSchema": "?"
               },
               "Role",
-              "Color",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Color",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "DisabledColor",
               "PressedColor",
               "HoverColor",
@@ -412,7 +426,7 @@
               },
               {
                 "Category": "Data",
-                "InvariantScript": "\"About the company\r\nWe are a technology consulting and services company with 10,000 associates in 33 global locations. We focus on on conceptualizing, designing, engineering, marketing and managing digital products.\"",
+                "InvariantScript": "\"About the company\nWe are a technology consulting and services company with 10,000 associates in 33 global locations. We focus on on conceptualizing, designing, engineering, marketing and managing digital products.\"",
                 "Property": "Text",
                 "RuleProviderType": "Unknown"
               },
@@ -430,7 +444,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "RGBA(0, 0, 0, 1)",
+                "InvariantScript": "RGBA(255, 255, 255, 1)",
                 "Property": "Color",
                 "RuleProviderType": "Unknown"
               },
@@ -1721,7 +1735,14 @@
                 "NameMapSourceSchema": "?"
               },
               "Role",
-              "Color",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Color",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "DisabledColor",
               "PressedColor",
               "HoverColor",
@@ -1731,7 +1752,14 @@
               "HoverBorderColor",
               "BorderStyle",
               "FocusedBorderColor",
-              "Fill",
+              {
+                "AFDDataSourceName": "",
+                "AutoRuleBindingEnabled": false,
+                "AutoRuleBindingString": "",
+                "InvariantPropertyName": "Fill",
+                "IsLockable": false,
+                "NameMapSourceSchema": "?"
+              },
               "DisabledFill",
               "PressedFill",
               "HoverFill",
@@ -1798,7 +1826,7 @@
               },
               {
                 "Category": "Design",
-                "InvariantScript": "RGBA(0, 0, 0, 1)",
+                "InvariantScript": "RGBA(255, 255, 255, 1)",
                 "Property": "Color",
                 "RuleProviderType": "Unknown"
               },
@@ -2079,7 +2107,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 51, 102, 1)",
+            "InvariantScript": "RGBA(4, 42, 64, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -2209,7 +2237,14 @@
           "Y",
           "Width",
           "Height",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledFill",
           "PressedFill",
           "HoverFill",
@@ -2454,7 +2489,14 @@
       }
     ],
     "ControlPropertyState": [
-      "Fill",
+      {
+        "AFDDataSourceName": "",
+        "AutoRuleBindingEnabled": false,
+        "AutoRuleBindingString": "RGBA(0, 0, 0, 0)",
+        "InvariantPropertyName": "Fill",
+        "IsLockable": false,
+        "NameMapSourceSchema": "?"
+      },
       {
         "AFDDataSourceName": "",
         "AutoRuleBindingEnabled": false,
@@ -2476,7 +2518,7 @@
       "ZIndex",
       "OnReset"
     ],
-    "LastModifiedTimestamp": "638072946805899090",
+    "LastModifiedTimestamp": "638072981611529367",
     "Name": "Component4",
     "Rules": [
       {
@@ -2541,7 +2583,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638072946805899090",
+  "LastModifiedTimestamp": "638072981611529367",
   "Name": "0927d2b0e1b146c68bb9d9479edc1044",
   "OverridableProperties": {},
   "Version": "638060689270422392"
