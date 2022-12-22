@@ -148,7 +148,8 @@
             OnSelect: |-
                 =Remove(white_papers,ThisItem);
                 Refresh(white_papers);
-                Set(varDocumentCurrent, GetDataURI.Run(First(white_papers).Identifier).result)
+                Set(varDocumentCurrent, GetDataURI.Run(First(white_papers).Identifier).result);
+                Notify("Item Deleted Successfully");
             Width: =53
             X: =493
             Y: =24
