@@ -87,8 +87,8 @@ Admin As screen:
                 Refresh('Event Track Details');
                 ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
                 
-                Patch(User, LookUp('User', Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name), {
-                    Points: LookUp('User', Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
+                Patch(User, LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name), {
+                    Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
                 });
                 
                 
