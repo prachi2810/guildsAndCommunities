@@ -155,9 +155,22 @@
                 Size: =15
                 Text: ="Sanjeev Korupolu"
                 Width: =186
-                X: =1034
-                Y: =249
+                X: =1001
+                Y: =253
                 ZIndex: =19
+
+            Label6_7 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =42
+                Size: =15
+                Text: ="Anand Vishyampan"
+                Width: =248
+                X: =162
+                Y: =253
+                ZIndex: =20
 
         DataCard25 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -177,8 +190,8 @@
                 Height: =172
                 Image: ='baishali roy'
                 Width: =162
-                X: =70
-                Y: =20
+                X: =162
+                Y: =27
                 ZIndex: =1
 
             Image10_2 As image:
@@ -188,8 +201,8 @@
                 Height: =182
                 Image: ='jayakanth abhimanyu'
                 Width: =155
-                X: =516
-                Y: =10
+                X: =611
+                Y: =5
                 ZIndex: =2
 
             Image10_3 As image:
@@ -199,7 +212,7 @@
                 Height: =172
                 Image: ='soundarya cholkar'
                 Width: =165
-                X: =941
+                X: =1028
                 Y: =10
                 ZIndex: =3
 
@@ -210,7 +223,8 @@
                 FontWeight: =FontWeight.Semibold
                 Size: =15
                 Text: ="Baishali Roy"
-                X: =82
+                Width: =165
+                X: =159
                 Y: =199
                 ZIndex: =4
 
@@ -221,7 +235,7 @@
                 FontWeight: =FontWeight.Semibold
                 Size: =15
                 Text: ="Soundarya Cholkar"
-                X: =949
+                X: =1043
                 Y: =199
                 ZIndex: =5
 
@@ -234,8 +248,8 @@
                 Size: =15
                 Text: ="Jayakanth Abhimanyu"
                 Width: =162
-                X: =516
-                Y: =177
+                X: =623
+                Y: =176
                 ZIndex: =6
 
         DataCard26 As dataCard.blankCard:
