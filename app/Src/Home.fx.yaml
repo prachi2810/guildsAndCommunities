@@ -13,7 +13,7 @@
         {Title:"E-learning",Screen:createBlog, Id:2, ParentTab: "Blog"},
         
         
-        {Title:"FAQs",Screen: Blank(),Id:3, ParentTab: "",LaunchLink: Launch("https://www.google.com")},
+        {Title:"FAQs",Screen: Blank(),Id:3, ParentTab: ""},
         
         
         {Title:"Templates",Screen:Community, Id:4, ParentTab: ""},
