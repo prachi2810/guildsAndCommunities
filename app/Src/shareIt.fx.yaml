@@ -1,0 +1,15 @@
+shareIt As screen:
+    Fill: =RGBA(232, 232, 232, 1)
+
+    Icon24 As icon.Share:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Share
+        OnSelect: |-
+            =Office365Outlook.SendEmail("p.patil7@zensar.com","check this","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c")
+        X: =151
+        Y: =136
+        ZIndex: =1
+
