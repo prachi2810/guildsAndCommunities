@@ -521,43 +521,6 @@
                 Y: =22
                 ZIndex: =3
 
-        DataCard6 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(255, 255, 255, 1)
-            Height: =448
-            Width: =1366
-            X: =0
-            Y: =7
-            ZIndex: =12
-
-            Component4_1 As Component4:
-
-            Icon4 As icon.Phone:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =44
-                Icon: =Icon.Phone
-                Width: =44
-                X: =406
-                Y: =140
-                ZIndex: =2
-
-            Icon5 As icon.Home:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(255, 255, 255, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =39
-                Icon: =Icon.Home
-                Width: =44
-                X: =406
-                Y: =40
-                ZIndex: =3
-
     Component6_1 As Component6:
         ZIndex: =13
 
