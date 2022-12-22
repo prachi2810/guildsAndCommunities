@@ -6,7 +6,7 @@
         
         {Title:"Home",Screen:Home, Id:1, ParentTab: ""},
         
-        {Title:"Insights",Screen:allBlogs, Id:2, ParentTab: ""},
+        {Title:"Insights",Screen:Blank(), Id:2, ParentTab: ""},
         {Title:"White Paper",Screen:WhitePapers, Id:2, ParentTab: "Blog"},
         {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: "Blog"},
         {Title:"Case Study",Screen:createBlog, Id:2, ParentTab: "Blog"},
