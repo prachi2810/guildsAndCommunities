@@ -10,6 +10,7 @@
         {Title:"White Paper",Screen:createBlog, Id:2, ParentTab: "Blog"},
         {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: "Blog"},
         {Title:"Case Study",Screen:createBlog, Id:2, ParentTab: "Blog"},
+        {Title:"E-learning",Screen:createBlog, Id:2, ParentTab: "Blog"},
         
         
         {Title:"FAQs", Id:3, ParentTab: "",Link:"https://zenloungeplus.zensar.com/documents/portlet_file_entry/111941/FAQ_GC.pdf/86ca753f-45c6-1e98-d57c-55fdd29cc887"},
