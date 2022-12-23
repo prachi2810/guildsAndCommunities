@@ -660,7 +660,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderThickness: =2
             Color: =RGBA(0, 0, 0, 1)
-            Default: ="Text input"
+            Default: =""
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
@@ -741,6 +741,7 @@
                     Office365Outlook.SendEmail(Gallery18.Selected.Mail,"Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?guild="&selectedId );
                     Notify("Mail Sent Successfully");
                     Set(ShareItem,false);
+                    Reset(UserName);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -768,7 +769,9 @@
             Fill: =RGBA(255, 255, 255, 1)
             Height: =46
             Icon: =Icon.CancelBadge
-            OnSelect: =Set(ShareItem,false)
+            OnSelect: |-
+                =Set(ShareItem,false);
+                Reset(UserName);
             Width: =49
             X: =1266
             Y: =46
