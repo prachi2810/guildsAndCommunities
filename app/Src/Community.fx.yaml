@@ -38,6 +38,7 @@
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
+        NumberOfColumns: =2
         Width: =Parent.Width
         Y: =RectQuickActionBar1_2.Y + RectQuickActionBar1_2.Height
         ZIndex: =6
@@ -254,23 +255,26 @@
 
         DataCard26 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
+            BorderStyle: =BorderStyle.None
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =327
+            Visible: =true
             Width: =1366
+            WidthFit: =false
             X: =0
             Y: =3
             ZIndex: =8
 
             Rectangle5_3 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
                 BorderThickness: =1
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =254
                 Width: =361
-                X: =40
-                Y: =16
+                X: =279
+                Y: =52
                 ZIndex: =1
 
             Label20_3 As label:
@@ -282,18 +286,20 @@
                 Size: =15
                 Text: =communities.Guild
                 Width: =339
-                X: =76
-                Y: =58
+                X: =301
+                Y: =113
                 ZIndex: =2
 
             Rectangle6_3 As rectangle:
                 BorderColor: =RGBA(0, 0, 0, 1)
+                BorderStyle: =BorderStyle.None
                 BorderThickness: =1
-                Fill: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(250, 250, 250, 1)
                 Height: =254
+                TabIndex: =1
                 Width: =345
-                X: =541
-                Y: =16
+                X: =810
+                Y: =52
                 ZIndex: =3
 
             Icon2_7 As icon.Link:
@@ -305,8 +311,8 @@
                 Icon: =Icon.Link
                 OnSelect: =Launch(communities.'Know More')
                 Width: =41
-                X: =212
-                Y: =157
+                X: =467
+                Y: =202
                 ZIndex: =4
 
             Button1_7 As button:
@@ -320,8 +326,8 @@
                 OnSelect: =Launch(communities.'Link To Join')
                 Size: =15
                 Text: ="Request to Join"
-                X: =132
-                Y: =210
+                X: =365
+                Y: =246
                 ZIndex: =5
 
             Label10_6 As label:
@@ -331,8 +337,8 @@
                 Size: =15
                 Text: ="Please reach out to"
                 Width: =260
-                X: =67
-                Y: =16
+                X: =315
+                Y: =68
                 ZIndex: =6
 
             Label10_7 As label:
@@ -342,8 +348,8 @@
                 Size: =15
                 Text: ="Please reach out to"
                 Width: =260
-                X: =583
-                Y: =16
+                X: =838
+                Y: =73
                 ZIndex: =7
 
             Label6_6 As label:
@@ -354,8 +360,8 @@
                 Size: =13
                 Text: =communities.Guild
                 Width: =289
-                X: =581
-                Y: =61
+                X: =838
+                Y: =115
                 ZIndex: =8
 
             Label14_6 As label:
@@ -366,8 +372,8 @@
                 Size: =18
                 Text: ="Know More about Community"
                 Width: =289
-                X: =581
-                Y: =119
+                X: =849
+                Y: =169
                 ZIndex: =9
 
             Icon2_8 As icon.Link:
@@ -379,8 +385,8 @@
                 Icon: =Icon.Link
                 OnSelect: =Launch(communities.'Know More')
                 Width: =41
-                X: =739
-                Y: =157
+                X: =1007
+                Y: =194
                 ZIndex: =10
 
             Button1_8 As button:
@@ -394,8 +400,8 @@
                 OnSelect: =Launch(communities.'Link To Join')
                 Size: =15
                 Text: ="Request to Join"
-                X: =620
-                Y: =210
+                X: =903
+                Y: =246
                 ZIndex: =11
 
             Label14_7 As label:
@@ -406,8 +412,8 @@
                 Size: =18
                 Text: ="Know More about Community"
                 Width: =289
-                X: =76
-                Y: =117
+                X: =324
+                Y: =169
                 ZIndex: =12
 
     Label12 As label:
