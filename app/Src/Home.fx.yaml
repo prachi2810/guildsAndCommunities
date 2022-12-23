@@ -552,8 +552,9 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: =If(Not(IsBlank(Param("guildId"))),Navigate(shareIt))
-        X: =15
-        Y: =97
+        Text: =Text("Timer")
+        X: =30
+        Y: =168
         ZIndex: =14
 
     Group1 As group:
