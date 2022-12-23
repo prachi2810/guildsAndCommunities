@@ -58,7 +58,7 @@
         "Name": "Image1",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 410,
+        "PublishOrderIndex": 412,
         "Rules": [
           {
             "Category": "Data",
@@ -277,7 +277,14 @@
           "Fill",
           "DisabledFill",
           "PressedFill",
-          "HoverFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantPropertyName": "HoverFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Font",
           "FontWeight",
           "Align",
@@ -354,7 +361,7 @@
         "Name": "Button1",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 411,
+        "PublishOrderIndex": 413,
         "Rules": [
           {
             "Category": "Data",
@@ -448,7 +455,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantScript": "ColorFade(RGBA(4, 166, 235, 1), -20%)",
             "Property": "HoverFill",
             "RuleProviderType": "Unknown"
           },
@@ -615,7 +622,14 @@
           "Fill",
           "DisabledFill",
           "PressedFill",
-          "HoverFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantPropertyName": "HoverFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Font",
           "FontWeight",
           "Align",
@@ -692,7 +706,7 @@
         "Name": "Button2",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 412,
+        "PublishOrderIndex": 414,
         "Rules": [
           {
             "Category": "Data",
@@ -786,7 +800,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantScript": "ColorFade(RGBA(4, 166, 235, 1), -20%)",
             "Property": "HoverFill",
             "RuleProviderType": "Unknown"
           },
@@ -953,7 +967,14 @@
           "Fill",
           "DisabledFill",
           "PressedFill",
-          "HoverFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantPropertyName": "HoverFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Font",
           "FontWeight",
           "Align",
@@ -1037,7 +1058,7 @@
         "Name": "Button2_1",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 413,
+        "PublishOrderIndex": 415,
         "Rules": [
           {
             "Category": "Data",
@@ -1131,7 +1152,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantScript": "ColorFade(RGBA(4, 166, 235, 1), -20%)",
             "Property": "HoverFill",
             "RuleProviderType": "Unknown"
           },
@@ -1298,7 +1319,14 @@
           "Fill",
           "DisabledFill",
           "PressedFill",
-          "HoverFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantPropertyName": "HoverFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Font",
           "FontWeight",
           "Align",
@@ -1382,7 +1410,7 @@
         "Name": "Button2_3",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 414,
+        "PublishOrderIndex": 416,
         "Rules": [
           {
             "Category": "Data",
@@ -1476,7 +1504,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantScript": "ColorFade(RGBA(4, 166, 235, 1), -20%)",
             "Property": "HoverFill",
             "RuleProviderType": "Unknown"
           },
@@ -1643,7 +1671,14 @@
           "Fill",
           "DisabledFill",
           "PressedFill",
-          "HoverFill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantPropertyName": "HoverFill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Font",
           "FontWeight",
           "Align",
@@ -1720,7 +1755,7 @@
         "Name": "Button13",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 415,
+        "PublishOrderIndex": 417,
         "Rules": [
           {
             "Category": "Data",
@@ -1814,7 +1849,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "ColorFade(RGBA(0, 51, 102, 1), -20%)",
+            "InvariantScript": "ColorFade(RGBA(4, 166, 235, 1), -20%)",
             "Property": "HoverFill",
             "RuleProviderType": "Unknown"
           },
@@ -1988,7 +2023,7 @@
       "Blog",
       "Dashboard"
     ],
-    "LastModifiedTimestamp": "638073826198833381",
+    "LastModifiedTimestamp": "638073834904265976",
     "Name": "Component1",
     "Rules": [
       {
@@ -2093,7 +2128,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638073826198833381",
+  "LastModifiedTimestamp": "638073834904265976",
   "Name": "62dc4f1561b4448e901618e4647b41b4",
   "OverridableProperties": {},
   "Version": "638059060512558886"
