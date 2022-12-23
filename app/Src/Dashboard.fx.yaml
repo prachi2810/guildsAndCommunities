@@ -324,6 +324,165 @@
                     Y: =0
                     ZIndex: =14
 
-    Component6_3 As NavBar:
-        ZIndex: =4
+    Button19_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(4, 42, 61, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =73
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: |
+            =Navigate(Home)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Home"
+        Width: =88
+        X: =69
+        Y: =2
+        ZIndex: =12
+
+    NavBarGr_1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =12
+
+        Component1_3 As Component1:
+            ZIndex: =4
+
+        Rectangle2_2 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            Height: =221
+            Visible: =DropDown
+            X: =180
+            Y: =75
+            ZIndex: =5
+
+        Button17_2 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(allBlogs)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Blog"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =73
+            ZIndex: =6
+
+        Button18_11 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(WhitePapers)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="White Papers"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =118
+            ZIndex: =7
+
+        Button18_10 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Case Study"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =158
+            ZIndex: =8
+
+        Button18_9 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="E-learning "
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =197
+            ZIndex: =9
+
+        Button18_8 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =56
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Customer testomonial"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =237
+            ZIndex: =10
+
+        Icon3_2 As icon.ChevronDown:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =38
+            Icon: =Icon.ChevronDown
+            OnSelect: =Set(DropDown,!DropDown)
+            Width: =26
+            X: =289
+            Y: =18
+            ZIndex: =11
 
