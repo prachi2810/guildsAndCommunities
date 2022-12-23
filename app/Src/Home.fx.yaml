@@ -189,7 +189,7 @@
                     Height: =34
                     Icon: =Icon.Share
                     OnSelect: |-
-                        =Office365Outlook.SendEmail("p.tolsankar@zensar.com","Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?guild=1")
+                        =Office365Outlook.SendEmail("p.tolsankar@zensar.com","Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?guild="+Text(1) )
                     Width: =36
                     X: =260
                     Y: =491
@@ -552,7 +552,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
-            =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Community_1,ID=1)}))
+            =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Community_1,ID=2)}))
         Text: =Text("Timer")
         X: =20
         Y: =151
