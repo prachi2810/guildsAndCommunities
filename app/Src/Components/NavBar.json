@@ -56,7 +56,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Rectangle8",
-        "Parent": "Component6",
+        "Parent": "NavBar",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 429,
         "Rules": [
@@ -219,7 +219,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Image1_1",
-        "Parent": "Component6",
+        "Parent": "NavBar",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 430,
         "Rules": [
@@ -1510,7 +1510,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Gallery11",
-        "Parent": "Component6",
+        "Parent": "NavBar",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 431,
         "Rules": [
@@ -1817,7 +1817,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Button16_1",
-        "Parent": "Component6",
+        "Parent": "NavBar",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 437,
         "Rules": [
@@ -2176,7 +2176,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Button16",
-        "Parent": "Component6",
+        "Parent": "NavBar",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 438,
         "Rules": [
@@ -2444,8 +2444,8 @@
         "NameMapSourceSchema": "?"
       }
     ],
-    "LastModifiedTimestamp": "638073744970872367",
-    "Name": "Component6",
+    "LastModifiedTimestamp": "638073795226641431",
+    "Name": "NavBar",
     "Rules": [
       {
         "Category": "Data",
@@ -2455,15 +2455,21 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(0, 0, 0, 0)",
-        "Property": "Fill",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
         "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "235",
-        "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -2473,21 +2479,15 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "235",
+        "Property": "Height",
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "RGBA(0, 0, 0, 0)",
+        "Property": "Fill",
+        "RuleProviderType": "System"
       }
     ]
   },
@@ -2495,7 +2495,7 @@
     "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component6",
+    "Name": "NavBar",
     "TemplateGuid": "abc5859afff742348a300a44f7269761"
   },
   "ComponentType": "CanvasComponent",
@@ -2519,7 +2519,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638073744970872367",
+  "LastModifiedTimestamp": "638073795226641431",
   "Name": "abc5859afff742348a300a44f7269761",
   "OverridableProperties": {},
   "Version": "638071924152698425"

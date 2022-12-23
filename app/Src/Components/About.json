@@ -122,7 +122,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "TextInput1",
-        "Parent": "Component3",
+        "Parent": "About",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 408,
         "Rules": [
@@ -423,7 +423,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Icon2",
-        "Parent": "Component3",
+        "Parent": "About",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 409,
         "Rules": [
@@ -692,7 +692,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "TextInput3",
-        "Parent": "Component3",
+        "Parent": "About",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 410,
         "Rules": [
@@ -993,7 +993,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Image5",
-        "Parent": "Component3",
+        "Parent": "About",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 411,
         "Rules": [
@@ -1284,7 +1284,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "TextInput2",
-        "Parent": "Component3",
+        "Parent": "About",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 412,
         "Rules": [
@@ -1628,7 +1628,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Button3",
-        "Parent": "Component3",
+        "Parent": "About",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 413,
         "Rules": [
@@ -1954,7 +1954,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Label2",
-        "Parent": "Component3",
+        "Parent": "About",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 414,
         "Rules": [
@@ -2232,20 +2232,26 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638073744970670784",
-    "Name": "Component3",
+    "LastModifiedTimestamp": "638073795397759786",
+    "Name": "About",
     "Rules": [
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(0, 0, 0, 0)",
-        "Property": "Fill",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
         "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "740",
-        "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -2255,21 +2261,15 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "740",
+        "Property": "Height",
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "RGBA(0, 0, 0, 0)",
+        "Property": "Fill",
+        "RuleProviderType": "System"
       }
     ]
   },
@@ -2277,7 +2277,7 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component3",
+    "Name": "About",
     "TemplateGuid": "f519ced9060241e4947d9bc36dcc7f62"
   },
   "ComponentType": "CanvasComponent",
@@ -2291,7 +2291,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638073744970670784",
+  "LastModifiedTimestamp": "638073795397759786",
   "Name": "f519ced9060241e4947d9bc36dcc7f62",
   "OverridableProperties": {},
   "Version": "638059174131501999"

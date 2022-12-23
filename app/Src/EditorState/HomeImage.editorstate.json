@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "Component2": {
+    "HomeImage": {
       "AllowAccessToGlobals": false,
       "ControlPropertyState": [
         "Fill",
@@ -25,19 +25,24 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Component2",
+      "Name": "HomeImage",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Design",
-          "PropertyName": "Fill",
+          "PropertyName": "ZIndex",
           "RuleProviderType": "System"
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
+          "PropertyName": "Y",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
@@ -46,18 +51,13 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "PropertyName": "Height",
+          "RuleProviderType": "System"
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "ZIndex",
-          "RuleProviderType": "Unknown"
+          "PropertyName": "Fill",
+          "RuleProviderType": "System"
         }
       ],
       "StyleName": "",
@@ -273,5 +273,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "Component2"
+  "TopParentName": "HomeImage"
 }

@@ -63,7 +63,7 @@
         "LayoutName": "",
         "MetaDataIDKey": "",
         "Name": "Image2",
-        "Parent": "Component2",
+        "Parent": "HomeImage",
         "PersistMetaDataIDKey": false,
         "PublishOrderIndex": 407,
         "Rules": [
@@ -274,20 +274,26 @@
       "Y",
       "ZIndex"
     ],
-    "LastModifiedTimestamp": "638073744970666310",
-    "Name": "Component2",
+    "LastModifiedTimestamp": "638073795524863817",
+    "Name": "HomeImage",
     "Rules": [
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(0, 0, 0, 0)",
-        "Property": "Fill",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
         "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "640",
-        "Property": "Height",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
@@ -297,21 +303,15 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "640",
+        "Property": "Height",
+        "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "Unknown"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
-        "RuleProviderType": "Unknown"
+        "InvariantScript": "RGBA(0, 0, 0, 0)",
+        "Property": "Fill",
+        "RuleProviderType": "System"
       }
     ]
   },
@@ -319,7 +319,7 @@
     "AllowAccessToGlobals": false,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "Component2",
+    "Name": "HomeImage",
     "TemplateGuid": "923589e162334ba3ac42a49447cb3358"
   },
   "ComponentType": "CanvasComponent",
@@ -333,7 +333,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638073744970666310",
+  "LastModifiedTimestamp": "638073795524863817",
   "Name": "923589e162334ba3ac42a49447cb3358",
   "OverridableProperties": {},
   "Version": "638059165900806792"
