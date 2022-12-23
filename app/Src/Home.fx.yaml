@@ -5,6 +5,7 @@
         ClearCollect(colHorizontalMenu,
         
         {Title:"Home",Screen:Home, Id:1, ParentTab: ""},
+        {Title:"Message From Leaders",Screen:Home, Id:1, ParentTab: "Home"},
         
         {Title:"Insights",Screen:Blank(), Id:2, ParentTab: ""},
         {Title:"White Paper",Screen:WhitePapers, Id:2, ParentTab: "Blog"},
