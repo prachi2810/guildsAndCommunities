@@ -2441,19 +2441,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.UserName.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5.Gallery18.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.UserName.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5.Gallery18.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "AccessibleLabel",
+                "member": "TabIndex",
                 "module": "Home",
-                "type": "Home.UserName"
+                "type": "Home.Container5.Gallery18"
               }
             }
           ],
@@ -2463,8 +2463,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 5
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4781,19 +4781,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Gallery3.AccessibleLabel"
+                  "fullyQualifiedName": "Home.Container5.Gallery18.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Gallery3.AccessibleLabel",
+                  "fullyQualifiedName": "Home.Container5.Gallery18.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Home",
-                "type": "Home.Gallery3"
+                "type": "Home.Container5.Gallery18"
               }
             }
           ],
@@ -4811,19 +4811,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Gallery3.TabIndex"
+                  "fullyQualifiedName": "Home.Container5.UserName.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Gallery3.TabIndex",
+                  "fullyQualifiedName": "Home.Container5.UserName.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home",
+                "type": "Home.Container5.UserName"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Icon4.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Icon4.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Home",
-                "type": "Home.Gallery3"
+                "type": "Home.Icon4"
               }
             }
           ],
@@ -4835,6 +4865,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Icon4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Icon4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home",
+                "type": "Home.Icon4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
