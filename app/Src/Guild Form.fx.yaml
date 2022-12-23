@@ -130,7 +130,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Description"
-            Default: =ThisItem.'Full Description'
+            Default: =ThisItem.FullDescription
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Description")
             Fill: =RGBA(0, 0, 0, 0)

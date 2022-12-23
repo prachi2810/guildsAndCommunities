@@ -491,46 +491,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Community.Canvas1_1.DataCard2_1.Label19.Text"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Community.Canvas1_1.DataCard2_1.Label19.Text",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 19,
-                  "charOffset": 4,
-                  "snippet": {
-                    "text": ".'Full Description'"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Text",
-                "module": "Community",
-                "type": "Community.Canvas1_1.DataCard2_1.Label19"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Full Description"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Component3.TextInput1.AccessibleLabel"
                 }
               ],
