@@ -99,6 +99,23 @@
     ],
     "id": "59bc595d-2c49-4295-b900-697078d27880"
   },
+  "6cba9de9-2faa-4c8d-b993-358233bbe43e": {
+    "connectionParameters": {
+      "sku": "Enterprise"
+    },
+    "connectionRef": {
+      "displayName": "Office 365 Users",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1611/1.0.1611.3104/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users"
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6cba9de9-2faa-4c8d-b993-358233bbe43e"
+  },
   "992a5415-928d-42ba-b621-3696bdd29ded": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-05.centralindia.logic.azure.com:443/workflows/a0c00b66a15843bca4737d5fb5e9a154/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Hw2tGuoAxLNXzR-eVonxckEDGcde1ZQjzBBIUV7-A9U",
