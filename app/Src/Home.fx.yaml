@@ -551,8 +551,7 @@
         Fill: =RGBA(0, 51, 102, 1)
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnTimerEnd: =If(Not(IsBlank(Param("guildId"))),Navigate(createBlog))
-        Visible: =false
+        OnTimerEnd: =If(Not(IsBlank(Param("guildId"))),Navigate(shareIt))
         X: =15
         Y: =97
         ZIndex: =14
