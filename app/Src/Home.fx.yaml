@@ -552,7 +552,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
-            =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Community_1,ID=Value(Param("guild")))}))
+            =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Guild,ID=Value(Param("guild")))}))
         Text: =Text("Timer")
         X: =20
         Y: =151
