@@ -420,29 +420,39 @@
                 Y: =8
                 ZIndex: =1
 
-            Image9 As image:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =165
-                Image: =Quotes2
-                ImagePosition: =ImagePosition.Fill
-                Width: =697
-                X: =644
-                Y: =192
-                ZIndex: =2
-
             Image10 As image:
                 BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =5
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =184
+                Height: =159
                 Image: =Quotes1
-                ImagePosition: =ImagePosition.Fill
-                Width: =697
-                X: =644
+                ImagePosition: =ImagePosition.Center
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =621
+                X: =657
                 Y: =8
                 ZIndex: =3
+
+            Image10_4 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =3
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =160
+                Image: =Quotes1
+                ImagePosition: =ImagePosition.Center
+                RadiusBottomLeft: =20
+                RadiusBottomRight: =20
+                RadiusTopLeft: =20
+                RadiusTopRight: =20
+                Width: =621
+                X: =657
+                Y: =197
+                ZIndex: =4
 
         DataCard4 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -494,7 +504,7 @@
                 Height: =362
                 Image: =priyatest
                 ImagePosition: =ImagePosition.Fill
-                Width: =634
+                Width: =679
                 X: =10
                 ZIndex: =1
 
@@ -505,8 +515,8 @@
                 Height: =362
                 Image: =poojatest
                 ImagePosition: =ImagePosition.Fill
-                Width: =669
-                X: =674
+                Width: =653
+                X: =689
                 ZIndex: =2
 
             Image6 As image:
@@ -514,12 +524,23 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =340
-                Image: =priya
+                Image: =priyatest1
                 ImagePosition: =ImagePosition.Fill
-                Width: =155
-                X: =10
+                Width: =197
                 Y: =22
                 ZIndex: =3
+
+            Image22 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =325
+                Image: =poojatest1
+                ImagePosition: =ImagePosition.Fill
+                Width: =189
+                X: =689
+                Y: =22
+                ZIndex: =4
 
     Component6_1 As Component6:
         ZIndex: =13
