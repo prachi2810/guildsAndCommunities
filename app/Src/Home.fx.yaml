@@ -739,6 +739,8 @@
                 OnSelect: |-
                     =Select(Parent);
                     Office365Outlook.SendEmail(Gallery18.Selected.Mail,"Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?guild="&selectedId );
+                    Notify("Mail Sent Successfully");
+                    Set(ShareItem,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
