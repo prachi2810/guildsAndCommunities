@@ -811,7 +811,7 @@
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDown,!DropDown)
         Width: =26
-        X: =315
+        X: =289
         Y: =18
         ZIndex: =23
 
@@ -824,10 +824,10 @@
 
         Rectangle2 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             Height: =221
             Visible: =DropDown
-            X: =195
+            X: =180
             Y: =75
             ZIndex: =17
 
@@ -836,7 +836,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -849,7 +849,7 @@
             Text: ="Blog"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =180
             Y: =78
             ZIndex: =18
 
@@ -858,7 +858,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -871,7 +871,7 @@
             Text: ="White Papers"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =180
             Y: =118
             ZIndex: =19
 
@@ -880,7 +880,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -892,7 +892,7 @@
             Text: ="Case Study"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =180
             Y: =160
             ZIndex: =20
 
@@ -901,7 +901,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -913,7 +913,7 @@
             Text: ="E-learning "
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =180
             Y: =200
             ZIndex: =21
 
@@ -922,7 +922,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             Height: =56
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -935,7 +935,27 @@
             Text: ="Customer testomonial"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =180
             Y: =240
             ZIndex: =22
+
+    Button20_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(4, 42, 61, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: =Navigate(Dashboard)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Dashboard"
+        Width: =155
+        X: =520
+        ZIndex: =24
 

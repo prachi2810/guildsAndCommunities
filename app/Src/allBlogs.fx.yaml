@@ -157,7 +157,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 102, 1)
+        Fill: =RGBA(4, 42, 61, 1)
         FontWeight: =FontWeight.Semibold
         Height: =73
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -170,9 +170,8 @@
         RadiusTopRight: =0
         Size: =15
         Text: ="Home"
-        Width: =106
-        X: =95
-        Y: =2
+        Width: =88
+        X: =69
         ZIndex: =8
 
     Icon3_1 As icon.ChevronDown:
@@ -184,9 +183,29 @@
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDown,!DropDown)
         Width: =26
-        X: =315
+        X: =292
         Y: =18
         ZIndex: =9
+
+    Button20 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(4, 42, 61, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =75
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: =Navigate(Dashboard)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Dashboard"
+        Width: =155
+        X: =530
+        ZIndex: =16
 
     Group2_1 As group:
         Height: =5
@@ -197,10 +216,10 @@
 
         Rectangle2_1 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             Height: =221
             Visible: =DropDown
-            X: =195
+            X: =168
             Y: =75
             ZIndex: =10
 
@@ -209,7 +228,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -222,7 +241,7 @@
             Text: ="Blog"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =168
             Y: =78
             ZIndex: =11
 
@@ -231,7 +250,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -244,7 +263,7 @@
             Text: ="White Papers"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =168
             Y: =118
             ZIndex: =12
 
@@ -253,7 +272,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -265,7 +284,7 @@
             Text: ="Case Study"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =168
             Y: =160
             ZIndex: =13
 
@@ -274,7 +293,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -286,7 +305,7 @@
             Text: ="E-learning "
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =168
             Y: =200
             ZIndex: =14
 
@@ -295,7 +314,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
             Height: =56
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -308,7 +327,7 @@
             Text: ="Customer testomonial"
             Visible: =DropDown
             Width: =150
-            X: =195
+            X: =168
             Y: =240
             ZIndex: =15
 

@@ -58,7 +58,7 @@
         "Name": "Image1",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 412,
+        "PublishOrderIndex": 421,
         "Rules": [
           {
             "Category": "Data",
@@ -274,7 +274,14 @@
           "PressedColor",
           "HoverColor",
           "DisplayMode",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 51, 102, 1)",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledFill",
           "PressedFill",
           {
@@ -361,7 +368,7 @@
         "Name": "Button1",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 413,
+        "PublishOrderIndex": 422,
         "Rules": [
           {
             "Category": "Data",
@@ -437,7 +444,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 51, 102, 1)",
+            "InvariantScript": "RGBA(4, 42, 61, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -485,7 +492,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "100",
+            "InvariantScript": "75",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -619,7 +626,14 @@
           "PressedColor",
           "HoverColor",
           "DisplayMode",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 51, 102, 1)",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledFill",
           "PressedFill",
           {
@@ -706,7 +720,7 @@
         "Name": "Button2",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 414,
+        "PublishOrderIndex": 423,
         "Rules": [
           {
             "Category": "Data",
@@ -782,7 +796,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 51, 102, 1)",
+            "InvariantScript": "RGBA(4, 42, 61, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -830,7 +844,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "178",
+            "InvariantScript": "153",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -964,7 +978,14 @@
           "PressedColor",
           "HoverColor",
           "DisplayMode",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 51, 102, 1)",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledFill",
           "PressedFill",
           {
@@ -1058,7 +1079,7 @@
         "Name": "Button2_1",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 415,
+        "PublishOrderIndex": 424,
         "Rules": [
           {
             "Category": "Data",
@@ -1134,7 +1155,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 51, 102, 1)",
+            "InvariantScript": "RGBA(4, 42, 61, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -1182,7 +1203,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "343",
+            "InvariantScript": "318",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1316,7 +1337,14 @@
           "PressedColor",
           "HoverColor",
           "DisplayMode",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 51, 102, 1)",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledFill",
           "PressedFill",
           {
@@ -1410,7 +1438,7 @@
         "Name": "Button2_3",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 416,
+        "PublishOrderIndex": 425,
         "Rules": [
           {
             "Category": "Data",
@@ -1486,7 +1514,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 51, 102, 1)",
+            "InvariantScript": "RGBA(4, 42, 61, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -1534,7 +1562,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "421",
+            "InvariantScript": "396",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1668,7 +1696,14 @@
           "PressedColor",
           "HoverColor",
           "DisplayMode",
-          "Fill",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "RGBA(0, 51, 102, 1)",
+            "InvariantPropertyName": "Fill",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "DisabledFill",
           "PressedFill",
           {
@@ -1755,7 +1790,7 @@
         "Name": "Button13",
         "Parent": "Component1",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 417,
+        "PublishOrderIndex": 426,
         "Rules": [
           {
             "Category": "Data",
@@ -1831,7 +1866,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "RGBA(0, 51, 102, 1)",
+            "InvariantScript": "RGBA(4, 42, 61, 1)",
             "Property": "Fill",
             "RuleProviderType": "Unknown"
           },
@@ -1879,7 +1914,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "549",
+            "InvariantScript": "524",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1969,7 +2004,7 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Navigate(Component1.Dashboard)",
+            "InvariantScript": "",
             "Property": "OnSelect",
             "RuleProviderType": "Unknown"
           }
@@ -2023,7 +2058,7 @@
       "Blog",
       "Dashboard"
     ],
-    "LastModifiedTimestamp": "638073834904265976",
+    "LastModifiedTimestamp": "638073841593951584",
     "Name": "Component1",
     "Rules": [
       {
@@ -2046,7 +2081,7 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(0, 51, 102, 1)",
+        "InvariantScript": "RGBA(4, 42, 61, 1)",
         "Property": "Fill",
         "RuleProviderType": "System"
       },
@@ -2128,7 +2163,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638073834904265976",
+  "LastModifiedTimestamp": "638073841593951584",
   "Name": "62dc4f1561b4448e901618e4647b41b4",
   "OverridableProperties": {},
   "Version": "638059060512558886"
