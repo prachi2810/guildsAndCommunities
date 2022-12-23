@@ -545,6 +545,18 @@
     Component6_1 As Component6:
         ZIndex: =13
 
+    Timer1 As timer:
+        AutoStart: =true
+        Duration: =600
+        Fill: =RGBA(0, 51, 102, 1)
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnTimerEnd: =If(Not(IsBlank(Param("guildId"))),Navigate(createBlog))
+        Visible: =false
+        X: =15
+        Y: =97
+        ZIndex: =14
+
     Group1 As group:
         Height: =5
         Width: =5
