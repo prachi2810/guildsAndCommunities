@@ -554,8 +554,8 @@
         OnTimerEnd: |-
             =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Community_1,ID=1)}))
         Text: =Text("Timer")
-        X: =30
-        Y: =168
+        X: =20
+        Y: =151
         ZIndex: =14
 
     Group1 As group:
