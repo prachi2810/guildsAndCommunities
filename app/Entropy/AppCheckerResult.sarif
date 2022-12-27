@@ -1898,36 +1898,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Guild Form'.Form1_1.'Guild Image_DataCard1'.AddPicture4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Guild Form'.Form1_1.'Guild Image_DataCard1'.AddPicture4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Guild Form",
-                "type": "'Guild Form'.Form1_1.'Guild Image_DataCard1'.AddPicture4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "'Guild Form'.Form1_1.Image1_DataCard1.AddPicture5_1.AccessibleLabel"
                 }
               ],

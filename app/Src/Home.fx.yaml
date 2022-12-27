@@ -106,8 +106,17 @@
                 Text: ="Leaders Message "
                 Visible: =DropDownHome
                 Width: =155
-                X: =80
+                X: =412
+                Y: =34
                 ZIndex: =3
+
+            Rectangle3 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Fill: =RGBA(0, 51, 102, 1)
+                Height: =209
+                Width: =140
+                X: =85
+                ZIndex: =4
 
         DataCard13 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
