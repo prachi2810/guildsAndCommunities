@@ -533,3 +533,44 @@
                 Y: =DataCardKey18_1.Y
                 ZIndex: =4
 
+    Button8_2 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(56, 96, 178, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =59
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        OnSelect: |-
+            =Patch('Event Track Details', Defaults('Event Track Details'), {
+                Title: Dropdown3.Selected.Title,
+                Count: Value(TextInput3_2.Text),
+                'DateofEvent ': DatePicker1.SelectedDate,
+                EventId: LookUp(EventTitle, Title=Dropdown3.Selected.Title).ID,
+                MemberName: User().FullName,
+                Status: "Pending",
+                Teams_Channel_Name: Dropdown4.Selected.Communities,
+                comments: TextInput4.Text,
+                'Training/Session Hours': If(Dropdown5.DisplayMode = DisplayMode.Edit, 
+                Dropdown5.Selected.Value, false),
+                'Members Attended': If(TextInput1_1.DisplayMode = DisplayMode.Edit, Value(TextInput1_1.Text), false),
+                Link: If(DataCardValue31.DisplayMode = DisplayMode.Edit, DataCardValue31.Text, false)
+            }, Form2_1.Updates);
+            Notify("Your Activity has been Submitted and is currently under review!");
+            ResetForm(Form2_1);
+            ResetForm(Form3_2);
+            Reset(TextInput1_1);
+            Reset(TextInput4_1);
+            Navigate(Profile);
+        RadiusBottomLeft: =35
+        RadiusBottomRight: =35
+        RadiusTopLeft: =35
+        RadiusTopRight: =35
+        Size: =15
+        Text: ="Submit"
+        Width: =179
+        X: =548
+        Y: =636
+        ZIndex: =7
+
