@@ -88,131 +88,6 @@
                 Y: =52
                 ZIndex: =2
 
-            HomeDropDown As group:
-                Height: =5
-                Width: =5
-                X: =60
-                Y: =60
-                ZIndex: =10
-
-                Rectangle3 As rectangle:
-                    BorderColor: =RGBA(0, 89, 178, 1)
-                    Fill: =RGBA(4, 42, 61, 1)
-                    Height: =281
-                    Visible: =DropDownHome
-                    Width: =155
-                    X: =77
-                    ZIndex: =4
-
-                Button1 As button:
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(4, 42, 61, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =64
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-                    OnSelect: =SetFocus(TextInput7)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =15
-                    Text: ="Leaders Message"
-                    Visible: =DropDownHome
-                    Width: =155
-                    X: =77
-                    Y: =172
-                    ZIndex: =5
-
-                Button1_2 As button:
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(4, 42, 61, 1)
-                    FontWeight: =FontWeight.Semibold
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-                    OnSelect: |
-                        =SetFocus(TextInput9)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =15
-                    Text: ="About"
-                    Visible: =DropDownHome
-                    Width: =155
-                    X: =77
-                    ZIndex: =6
-
-                Button1_3 As button:
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(4, 42, 61, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =43
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-                    OnSelect: =SetFocus(TextInput11)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =15
-                    Text: ="L&D Team"
-                    Visible: =DropDownHome
-                    Width: =155
-                    X: =77
-                    Y: =236
-                    ZIndex: =7
-
-                Button1_4 As button:
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(4, 42, 61, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =64
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-                    OnSelect: =SetFocus(TextInput10)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =15
-                    Text: ="Upcoming Guilds"
-                    Visible: =DropDownHome
-                    Width: =155
-                    X: =77
-                    Y: =108
-                    ZIndex: =8
-
-                Button1_5 As button:
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    DisabledFill: =RGBA(244, 244, 244, 1)
-                    Fill: =RGBA(4, 42, 61, 1)
-                    FontWeight: =FontWeight.Semibold
-                    Height: =64
-                    HoverColor: =RGBA(255, 255, 255, 1)
-                    HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-                    OnSelect: =SetFocus(TextInput9_1)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =15
-                    Text: ="Explore Communities"
-                    Visible: =DropDownHome
-                    Width: =155
-                    X: =77
-                    Y: =40
-                    ZIndex: =9
-
         DataCard13 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1268,4 +1143,131 @@
         X: =1288
         Y: =5
         ZIndex: =28
+
+    HomeDropDown As group:
+        Height: =5
+        Width: =5
+        X: =481
+        Y: =254
+        ZIndex: =35
+
+        Rectangle3 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            Height: =281
+            Visible: =DropDownHome
+            Width: =155
+            X: =81
+            Y: =75
+            ZIndex: =29
+
+        Button1 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =64
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput7)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Leaders Message"
+            Visible: =DropDownHome
+            Width: =155
+            X: =81
+            Y: =247
+            ZIndex: =30
+
+        Button1_2 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: |
+                =SetFocus(TextInput9)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="About"
+            Visible: =DropDownHome
+            Width: =155
+            X: =81
+            Y: =75
+            ZIndex: =31
+
+        Button1_3 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =43
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput11)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="L&D Team"
+            Visible: =DropDownHome
+            Width: =155
+            X: =81
+            Y: =311
+            ZIndex: =32
+
+        Button1_4 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =64
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput10)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Upcoming Guilds"
+            Visible: =DropDownHome
+            Width: =155
+            X: =81
+            Y: =183
+            ZIndex: =33
+
+        Button1_5 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =64
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =SetFocus(TextInput9_1)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Explore Communities"
+            Visible: =DropDownHome
+            Width: =155
+            X: =81
+            Y: =115
+            ZIndex: =34
 
