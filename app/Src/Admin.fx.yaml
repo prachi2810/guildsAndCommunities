@@ -55,21 +55,9 @@
     RectQuickActionBar9 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
         Fill: =RGBA(0, 51, 102, 1)
-        Height: =88
+        Height: =75
         Width: =Parent.Width
         ZIndex: =1
-
-    LblAppName4 As label:
-        Align: =Align.Center
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Height: =88
-        Size: =18
-        Text: |-
-            ="Admin Center
-            "
-        Width: =Parent.Width
-        ZIndex: =2
 
     Canvas6 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -480,4 +468,192 @@
                 X: =486
                 Y: =641
                 ZIndex: =11
+
+    NavBarGr_2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =20
+        ZIndex: =14
+
+        Component1_4 As Component1:
+            Height: =77
+            Width: =1366
+            ZIndex: =4
+
+        Rectangle2_3 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            Height: =226
+            Visible: =DropDown
+            X: =180
+            Y: =79
+            ZIndex: =5
+
+        Button17_3 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(allBlogs)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Blog"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =79
+            ZIndex: =6
+
+        Button18_15 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(WhitePapers)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="White Papers"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =128
+            ZIndex: =7
+
+        Button18_14 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Case Study"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =169
+            ZIndex: =8
+
+        Button18_13 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =41
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="E-learning "
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =206
+            ZIndex: =9
+
+        Button18_12 As button:
+            Align: =Align.Left
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =57
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Customer Testomonial"
+            Visible: =DropDown
+            Width: =150
+            X: =180
+            Y: =247
+            ZIndex: =10
+
+        Icon3_3 As icon.ChevronDown:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =39
+            Icon: =Icon.ChevronDown
+            OnSelect: =Set(DropDown,!DropDown)
+            Width: =26
+            X: =281
+            Y: =19
+            ZIndex: =11
+
+        Button20_3 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =75
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Dashboard)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Dashboard"
+            Width: =140
+            X: =520
+            Y: =1
+            ZIndex: =12
+
+        Button20_4 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =75
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Admin)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Admin Center"
+            Width: =155
+            X: =660
+            Y: =1
+            ZIndex: =13
 

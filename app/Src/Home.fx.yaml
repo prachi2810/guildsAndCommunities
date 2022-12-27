@@ -799,32 +799,12 @@
             Y: =112
             ZIndex: =3
 
-    Button20_1 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(4, 42, 61, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =75
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-        OnSelect: =Navigate(Dashboard)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Dashboard"
-        Width: =155
-        X: =520
-        ZIndex: =24
-
     NavBarGr As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =25
+        ZIndex: =26
 
         Component1_1 As Component1:
             ZIndex: =16
@@ -958,4 +938,45 @@
             X: =289
             Y: =18
             ZIndex: =23
+
+        Button20_1 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =75
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Dashboard)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Dashboard"
+            Width: =155
+            X: =520
+            ZIndex: =24
+
+        Button20_2 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =75
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Admin)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Admin Center"
+            Visible: =If(LookUp(User, Email=User().Email).Role = "admin", true, false)
+            Width: =155
+            X: =675
+            ZIndex: =25
 
