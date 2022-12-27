@@ -33,6 +33,7 @@
         Set(_calendarVisible, true);
         Set(ShareItem,false);
         Set(DropDown,false);
+        Set(DropDownHome,false);
 
     RectQuickActionBar1 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -86,6 +87,27 @@
                 X: =482
                 Y: =52
                 ZIndex: =2
+
+            Button20_13 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(4, 42, 61, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =64
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+                OnSelect: =Navigate(Admin)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                Text: ="Leaders Message "
+                Visible: =DropDownHome
+                Width: =155
+                X: =80
+                ZIndex: =3
 
         DataCard13 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -568,8 +590,7 @@
             =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Guild,ID=Value(Param("guild")))}))
         Text: =Text("Timer")
         Visible: =false
-        X: =20
-        Y: =151
+        Y: =226
         ZIndex: =14
 
     Group1 As group:
@@ -798,6 +819,19 @@
             X: =277
             Y: =112
             ZIndex: =3
+
+    Icon3_4 As icon.ChevronDown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =19
+        Icon: =Icon.ChevronDown
+        OnSelect: =Set(DropDownHome,!DropDownHome)
+        Width: =20
+        X: =198
+        Y: =25
+        ZIndex: =27
 
     NavBarGr As group:
         Height: =5
