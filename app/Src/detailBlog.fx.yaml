@@ -69,9 +69,11 @@
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Bold
+                Height: =60
                 Size: =18
                 Text: =data.'Created By'.DisplayName
-                X: =141
+                Width: =185
+                X: =123
                 Y: =15
                 ZIndex: =1
 
@@ -94,8 +96,8 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
                 Text: =Text(data.Created, DateTimeFormat.ShortDate)
-                X: =141
-                Y: =55
+                X: =123
+                Y: =75
                 ZIndex: =3
 
             Label17 As label:
@@ -346,8 +348,8 @@
             =Navigate(editBlog,ScreenTransition.Cover,{data:data})
         Visible: =If(data.'Created By'.Email=User().Email,true,false)
         Width: =50
-        X: =20
-        Y: =12
+        X: =74
+        Y: =20
         ZIndex: =4
 
     Icon12 As icon.Trash:
@@ -448,10 +450,10 @@
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =57
+        Height: =54
         Icon: =Icon.BackArrow
         OnSelect: =Navigate(allBlogs)
-        Width: =70
-        Y: =12
+        Width: =52
+        Y: =15
         ZIndex: =11
 
