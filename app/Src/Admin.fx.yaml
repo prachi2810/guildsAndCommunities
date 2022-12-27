@@ -177,6 +177,8 @@
                             Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
                         });
                         
+                        Office365Outlook.SendEmail(LookUp(User, Name=ThisItem.MemberName).Email , "Activity Approved", "Your Activity has been approved!");
+                        
                         
                         
                         

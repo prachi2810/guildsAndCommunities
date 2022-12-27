@@ -94,6 +94,7 @@ Feedback As screen:
             });
             Notify("Activity has been rejected!");
             Reset(RichTextEditor1);
+            Office365Outlook.SendEmail(LookUp(User, Name=data.MemberName).Email , "Activity Rejected", PlainText(RichTextEditor1.HtmlText));
             Navigate(Admin);
         Size: =15
         Text: ="Submit"
