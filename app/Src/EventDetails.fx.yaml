@@ -50,7 +50,7 @@
         Body2 As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =Self.Size * 4
+            Height: =32
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -59,9 +59,9 @@
             Size: =16
             Text: =ThisItem.Name
             VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =74
-            Y: =68
+            Width: =431
+            X: =32
+            Y: =117
             ZIndex: =3
 
         Separator5 As rectangle:

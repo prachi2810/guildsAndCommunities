@@ -443,3 +443,15 @@
         Y: =286
         ZIndex: =10
 
+    Icon20 As icon.BackArrow:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =57
+        Icon: =Icon.BackArrow
+        OnSelect: =Navigate(allBlogs)
+        Width: =70
+        Y: =12
+        ZIndex: =11
+
