@@ -135,7 +135,7 @@
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
                     OnSelect: |
-                        =true
+                        =SetFocus(TextInput9)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -156,6 +156,7 @@
                     Height: =43
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+                    OnSelect: =SetFocus(TextInput11)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -177,6 +178,7 @@
                     Height: =64
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+                    OnSelect: =SetFocus(TextInput10)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -198,6 +200,7 @@
                     Height: =64
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+                    OnSelect: =SetFocus(TextInput9_1)
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -244,6 +247,28 @@
                 X: =558
                 Y: =254
                 ZIndex: =2
+
+            TextInput9_1 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="Explore More Communities"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =63
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =543
+                X: =15
+                Y: =664
+                ZIndex: =3
 
         DataCard2 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -656,6 +681,28 @@
                 Y: =6
                 ZIndex: =1
 
+            TextInput11 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="L&D Team"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =58
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =363
+                X: =500
+                Y: =22
+                ZIndex: =2
+
         DataCard5 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -724,6 +771,28 @@
             ZIndex: =12
 
             UpcomingGuild_1 As UpcomingGuild:
+
+            TextInput10 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="Upcoming Guilds"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =63
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =359
+                X: =484
+                Y: =12
+                ZIndex: =2
 
     Timer1 As timer:
         AutoStart: =true
