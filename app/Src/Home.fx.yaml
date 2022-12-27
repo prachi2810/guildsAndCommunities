@@ -83,8 +83,8 @@
                 Size: =28
                 Text: ="Zensar Guilds and Communities 2022"
                 Width: =412
-                X: =477
-                Y: =22
+                X: =482
+                Y: =52
                 ZIndex: =2
 
         DataCard13 As dataCard.blankCard:
@@ -804,7 +804,7 @@
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =26
+        ZIndex: =27
 
         Component1_1 As Component1:
             ZIndex: =16
@@ -814,7 +814,7 @@
             Fill: =RGBA(4, 42, 61, 1)
             Height: =221
             Visible: =DropDown
-            X: =180
+            X: =236
             Y: =75
             ZIndex: =17
 
@@ -836,8 +836,8 @@
             Text: ="Blog"
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =78
+            X: =232
+            Y: =79
             ZIndex: =18
 
         Button18 As button:
@@ -858,8 +858,8 @@
             Text: ="White Papers"
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =118
+            X: =236
+            Y: =116
             ZIndex: =19
 
         Button18_1 As button:
@@ -879,8 +879,8 @@
             Text: ="Case Study"
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =160
+            X: =236
+            Y: =158
             ZIndex: =20
 
         Button18_2 As button:
@@ -900,8 +900,8 @@
             Text: ="E-learning "
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =200
+            X: =236
+            Y: =198
             ZIndex: =21
 
         Button18_3 As button:
@@ -922,8 +922,8 @@
             Text: ="Customer Testomonial"
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =240
+            X: =236
+            Y: =238
             ZIndex: =22
 
         Icon3 As icon.ChevronDown:
@@ -931,12 +931,12 @@
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =38
+            Height: =19
             Icon: =Icon.ChevronDown
             OnSelect: =Set(DropDown,!DropDown)
-            Width: =26
-            X: =289
-            Y: =18
+            Width: =20
+            X: =366
+            Y: =28
             ZIndex: =23
 
         Button20_1 As button:
@@ -956,7 +956,7 @@
             Size: =15
             Text: ="Dashboard"
             Width: =155
-            X: =520
+            X: =654
             ZIndex: =24
 
         Button20_2 As button:
@@ -977,6 +977,26 @@
             Text: ="Admin Center"
             Visible: =If(LookUp(User, Email=User().Email).Role = "admin", true, false)
             Width: =155
-            X: =675
+            X: =809
             ZIndex: =25
+
+        Button20_5 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =75
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Home)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Home"
+            Width: =155
+            X: =77
+            ZIndex: =26
 
