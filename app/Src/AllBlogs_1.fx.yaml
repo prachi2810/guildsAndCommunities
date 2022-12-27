@@ -1,6 +1,6 @@
 "allBlogs As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =
+    OnVisible: =Refresh(Blog)
 
     RectQuickActionBar6 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -11,15 +11,15 @@
 
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
-        Height: =342
+        Height: =543
         Items: |
             =Search(Blog, TextInput6.Text, "Title")
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =146
-        Width: =1331
-        X: =17
-        Y: =208
+        Width: =1316
+        X: =35
+        Y: =225
         ZIndex: =1
 
         Image15 As image:
