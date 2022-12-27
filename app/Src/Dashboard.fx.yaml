@@ -324,48 +324,26 @@
                     Y: =0
                     ZIndex: =14
 
-    Button19_1 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(4, 42, 61, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =73
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-        OnSelect: |
-            =Navigate(Home)
-        RadiusBottomLeft: =0
-        RadiusBottomRight: =0
-        RadiusTopLeft: =0
-        RadiusTopRight: =0
-        Size: =15
-        Text: ="Home"
-        Width: =88
-        X: =69
-        Y: =2
-        ZIndex: =12
-
     NavBarGr_1 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =20
-        ZIndex: =12
+        ZIndex: =15
 
         Component1_3 As Component1:
             ZIndex: =4
 
-        Rectangle2_2 As rectangle:
+        Rectangle2_1 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             Fill: =RGBA(4, 42, 61, 1)
             Height: =221
             Visible: =DropDown
-            X: =180
+            X: =236
             Y: =75
             ZIndex: =5
 
-        Button17_2 As button:
+        Button17_1 As button:
             Align: =Align.Left
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -383,11 +361,11 @@
             Text: ="Blog"
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =73
+            X: =236
+            Y: =75
             ZIndex: =6
 
-        Button18_11 As button:
+        Button18_7 As button:
             Align: =Align.Left
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -405,11 +383,11 @@
             Text: ="White Papers"
             Visible: =DropDown
             Width: =150
-            X: =180
+            X: =236
             Y: =118
             ZIndex: =7
 
-        Button18_10 As button:
+        Button18_6 As button:
             Align: =Align.Left
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -426,11 +404,11 @@
             Text: ="Case Study"
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =158
+            X: =236
+            Y: =160
             ZIndex: =8
 
-        Button18_9 As button:
+        Button18_5 As button:
             Align: =Align.Left
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -447,11 +425,11 @@
             Text: ="E-learning "
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =197
+            X: =236
+            Y: =200
             ZIndex: =9
 
-        Button18_8 As button:
+        Button18_4 As button:
             Align: =Align.Left
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
@@ -466,11 +444,11 @@
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =15
-            Text: ="Customer testomonial"
+            Text: ="Customer Testomonial"
             Visible: =DropDown
             Width: =150
-            X: =180
-            Y: =237
+            X: =236
+            Y: =240
             ZIndex: =10
 
         Icon3_2 As icon.ChevronDown:
@@ -478,11 +456,74 @@
             Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =38
+            Height: =19
             Icon: =Icon.ChevronDown
             OnSelect: =Set(DropDown,!DropDown)
-            Width: =26
-            X: =289
-            Y: =18
+            Width: =20
+            X: =366
+            Y: =30
             ZIndex: =11
+
+        Button20_11 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Dashboard)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Dashboard"
+            Width: =155
+            X: =654
+            Y: =1
+            ZIndex: =12
+
+        Button20_12 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Admin)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Admin Center"
+            Visible: =If(LookUp(User, Email=User().Email).Role = "admin", true, false)
+            Width: =155
+            X: =809
+            ZIndex: =13
+
+        Button20_10 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Home)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Home"
+            Width: =155
+            X: =81
+            Y: =1
+            ZIndex: =14
 

@@ -836,8 +836,8 @@
             Text: ="Blog"
             Visible: =DropDown
             Width: =150
-            X: =232
-            Y: =79
+            X: =236
+            Y: =73
             ZIndex: =18
 
         Button18 As button:
@@ -945,10 +945,11 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =75
+            Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Dashboard)
+            PaddingTop: =0
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -965,7 +966,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =75
+            Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Admin)
@@ -986,17 +987,18 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =75
+            Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Home)
+            PaddingTop: =0
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
             RadiusTopRight: =0
             Size: =15
             Text: ="Home"
-            Width: =155
+            Width: =159
             X: =77
             ZIndex: =26
 

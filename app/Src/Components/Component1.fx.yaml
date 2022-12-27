@@ -51,9 +51,8 @@ Component1 As CanvasComponent:
         Height: =75
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-        OnSelect: |-
-            =Launch("https://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:p:/p/p_tolsankar/Eab9JQSuFR9FmzSzK1ypztwBU1hPasrLLLKk15ay6hi7Iw?e=hCMMdC
-            ")
+        OnSelect: |
+            =Set(DropDown,!DropDown)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0

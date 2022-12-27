@@ -615,7 +615,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =75
+            Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Dashboard)
@@ -635,7 +635,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =75
+            Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Admin)
@@ -656,7 +656,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =75
+            Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Home)
