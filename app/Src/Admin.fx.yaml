@@ -1,209 +1,483 @@
-Admin As screen:
-    Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+"Admin As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: |-
+        =ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+        ClearCollect(
+            BlogsPerMonth,
+            DropColumns(
+                AddColumns(
+                    GroupBy(
+                        AddColumns(
+                            SortByColumns(
+                                Blog,
+                                "Created",
+                                Ascending
+                            ),
+                            "dates",
+                            Text(
+                                ThisRecord.Month,
+                                "mmmm"
+                            )
+                        ),
+                        "dates",
+                        "GroupDate"
+                    ),
+                    "counts",
+                    CountRows(GroupDate)
+                ),
+                "GroupDate"
+            )
+        );
+        ClearCollect(
+            GroupUsers,
+            DropColumns(
+                AddColumns(
+                    GroupBy(User,"Name","GroupedItems"),
+                    "Sum of Value",Sum(GroupedItems,Points)
+                ),
+            "GroupedItems"
+            )
+        );
+        Clear(Ranks); 
+        ForAll(
+            GroupUsers,
+            Collect(
+                Ranks,
+                {
+                    No: CountRows(Ranks) + 1,
+                    UserName: Name
+                }
+            )
+        );
+        ClearCollect(TopFiveUsers, FirstN(SortByColumns(Ranks, "No", Ascending), 5));
+        ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));
+        ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 5));
 
-    "Gallery2_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Height: =372
-        Items: =EventStatus
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =Min(168, Self.Height - 60)
-        Width: =1305
-        X: =61
-        Y: =396
+    RectQuickActionBar9 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =88
+        Width: =Parent.Width
         ZIndex: =1
 
-        Title8_1 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20
-            Text: =ThisItem.Title
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =16
-            ZIndex: =1
-
-        Subtitle7 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =18
-            Text: =ThisItem.MemberName
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =Title8_1.Y + Title8_1.Height + 2
-            ZIndex: =2
-
-        Body1 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =Self.Size * 4
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =16
-            Text: =ThisItem.'DateofEvent '
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - 104
-            X: =32
-            Y: =Subtitle7.Y + Subtitle7.Height + 4
-            ZIndex: =3
-
-        NextArrow6 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Color: =RGBA(0, 18, 107, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =60
-            Icon: =Icon.Check
-            OnSelect: |+
-                =Select(Parent);
-                Patch(
-                    'Event Track Details',
-                    LookUp('Event Track Details',ID=ThisItem.ID),
-                    {
-                        Status:  "Approved"
-                    }
-                );
-                Notify("Activity has been approved!");
-                Refresh('Event Track Details');
-                ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
-                
-                Patch(User, LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name), {
-                    Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
-                });
-                
-                
-                
-                
-                
-                
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="View item details"
-            Width: =60
-            X: =1133
-            Y: =54
-            ZIndex: =4
-
-        Separator6 As rectangle:
-            BorderColor: =RGBA(0, 18, 107, 1)
-            Fill: =RGBA(0, 18, 107, 1)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - 1
-            ZIndex: =5
-
-    Image8_1 As image:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =187
-        Image: =User().Image
-        RadiusBottomLeft: =50
-        RadiusBottomRight: =50
-        RadiusTopLeft: =50
-        RadiusTopRight: =50
-        Width: =217
-        X: =100
-        Y: =100
+    LblAppName4 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =88
+        Size: =18
+        Text: |-
+            ="Admin Center
+            "
+        Width: =Parent.Width
         ZIndex: =2
 
-    Label2_1 As label:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =92
-        Size: =30
-        Text: =User().FullName
-        Width: =552
-        X: =388
-        Y: =122
+    Canvas6 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar9.Y + RectQuickActionBar9.Height
         ZIndex: =3
 
-    Icon4_1 As icon.HorizontalLine:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =0
-        Icon: =Icon.HorizontalLine
-        Width: =1306
-        X: =60
-        Y: =287
-        ZIndex: =4
+        DataCard19 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
 
-    Label9 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 13, 75, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(213, 232, 245, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =53
-        Size: =25
-        Text: ="Activities for Apporoval"
-        Width: =1305
-        X: =61
-        Y: =316
-        ZIndex: =5
+            "Gallery2_1 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Height: =298
+                Items: =EventStatus
+                Layout: =Layout.Vertical
+                ShowScrollbar: =false
+                TemplatePadding: =0
+                TemplateSize: =Min(168, Self.Height - 60)
+                Width: =1305
+                X: =22
+                Y: =333
+                ZIndex: =1
 
-    Label10 As label:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Semibold
-        Size: =20
-        Text: ="Admin"
-        X: =388
-        Y: =202
-        ZIndex: =6
+                Title8_1 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =35
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: =ThisItem.Title
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =644
+                    X: =32
+                    Y: =16
+                    ZIndex: =1
 
-    Label9_4 As label:
-        Align: =Align.Center
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Fill: =RGBA(71, 103, 166, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =60
-        Size: =25
-        Text: ="Admin Center"
-        Width: =1366
-        Y: =7
-        ZIndex: =7
+                Subtitle7_1 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: =ThisItem.MemberName
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 104
+                    X: =32
+                    Y: =Title8_1.Y + Title8_1.Height + 2
+                    ZIndex: =2
 
-    Icon20 As icon.ArrowLeft:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.ArrowLeft
-        OnSelect: =Navigate(Home)
-        X: =15
-        Y: =3
-        ZIndex: =8
+                Body1_1 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =Self.Size * 4
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =16
+                    Text: =ThisItem.'DateofEvent '
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 104
+                    X: =32
+                    Y: =Subtitle7_1.Y + Subtitle7_1.Height + 4
+                    ZIndex: =3
+
+                Separator6_1 As rectangle:
+                    BorderColor: =RGBA(0, 18, 107, 1)
+                    Fill: =RGBA(0, 18, 107, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - 1
+                    ZIndex: =5
+
+                Button3_1 As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(54, 176, 75, 1)
+                    FontWeight: =FontWeight.Semibold
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                    OnSelect: |+
+                        =Select(Parent);
+                        Patch(
+                            'Event Track Details',
+                            LookUp('Event Track Details',ID=ThisItem.ID),
+                            {
+                                Status:  "Approved"
+                            }
+                        );
+                        Notify("Activity has been approved!");
+                        Refresh('Event Track Details');
+                        ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+                        
+                        Patch(User, LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name), {
+                            Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
+                        });
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    Size: =15
+                    Text: ="Approve"
+                    X: =905
+                    Y: =69
+                    ZIndex: =8
+
+                Button4_1 As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(217, 26, 45, 1)
+                    FontWeight: =FontWeight.Semibold
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                    OnSelect: |-
+                        =Navigate(Feedback, Transition.None, { data :  ThisItem});
+                    Size: =15
+                    Text: ="Reject"
+                    X: =696
+                    Y: =69
+                    ZIndex: =9
+
+                Button8_1 As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(56, 96, 178, 1)
+                    FontWeight: =FontWeight.Semibold
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+                    OnSelect: |-
+                        =Select(Parent);
+                        Navigate(ActivityDetails, Transition.None ,{ data: ThisItem });
+                    Size: =15
+                    Text: ="Details"
+                    X: =1110
+                    Y: =69
+                    ZIndex: =10
+
+            Image8_1 As image:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =200
+                Image: =User().Image
+                RadiusBottomLeft: =100
+                RadiusBottomRight: =100
+                RadiusTopLeft: =100
+                RadiusTopRight: =100
+                Width: =200
+                X: =67
+                Y: =56
+                ZIndex: =2
+
+            Label2_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =92
+                Size: =30
+                Text: =User().FullName
+                Width: =552
+                X: =358
+                Y: =40
+                ZIndex: =3
+
+            Label9_4 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 13, 75, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Fill: =RGBA(213, 232, 245, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =58
+                Size: =25
+                Text: ="Activities for Apporoval"
+                Width: =1305
+                X: =22
+                Y: =278
+                ZIndex: =4
+
+            Label10_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Size: =20
+                Text: ="Admin"
+                X: =358
+                Y: =120
+                ZIndex: =5
+
+            Icon5_1 As icon.Reload:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =50
+                Icon: =Icon.Reload
+                OnSelect: |-
+                    =Refresh('Event Track Details');
+                    ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+                    Notify("List has been refreshed!");
+                Width: =50
+                X: =1258
+                Y: =282
+                ZIndex: =6
+
+        DataCard22 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+
+            Label13_1 As label:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(56, 96, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =72
+                Size: =40
+                Text: ="Statistics"
+                Width: =275
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            CompositeLineChart1_1 As group:
+                Height: =5
+                Width: =5
+                X: =-26
+                Y: =-16
+                ZIndex: =2
+
+                Title1_1 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =21
+                    Text: ="Blogs Per Month"
+                    Width: =512
+                    X: =51
+                    Y: =157
+                    ZIndex: =3
+
+                LineChart1_1 As lineChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    Height: =341
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =BlogsPerMonth
+                    Size: =11
+                    Width: =512
+                    X: =51
+                    Y: =183
+                    ZIndex: =4
+
+                Legend1_1 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =69
+                    ItemColorSet: =LineChart1_1.ItemColorSet
+                    Items: =LineChart1_1.SeriesLabels
+                    Width: =410
+                    X: =103
+                    Y: =532
+                    ZIndex: =5
+
+            CompositeColumnChart2_1 As group:
+                Height: =5
+                Width: =5
+                X: =-26
+                Y: =-16
+                ZIndex: =6
+
+                Title5_2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =22
+                    Text: ="Top Communities"
+                    Width: =492
+                    X: =685
+                    Y: =148
+                    ZIndex: =7
+
+                "'Top Communities_1' As barChart":
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    Height: =364
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =TopFiveCommunities
+                    Width: =492
+                    X: =714
+                    Y: =141
+                    ZIndex: =8
+
+                Legend5_1 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =73
+                    ItemColorSet: ='Top Communities_1'.ItemColorSet
+                    Items: ='Top Communities_1'.SeriesLabels
+                    Width: =393
+                    X: =714
+                    Y: =528
+                    ZIndex: =9
+
+            DataTable2 As dataTable.datatable:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                BorderStyle: =BorderStyle.Solid
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.'Open Sans'
+                FontWeight: =FontWeight.Normal
+                HeadingColor: =RGBA(255, 255, 255, 1)
+                HeadingFill: =RGBA(56, 96, 178, 1)
+                HeadingFont: =Font.'Open Sans'
+                HeadingFontWeight: =FontWeight.Normal
+                HeadingSize: =13
+                Height: =232
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(186, 202, 226, .2)
+                InputFill: =RGBA(255, 255, 255, 1)
+                InvertedColor: =RGBA(255, 255, 255, 1)
+                Items: =TopFiveUsers
+                LinkColor: =RGBA(0, 134, 208, 1)
+                PrimaryColor1: =RGBA(56, 96, 178, 1)
+                PrimaryColor2: =RGBA(0, 18, 107, 1)
+                PrimaryColor3: =RGBA(186, 202, 226, 1)
+                SelectedColor: =RGBA(0, 0, 0, 1)
+                SelectedFill: =RGBA(56, 96, 178, .2)
+                Size: =18
+                Width: =854
+                X: =218
+                Y: =699
+                ZIndex: =10
+
+                UserName_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Name"
+                    FieldName: ="UserName"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.UserName
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =11
+
+                No_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Rank"
+                    FieldName: ="No"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.No
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =12
+
+            Title1_2 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =17
+                Text: ="Top Five Users"
+                Width: =300
+                X: =486
+                Y: =641
+                ZIndex: =11
 

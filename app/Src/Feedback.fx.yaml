@@ -1,0 +1,127 @@
+Feedback As screen:
+
+    TextInput3_1 As text:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =User().FullName
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 18, 107, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(186, 202, 226, 1)
+        Size: =13
+        X: =183
+        Y: =220
+        ZIndex: =1
+
+    DatePicker1 As datepicker:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        CalendarHeaderFill: =RGBA(56, 96, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.Disabled
+        HoverDateFill: =RGBA(186, 202, 226, 1)
+        IconBackground: =RGBA(56, 96, 178, 1)
+        SelectedDateFill: =RGBA(56, 96, 178, 1)
+        X: =910
+        Y: =220
+        ZIndex: =2
+
+    Label8_1 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Feedback By"
+        Width: =210
+        X: =183
+        Y: =148
+        ZIndex: =3
+
+    Label11_4 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Date"
+        X: =910
+        Y: =148
+        ZIndex: =4
+
+    Label12_1 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Size: =20
+        Text: ="Feedback"
+        X: =183
+        Y: =315
+        ZIndex: =5
+
+    RichTextEditor1 As richTextEditor:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Default: =""
+        Height: =243
+        Width: =650
+        X: =183
+        Y: =377
+        ZIndex: =6
+
+    Button5_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(56, 96, 178, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =47
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        OnSelect: |-
+            =Patch('Event Track Details', LookUp('Event Track Details', ID=data.ID), {
+                Feedback: RichTextEditor1.HtmlText,
+                'Date of Approval': DatePicker1.SelectedDate,
+                'Approved/Rejected By': TextInput3_1.Text,
+                Status: "Rejected"
+            });
+            Notify("Activity has been rejected!");
+            Reset(RichTextEditor1);
+            Navigate(Admin);
+        Size: =15
+        Text: ="Submit"
+        X: =620
+        Y: =697
+        ZIndex: =7
+
+    Label9_5 As label:
+        Align: =Align.Center
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(71, 103, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =88
+        Size: =25
+        Text: ="Admin Center"
+        Width: =1366
+        ZIndex: =9
+
+    Icon4 As icon.ArrowLeft:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Admin)
+        X: =23
+        Y: =14
+        ZIndex: =10
+

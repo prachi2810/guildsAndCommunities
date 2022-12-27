@@ -52,6 +52,9 @@
           "Community_2": {
             "tableName": "e3e59fbf-0c7d-4482-bbea-7239f2499602"
           },
+          "Event Track Details": {
+            "tableName": "385d1bfa-3e9d-4a32-868f-9b0fcba72a44"
+          },
           "Guild": {
             "tableName": "fd2f121a-49eb-4e79-80ba-02382fec8763"
           },
@@ -66,6 +69,9 @@
           },
           "Like": {
             "tableName": "6a813ec4-e80b-4b16-a85e-06e7f84b5852"
+          },
+          "Points": {
+            "tableName": "524d759a-316a-46bc-bc54-c5cf39728d0f"
           },
           "User": {
             "tableName": "e1f12d43-e289-4b40-905c-e56517a00822"
@@ -90,7 +96,9 @@
       "Like",
       "User",
       "Community_2",
-      "white_papers"
+      "white_papers",
+      "Points",
+      "Event Track Details"
     ],
     "dependencies": {},
     "dependents": [
