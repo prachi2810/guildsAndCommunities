@@ -97,7 +97,7 @@
                 Height: =64
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-                OnSelect: =Navigate(Admin)
+                OnSelect: =SetFocus(TextInput7)
                 RadiusBottomLeft: =0
                 RadiusBottomRight: =0
                 RadiusTopLeft: =0
@@ -421,6 +421,28 @@
                 Text: ="Message From Leaders"
                 Width: =1336
                 ZIndex: =1
+
+            TextInput7 As text:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =0
+                Color: =RGBA(0, 0, 0, 1)
+                Default: ="Message From Leaders"
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =DisplayMode.View
+                FocusedBorderThickness: =4
+                FontWeight: =FontWeight.Bold
+                Height: =52
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Size: =27
+                Width: =470
+                X: =434
+                Y: =28
+                ZIndex: =2
 
         DataCard1 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -979,7 +1001,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =70
+            Height: =68
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Dashboard)
@@ -992,6 +1014,7 @@
             Text: ="Dashboard"
             Width: =155
             X: =654
+            Y: =5
             ZIndex: =24
 
         Button20_2 As button:
@@ -1000,7 +1023,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =70
+            Height: =68
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Admin)
@@ -1013,6 +1036,7 @@
             Visible: =If(LookUp(User, Email=User().Email).Role = "admin", true, false)
             Width: =155
             X: =809
+            Y: =5
             ZIndex: =25
 
         Button20_5 As button:
@@ -1021,7 +1045,7 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(4, 42, 61, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =70
+            Height: =68
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Home)
@@ -1034,5 +1058,22 @@
             Text: ="Home"
             Width: =159
             X: =77
+            Y: =5
             ZIndex: =26
+
+    Image26 As image:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =60
+        Image: =User().Image
+        OnSelect: =Navigate(Profile)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Width: =60
+        X: =1288
+        Y: =5
+        ZIndex: =28
 
