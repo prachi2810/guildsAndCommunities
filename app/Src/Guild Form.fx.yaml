@@ -659,7 +659,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="TrendSetters"
-            Default: =ThisItem.'Trend Setters'
+            Default: =ThisItem.'Trend Setters1'
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TrendSetters")
             Fill: =RGBA(0, 0, 0, 0)
