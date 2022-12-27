@@ -1,7 +1,7 @@
 "'Guild Form' As screen":
     Fill: =RGBA(232, 232, 232, 1)
 
-    Button5 As button:
+    Button5_3 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
@@ -10,13 +10,13 @@
         Height: =72
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =SubmitForm(Form1)
+        OnSelect: =SubmitForm(Form1_1)
         Size: =15
         Text: ="Submit"
         Width: =195
-        X: =448
-        Y: =696
-        ZIndex: =2
+        X: =486
+        Y: =674
+        ZIndex: =1
 
     Icon8 As icon.Cancel:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -27,16 +27,108 @@
         Icon: =Icon.Cancel
         OnSelect: =Navigate(Home)
         Width: =46
-        X: =1320
-        ZIndex: =3
+        X: =1318
+        Y: =18
+        ZIndex: =2
 
-    Form1 As form:
+    Form1_1 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =Guild
         Height: =683
         Item: =Defaults(Guild)
         Width: =1320
-        ZIndex: =4
+        X: =38
+        Y: =18
+        ZIndex: =3
+
+        "'Short Description_DataCard2' As typedDataCard.textualEditCard":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="ShortDescription"
+            Default: =ThisItem.'Short Description'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"ShortDescription")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "ShortDescription")
+            Required: =true
+            Update: =DataCardValue3_1.Text
+            Width: =440
+            X: =1
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey3 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =34
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                HintText: ="Word Limit upto 10 words for Home Page"
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3_1.Y + DataCardValue3_1.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey3.Height
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey3.Y
+                ZIndex: =4
 
         FullDescription_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -126,24 +218,24 @@
                 Y: =DataCardKey33.Y
                 ZIndex: =4
 
-        "'Short Description_DataCard2' As typedDataCard.textualEditCard":
+        Polestar1_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="ShortDescription"
-            Default: =ThisItem.'Short Description'
+            DataField: ="Polestar1"
+            Default: =ThisItem.Polestar1
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"ShortDescription")
+            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Polestar1")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "ShortDescription")
+            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Polestar1")
             Required: =true
-            Update: =DataCardValue3.Text
+            Update: =DataCardValue4_1.Text
             Width: =440
-            X: =1
-            Y: =0
+            X: =0
+            Y: =1
             ZIndex: =1
 
-            DataCardKey3 As label:
+            DataCardKey4_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -156,7 +248,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue3 As text:
+            DataCardValue4_1 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -167,7 +259,6 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
                 FocusedBorderThickness: =4
-                HintText: ="Word Limit upto 10 words"
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
@@ -181,10 +272,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                Y: =DataCardKey4_1.Y + DataCardKey4_1.Height + 5
                 ZIndex: =2
 
-            ErrorMessage3 As label:
+            ErrorMessage4_1 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -199,57 +290,128 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue3.Y + DataCardValue3.Height
+                Y: =DataCardValue4_1.Y + DataCardValue4_1.Height
                 ZIndex: =3
 
-            StarVisible3 As label:
+            StarVisible4_1 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey3.Height
+                Height: =DataCardKey4_1.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey3.Y
+                Y: =DataCardKey4_1.Y
                 ZIndex: =4
 
-        Polestar2_DataCard2 As typedDataCard.textualEditCard:
+        Designation1_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Polestar2"
-            Default: =ThisItem.Polestar2
+            DataField: ="Designation1"
+            Default: =ThisItem.Designation1
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Polestar2")
+            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Designation1")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Polestar2")
-            Required: =false
+            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Designation1")
+            Required: =true
+            Update: =DataCardValue5_1.Text
+            Width: =440
+            X: =1
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey6_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =34
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5_1 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =13
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey6_1.Y + DataCardKey6_1.Height + 5
+                ZIndex: =2
+
+            ErrorMessage6_1 As label:
+                AutoHeight: =true
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5_1.Y + DataCardValue5_1.Height
+                ZIndex: =3
+
+            StarVisible6_1 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey6_1.Height
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey6_1.Y
+                ZIndex: =4
+
+        "'Torch Bearers1_DataCard1' As typedDataCard.textualEditCard":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TorchBearers"
+            Default: =ThisItem.'Torch Bearers1'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TorchBearers")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "TorchBearers")
+            Required: =true
             Update: =DataCardValue8.Text
             Width: =440
             X: =0
-            Y: =6
+            Y: =2
             ZIndex: =1
 
-        Designation2_DataCard2 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Designation2"
-            Default: =ThisItem.Designation2
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Designation2")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Designation2")
-            Required: =false
-            Update: =DataCardValue24.Text
-            Width: =440
-            X: =1
-            Y: =6
-            ZIndex: =1
-
-            DataCardKey30 As label:
+            DataCardKey11 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -262,7 +424,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue24 As text:
+            DataCardValue8 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -286,10 +448,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey30.Y + DataCardKey30.Height + 5
+                Y: =DataCardKey11.Y + DataCardKey11.Height + 5
                 ZIndex: =2
 
-            ErrorMessage30 As label:
+            ErrorMessage11 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -304,20 +466,20 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue24.Y + DataCardValue24.Height
+                Y: =DataCardValue8.Y + DataCardValue8.Height
                 ZIndex: =3
 
-            StarVisible30 As label:
+            StarVisible11 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey30.Height
+                Height: =DataCardKey11.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey30.Y
+                Y: =DataCardKey11.Y
                 ZIndex: =4
 
         "'Torch Bearers2_DataCard1' As typedDataCard.textualEditCard":
@@ -328,16 +490,16 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TorchBearers2")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =111
+            Height: =50
             MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "TorchBearers2")
-            Required: =false
-            Update: =DataCardValue22.Text
+            Required: =true
+            Update: =DataCardValue9.Text
             Width: =440
-            X: =2
+            X: =1
             Y: =2
             ZIndex: =1
 
-            DataCardKey28 As label:
+            DataCardKey12 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -350,7 +512,7 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue22 As text:
+            DataCardValue9 As text:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
@@ -374,10 +536,10 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey28.Y + DataCardKey28.Height + 5
+                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
                 ZIndex: =2
 
-            ErrorMessage28 As label:
+            ErrorMessage12 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -392,20 +554,20 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue22.Y + DataCardValue22.Height
+                Y: =DataCardValue9.Y + DataCardValue9.Height
                 ZIndex: =3
 
-            StarVisible28 As label:
+            StarVisible12 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey28.Height
+                Height: =DataCardKey12.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey28.Y
+                Y: =DataCardKey12.Y
                 ZIndex: =4
 
         "'Torch Bearers3_DataCard1' As typedDataCard.textualEditCard":
@@ -421,8 +583,8 @@
             Required: =true
             Update: =DataCardValue25.Text
             Width: =440
-            X: =0
-            Y: =3
+            X: =2
+            Y: =2
             ZIndex: =1
 
             DataCardKey31 As label:
@@ -509,7 +671,7 @@
             Required: =true
             Update: =DataCardValue27.Text
             Width: =440
-            X: =1
+            X: =0
             Y: =3
             ZIndex: =1
 
@@ -597,7 +759,7 @@
             Required: =true
             Update: =DataCardValue23.Text
             Width: =440
-            X: =2
+            X: =1
             Y: =3
             ZIndex: =1
 
@@ -685,8 +847,8 @@
             Required: =true
             Update: =DataCardValue28.Text
             Width: =440
-            X: =0
-            Y: =4
+            X: =2
+            Y: =3
             ZIndex: =1
 
             DataCardKey35 As label:
@@ -848,375 +1010,23 @@
                 Y: =DataCardKey1.Y
                 ZIndex: =4
 
-        Polestar1_DataCard1 As typedDataCard.textualEditCard:
+        Image_DataCard1 As typedDataCard.addLargePictureCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
-            DataField: ="Polestar1"
-            Default: =ThisItem.Polestar1
+            DataField: ="Image"
+            Default: =ThisItem.Image
             DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Polestar1")
+            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Image")
             Fill: =RGBA(0, 0, 0, 0)
             Height: =50
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Polestar1")
             Required: =false
-            Update: =DataCardValue4.Text
+            Update: =Image21.Image
             Width: =440
             X: =0
-            Y: =1
-            ZIndex: =5
-
-            DataCardKey4 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue4 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                HoverBorderColor: =RGBA(0, 89, 178, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =13
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
-                ZIndex: =2
-
-            ErrorMessage4 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue4.Y + DataCardValue4.Height
-                ZIndex: =3
-
-            StarVisible4 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey4.Height
-                Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey4.Y
-                ZIndex: =4
-
-        Designation2_DataCard1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Designation2"
-            Default: =ThisItem.Designation2
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Designation2")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Designation2")
-            Required: =false
-            Update: =DataCardValue7.Text
-            Width: =440
-            X: =0
-            Y: =2
-            ZIndex: =5
-
-            DataCardKey9 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue7 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                HoverBorderColor: =RGBA(0, 89, 178, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =13
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey9.Y + DataCardKey9.Height + 5
-                ZIndex: =2
-
-            ErrorMessage9 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue7.Y + DataCardValue7.Height
-                ZIndex: =3
-
-            StarVisible9 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey9.Height
-                Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey9.Y
-                ZIndex: =4
-
-        Designation1_DataCard1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Designation1"
-            Default: =ThisItem.Designation1
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Designation1")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =144
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Designation1")
-            Required: =false
-            Update: =DataCardValue5.Text
-            Width: =440
-            X: =1
-            Y: =1
-            ZIndex: =5
-
-            DataCardKey6 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue5 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                HoverBorderColor: =RGBA(0, 89, 178, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =13
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey6.Y + DataCardKey6.Height + 5
-                ZIndex: =2
-
-            ErrorMessage6 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue5.Y + DataCardValue5.Height
-                ZIndex: =3
-
-            StarVisible6 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey6.Height
-                Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey6.Y
-                ZIndex: =4
-
-        Polestar2_DataCard1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Polestar2"
-            Default: =ThisItem.Polestar2
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Polestar2")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Polestar2")
-            Required: =false
-            Update: =DataCardValue6.Text
-            Width: =440
-            X: =2
-            Y: =1
-            ZIndex: =5
-
-            DataCardKey8 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue6 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                HoverBorderColor: =RGBA(0, 89, 178, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =13
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey8.Y + DataCardKey8.Height + 5
-                ZIndex: =2
-
-            ErrorMessage8 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue6.Y + DataCardValue6.Height
-                ZIndex: =3
-
-            StarVisible8 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey8.Height
-                Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey8.Y
-                ZIndex: =4
-
-        Image2_DataCard1 As typedDataCard.addLargePictureCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Image2"
-            Default: =ThisItem.Image2
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Image2")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =191
-            Required: =false
-            Update: =Image4.Image
-            Width: =440
-            X: =2
             Y: =4
             ZIndex: =5
 
-            DataCardKey10 As label:
+            DataCardKey15 As label:
                 AutoHeight: =true
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1226,33 +1036,33 @@
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
-                Y: =7
+                Y: =10
                 ZIndex: =1
 
-            Image4 As image:
+            Image21 As image:
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
-                Height: =AddPicture1.Height
-                Image: =If(IsBlank(AddPicture1.Media), Parent.Default, AddPicture1.Media)
+                Height: =AddPicture6.Height
+                Image: =If(IsBlank(AddPicture6.Media), Parent.Default, AddPicture6.Media)
                 Tooltip: =Parent.DisplayName
-                Width: =AddPicture1.Width
-                X: =AddPicture1.X
-                Y: =AddPicture1.Y
+                Width: =AddPicture6.Width
+                X: =AddPicture6.X
+                Y: =AddPicture6.Y
                 ZIndex: =2
 
-            AddPicture1 As addMedia:
+            AddPicture6 As addMedia:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(255, 255, 255, 1)
                 Height: =200
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =56
+                Y: =DataCardKey15.Y + DataCardKey15.Height + 5
                 ZIndex: =3
 
-            ErrorMessage10 As label:
+            ErrorMessage15 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1267,109 +1077,21 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =Image4.Y + Image4.Height
+                Y: =Image21.Y + Image21.Height
                 ZIndex: =4
 
-            StarVisible10 As label:
+            StarVisible15 As label:
                 Align: =Align.Center
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey10.Height
+                Height: =DataCardKey15.Height
                 Size: =13
                 Text: ="*"
                 Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
                 Width: =30
                 Wrap: =false
-                Y: =DataCardKey10.Y
+                Y: =DataCardKey15.Y
                 ZIndex: =5
-
-        "'Torch Bearers_DataCard1' As typedDataCard.textualEditCard":
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="TorchBearers"
-            Default: =ThisItem.'Torch Bearers1'
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TorchBearers")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =124
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "TorchBearers")
-            Required: =false
-            Update: =DataCardValue9.Text
-            Width: =440
-            X: =1
-            Y: =2
-            ZIndex: =5
-
-            DataCardKey12 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue9 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                HoverBorderColor: =RGBA(0, 89, 178, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =13
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey12.Y + DataCardKey12.Height + 5
-                ZIndex: =2
-
-            ErrorMessage12 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue9.Y + DataCardValue9.Height
-                ZIndex: =3
-
-            StarVisible12 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey12.Height
-                Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey12.Y
-                ZIndex: =4
 
         "'Guild Image_DataCard1' As typedDataCard.addLargePictureCard":
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -1383,8 +1105,8 @@
             Required: =false
             Update: =Image19.Image
             Width: =440
-            X: =0
-            Y: =5
+            X: =1
+            Y: =4
             ZIndex: =5
 
             DataCardKey13 As label:
@@ -1462,12 +1184,12 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Image1")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =146
             Required: =false
             Update: =Image20.Image
             Width: =440
-            X: =1
-            Y: =5
+            X: =2
+            Y: =1
             ZIndex: =5
 
             DataCardKey14 As label:
@@ -1488,15 +1210,15 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =Parent.DisplayMode
-                Height: =AddPicture5.Height
-                Image: =If(IsBlank(AddPicture5.Media), Parent.Default, AddPicture5.Media)
+                Height: =AddPicture5_1.Height
+                Image: =If(IsBlank(AddPicture5_1.Media), Parent.Default, AddPicture5_1.Media)
                 Tooltip: =Parent.DisplayName
-                Width: =AddPicture5.Width
-                X: =AddPicture5.X
-                Y: =AddPicture5.Y
+                Width: =AddPicture5_1.Width
+                X: =AddPicture5_1.X
+                Y: =AddPicture5_1.Y
                 ZIndex: =2
 
-            AddPicture5 As addMedia:
+            AddPicture5_1 As addMedia:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(255, 255, 255, 1)
@@ -1537,89 +1259,6 @@
                 Y: =DataCardKey14.Y
                 ZIndex: =5
 
-        Image_DataCard1 As typedDataCard.addLargePictureCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Image"
-            Default: =ThisItem.Image
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Image")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            Required: =false
-            Update: =Image21.Image
-            Width: =440
-            X: =1
-            Y: =4
-            ZIndex: =5
-
-            DataCardKey15 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            Image21 As image:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                Height: =AddPicture6.Height
-                Image: =If(IsBlank(AddPicture6.Media), Parent.Default, AddPicture6.Media)
-                Tooltip: =Parent.DisplayName
-                Width: =AddPicture6.Width
-                X: =AddPicture6.X
-                Y: =AddPicture6.Y
-                ZIndex: =2
-
-            AddPicture6 As addMedia:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                Fill: =RGBA(255, 255, 255, 1)
-                Height: =200
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey15.Y + DataCardKey15.Height + 5
-                ZIndex: =3
-
-            ErrorMessage15 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =Image21.Y + Image21.Height
-                ZIndex: =4
-
-            StarVisible15 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey15.Height
-                Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey15.Y
-                ZIndex: =5
-
         Attachments_DataCard1 As typedDataCard.attachmentsEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1633,7 +1272,7 @@
             Update: =DataCardValue11.Attachments
             Width: =440
             X: =2
-            Y: =5
+            Y: =4
             ZIndex: =5
 
             DataCardKey17 As label:
