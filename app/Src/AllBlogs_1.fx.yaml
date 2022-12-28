@@ -3,6 +3,7 @@
     OnVisible: |-
         =Refresh(Blog);
         ClearCollect(UserCommunity, Filter(User, Name=User().FullName));
+        SortByColumns(UserCommunity, "Communities", Ascending);
 
     RectQuickActionBar6 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)

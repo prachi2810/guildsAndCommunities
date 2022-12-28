@@ -174,7 +174,7 @@
                         );
                         Notify("Activity has been approved!");
                         Refresh('Event Track Details');
-                        ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+                        ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending" && Teams_Channel_Name=Dropdown6.Selected.Communities));
                         
                         Patch(User, LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name), {
                             Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
@@ -291,7 +291,7 @@
                 Icon: =Icon.Reload
                 OnSelect: |-
                     =Refresh('Event Track Details');
-                    ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+                    ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending" && Teams_Channel_Name=Dropdown6.Selected.Communities));
                     Notify("List has been refreshed!");
                 Width: =50
                 X: =1258
@@ -311,6 +311,9 @@
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 Items: =EventStatusAdmin
+                OnChange: |-
+                    =ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending" && Teams_Channel_Name=Dropdown6.Selected.Communities
+                    ));
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(0, 51, 102, 1)
