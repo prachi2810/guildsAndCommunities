@@ -58,7 +58,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =145
             Width: =1366
             X: =0
             Y: =0
@@ -72,9 +72,9 @@
                 Height: =60
                 Size: =18
                 Text: =data.'Created By'.DisplayName
-                Width: =185
+                Width: =265
                 X: =123
-                Y: =15
+                Y: =30
                 ZIndex: =1
 
             Image17 As image:
@@ -87,7 +87,7 @@
                 RadiusTopLeft: =50
                 RadiusTopRight: =50
                 X: =23
-                Y: =15
+                Y: =30
                 ZIndex: =2
 
             Label16 As label:
@@ -110,8 +110,8 @@
                 Size: =28
                 Text: =data.Title
                 Width: =978
-                X: =326
-                Y: =15
+                X: =331
+                Y: =30
                 ZIndex: =4
 
         DataCard20 As dataCard.blankCard:
@@ -200,7 +200,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =370
+            Height: =405
             Width: =1366
             X: =0
             Y: =1
@@ -211,8 +211,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =351
-                Image: =data.Image.Large
-                ImagePosition: =ImagePosition.Fill
+                Image: =If(!IsBlank(data.Image.Large), data.Image, SampleImage)
                 Width: =1310
                 X: =21
                 Y: =18
@@ -348,8 +347,8 @@
             =Navigate(editBlog,ScreenTransition.Cover,{data:data})
         Visible: =If(data.'Created By'.Email=User().Email,true,false)
         Width: =50
-        X: =74
-        Y: =20
+        X: =1221
+        Y: =19
         ZIndex: =4
 
     Icon12 As icon.Trash:
@@ -445,15 +444,14 @@
         Y: =286
         ZIndex: =10
 
-    Icon20 As icon.BackArrow:
+    Icon25 As icon.ArrowLeft:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        Height: =54
-        Icon: =Icon.BackArrow
+        Icon: =Icon.ArrowLeft
         OnSelect: =Navigate(allBlogs)
-        Width: =52
-        Y: =15
-        ZIndex: =11
+        X: =25
+        Y: =12
+        ZIndex: =12
 

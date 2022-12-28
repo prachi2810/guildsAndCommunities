@@ -27,7 +27,7 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =128
-            Image: =ThisItem.Image
+            Image: =If(!IsBlank(ThisItem.Image), ThisItem.Image, SampleImage)
             OnSelect: =Select(Parent)
             Width: =128
             X: =16
@@ -66,30 +66,8 @@
             VerticalAlign: =VerticalAlign.Top
             Width: =Title4.Width
             X: =Title4.X
-            Y: =105
+            Y: =87
             ZIndex: =3
-
-        NextArrow1 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =60
-            Icon: =Icon.ChevronRight
-            OnSelect: |-
-                =Select(Parent);
-                Navigate(detailBlog,ScreenTransition.Cover,{data:Gallery4.Selected})
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="View item details"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
 
         Separator1 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -100,6 +78,24 @@
             Y: =145
             ZIndex: =5
 
+        Button2 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(54, 176, 75, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: |-
+                =Select(Parent);
+                Select(Parent);
+                Navigate(detailBlog,ScreenTransition.Cover,{data:Gallery4.Selected})
+            Size: =15
+            Text: ="Read Blog"
+            X: =1110
+            Y: =47
+            ZIndex: =6
+
     Icon14 As icon.Search:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)
@@ -108,7 +104,7 @@
         Height: =49
         Icon: =Icon.Search
         Width: =50
-        X: =123
+        X: =58
         Y: =131
         ZIndex: =4
 
@@ -129,8 +125,8 @@
         HoverFill: =RGBA(153, 205, 255, 1)
         Size: =20
         Width: =359
-        X: =201
-        Y: =131
+        X: =143
+        Y: =130
         ZIndex: =5
 
     Button11 As button:
@@ -146,8 +142,8 @@
         Size: =15
         Text: ="Create Blog"
         Width: =190
-        X: =1139
-        Y: =131
+        X: =1109
+        Y: =130
         ZIndex: =6
 
     Timer1_1 As timer:

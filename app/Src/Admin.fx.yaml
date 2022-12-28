@@ -542,17 +542,17 @@
                     Y: =0
                     ZIndex: =14
 
-    Label31 As label:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        FontWeight: =FontWeight.Bold
-        Height: =25
-        Text: ="Members Per Guild"
-        Width: =207
-        X: =558
-        Y: =468
-        ZIndex: =15
+            Label31 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =25
+                Text: ="Members Per Guild"
+                Width: =207
+                X: =528
+                Y: =32
+                ZIndex: =2
 
     NavBarGr_2 As group:
         Height: =5
