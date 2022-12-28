@@ -1072,7 +1072,7 @@
             Height: =68
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-            OnSelect: =Navigate(Dashboard)
+            OnSelect: =true
             PaddingTop: =0
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
