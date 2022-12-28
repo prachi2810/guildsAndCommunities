@@ -309,7 +309,7 @@
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-            OnSelect: =Navigate(Dashboard)
+            OnSelect: =true
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -320,28 +320,6 @@
             X: =654
             Y: =3
             ZIndex: =24
-
-        Button20_9 As button:
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =70
-            HoverColor: =RGBA(255, 255, 255, 1)
-            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-            OnSelect: =Navigate(Admin)
-            RadiusBottomLeft: =0
-            RadiusBottomRight: =0
-            RadiusTopLeft: =0
-            RadiusTopRight: =0
-            Size: =15
-            Text: ="Admin Center"
-            Visible: =If(LookUp(User, Email=User().Email).Role = "admin", true, false)
-            Width: =155
-            X: =809
-            Y: =3
-            ZIndex: =25
 
         Button20_7 As button:
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -503,4 +481,55 @@
             X: =40
             Y: =106
             ZIndex: =4
+
+    Icon3_7 As icon.ChevronDown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =16
+        Icon: =Icon.ChevronDown
+        OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
+        Width: =27
+        X: =787
+        Y: =28
+        ZIndex: =31
+
+    DtopDownDash_2 As group:
+        Height: =5
+        Width: =5
+        X: =20
+        Y: =20
+        ZIndex: =32
+
+        Rectangle6_2 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            Height: =55
+            Visible: =DropDownDashboard
+            X: =648
+            Y: =69
+            ZIndex: =29
+
+        Button5_5 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(4, 42, 61, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =51
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+            OnSelect: =Navigate(Admin)
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =15
+            Text: ="Admin Center"
+            Visible: =DropDownDashboard
+            Width: =150
+            X: =648
+            Y: =73
+            ZIndex: =30
 
