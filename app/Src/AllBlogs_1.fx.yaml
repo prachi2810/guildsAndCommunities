@@ -1,6 +1,8 @@
 "allBlogs As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =Refresh(Blog)
+    OnVisible: |-
+        =Refresh(Blog);
+        ClearCollect(UserCommunity, Filter(User, Name=User().FullName));
 
     RectQuickActionBar6 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -12,8 +14,10 @@
     "Gallery4 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
         Height: =543
-        Items: |
-            =Search(Blog, TextInput6.Text, "Title")
+        Items: |-
+            =/*Search(Blog, TextInput6.Text, "Title")*/
+            /*Filter(Blog, Tags=Dropdown1.Selected.Communities);*/
+            If(!IsBlank(TextInput6.Text), Search(Filter(Blog, Tags=Dropdown1.Selected.Communities), TextInput6.Text, "Title") , Filter(Blog, Tags=Dropdown1.Selected.Communities))
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =146
@@ -62,7 +66,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.'Created By'.DisplayName
+            Text: =ThisItem.ID
             VerticalAlign: =VerticalAlign.Top
             Width: =Title4.Width
             X: =Title4.X
@@ -145,20 +149,6 @@
         X: =1109
         Y: =130
         ZIndex: =6
-
-    Timer1_1 As timer:
-        AutoStart: =true
-        Duration: =50
-        Fill: =RGBA(0, 51, 102, 1)
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnTimerEnd: |-
-            =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Guild,ID=Value(Param("guild")))}))
-        Text: =Text("Timer")
-        Visible: =false
-        X: =20
-        Y: =246
-        ZIndex: =27
 
     NavBarGr_3 As group:
         Height: =5
@@ -494,6 +484,27 @@
         X: =787
         Y: =28
         ZIndex: =31
+
+    Dropdown1 As dropdown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =UserCommunity
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        X: =617
+        Y: =135
+        ZIndex: =32
 
     DtopDownDash_2 As group:
         Height: =5

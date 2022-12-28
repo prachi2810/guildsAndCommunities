@@ -142,12 +142,14 @@
             Patch(Community_1, LookUp(Community_1, Title=Dropdown2.Selected.Title), {
                 Blogs: LookUp(Community_1, Title=Dropdown2.Selected.Title).Blogs + 1
             });
+            
             Patch(Blog,Defaults(Blog),{
                 Title:title.Text,
                 Content:content.HtmlText,
                 Image:Image8.Image,
                 Tags: Dropdown2.Selected.Title
             });
+            
             Notify("Blog Successfully Posted!");
             Navigate(allBlogs)
         Size: =15
