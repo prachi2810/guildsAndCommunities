@@ -462,8 +462,7 @@
                 OnSelect: =Set(AllGuilds,true)
                 Size: =18
                 Text: ="See All"
-                X: =780
-                Y: =542
+                X: =22
                 ZIndex: =18
 
         DataCard3 As dataCard.blankCard:
@@ -1310,21 +1309,22 @@
 
     Container3 As groupContainer.manualLayoutContainer:
         Fill: =RGBA(237, 237, 237, 1)
-        Height: =692
+        Height: =564
         Visible: =AllGuilds
-        Width: =1348
-        Y: =76
+        Width: =1062
+        X: =81
+        Y: =127
         ZIndex: =38
 
         "Gallery9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
             BorderColor: =RGBA(0, 89, 178, 1)
-            Height: =593
+            Height: =447
             Items: =Guild
             Layout: =Layout.Vertical
             TemplatePadding: =0
             TemplateSize: =Min(96, Self.Height - 60)
-            Width: =1088
-            X: =92
+            Width: =1044
+            X: =4
             Y: =66
             ZIndex: =1
 
@@ -1380,11 +1380,11 @@
             Color: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =34
+            Height: =38
             Icon: =Icon.CancelBadge
             OnSelect: =Set(AllGuilds,false)
-            Width: =48
-            X: =1300
+            Width: =46
+            X: =1016
             Y: =2
             ZIndex: =2
 
