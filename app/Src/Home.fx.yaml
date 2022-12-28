@@ -1318,12 +1318,12 @@
 
         "Gallery9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
             BorderColor: =RGBA(0, 89, 178, 1)
-            Height: =494
+            Height: =474
             Items: =Guild
             Layout: =Layout.Vertical
             TemplatePadding: =0
             TemplateSize: =Min(96, Self.Height - 60)
-            Width: =1062
+            Width: =1047
             Y: =52
             ZIndex: =1
 
@@ -1353,7 +1353,9 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =60
                 Icon: =Icon.ChevronRight
-                OnSelect: =Select(Parent)
+                OnSelect: |-
+                    =Select(Parent);
+                    Navigate(Community,Cover,{data:galPaginated.Selected});
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
