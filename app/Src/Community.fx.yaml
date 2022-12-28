@@ -169,7 +169,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =152
-                Image: ='Anand V'
+                Image: =data.TorchImage1
                 Width: =182
                 X: =162
                 Y: =101
@@ -180,7 +180,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
-                Image: ='sanjeev korupolu'
+                Image: =data.TorchImage3
                 Width: =150
                 X: =1017
                 Y: =101
@@ -191,7 +191,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
-                Image: ='Harshal Jawale'
+                Image: =data.TorchImage2
                 Width: =167
                 X: =600
                 Y: =97
@@ -204,9 +204,9 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =42
                 Size: =15
-                Text: ="Harshal Jawale"
+                Text: =data.'Torch Bearers2'
                 Width: =248
-                X: =600
+                X: =589
                 Y: =249
                 ZIndex: =18
 
@@ -217,7 +217,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =42
                 Size: =15
-                Text: ="Sanjeev Korupolu"
+                Text: =data.'Torch Bearers3'
                 Width: =186
                 X: =1001
                 Y: =253
@@ -230,7 +230,7 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =42
                 Size: =15
-                Text: ="Anand Vishyampan"
+                Text: =data.'Torch Bearers1'
                 Width: =248
                 X: =162
                 Y: =253
