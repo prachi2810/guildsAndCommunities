@@ -454,6 +454,18 @@
                 Y: =557
                 ZIndex: =17
 
+            Label43 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                OnSelect: =Set(AllGuilds,true)
+                Size: =18
+                Text: ="See All"
+                X: =780
+                Y: =542
+                ZIndex: =18
+
         DataCard3 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -1295,6 +1307,86 @@
             X: =81
             Y: =115
             ZIndex: =34
+
+    Container3 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =692
+        Visible: =AllGuilds
+        Width: =1348
+        Y: =76
+        ZIndex: =38
+
+        "Gallery9 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Height: =593
+            Items: =Guild
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(96, Self.Height - 60)
+            Width: =1088
+            X: =92
+            Y: =66
+            ZIndex: =1
+
+            Title18 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.Title
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 104
+                X: =32
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            NextArrow6 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent)
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =2
+
+            Separator9 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Fill: =RGBA(0, 89, 178, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =3
+
+        Icon20 As icon.CancelBadge:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =34
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(AllGuilds,false)
+            Width: =48
+            X: =1300
+            Y: =2
+            ZIndex: =2
 
     DtopDownDash As group:
         Height: =5
