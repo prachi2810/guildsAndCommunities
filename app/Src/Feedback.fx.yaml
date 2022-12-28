@@ -92,9 +92,9 @@ Feedback As screen:
                 'Approved/Rejected By': TextInput3_1.Text,
                 Status: "Rejected"
             });
+            Office365Outlook.SendEmail(LookUp(User, Name=data.MemberName).Email , "Activity Rejected", (PlainText(RichTextEditor1.HtmlText) & " Rejected By: " & TextInput3_1.Text & " " & "Date: " & DatePicker1.SelectedDate));
             Notify("Activity has been rejected!");
             Reset(RichTextEditor1);
-            Office365Outlook.SendEmail(LookUp(User, Name=data.MemberName).Email , "Activity Rejected", (PlainText(RichTextEditor1.HtmlText) & "<br>" & "Rejected By: " & TextInput1_1.Text & "<br>" & "Date: " & DatePicker1.SelectedDate));
             Navigate(Admin);
         Size: =15
         Text: ="Submit"
