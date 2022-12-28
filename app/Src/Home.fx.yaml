@@ -1,31 +1,7 @@
 "Home As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     BackgroundImage: =
     OnVisible: |-
-        =/*resets calendar view and date selection to today*/
-        ClearCollect(colHorizontalMenu,
-        
-        {Title:"Home",Screen:Home, Id:1, ParentTab: ""},
-        
-        {Title:"Insights",Screen:Blank(), Id:2, ParentTab: ""},
-        {Title:"White Paper",Screen:WhitePapers, Id:2, ParentTab: "Blog"},
-        {Title:"Blog",Screen:allBlogs, Id:2, ParentTab: "Blog"},
-        {Title:"Case Study",Screen:createBlog, Id:2, ParentTab: "Blog"},
-        {Title:"E-learning",Screen:createBlog, Id:2, ParentTab: "Blog"},
-        
-        
-        {Title:"FAQs",Screen: FAQs,Id:3, ParentTab: ""},
-        
-        
-        {Title:"Templates",Screen:Community, Id:4, ParentTab: ""},
-        
-        
-        {Title:"Dashboard",Screen:Dashboard, Id:5, ParentTab: ""}
-        
-        );
-        
-        Set(varMenuPrimaryColor, RGBA(4, 42, 61, 1));
-        Set(varMenuSecondaryColor, RGBA(4, 166, 235, 1));
-        Set(varTabSelected, 1);
+        =UpdateContext({varPageNumber:1});
         Set(_dateSelected, Today());
         Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
         Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
@@ -151,20 +127,20 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =585
+            Height: =620
             Width: =1366
             X: =0
             Y: =2
             ZIndex: =6
 
-            "Gallery1 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+            "galPaginated As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Height: =556
-                Items: =Guild
+                Items: =If(varPageNumber=1, FirstN(Guild,ddPageSize.SelectedText.Value*varPageNumber), LastN(FirstN(Guild,ddPageSize.SelectedText.Value*varPageNumber), ddPageSize.SelectedText.Value*1))
                 TemplatePadding: =0
                 TemplateSize: =296
                 Width: =902
-                X: =38
+                X: =5
                 ZIndex: =1
 
                 Image3 As image:
@@ -223,7 +199,7 @@
                     Icon: =Icon.NextArrow
                     OnSelect: |-
                         =Select(Parent);
-                        Navigate(Community,Cover,{data:Gallery1.Selected});
+                        Navigate(Community,Cover,{data:galPaginated.Selected});
                     Width: =44
                     X: =252
                     Y: =451
@@ -254,8 +230,7 @@
                 Icon: =Icon.AddUser
                 OnSelect: =Navigate('Guild Form')
                 Width: =49
-                X: =853
-                Y: =23
+                X: =858
                 ZIndex: =8
 
             LblMonthSelected1_1 As label:
@@ -422,6 +397,62 @@
                     Width: =60
                     Wrap: =false
                     ZIndex: =3
+
+            ddPageSize As dropdown:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Items: =["3","10","20"]
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                SelectionFill: =RGBA(0, 51, 102, 1)
+                Size: =13
+                Visible: =false
+                Width: =78
+                X: =22
+                ZIndex: =14
+
+            btnPrevious As arrow.backArrow:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =If(varPageNumber = 1, Disabled, Edit)
+                Fill: =RGBA(0, 51, 102, 1)
+                OnSelect: |-
+                    =UpdateContext({varPageNumber: varPageNumber - 1})
+                X: =329
+                Y: =557
+                ZIndex: =15
+
+            lblPagination As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =32
+                Size: =13
+                Text: =varPageNumber & " of " & RoundUp(CountRows(Guild)/ddPageSize.SelectedText.Value,0)
+                Width: =80
+                X: =416
+                Y: =566
+                ZIndex: =16
+
+            btnNext As arrow:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =If(ddPageSize.SelectedText.Value*varPageNumber<CountRows(Guild), DisplayMode.Edit,Disabled)
+                Fill: =RGBA(0, 51, 102, 1)
+                OnSelect: |-
+                    =UpdateContext({varPageNumber: varPageNumber + 1})
+                X: =522
+                Y: =557
+                ZIndex: =17
 
         DataCard3 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -674,13 +705,15 @@
         AutoStart: =true
         Duration: =50
         Fill: =RGBA(0, 51, 102, 1)
+        Height: =55
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnTimerEnd: |-
             =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Guild,ID=Value(Param("guild")))}))
         Text: =Text("Timer")
         Visible: =false
-        Y: =226
+        X: =17
+        Y: =116
         ZIndex: =14
 
     Group1 As group:
