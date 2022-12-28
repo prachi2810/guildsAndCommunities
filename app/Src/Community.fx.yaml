@@ -233,7 +233,7 @@
                 Text: =data.'Torch Bearers1'
                 Width: =248
                 X: =162
-                Y: =253
+                Y: =268
                 ZIndex: =20
 
         DataCard25 As dataCard.blankCard:
@@ -367,19 +367,6 @@
                 Y: =52
                 ZIndex: =3
 
-            Icon2_7 As icon.Link:
-                BorderColor: =RGBA(0, 18, 107, 1)
-                Color: =RGBA(0, 18, 107, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =44
-                Icon: =Icon.Link
-                OnSelect: =Launch(communities.'Know More')
-                Width: =41
-                X: =467
-                Y: =202
-                ZIndex: =4
-
             Button1_7 As button:
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -469,7 +456,7 @@
                 Y: =246
                 ZIndex: =11
 
-            Label14_7 As label:
+            Label14_8 As label:
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -477,9 +464,22 @@
                 Size: =18
                 Text: ="Know More about Community"
                 Width: =289
-                X: =324
-                Y: =169
-                ZIndex: =12
+                X: =301
+                Y: =172
+                ZIndex: =13
+
+            Icon2_9 As icon.Link:
+                BorderColor: =RGBA(0, 18, 107, 1)
+                Color: =RGBA(0, 18, 107, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =44
+                Icon: =Icon.Link
+                OnSelect: =Launch(communities.'Know More')
+                Width: =41
+                X: =450
+                Y: =197
+                ZIndex: =14
 
     Label12 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
