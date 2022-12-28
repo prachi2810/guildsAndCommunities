@@ -1,6 +1,8 @@
 "Admin As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |-
-        =ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending"));
+    OnVisible: |+
+        =ClearCollect(EventStatusAdmin, Filter(User, Email=User().Email && Role="admin"));
+        ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending" && Teams_Channel_Name=Dropdown6.Selected.Communities
+        ));
         ClearCollect(
             BlogsPerMonth,
             DropColumns(
@@ -51,6 +53,7 @@
         ClearCollect(TopFiveUsers, FirstN(SortByColumns(Ranks, "No", Ascending), 5));
         ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));
         ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 3));
+        
 
     RectQuickActionBar9 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -294,6 +297,27 @@
                 X: =1258
                 Y: =282
                 ZIndex: =6
+
+            Dropdown6 As dropdown:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Items: =EventStatusAdmin
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                SelectionFill: =RGBA(0, 51, 102, 1)
+                Size: =13
+                X: =980
+                Y: =201
+                ZIndex: =7
 
         DataCard22 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)

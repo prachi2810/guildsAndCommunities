@@ -100,7 +100,7 @@
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 Items: |
-                    =Community_1
+                    =UserCommunity
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(0, 51, 102, 1)
@@ -130,7 +130,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
-            =If(LookUp(User, Email=User().Email, true), 
+            =/*If(LookUp(User, Email=User().Email, true), 
                 Patch(User,LookUp(User, Email=User().Email), { Points: LookUp(User, Email=User().Email).Points + 100 }),
                 Patch(User,Defaults(User), {
                     Title: User().FullName,
@@ -138,7 +138,18 @@
                     Email: User().Email,
                     Points: 100
                 })
-            );
+            );*/
+            
+            Patch('Event Track Details',Defaults('Event Track Details'), {
+                Title: "Creating white papers/ blogs",
+                Count: 25,
+                'DateofEvent ': Now(),
+                EventId: LookUp(Points, Title="Creating white papers/ blogs").ID,
+                MemberName: User().FullName,
+                Status: "Pending",
+                Teams_Channel_Name: Dropdown2.Selected.Communities
+            });
+            
             Patch(Community_1, LookUp(Community_1, Title=Dropdown2.Selected.Title), {
                 Blogs: LookUp(Community_1, Title=Dropdown2.Selected.Title).Blogs + 1
             });
@@ -147,7 +158,7 @@
                 Title:title.Text,
                 Content:content.HtmlText,
                 Image:Image8.Image,
-                Tags: Dropdown2.Selected.Title
+                Tags: Dropdown2.Selected.Communities
             });
             
             Notify("Blog Successfully Posted!");
