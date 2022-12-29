@@ -334,7 +334,9 @@
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =60
                     Icon: =Icon.ChevronRight
-                    OnSelect: =Select(Parent)
+                    OnSelect: |
+                        =Select(Parent);
+                        Navigate(Community,Cover,Gallery1.Selected)
                     PaddingBottom: =10
                     PaddingLeft: =10
                     PaddingRight: =10
@@ -354,6 +356,16 @@
                     Width: =Parent.TemplateWidth
                     Y: =Parent.TemplateHeight - 1
                     ZIndex: =3
+
+            Label49 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Size: =13
+                Text: ="Text"
+                X: =964
+                Y: =580
+                ZIndex: =20
 
         DataCard3 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -613,8 +625,8 @@
             =If(Not(IsBlank(Param("guild"))),Navigate(Community,ScreenTransition.Cover,{data:LookUp(Guild,ID=Value(Param("guild")))}))
         Text: =Text("Timer")
         Visible: =false
-        X: =17
-        Y: =116
+        X: =1090
+        Y: =648
         ZIndex: =14
 
     Group1 As group:

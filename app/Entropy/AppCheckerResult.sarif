@@ -571,6 +571,326 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard2_1.Image3_1.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard2_1.Image3_1.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".'Polestar Image'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard2_1.Image3_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Polestar Image"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard2_1.Label19.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard2_1.Label19.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 16,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".FullDescription"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard2_1.Label19"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "FullDescription"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard23.Label6_4.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard23.Label6_4.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".'Torch Bearers2'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard23.Label6_4"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Torch Bearers2"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard23.Label6_5.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard23.Label6_5.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".'Torch Bearers3'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard23.Label6_5"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Torch Bearers3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard23.Label6_7.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard23.Label6_7.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".'Torch Bearers1'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard23.Label6_7"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Torch Bearers1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard25.Label9_3.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard25.Label9_3.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".'Trend Setters2'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard25.Label9_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Trend Setters2"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard25.Label9_2.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard25.Label9_2.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".'Trend Setters3'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard25.Label9_2"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Trend Setters3"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard25.Label9_1.Text"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard25.Label9_1.Text",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 17,
+                  "charOffset": 4,
+                  "snippet": {
+                    "text": ".'Trend Setters1'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Text",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard25.Label9_1"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Trend Setters1"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "About.TextInput1.AccessibleLabel"
                 }
               ],
@@ -7795,6 +8115,876 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 10
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Author"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Author",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Author",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.ComplianceAssetId"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.ComplianceAssetId",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ComplianceAssetId",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Created"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Created",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Created",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Date"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Date",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Date",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Description"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Description",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Description",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Editor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Editor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Editor",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Guild"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Guild",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Guild",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.ID"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.ID",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ID",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Modified"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Modified",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Modified",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Name"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Name",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Name",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.NextArrow3"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.NextArrow3",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "NextArrow3",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Separator4"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Separator4",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Separator4",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Title"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Title",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Title",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Title15"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Title15",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Title15",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{Attachments}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{Attachments}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{Attachments}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{FilenameWithExtension}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{FilenameWithExtension}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{FilenameWithExtension}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{FullPath}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{FullPath}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{FullPath}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{HasAttachments}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{HasAttachments}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{HasAttachments}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{Identifier}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{Identifier}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{Identifier}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{IsFolder}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{IsFolder}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{IsFolder}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{Link}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{Link}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{Link}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{ModerationComment}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{ModerationComment}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{ModerationComment}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{ModerationStatus}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{ModerationStatus}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{ModerationStatus}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{Name}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{Name}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{Name}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{Path}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{Path}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{Path}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{Thumbnail}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{Thumbnail}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{Thumbnail}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{TriggerWindowEndToken}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{TriggerWindowEndToken}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{TriggerWindowEndToken}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{TriggerWindowStartToken}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{TriggerWindowStartToken}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{TriggerWindowStartToken}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.{VersionNumber}"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.{VersionNumber}",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "{VersionNumber}",
+                "module": "Community",
+                "type": "Community"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 8
         }
       ],
       "tool": {
