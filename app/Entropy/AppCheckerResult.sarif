@@ -3331,19 +3331,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Label44.TabIndex"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Icon31.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Label44.TabIndex",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Icon31.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "Community",
-                "type": "Community.Canvas1_1.DataCard33.Gallery3.Label44"
+                "type": "Community.Canvas1_1.DataCard33.Gallery3.Icon31"
               }
             }
           ],
@@ -3361,19 +3361,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Label44.FocusedBorderThickness"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Icon31.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Label44.FocusedBorderThickness",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Icon31.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "FocusedBorderThickness",
+                "member": "AccessibleLabel",
                 "module": "Community",
-                "type": "Community.Canvas1_1.DataCard33.Gallery3.Label44"
+                "type": "Community.Canvas1_1.DataCard33.Gallery3.Icon31"
               }
             }
           ],
@@ -3383,8 +3383,8 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 7
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [

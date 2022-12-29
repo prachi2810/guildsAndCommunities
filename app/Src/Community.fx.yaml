@@ -320,23 +320,34 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =205
+            Height: =428
             Width: =1366
             X: =0
-            Y: =4
+            Y: =3
             ZIndex: =9
 
             Gallery3 As gallery.galleryHorizontal:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderThickness: =2
                 Fill: =RGBA(241, 241, 241, 1)
-                Height: =362
+                Height: =374
                 Items: =GuildCommunities
                 TemplateSize: =338
                 Width: =1272
                 X: =40
                 Y: =40
                 ZIndex: =1
+
+                Rectangle7 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 1)
+                    BorderThickness: =2
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =340
+                    OnSelect: =Select(Parent)
+                    Width: =308
+                    X: =16
+                    Y: =12
+                    ZIndex: =1
 
                 Label40 As label:
                     BorderColor: =RGBA(0, 89, 178, 1)
@@ -349,8 +360,8 @@
                     Text: =ThisItem.Title
                     Width: =250
                     X: =40
-                    Y: =25
-                    ZIndex: =1
+                    Y: =29
+                    ZIndex: =2
 
                 Label41 As label:
                     BorderColor: =RGBA(0, 89, 178, 1)
@@ -361,8 +372,8 @@
                     Size: =13
                     Text: =ThisItem.Members & " Members"
                     X: =40
-                    Y: =80
-                    ZIndex: =2
+                    Y: =95
+                    ZIndex: =3
 
                 Label44 As label:
                     BorderColor: =RGBA(0, 89, 178, 1)
@@ -370,13 +381,13 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =92
-                    OnSelect: =Launch(ThisItem.'Know More');
+                    OnSelect: =
                     Size: =13
                     Text: ="Know more about the community"
-                    Width: =250
+                    Width: =224
                     X: =40
-                    Y: =197
-                    ZIndex: =3
+                    Y: =212
+                    ZIndex: =4
 
                 Label45 As label:
                     BorderColor: =RGBA(0, 89, 178, 1)
@@ -388,8 +399,8 @@
                     Text: ="Please reach out " & ThisItem.Title & " for more details"
                     Width: =250
                     X: =40
-                    Y: =132
-                    ZIndex: =4
+                    Y: =147
+                    ZIndex: =5
 
                 Icon30 As icon.Link:
                     BorderColor: =RGBA(0, 89, 178, 1)
@@ -400,9 +411,58 @@
                     Icon: =Icon.Link
                     OnSelect: =Select(Parent)
                     Width: =35
-                    X: =290
-                    Y: =136
-                    ZIndex: =5
+                    X: =278
+                    Y: =167
+                    ZIndex: =6
+
+                Icon31 As icon.Link:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 89, 178, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(244, 244, 244, 1)
+                    Height: =45
+                    Icon: =Icon.Link
+                    OnSelect: =Launch(ThisItem.'Know More');
+                    Width: =35
+                    X: =278
+                    Y: =235
+                    ZIndex: =7
+
+                Button13 As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(0, 51, 102, 1)
+                    FontWeight: =FontWeight.Semibold
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                    OnSelect: |-
+                        =Patch(User, Defaults(User), {
+                            Name: User().FullName,
+                            Email: User().Email,
+                            Guild: data.Title,
+                            Communities: ThisItem.Title
+                        });
+                        
+                        Patch(Community_1, LookUp(Community_1, Title=ThisItem.Title), {
+                            Members: LookUp(Community_1, Title=ThisItem.Title).Members + 1
+                        });
+                        
+                        Patch(Guild, LookUp(Guild, Title=data.Title), {
+                            Members: LookUp(Guild, Title=data.Title).Members + 1
+                        });
+                        
+                        Launch(ThisItem.'Link To Join');
+                    RadiusBottomLeft: =50
+                    RadiusBottomRight: =50
+                    RadiusTopLeft: =50
+                    RadiusTopRight: =50
+                    Size: =15
+                    Text: ="Request To Join"
+                    Width: =180
+                    X: =75
+                    Y: =304
+                    ZIndex: =8
 
     Label12 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -423,7 +483,7 @@
         Size: =13
         Text: =LookUp(Guild, Title=data.Title).Members & " Members"
         X: =24
-        Y: =56
+        Y: =63
         ZIndex: =8
 
     Icon18 As icon.ArrowLeft:
