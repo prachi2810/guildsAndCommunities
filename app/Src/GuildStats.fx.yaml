@@ -209,7 +209,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     Height: =296
-                    Image: =LookUp(User, 'Created By'=ThisItem.Name).'Created By'.Picture
+                    Image: =LookUp(User, 'Created By'.DisplayName=ThisItem.Name).'Created By'.Picture
                     OnSelect: =Select(Parent)
                     RadiusBottomLeft: =204
                     RadiusBottomRight: =204
