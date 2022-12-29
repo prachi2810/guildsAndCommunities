@@ -303,7 +303,14 @@
           "FontWeight",
           "Align",
           "VerticalAlign",
-          "X",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "",
+            "InvariantPropertyName": "X",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           "Y",
           {
             "AFDDataSourceName": "",
@@ -506,7 +513,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "250",
+            "InvariantScript": "203",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -872,7 +879,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "395",
+            "InvariantScript": "331",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1238,7 +1245,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "523",
+            "InvariantScript": "459",
             "Property": "X",
             "RuleProviderType": "Unknown"
           },
@@ -1382,7 +1389,7 @@
       "Blog",
       "Dashboard"
     ],
-    "LastModifiedTimestamp": "638079286335576849",
+    "LastModifiedTimestamp": "638079300426088442",
     "Name": "Component1",
     "Rules": [
       {
@@ -1487,7 +1494,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638079286335576849",
+  "LastModifiedTimestamp": "638079300426088442",
   "Name": "62dc4f1561b4448e901618e4647b41b4",
   "OverridableProperties": {},
   "Version": "638059060512558886"

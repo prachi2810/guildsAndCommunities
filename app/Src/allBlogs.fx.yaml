@@ -5,6 +5,7 @@
         ClearCollect(UserCommunity, { Communities: "All" });
         Collect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
         SortByColumns(UserCommunity, "Communities", Ascending);
+        Set(DropDownDashboard,false);
 
     RectQuickActionBar6 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)

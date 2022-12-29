@@ -1,5 +1,5 @@
 "Admin As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    OnVisible: |+
+    OnVisible: |
         =ClearCollect(EventStatusAdmin, Filter(User, Email=User().Email && Role="admin"));
         ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending" && Teams_Channel_Name=Dropdown6.Selected.Communities
         ));
@@ -53,7 +53,7 @@
         ClearCollect(TopFiveUsers, FirstN(SortByColumns(Ranks, "No", Ascending), 5));
         ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));
         ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 3));
-        
+        Set(DropDownDashboard,false);
 
     RectQuickActionBar9 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
