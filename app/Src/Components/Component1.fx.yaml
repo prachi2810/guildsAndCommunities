@@ -20,10 +20,11 @@ Component1 As CanvasComponent:
 
     Button2_3 As button:
         BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(4, 42, 61, 1)
+        Fill: =RGBA(241, 241, 241, 1)
         FontWeight: =FontWeight.Semibold
         Height: =75
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -43,10 +44,11 @@ Component1 As CanvasComponent:
 
     Button2_5 As button:
         BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(4, 42, 61, 1)
+        Fill: =RGBA(241, 241, 241, 1)
         FontWeight: =FontWeight.Semibold
         Height: =75
         HoverColor: =RGBA(255, 255, 255, 1)
@@ -65,10 +67,11 @@ Component1 As CanvasComponent:
 
     Button2_6 As button:
         BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(4, 42, 61, 1)
+        Fill: =RGBA(241, 241, 241, 1)
         FontWeight: =FontWeight.Semibold
         Height: =75
         HoverColor: =RGBA(255, 255, 255, 1)
