@@ -1,7 +1,7 @@
 "Community As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |-
         =ClearCollect(GuildCommunities ,Filter(Community_1, Guild=data.Title));
-        Filter(Event,Guild=data.Title)
+        ClearCollect(GuildEvents,Filter(Event,Guild=data.Title))
 
     Canvas2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
