@@ -1,5 +1,4 @@
 "Community As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    Fill: =RGBA(232, 232, 232, 1)
     OnVisible: =Set(communities,LookUp(Community_1,Guild= data.Title))
 
     RectQuickActionBar2 As rectangle:
@@ -497,8 +496,8 @@
         Color: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Size: =13
-        Text: ="57 Members"
-        X: =12
+        Text: =LookUp(Guild, Title=data.Title).Members & " Members"
+        X: =24
         Y: =56
         ZIndex: =8
 
