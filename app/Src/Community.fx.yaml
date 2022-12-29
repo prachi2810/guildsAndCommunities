@@ -474,7 +474,7 @@
                     Visible: |-
                         =/*Visible if calendar events are found on this day*/               
                         /*CountRows(Filter(MyCalendarEvents, DateValue(Text(Start)) = DateAdd(_firstDayInView,ThisItem.Value,Days))) > 0 && !Subcircle1_1.Visible && Title3_1.Visible*/
-                        !IsBlank(LookUp(Event,Date=DateAdd(_firstDayInView,ThisItem.Value,Days)).Title)
+                        !IsBlank(LookUp(GuildEvents,Date=DateAdd(_firstDayInView,ThisItem.Value,Days)).Title)
                     Width: =6.5
                     X: =MonthDayGallery1_1.TemplateWidth / 2 - Self.Width / 2
                     Y: =MonthDayGallery1_1.TemplateHeight * (0.75)
@@ -512,7 +512,7 @@
                     Height: =60
                     OnSelect: |-
                         =Set(_dateSelected, DateAdd(_firstDayInView, ThisItem.Value, Days));
-                        Navigate(EventDetails);
+                        Navigate(EventDetails, None, { data: data.Title });
                         //Set(calendarpop,true);
                     Size: =17 * MonthDayGallery1_1.TemplateWidth / 91
                     TabIndex: =0

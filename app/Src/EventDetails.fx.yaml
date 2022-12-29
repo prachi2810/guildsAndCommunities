@@ -112,7 +112,8 @@
         Height: =67
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(EventForm)
+        OnSelect: |-
+            =Navigate(EventForm, None, { guildName: data });
         Size: =15
         Text: ="Create Event"
         Width: =192
