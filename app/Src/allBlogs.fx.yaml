@@ -164,11 +164,12 @@
         ZIndex: =27
 
         Component1_2 As Component1:
+            Fill: =RGBA(241, 241, 241, 1)
             ZIndex: =16
 
         Rectangle2_4 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(246, 246, 246, 1)
             Height: =221
             Visible: =DropDown
             X: =236
@@ -177,10 +178,12 @@
 
         Button17_4 As button:
             Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -199,11 +202,14 @@
 
         Button18_19 As button:
             Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
+            Height: =43
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(WhitePapers)
@@ -216,15 +222,17 @@
             Visible: =DropDown
             Width: =150
             X: =236
-            Y: =114
+            Y: =113
             ZIndex: =19
 
         Button18_18 As button:
             Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -242,10 +250,12 @@
 
         Button18_17 As button:
             Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
@@ -263,10 +273,12 @@
 
         Button18_16 As button:
             Align: =Align.Left
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
             Height: =56
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -285,7 +297,6 @@
 
         Icon3_1 As icon.ChevronDown:
             BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(255, 255, 255, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =19
@@ -297,10 +308,12 @@
             ZIndex: =23
 
         Button20_8 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -318,10 +331,12 @@
             ZIndex: =24
 
         Button20_7 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -480,7 +495,6 @@
 
     Icon3_7 As icon.ChevronDown:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(255, 255, 255, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Height: =16
@@ -521,18 +535,20 @@
 
         Rectangle6_2 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(246, 246, 246, 1)
             Height: =55
             Visible: =DropDownDashboard
-            X: =648
-            Y: =69
+            X: =656
+            Y: =80
             ZIndex: =29
 
         Button5_5 As button:
+            BorderThickness: =0
+            Color: =RGBA(0, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
-            Fill: =RGBA(4, 42, 61, 1)
+            Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
             Height: =51
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -546,7 +562,7 @@
             Text: ="Admin Center"
             Visible: =DropDownDashboard
             Width: =150
-            X: =648
-            Y: =73
+            X: =656
+            Y: =74
             ZIndex: =30
 
