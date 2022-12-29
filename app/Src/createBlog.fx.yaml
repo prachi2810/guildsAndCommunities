@@ -142,6 +142,7 @@
             
             Patch('Event Track Details',Defaults('Event Track Details'), {
                 Title: "Creating white papers/ blogs",
+                Category: "Expert Engagement",
                 Count: 25,
                 'DateofEvent ': Now(),
                 EventId: LookUp(Points, Title="Creating white papers/ blogs").ID,
