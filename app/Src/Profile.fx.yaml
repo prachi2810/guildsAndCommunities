@@ -607,14 +607,14 @@
         Y: =18
         ZIndex: =4
 
-    Icon28 As icon.Home:
+    Icon33 As icon.ArrowLeft:
         BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(255, 255, 255, 1)
+        Color: =RGBA(250, 250, 250, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.Home
-        OnSelect: =Navigate(Home)
-        X: =12
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Home);
+        X: =20
         Y: =6
         ZIndex: =5
 

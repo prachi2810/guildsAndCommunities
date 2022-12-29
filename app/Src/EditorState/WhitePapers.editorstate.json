@@ -505,22 +505,22 @@
       "StyleName": "defaultGalleryTemplateStyle",
       "Type": "ControlInfo"
     },
-    "Icon2_1": {
+    "Icon29": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         "Icon",
-        "Color",
-        "DisabledColor",
-        "PressedColor",
-        "HoverColor",
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
           "AutoRuleBindingString": "",
-          "InvariantPropertyName": "Fill",
+          "InvariantPropertyName": "Color",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
+        "DisabledColor",
+        "PressedColor",
+        "HoverColor",
+        "Fill",
         "DisabledFill",
         "PressedFill",
         "HoverFill",
@@ -556,7 +556,7 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "Icon2_1",
+      "Name": "Icon29",
       "ParentIndex": 2,
       "PersistMetaDataIDKey": false,
       "Properties": [

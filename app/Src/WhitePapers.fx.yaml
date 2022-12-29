@@ -19,18 +19,6 @@
         X: =100
         ZIndex: =2
 
-    Icon2_1 As icon.Home:
-        BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(255, 255, 255, 1)
-        Icon: =Icon.Home
-        OnSelect: =Navigate(Home);
-        X: =36
-        Y: =12
-        ZIndex: =4
-
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 18, 107, 1)
         Fill: =RGBA(237, 237, 237, 1)
@@ -178,4 +166,15 @@
         X: =1160
         Y: =24
         ZIndex: =7
+
+    Icon29 As icon.ArrowLeft:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Home);
+        X: =30
+        Y: =12
+        ZIndex: =8
 
