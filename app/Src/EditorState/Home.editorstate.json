@@ -6078,7 +6078,8 @@
           "InvariantPropertyName": "ShowNavigation",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Visible"
       ],
       "GalleryTemplateChildName": "galleryTemplate3",
       "HasDynamicProperties": false,
@@ -6222,6 +6223,11 @@
         {
           "Category": "Design",
           "PropertyName": "ShowNavigation",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Visible",
           "RuleProviderType": "Unknown"
         }
       ],
