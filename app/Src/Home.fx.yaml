@@ -2,11 +2,11 @@
     BackgroundImage: =
     OnVisible: |-
         =UpdateContext({varPageNumber:1});
-        
         Set(ShareItem,false);
         Set(DropDown,false);
         Set(DropDownHome,false);
         Set(DropDownDashboard,false);
+        RemoveIf(Event, Date<Now());
 
     RectQuickActionBar1 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -322,31 +322,9 @@
                     Text: =ThisItem.Title
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 104
-                    X: =32
-                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                    X: =39
+                    Y: =18
                     ZIndex: =1
-
-                NextArrow3 As icon.ChevronRight:
-                    AccessibleLabel: =Self.Tooltip
-                    BorderColor: =RGBA(0, 89, 178, 1)
-                    Color: =RGBA(0, 89, 178, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    DisabledColor: =RGBA(244, 244, 244, 1)
-                    Height: =60
-                    Icon: =Icon.ChevronRight
-                    OnSelect: |
-                        =Select(Parent);
-                        Navigate(Community,Cover,Gallery1.Selected)
-                    PaddingBottom: =10
-                    PaddingLeft: =10
-                    PaddingRight: =10
-                    PaddingTop: =10
-                    TabIndex: =0
-                    Tooltip: ="View item details"
-                    Width: =60
-                    X: =Parent.TemplateWidth - Self.Width - 5
-                    Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-                    ZIndex: =2
 
                 Separator4 As rectangle:
                     BorderColor: =RGBA(0, 89, 178, 1)
@@ -356,6 +334,19 @@
                     Width: =Parent.TemplateWidth
                     Y: =Parent.TemplateHeight - 1
                     ZIndex: =3
+
+                Label47 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =41
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.Date
+                    Width: =143
+                    X: =39
+                    Y: =55
+                    ZIndex: =4
 
             Label49 As label:
                 BorderColor: =RGBA(0, 89, 178, 1)
