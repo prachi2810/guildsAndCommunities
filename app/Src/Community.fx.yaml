@@ -1,6 +1,11 @@
 "Community As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |-
-        =ClearCollect(GuildCommunities ,Filter(Community_1, Guild=data.Title));
+        =Set(_dateSelected, Today());
+        Set(_firstDayOfMonth, DateAdd(Today(), 1 - Day(Today()), Days));
+        Set(_firstDayInView, DateAdd(_firstDayOfMonth, -(Weekday(_firstDayOfMonth) - 2 + 1), Days));
+        Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));        
+        Set(_calendarVisible, true);
+        ClearCollect(GuildCommunities ,Filter(Community_1, Guild=data.Title));
         ClearCollect(GuildEvents,Filter(Event,Guild=data.Title))
 
     Canvas2 As fluidGrid.fluidGridWithBlankCard:
