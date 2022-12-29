@@ -4,10 +4,12 @@
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
-        Items: =Filter(Event,Date=_dateSelected)
+        Height: =545
+        Items: =Filter(Event,Date=_dateSelected && Guild=data)
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
+        Width: =697
         X: =317
         Y: =193
         ZIndex: =1
