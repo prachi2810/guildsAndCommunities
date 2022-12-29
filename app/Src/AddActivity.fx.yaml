@@ -545,6 +545,7 @@
         OnSelect: |-
             =Patch('Event Track Details', Defaults('Event Track Details'), {
                 Title: Dropdown3.Selected.Title,
+                Category: Dropdown2_2.Selected.Result,
                 Count: Value(TextInput3_2.Text),
                 'DateofEvent ': DatePicker1_1.SelectedDate,
                 EventId: LookUp(EventTitle, Title=Dropdown3.Selected.Title).ID,

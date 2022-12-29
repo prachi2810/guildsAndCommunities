@@ -1,18 +1,11 @@
 "Community As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: =ClearCollect(GuildCommunities ,Filter(Community_1, Guild=data.Title));
 
-    RectQuickActionBar2 As rectangle:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Fill: =RGBA(0, 51, 102, 1)
-        Height: =177
-        Width: =Parent.Width
-        ZIndex: =1
-
     Canvas2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =RectQuickActionBar2.Y + RectQuickActionBar2.Height
+        Y: =
         ZIndex: =3
 
         DataCard7 As dataCard:
@@ -31,7 +24,7 @@
         BorderColor: =RGBA(49, 3, 51, 1)
         Fill: =RGBA(0, 13, 75, 1)
         Height: =175
-        Width: =1335
+        Width: =1366
         ZIndex: =5
 
     Canvas1_1 As fluidGrid.fluidGridWithBlankCard:
@@ -125,19 +118,6 @@
                 X: =940
                 Y: =56
                 ZIndex: =13
-
-            Label29_1 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =182
-                Size: =15
-                Text: =data.Designation2
-                Width: =372
-                X: =929
-                Y: =28
-                ZIndex: =14
 
         DataCard23 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
@@ -328,13 +308,12 @@
 
             Gallery3 As gallery.galleryHorizontal:
                 BorderColor: =RGBA(0, 89, 178, 1)
-                BorderThickness: =2
-                Fill: =RGBA(241, 241, 241, 1)
+                Fill: =RGBA(255, 255, 255, 1)
                 Height: =374
                 Items: =GuildCommunities
                 TemplateSize: =338
-                Width: =1272
-                X: =40
+                Width: =696
+                X: =87
                 Y: =40
                 ZIndex: =1
 
@@ -497,4 +476,25 @@
         Width: =46
         X: =12
         ZIndex: =10
+
+    Button15 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 191, 0, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =50
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: =Navigate(GuildStats)
+        RadiusBottomLeft: =30
+        RadiusBottomRight: =30
+        RadiusTopLeft: =30
+        RadiusTopRight: =30
+        Size: =15
+        Text: ="View Statistics"
+        Width: =258
+        X: =1070
+        Y: =110
+        ZIndex: =11
 
