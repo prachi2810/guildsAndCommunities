@@ -3001,19 +3001,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.iconPrevMonth1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.iconNextMonth1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.iconPrevMonth1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.iconNextMonth1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.iconPrevMonth1_1"
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.iconNextMonth1_1"
               }
             }
           ],
@@ -3031,19 +3031,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.iconNextMonth1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.iconPrevMonth1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.iconNextMonth1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.iconPrevMonth1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.iconNextMonth1_1"
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.iconPrevMonth1_1"
               }
             }
           ],
@@ -3061,19 +3061,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.WeekdayGallery1_1.TabIndex"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.WeekdayGallery1_1.TabIndex",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.WeekdayGallery1_1"
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1"
               }
             }
           ],
@@ -3091,49 +3091,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.TabIndex"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Subcircle1_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.MonthDayGallery1_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Subcircle1_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Subcircle1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Subcircle1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Subcircle1_1"
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Subcircle1_1"
               }
             }
           ],
@@ -3151,19 +3121,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Subcircle1_1.TabIndex"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.WeekdayGallery1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Subcircle1_1.TabIndex",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.WeekdayGallery1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Subcircle1_1"
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.WeekdayGallery1_1"
               }
             }
           ],
@@ -3181,19 +3151,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Circle1_1.AccessibleLabel"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Circle1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Circle1_1.AccessibleLabel",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Circle1_1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Circle1_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Circle1_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Circle1_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Circle1_1"
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Circle1_1"
               }
             }
           ],
@@ -3211,19 +3211,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Circle1_1.TabIndex"
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Subcircle1_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Circle1_1.TabIndex",
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Subcircle1_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "Home",
-                "type": "Home.Canvas1.DataCard2.MonthDayGallery1_1.Circle1_1"
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.MonthDayGallery1_1.Subcircle1_1"
               }
             }
           ],
@@ -7075,6 +7075,66 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Canvas1.DataCard2.Gallery1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Canvas1.DataCard2.Gallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "Home",
+                "type": "Home.Canvas1.DataCard2.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Home.Canvas1.DataCard2.Gallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Home.Canvas1.DataCard2.Gallery1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "Home",
+                "type": "Home.Canvas1.DataCard2.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 5
         },
         {
           "locations": [
