@@ -12,30 +12,17 @@
             "GroupedItems"
             )
         );
-        ClearCollect(UserGuild, Filter(Use);
-        
-        /*ClearCollect(
+        ClearCollect(UserGuild, Filter(User, Guild=guildName));
+        ClearCollect(
             GroupUsersByGuild,
             DropColumns(
                 AddColumns(
-                    GroupBy(User,"Name","GroupedItems"),
-                    "Sum of Value",Sum(GroupedItems,Points)
+                    GroupBy(UserGuild,"Name","GroupedItems"),
+                    "Total Points",Sum(GroupedItems,Points)
                 ),
             "GroupedItems"
             )
         );
-        Clear(Ranks); 
-        ForAll(
-            GroupUsersByGuild,
-            Collect(
-                Ranks,
-                {
-                    No: CountRows(Ranks) + 1,
-                    UserName: Name
-                }
-            )
-        );
-        Sort(Ranks, Descending);*/
 
     RectQuickActionBar2 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -188,11 +175,87 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =300
+            Height: =679
             Width: =1366
             X: =0
             Y: =1
             ZIndex: =2
+
+            Label48 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =48
+                Size: =20
+                Text: ="Our Top Performers"
+                Width: =322
+                X: =42
+                Y: =21
+                ZIndex: =1
+
+            "Gallery5 As gallery.'BrowseLayout_Horizontal_TwoTextOneImageVariant_ver4.0'":
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Items: =GroupUsersByGuild
+                TemplatePadding: =0
+                TemplateSize: =Min(440, Self.Height - 60)
+                Width: =1268
+                X: =42
+                Y: =69
+                ZIndex: =2
+
+                Image34 As image:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Height: =296
+                    Image: =LookUp(User, 'Created By'=ThisItem.Name).'Created By'.Picture
+                    OnSelect: =Select(Parent)
+                    RadiusBottomLeft: =204
+                    RadiusBottomRight: =204
+                    RadiusTopLeft: =204
+                    RadiusTopRight: =204
+                    Width: =296
+                    X: =(Parent.TemplateWidth / 2) - (Self.Width / 2)
+                    Y: =16
+                    ZIndex: =1
+
+                Title14 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: =ThisItem.Name
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 64
+                    X: =32
+                    Y: =354
+                    ZIndex: =2
+
+                Subtitle7 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: =ThisItem.'Total Points' & " Points"
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Title14.Width
+                    X: =Title14.X
+                    Y: =390
+                    ZIndex: =3
 
     Icon32 As icon.ArrowLeft:
         BorderColor: =RGBA(0, 89, 178, 1)
