@@ -53,7 +53,7 @@ EventForm As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Event],DataSourceInfo.DisplayName,"Guild")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =104
             MaxLength: =DataSourceInfo([@Event], DataSourceInfo.MaxLength, "Guild")
             Required: =false
             Update: =DataCardValue2.Text
@@ -86,6 +86,7 @@ EventForm As screen:
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
+                Height: =50
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
@@ -97,7 +98,7 @@ EventForm As screen:
                 RadiusTopRight: =0
                 Size: =13
                 Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
+                Width: =364
                 X: =30
                 Y: =DataCardKey13.Y + DataCardKey13.Height + 5
                 ZIndex: =2
