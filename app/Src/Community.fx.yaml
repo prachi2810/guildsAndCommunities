@@ -486,7 +486,8 @@
         Height: =50
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: =Navigate(GuildStats)
+        OnSelect: |-
+            =Navigate(GuildStats, None, { guildName: data.Title })
         RadiusBottomLeft: =30
         RadiusBottomRight: =30
         RadiusTopLeft: =30

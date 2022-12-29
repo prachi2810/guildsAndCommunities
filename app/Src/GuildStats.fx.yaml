@@ -1,4 +1,41 @@
 "GuildStats As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    OnVisible: |
+        =ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title));
+        /*ClearCollect(EventsByPillars, GroupBy(CommunityEvents, "Category", "data"));*/
+        ClearCollect(
+            EventsByPillars,
+            DropColumns(
+                AddColumns(
+                    GroupBy(CommunityEvents, "Category", "GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+            )
+        );
+        ClearCollect(UserGuild, Filter(Use);
+        
+        /*ClearCollect(
+            GroupUsersByGuild,
+            DropColumns(
+                AddColumns(
+                    GroupBy(User,"Name","GroupedItems"),
+                    "Sum of Value",Sum(GroupedItems,Points)
+                ),
+            "GroupedItems"
+            )
+        );
+        Clear(Ranks); 
+        ForAll(
+            GroupUsersByGuild,
+            Collect(
+                Ranks,
+                {
+                    No: CountRows(Ranks) + 1,
+                    UserName: Name
+                }
+            )
+        );
+        Sort(Ranks, Descending);*/
 
     RectQuickActionBar2 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -33,7 +70,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height - 100
+            Height: =335
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -51,6 +88,111 @@
                 X: =40
                 Y: =40
                 ZIndex: =1
+
+            Dropdown7 As dropdown:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Items: =GuildCommunities
+                OnChange: |-
+                    =ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title));
+                    /*ClearCollect(EventsByPillars, GroupBy(CommunityEvents, "Category", "data"));*/
+                    ClearCollect(
+                        EventsByPillars,
+                        DropColumns(
+                            AddColumns(
+                                GroupBy(CommunityEvents, "Category", "GroupedItems"),
+                                "Count",CountRows(GroupedItems)
+                            ),
+                        "GroupedItems"
+                        )
+                    );
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                SelectionFill: =RGBA(0, 51, 102, 1)
+                Size: =13
+                X: =928
+                Y: =46
+                ZIndex: =2
+
+            DataTable4 As dataTable.datatable:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderStyle: =BorderStyle.Solid
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisplayMode: =DisplayMode.Edit
+                Fill: =RGBA(0, 0, 0, 0)
+                Font: =Font.'Open Sans'
+                FontWeight: =FontWeight.Normal
+                HeadingColor: =RGBA(255, 255, 255, 1)
+                HeadingFill: =RGBA(0, 51, 102, 1)
+                HeadingFont: =Font.'Open Sans'
+                HeadingFontWeight: =FontWeight.Normal
+                HeadingSize: =13
+                Height: =256
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, .2)
+                InputFill: =RGBA(255, 255, 255, 1)
+                InvertedColor: =RGBA(255, 255, 255, 1)
+                Items: =EventsByPillars
+                LinkColor: =RGBA(0, 134, 208, 1)
+                PrimaryColor1: =RGBA(0, 51, 102, 1)
+                PrimaryColor2: =RGBA(0, 89, 178, 1)
+                PrimaryColor3: =RGBA(153, 205, 255, 1)
+                SelectedColor: =RGBA(0, 0, 0, 1)
+                SelectedFill: =RGBA(0, 51, 102, .2)
+                Size: =13
+                Width: =1196
+                X: =60
+                Y: =117
+                ZIndex: =3
+
+                Category_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Category"
+                    FieldName: ="Category"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =1
+                    Text: =ThisItem.Category
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =4
+
+                Count_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Activities Conducted"
+                    FieldName: ="Count"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =2
+                    Text: =ThisItem.Count
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =5
+
+        DataCard35 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =300
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
 
     Icon32 As icon.ArrowLeft:
         BorderColor: =RGBA(0, 89, 178, 1)
