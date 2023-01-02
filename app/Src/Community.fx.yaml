@@ -6,7 +6,7 @@
         Set(_lastDayOfMonth, DateAdd(DateAdd(_firstDayOfMonth, 1, Months), -1, Days));        
         Set(_calendarVisible, true);
         ClearCollect(GuildCommunities ,Filter(Community_1, Guild=data.Title));
-        ClearCollect(GuildEvents,Filter(Event,Guild=data.Title))
+        ClearCollect(GuildEvents,Filter(Event,Guild=data.Title));
 
     Canvas2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -436,28 +436,34 @@
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                     OnSelect: |-
-                        =Patch(User, Defaults(User), {
-                            Name: User().FullName,
-                            Email: User().Email,
-                            Guild: data.Title,
-                            Communities: ThisItem.Title
-                        });
+                        =If(
+                            IsBlank(LookUp(User, Communities=ThisItem.Title)), 
+                            Patch(User, Defaults(User), {
+                                Name: User().FullName,
+                                Email: User().Email,
+                                Guild: data.Title,
+                                Communities: ThisItem.Title
+                            });
                         
-                        Patch(Community_1, LookUp(Community_1, Title=ThisItem.Title), {
-                            Members: LookUp(Community_1, Title=ThisItem.Title).Members + 1
-                        });
+                            Patch(Community_1, LookUp(Community_1, Title=ThisItem.Title), {
+                                Members: LookUp(Community_1, Title=ThisItem.Title).Members + 1
+                            });
                         
-                        Patch(Guild, LookUp(Guild, Title=data.Title), {
-                            Members: LookUp(Guild, Title=data.Title).Members + 1
-                        });
+                            Patch(Guild, LookUp(Guild, Title=data.Title), {
+                                Members: LookUp(Guild, Title=data.Title).Members + 1
+                            });
                         
-                        Launch(ThisItem.'Link To Join');
+                            Launch(ThisItem.'Link To Join'), 
+                            Notify("You are already a member of this community!"));
                     RadiusBottomLeft: =50
                     RadiusBottomRight: =50
                     RadiusTopLeft: =50
                     RadiusTopRight: =50
                     Size: =15
-                    Text: ="Request To Join"
+                    Text: |-
+                        =If(IsBlank(LookUp(User, Communities=ThisItem.Title)), 
+                        "Request to Join", 
+                        "Joined")
                     Width: =180
                     X: =75
                     Y: =304
