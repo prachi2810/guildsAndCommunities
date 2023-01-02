@@ -315,6 +315,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241, 241, 241, 1)
+            Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -327,7 +328,7 @@
             Size: =15
             Text: ="Dashboard"
             Width: =155
-            X: =654
+            X: =593
             Y: =3
             ZIndex: =24
 
@@ -338,6 +339,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241, 241, 241, 1)
+            Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -502,7 +504,7 @@
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
         Width: =27
-        X: =787
+        X: =720
         Y: =30
         ZIndex: =31
 
