@@ -3,7 +3,7 @@
     OnVisible: |-
         =Refresh(whitePapersWithCommunities);
         ClearCollect(UserCommunities,Filter(User,Email=User().Email));
-        Set(currCommunity,Dropdown2.Selected.Communities);
+        Set(currCommunity,Dropdown2_3.Selected.Communities);
         If(IsBlank(varDocumentCurrent),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities=currCommunity)).Identifier).result))
 
     RectQuickActionBar2_1 As rectangle:
