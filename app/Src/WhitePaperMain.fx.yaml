@@ -156,7 +156,8 @@
                 Refresh(whitePapersWithCommunities);
                 Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities=currCommunity)).Identifier).result)
             Visible: |
-                =If(!IsBlank(LookUp(whitePapersWithCommunities, 'Created By'.DisplayName=User().FullName)) || IsBlank(LookUp(User,  Name=User().FullName && Role="admin")),true, false)
+                =If(!IsBlank(LookUp(whitePapersWithCommunities, 'Modified By'.DisplayName=User().FullName)) ||
+                IsBlank(LookUp(User,Email=User().Email && Role="admin")),true,false)
             X: =515
             Y: =46
             ZIndex: =8
