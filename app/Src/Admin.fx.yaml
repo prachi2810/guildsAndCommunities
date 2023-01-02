@@ -747,7 +747,7 @@
             Size: =15
             Text: ="Dashboard"
             Width: =155
-            X: =626
+            X: =600
             Y: =2
             ZIndex: =12
 
@@ -760,7 +760,7 @@
             Fill: =RGBA(241, 241, 241, 1)
             Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
-            Height: =70
+            Height: =75
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Home)
@@ -782,7 +782,7 @@
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
         Width: =27
-        X: =755
+        X: =731
         Y: =29
         ZIndex: =17
 
