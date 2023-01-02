@@ -1,0 +1,229 @@
+"WhitePaperMain As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |-
+        =Refresh(whitePapersWithCommunities);
+        ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+        Set(currCommunity,Dropdown2.Selected.Communities);
+        If(IsBlank(varDocumentCurrent),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities=currCommunity)).Identifier).result))
+
+    RectQuickActionBar2_1 As rectangle:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Fill: =RGBA(56, 96, 178, 1)
+        Height: =88
+        Width: =Parent.Width
+        Y: =40
+        ZIndex: =1
+
+    "Gallery3_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =554
+        Items: =Filter(whitePapersWithCommunities,communities=currCommunity)
+        Layout: =Layout.Vertical
+        OnSelect: =Set(varDocumentCurrent, GetDataURI.Run(Gallery3_1.Selected.Identifier).result);
+        TemplateFill: =If(ThisItem.IsSelected, ColorFade(LightSkyBlue, 70%), White)
+        TemplatePadding: =8
+        TemplateSize: =Min(168, Self.Height - 60)
+        X: =73
+        Y: =214
+        ZIndex: =2
+
+        Image8_2 As image:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =128
+            Image: |-
+                =If(
+                    // checks the file extension
+                    EndsWith(ThisItem.'File name with extension', "pdf"),
+                
+                    // pdf icon
+                "data:image/svg+xml;utf8, %3Csvg%20%20viewBox%3D%270%200%202048%202048%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M1920%201664h-128v384H128v-384H0V640h128V0h1243l421%20421v219h128v1024zM1408%20384h165l-165-165v165zM256%20640h1408V512h-384V128H256v512zm1408%201024H256v256h1408v-256zm128-896H128v768h1664V768zM448%20896q40%200%2075%2015t61%2041%2041%2061%2015%2075q0%2040-15%2075t-41%2061-61%2041-75%2015h-64v128H256V896h192zm0%20256q26%200%2045-19t19-45q0-26-19-45t-45-19h-64v128h64zm448-256q53%200%2099%2020t82%2055%2055%2081%2020%20100q0%2053-20%2099t-55%2082-81%2055-100%2020H768V896h128zm0%20384q27%200%2050-10t40-27%2028-41%2010-50q0-27-10-50t-27-40-41-28-50-10v256zm384-384h320v128h-192v128h192v128h-192v128h-128V896z%27%20fill%3D%27%23d13438%27%3E%3C%2Fpath%3E%3C%2Fsvg%3E",
+                
+                    // file icon
+                    "data:image/svg+xml;utf8, %3Csvg%20%20viewBox%3D%270%200%202048%202048%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M1243%200l549%20549v1499H128V0h1115zm37%20219v293h293l-293-293zM256%201920h1408V640h-512V128H256v1792zm256-896V896h896v128H512zm0%20256v-128h896v128H512zm0%20256v-128h896v128H512z%27%20fill%3D%27%237a7574%27%3E%3C%2Fpath%3E%3C%2Fsvg%3E"
+                )
+            OnSelect: =Select(Parent)
+            Width: =128
+            X: =16
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =1
+
+        Title9_1 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =Self.Size * 1.8
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =20
+            Text: =Upper(ThisItem.Name)
+            VerticalAlign: =VerticalAlign.Top
+            Width: =Parent.TemplateWidth - Image8_2.Width - 104
+            X: =160
+            Y: =36
+            ZIndex: =2
+
+        Subtitle7_2 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Height: =38
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.Modified
+            VerticalAlign: =VerticalAlign.Top
+            Width: =233
+            X: =386
+            Y: =114
+            ZIndex: =3
+
+        Body3 As label:
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            OnSelect: =Select(Parent)
+            PaddingBottom: =0
+            PaddingLeft: =0
+            PaddingRight: =0
+            PaddingTop: =0
+            Size: =18
+            Text: =ThisItem.'Modified By'.DisplayName
+            VerticalAlign: =VerticalAlign.Top
+            Width: =233
+            X: =160
+            Y: =116
+            ZIndex: =4
+
+        NextArrow9 As icon.ChevronRight:
+            AccessibleLabel: =Self.Tooltip
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 18, 107, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =60
+            Icon: =Icon.ChevronRight
+            OnSelect: =Select(Parent)
+            PaddingBottom: =10
+            PaddingLeft: =10
+            PaddingRight: =10
+            PaddingTop: =10
+            TabIndex: =0
+            Tooltip: ="View item details"
+            Width: =60
+            X: =Parent.TemplateWidth - Self.Width - 5
+            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            ZIndex: =5
+
+        Separator9_1 As rectangle:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Fill: =RGBA(0, 18, 107, 1)
+            Height: =1
+            OnSelect: =Select(Parent)
+            Width: =Parent.TemplateWidth
+            Y: =Parent.TemplateHeight - 1
+            ZIndex: =6
+
+        Label2_3 As label:
+            BorderColor: =RGBA(0, 18, 107, 1)
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Semibold
+            Height: =33
+            OnSelect: =Select(Parent)
+            Size: =13
+            Text: =ThisItem.communities
+            Width: =210
+            X: =160
+            Y: =72
+            ZIndex: =7
+
+    LblAppName2_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =88
+        Size: =18
+        Text: ="White Papers"
+        Width: =Parent.Width
+        Y: =40
+        ZIndex: =3
+
+    Dropdown2_3 As dropdown:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        ChevronBackground: =RGBA(56, 96, 178, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(186, 202, 226, 1)
+        Items: =UserCommunities
+        OnChange: |-
+            =Refresh(whitePapersWithCommunities);
+            Set(currCommunity,Dropdown2_3.Selected.Communities);
+            Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities=currCommunity)).Identifier).result)
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(56, 96, 178, 1)
+        Size: =13
+        X: =1009
+        Y: =170
+        ZIndex: =4
+
+    Label3_2 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =23
+        Size: =16
+        Text: ="Select A community"
+        Width: =225
+        X: =1009
+        Y: =136
+        ZIndex: =5
+
+    PdfViewer1_1 As pdfViewer:
+        Document: =varDocumentCurrent
+        Height: =554
+        X: =726
+        Y: =214
+        ZIndex: =6
+
+    Button2_1 As button:
+        Color: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        OnSelect: =Navigate(WhitePaperForm);
+        Size: =15
+        Text: ="Add Paper"
+        X: =1177
+        Y: =64
+        ZIndex: =7
+
+    Icon34 As icon.Home:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home);
+        X: =73
+        Y: =52
+        ZIndex: =8
+

@@ -1,0 +1,122 @@
+"WhitePaperForm As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+
+    RectQuickActionBar1_1 As rectangle:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Fill: =RGBA(56, 96, 178, 1)
+        Height: =88
+        Width: =Parent.Width
+        Y: =40
+        ZIndex: =1
+
+    LblAppName1_1 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =88
+        Size: =18
+        Text: ="Form Submission"
+        Width: =Parent.Width
+        Y: =40
+        ZIndex: =2
+
+    DataCardValue2_1 As attachments:
+        BorderColor: =Blue
+        BorderThickness: =2
+        Color: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =167
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(186, 202, 226, 1)
+        IsInDataCard: =true
+        ItemColor: =RGBA(255, 255, 255, 1)
+        ItemFill: =RGBA(56, 96, 178, 1)
+        ItemHoverColor: =RGBA(0, 0, 0, 1)
+        ItemHoverFill: =RGBA(186, 202, 226, 1)
+        Items: =Blank()
+        MaxAttachments: =1
+        PaddingBottom: =5
+        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+        PaddingRight: =5
+        PaddingTop: =5
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 18, 107, 1)
+        Tooltip: ="Add PDF"
+        Width: =175
+        X: =588
+        Y: =343
+        ZIndex: =3
+
+    Label1_2 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 18, 107, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =28
+        Size: =13
+        Text: ="Select a community"
+        Width: =209
+        X: =512
+        Y: =224
+        ZIndex: =4
+
+    Dropdown1_2 As dropdown:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        ChevronBackground: =RGBA(56, 96, 178, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(186, 202, 226, 1)
+        Items: =UserCommunities
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(56, 96, 178, 1)
+        Size: =13
+        X: =512
+        Y: =264
+        ZIndex: =5
+
+    Button1_6 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(56, 96, 178, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        OnSelect: |
+            =uploadPdfToDocumentLibrary.Run(
+                 {
+                     contentBytes: First(DataCardValue2_1.Attachments).Value,
+                     name: First(DataCardValue2_1.Attachments).Name
+                 },
+                 Dropdown1_2.Selected.Communities
+             );
+            
+            Reset(DataCardValue2_1);
+            Navigate(WhitePaperMain);
+            Refresh(whitePapersWithCommunities);
+        Size: =15
+        Text: ="Submit"
+        X: =596
+        Y: =550
+        ZIndex: =6
+
+    Arrow1 As arrow.backArrow:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        Fill: =RGBA(255, 255, 255, 1)
+        OnSelect: =Navigate(WhitePaperMain);
+        X: =82
+        Y: =59
+        ZIndex: =7
+
