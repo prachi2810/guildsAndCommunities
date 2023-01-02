@@ -454,14 +454,14 @@
                             });
                         
                             Launch(ThisItem.'Link To Join'), 
-                            Notify("You are already a member of this community!"));
+                            Button13.Text = "Joined");
                     RadiusBottomLeft: =50
                     RadiusBottomRight: =50
                     RadiusTopLeft: =50
                     RadiusTopRight: =50
                     Size: =15
                     Text: |-
-                        =If(IsBlank(LookUp(User, Communities=ThisItem.Title)), 
+                        =If(IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Title)), 
                         "Request to Join", 
                         "Joined")
                     Width: =180
