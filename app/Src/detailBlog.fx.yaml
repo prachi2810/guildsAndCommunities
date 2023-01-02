@@ -339,6 +339,18 @@
                 Y: =28
                 ZIndex: =6
 
+            Icon28 As icon.Share:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Icon: =Icon.Share
+                OnSelect: |
+                    =Set(ShareItem,true);
+                X: =715
+                Y: =17
+                ZIndex: =7
+
     Icon1 As icon.Draw:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =White
@@ -457,4 +469,144 @@
         X: =25
         Y: =12
         ZIndex: =12
+
+    Container5_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(4, 42, 64, 0.3)
+        Height: =698
+        Visible: =ShareItem
+        Width: =1366
+        Y: =70
+        ZIndex: =14
+
+        UserName_2 As text:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Height: =53
+            HoverBorderColor: =RGBA(0, 89, 178, 1)
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(153, 205, 255, 1)
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
+            Size: =13
+            Width: =454
+            X: =319
+            Y: =109
+            ZIndex: =1
+
+        "Gallery18_2 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =320
+            Items: |-
+                =Office365Users.SearchUserV2({searchTerm:UserName_2.Text,top:3}).value
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(104, Self.Height - 60)
+            Width: =773
+            X: =278
+            Y: =208
+            ZIndex: =1
+
+            Title26_2 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.DisplayName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 104
+                X: =52
+                Y: =20
+                ZIndex: =1
+
+            Subtitle20_2 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: =ThisItem.Mail
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - 104
+                X: =32
+                Y: =Title26_2.Y + Title26_2.Height + 4
+                ZIndex: =2
+
+            NextArrow20_2 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: |-
+                    =Select(Parent);
+                    Office365Outlook.SendEmail(Gallery18_2.Selected.Mail,"Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?guild="&selectedId );
+                    Notify("Mail Sent Successfully");
+                    Set(ShareItem,false);
+                    Reset(UserName_2);
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =3
+
+            Separator22_2 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Fill: =RGBA(0, 89, 178, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =4
+
+        Icon5_4 As icon.CancelBadge:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =46
+            Icon: =Icon.CancelBadge
+            OnSelect: |-
+                =Set(ShareItem,false);
+                Reset(UserName_2);
+            Width: =49
+            X: =1266
+            Y: =46
+            ZIndex: =2
+
+        Icon27_2 As icon.Search:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =46
+            Icon: =Icon.Search
+            Width: =42
+            X: =277
+            Y: =112
+            ZIndex: =3
 
