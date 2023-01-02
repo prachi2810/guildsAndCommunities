@@ -542,7 +542,7 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
-                    Office365Outlook.SendEmail(Gallery18_2.Selected.Mail,"Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?blog="&data.ID );
+                    Office365Outlook.SendEmail(Gallery18_2.Selected.Mail,"Blog","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?blog="&data.ID );
                     Notify("Mail Sent Successfully");
                     Set(ShareItem,false);
                     Reset(UserName_2);
