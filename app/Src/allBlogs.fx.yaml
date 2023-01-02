@@ -48,6 +48,7 @@
         Title4 As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
             Height: =Self.Size * 1.8
             OnSelect: =Select(Parent)
@@ -145,6 +146,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(0, 51, 102, 1)
+        Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Semibold
         Height: =49
         HoverColor: =RGBA(255, 255, 255, 1)
