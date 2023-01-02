@@ -786,7 +786,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 30,
+                  "charOffset": 52,
                   "snippet": {
                     "text": "Communities"
                   }
@@ -826,9 +826,49 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 41,
+                  "charOffset": 63,
                   "snippet": {
                     "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "Community",
+                "type": "Community.Canvas1_1.DataCard33.Gallery3.Button13"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Button13.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Community.Canvas1_1.DataCard33.Gallery3.Button13.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 49,
+                  "snippet": {
+                    "text": "&&"
                   }
                 }
               },

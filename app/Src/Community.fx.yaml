@@ -437,7 +437,7 @@
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                     OnSelect: |-
                         =If(
-                            IsBlank(LookUp(User, Communities=ThisItem.Title)), 
+                            IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Title)), 
                             Patch(User, Defaults(User), {
                                 Name: User().FullName,
                                 Email: User().Email,
@@ -453,8 +453,9 @@
                                 Members: LookUp(Guild, Title=data.Title).Members + 1
                             });
                         
-                            Launch(ThisItem.'Link To Join'), 
-                            Button13.Text = "Joined");
+                            Refresh(Community_1);
+                            Launch(ThisItem.'Link To Join');, 
+                            Notify("You are already a member of this community!"));
                     RadiusBottomLeft: =50
                     RadiusBottomRight: =50
                     RadiusTopLeft: =50
