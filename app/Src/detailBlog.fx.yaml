@@ -515,24 +515,6 @@
             Y: =208
             ZIndex: =1
 
-            Title26_2 As label:
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =Self.Size * 1.8
-                OnSelect: =Select(Parent)
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Size: =20
-                Text: =ThisItem.DisplayName
-                VerticalAlign: =VerticalAlign.Top
-                Width: =Parent.TemplateWidth - 104
-                X: =52
-                Y: =20
-                ZIndex: =1
-
             Subtitle20_2 As label:
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -546,8 +528,8 @@
                 Text: =ThisItem.Mail
                 VerticalAlign: =VerticalAlign.Top
                 Width: =Parent.TemplateWidth - 104
-                X: =32
-                Y: =Title26_2.Y + Title26_2.Height + 4
+                X: =14
+                Y: =Self.Size * 1.8
                 ZIndex: =2
 
             NextArrow20_2 As icon.ChevronRight:
@@ -560,7 +542,7 @@
                 Icon: =Icon.ChevronRight
                 OnSelect: |-
                     =Select(Parent);
-                    Office365Outlook.SendEmail(Gallery18_2.Selected.Mail,"Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?guild="&selectedId );
+                    Office365Outlook.SendEmail(Gallery18_2.Selected.Mail,"Search","https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?blog="&data.ID );
                     Notify("Mail Sent Successfully");
                     Set(ShareItem,false);
                     Reset(UserName_2);
@@ -609,4 +591,14 @@
             X: =277
             Y: =112
             ZIndex: =3
+
+    Label49 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: =data.ID
+        X: =1121
+        Y: =286
+        ZIndex: =15
 
