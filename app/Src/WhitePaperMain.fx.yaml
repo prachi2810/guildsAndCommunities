@@ -4,7 +4,7 @@
         =Refresh(whitePapersWithCommunities);
         ClearCollect(UserCommunities,Filter(User,Email=User().Email));
         Set(currCommunity,Dropdown2_3.Selected.Communities);
-        If(IsBlank(varDocumentCurrent),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities=currCommunity)).Identifier).result))
+        If(IsBlank(varDocumentCurrent) && !IsBlank(currCommunity),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities=currCommunity)).Identifier).result))
 
     RectQuickActionBar2_1 As rectangle:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -158,8 +158,8 @@
             Visible: |
                 =If(!IsBlank(LookUp(whitePapersWithCommunities, 'Modified By'.DisplayName=User().FullName)) ||
                 IsBlank(LookUp(User,Email=User().Email && Role="admin")),true,false)
-            X: =515
-            Y: =46
+            X: =545
+            Y: =36
             ZIndex: =8
 
     LblAppName2_1 As label:
