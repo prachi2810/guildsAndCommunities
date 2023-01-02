@@ -597,7 +597,7 @@
             Fill: =RGBA(4, 42, 61, 1)
             Height: =221
             Visible: =DropDown
-            X: =236
+            X: =209
             Y: =75
             ZIndex: =5
 
@@ -620,7 +620,7 @@
             Text: ="Blog"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =209
             Y: =75
             ZIndex: =6
 
@@ -644,7 +644,7 @@
             Text: ="White Papers"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =209
             Y: =115
             ZIndex: =7
 
@@ -666,7 +666,7 @@
             Text: ="Case Study"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =209
             Y: =160
             ZIndex: =8
 
@@ -688,7 +688,7 @@
             Text: ="E-learning "
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =209
             Y: =200
             ZIndex: =9
 
@@ -711,7 +711,7 @@
             Text: ="Customer Testomonial"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =209
             Y: =240
             ZIndex: =10
 
@@ -796,9 +796,10 @@
         Rectangle6_1 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             Fill: =RGBA(241, 241, 241, 1)
-            Height: =55
+            Height: =45
             Visible: =DropDownDashboard
-            X: =654
+            Width: =158
+            X: =600
             Y: =70
             ZIndex: =15
 
@@ -810,7 +811,6 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241, 241, 241, 1)
             FontWeight: =FontWeight.Semibold
-            Height: =42
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
             OnSelect: =Navigate(Admin)
@@ -821,8 +821,8 @@
             Size: =15
             Text: ="Admin Center"
             Visible: =DropDownDashboard
-            Width: =150
-            X: =654
-            Y: =74
+            Width: =155
+            X: =600
+            Y: =75
             ZIndex: =16
 
