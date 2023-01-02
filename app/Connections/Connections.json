@@ -1,38 +1,4 @@
 {
-  "0f30bca4-b8d4-444e-8779-62473cc21d4e": {
-    "connectionParameters": {
-      "workFlowCallbackUri": "https://prod-05.centralindia.logic.azure.com:443/workflows/a0c00b66a15843bca4737d5fb5e9a154/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=Hw2tGuoAxLNXzR-eVonxckEDGcde1ZQjzBBIUV7-A9U",
-      "workflowEndpoint": "/subscriptions/5c340b36-e0fa-450e-b6c2-cb7e0327fc56/resourceGroups/207c3e3271154ed38a5522f7edb77dc9-087a7e055ddc49d1b36a747f93db3c3f/providers/Microsoft.Logic/workflows/d86e0e4e-deb2-497e-98eb-aabd6762350c",
-      "workflowName": "d86e0e4e-deb2-497e-98eb-aabd6762350c",
-      "workflowPath": "/subscriptions/5c340b36-e0fa-450e-b6c2-cb7e0327fc56/resourceGroups/207c3e3271154ed38a5522f7edb77dc9-087a7e055ddc49d1b36a747f93db3c3f/providers/Microsoft.Logic/workflows/d86e0e4e-deb2-497e-98eb-aabd6762350c"
-    },
-    "connectionRef": {
-      "displayName": "Logic flows",
-      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1534/1.0.1534.2605/logicflows/icon.png",
-      "id": "/providers/microsoft.powerapps/apis/shared_logicflows",
-      "parameterHints": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "d86e0e4e-deb2-497e-98eb-aabd6762350c"
-        }
-      },
-      "parameterHintsV2": {
-        "workflowEntityId": {},
-        "workflowName": {
-          "value": "d86e0e4e-deb2-497e-98eb-aabd6762350c"
-        }
-      }
-    },
-    "datasets": {},
-    "dataSources": [
-      "UploadFileToDocumentLibrary"
-    ],
-    "dependencies": {
-      "shared_sharepointonline": "59bc595d-2c49-4295-b900-697078d27880"
-    },
-    "dependents": [],
-    "id": "0f30bca4-b8d4-444e-8779-62473cc21d4e"
-  },
   "3be7a2d9-4b8e-43dd-9da5-e5b07fb02f5d": {
     "connectionParameters": {
       "workFlowCallbackUri": "https://prod-01.centralindia.logic.azure.com:443/workflows/b0fc47a883c649c4b9a3d074783c55d1/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=g2eHUUJ3ZkFGv8D_uv-FHUFfOxCJ6iVlsllJlYGNVPU",
