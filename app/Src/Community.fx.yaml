@@ -68,7 +68,9 @@
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.Lato
                 Height: =278
+                LineHeight: =1.5
                 Size: =18
                 Text: =data.FullDescription
                 Width: =1041
@@ -93,11 +95,13 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
                 Height: =182
+                LineHeight: =1.5
                 Size: =15
                 Text: =data.Designation1
-                Width: =372
+                Width: =359
                 X: =353
                 Y: =28
                 ZIndex: =11
@@ -142,6 +146,7 @@
                 BorderColor: =RGBA(0, 18, 107, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.'Lato Black'
                 FontWeight: =FontWeight.Bold
                 Height: =49
                 Size: =25
@@ -339,6 +344,7 @@
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.'Lato Black'
                     FontWeight: =FontWeight.Bold
                     Height: =66
                     OnSelect: =Select(Parent)
@@ -353,6 +359,7 @@
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.Lato
                     FontWeight: =FontWeight.Semibold
                     OnSelect: =Select(Parent)
                     Size: =13
@@ -365,6 +372,7 @@
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Color: =RGBA(0, 89, 178, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.Lato
                     FontWeight: =FontWeight.Bold
                     Height: =92
                     OnSelect: =
@@ -379,7 +387,9 @@
                     BorderColor: =RGBA(0, 89, 178, 1)
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    Font: =Font.Lato
                     Height: =65
+                    LineHeight: =1.5
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: ="Please reach out " & ThisItem.Title & " for more details"
@@ -419,6 +429,7 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
                     Fill: =RGBA(0, 51, 102, 1)
+                    Font: =Font.'Lato Black'
                     FontWeight: =FontWeight.Semibold
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -616,6 +627,7 @@
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
         Height: =50
         Size: =28
         Text: =data.Title
@@ -628,6 +640,7 @@
         BorderColor: =RGBA(0, 18, 107, 1)
         Color: =RGBA(255, 255, 255, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
         Size: =13
         Text: =LookUp(Guild, Title=data.Title).Members & " Members"
         X: =24
@@ -652,6 +665,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(255, 191, 0, 1)
+        Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Semibold
         Height: =50
         HoverColor: =RGBA(255, 255, 255, 1)

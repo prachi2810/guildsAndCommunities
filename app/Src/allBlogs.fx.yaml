@@ -173,7 +173,7 @@
             Fill: =RGBA(246, 246, 246, 1)
             Height: =221
             Visible: =DropDown
-            X: =236
+            X: =206
             Y: =75
             ZIndex: =17
 
@@ -197,7 +197,7 @@
             Text: ="Blog"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =206
             Y: =73
             ZIndex: =18
 
@@ -222,7 +222,7 @@
             Text: ="White Papers"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =206
             Y: =113
             ZIndex: =19
 
@@ -245,7 +245,7 @@
             Text: ="Case Study"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =206
             Y: =156
             ZIndex: =20
 
@@ -268,7 +268,7 @@
             Text: ="E-learning "
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =206
             Y: =196
             ZIndex: =21
 
@@ -292,7 +292,7 @@
             Text: ="Customer Testomonial"
             Visible: =DropDown
             Width: =150
-            X: =236
+            X: =206
             Y: =236
             ZIndex: =22
 
@@ -300,12 +300,12 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =19
+            Height: =16
             Icon: =Icon.ChevronDown
             OnSelect: =Set(DropDown,!DropDown)
-            Width: =20
-            X: =362
-            Y: =28
+            Width: =35
+            X: =301
+            Y: =32
             ZIndex: =23
 
         Button20_8 As button:
@@ -503,7 +503,7 @@
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
         Width: =27
         X: =787
-        Y: =28
+        Y: =30
         ZIndex: =31
 
     Dropdown1 As dropdown:
