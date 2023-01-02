@@ -405,7 +405,9 @@
                     DisabledColor: =RGBA(244, 244, 244, 1)
                     Height: =45
                     Icon: =Icon.Link
-                    OnSelect: =Select(Parent)
+                    OnSelect: |-
+                        =Select(Parent);
+                        Launch(ThisItem.'Community Details')
                     Width: =35
                     X: =278
                     Y: =167
