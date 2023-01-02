@@ -57,10 +57,12 @@ About As CanvasComponent:
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: =DisplayMode.View
         FocusedBorderThickness: =4
+        Font: =Font.Lato
         Height: =263
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
+        LineHeight: =1.5
         Mode: =TextMode.MultiLine
         Size: =17
         Width: =888
@@ -103,10 +105,11 @@ About As CanvasComponent:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 0, 0, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =Font.'Lato Black'
         FontWeight: =FontWeight.Bold
         Height: =72
         Size: =28
-        Text: ="   Explore More Communities                                           Upcoming Events"
+        Text: ="   Explore More Communities                                                                  Upcoming Events"
         Width: =1366
         Y: =668
         ZIndex: =6
@@ -118,6 +121,7 @@ About As CanvasComponent:
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         Fill: =RGBA(255, 255, 255, 1)
+        Font: =Font.Lato
         FontWeight: =FontWeight.Semibold
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
@@ -125,7 +129,7 @@ About As CanvasComponent:
             =Launch("https://zensar-my.sharepoint.com/personal/s_shendkar_zensar_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fs%5Fshendkar%5Fzensar%5Fcom%2FDocuments%2FG%26C%20microsite%20%281%29%2Epdf&parent=%2Fpersonal%2Fs%5Fshendkar%5Fzensar%5Fcom%2FDocuments&ct=1670489457516&or=Teams%2DHL&ga=1")
         Size: =15
         Text: ="Know More"
-        X: =1174
-        Y: =573
+        X: =1192
+        Y: =600
         ZIndex: =7
 
