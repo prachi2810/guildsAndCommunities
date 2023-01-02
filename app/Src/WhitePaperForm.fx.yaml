@@ -7,7 +7,7 @@
         Fill: =RGBA(56, 96, 178, 1)
         Height: =88
         Width: =Parent.Width
-        Y: =40
+        Y: =2
         ZIndex: =1
 
     LblAppName1_1 As label:
@@ -18,7 +18,7 @@
         Size: =18
         Text: ="Form Submission"
         Width: =Parent.Width
-        Y: =40
+        Y: =2
         ZIndex: =2
 
     DataCardValue2_1 As attachments:
@@ -46,9 +46,9 @@
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 18, 107, 1)
         Tooltip: ="Add PDF"
-        Width: =175
-        X: =588
-        Y: =343
+        Width: =299
+        X: =519
+        Y: =300
         ZIndex: =3
 
     Label1_2 As label:
@@ -59,9 +59,9 @@
         Height: =28
         Size: =13
         Text: ="Select a community"
-        Width: =209
-        X: =512
-        Y: =224
+        Width: =191
+        X: =519
+        Y: =181
         ZIndex: =4
 
     Dropdown1_2 As dropdown:
@@ -81,8 +81,9 @@
         PressedFill: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(56, 96, 178, 1)
         Size: =13
-        X: =512
-        Y: =264
+        Width: =299
+        X: =519
+        Y: =221
         ZIndex: =5
 
     Button1_6 As button:
@@ -107,8 +108,9 @@
             Refresh(whitePapersWithCommunities);
         Size: =15
         Text: ="Submit"
-        X: =596
-        Y: =550
+        Width: =146
+        X: =603
+        Y: =507
         ZIndex: =6
 
     Arrow1 As arrow.backArrow:
@@ -116,7 +118,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 255, 255, 1)
         OnSelect: =Navigate(WhitePaperMain);
-        X: =82
-        Y: =59
+        X: =77
+        Y: =21
         ZIndex: =7
 
