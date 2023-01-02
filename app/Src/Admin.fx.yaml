@@ -719,12 +719,12 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =19
+            Height: =16
             Icon: =Icon.ChevronDown
             OnSelect: =Set(DropDown,!DropDown)
-            Width: =20
-            X: =362
-            Y: =28
+            Width: =32
+            X: =300
+            Y: =33
             ZIndex: =11
 
         Button20_3 As button:
@@ -734,6 +734,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241, 241, 241, 1)
+            Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -746,7 +747,8 @@
             Size: =15
             Text: ="Dashboard"
             Width: =155
-            X: =654
+            X: =626
+            Y: =2
             ZIndex: =12
 
         Button20_6 As button:
@@ -756,6 +758,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Fill: =RGBA(241, 241, 241, 1)
+            Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
@@ -767,7 +770,7 @@
             RadiusTopRight: =0
             Size: =15
             Text: ="Home"
-            Width: =155
+            Width: =132
             X: =77
             ZIndex: =14
 
@@ -779,7 +782,7 @@
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
         Width: =27
-        X: =793
+        X: =755
         Y: =29
         ZIndex: =17
 
