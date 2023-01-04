@@ -186,7 +186,7 @@
                             Points: LookUp(User, Name=ThisItem.MemberName && Communities=ThisItem.Teams_Channel_Name).Points + ThisItem.Count
                         });
                         
-                        /*Office365Outlook.SendEmail(LookUp(User, Name=ThisItem.MemberName).Email , "Activity Approved", ("Your Activity has been approved for the event " & ThisItem.Title & " dated on " & ThisItem.'DateofEvent ' & ". You have been awarded " & ThisItem.Count & " points."));*/
+                        Office365Outlook.SendEmail(LookUp(User, Name=ThisItem.MemberName).Email , "Activity Approved", ("Your Activity has been approved for the event " & ThisItem.Title & " dated on " & ThisItem.'DateofEvent ' & ". You have been awarded " & ThisItem.Count & " points."));
                         
                         
                         
