@@ -1783,66 +1783,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard26.ColumnChart5.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard26.ColumnChart5.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "GuildStats",
-                "type": "GuildStats.Canvas12.DataCard26.ColumnChart5"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard26.ColumnChart4.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard26.ColumnChart4.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "GuildStats",
-                "type": "GuildStats.Canvas12.DataCard26.ColumnChart4"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Dashboard.Icon3_2.AccessibleLabel"
                 }
               ],
@@ -8096,6 +8036,96 @@
                 "member": "AccessibleLabel",
                 "module": "GuildStats",
                 "type": "GuildStats.Canvas12.DataCard37.ColumnChart5_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard38.ColumnChart5_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard38.ColumnChart5_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "GuildStats",
+                "type": "GuildStats.Canvas12.DataCard38.ColumnChart5_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard39.ColumnChart5_4.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard39.ColumnChart5_4.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "GuildStats",
+                "type": "GuildStats.Canvas12.DataCard39.ColumnChart5_4"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard40.ColumnChart5_5.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "GuildStats.Canvas12.DataCard40.ColumnChart5_5.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "GuildStats",
+                "type": "GuildStats.Canvas12.DataCard40.ColumnChart5_5"
               }
             }
           ],

@@ -1,6 +1,6 @@
 "GuildStats As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |+
-        =ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title));
+        =ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title && Status="Approved"));
         /*ClearCollect(EventsByPillars, GroupBy(CommunityEvents, "Category", "data"));*/
         ClearCollect(
             EventsByPillars,
@@ -28,7 +28,7 @@
             KnowledgeSharing,
             DropColumns(
                 AddColumns(
-                    GroupBy(Filter(CommunityEvents, Category="Knowledge Sharing; Trainings and Certification" &&                                Status="Approved"), "Title", "GroupedItems"),
+                    GroupBy(Filter(CommunityEvents, Category="Knowledge Sharing; Trainings and Certification"), "Title", "GroupedItems"),
                     "Count",CountRows(GroupedItems)
                 ),
             "GroupedItems"
@@ -38,7 +38,37 @@
             CommunityEngagement,
             DropColumns(
                 AddColumns(
-                    GroupBy(Filter(CommunityEvents, Category="Knowledge Sharing; Trainings and Certification" &&                                Status="Approved"), "Title", "GroupedItems"),
+                    GroupBy(Filter(CommunityEvents, Category="Community Engagement"), "Title", "GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+            )
+        );
+        ClearCollect(
+            ExpertEngagement,
+            DropColumns(
+                AddColumns(
+                    GroupBy(Filter(CommunityEvents, Category="Expert Engagement"), "Title", "GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+            )
+        );
+        ClearCollect(
+            DeliveryExcellence,
+            DropColumns(
+                AddColumns(
+                    GroupBy(Filter(CommunityEvents, Category="Delivery Excellence"), "Title", "GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+            )
+        );
+        ClearCollect(
+            CustomerAcademy,
+            DropColumns(
+                AddColumns(
+                    GroupBy(Filter(CommunityEvents, Category="Customer Academy"), "Title", "GroupedItems"),
                     "Count",CountRows(GroupedItems)
                 ),
             "GroupedItems"
@@ -129,6 +159,46 @@
                         DropColumns(
                             AddColumns(
                                 GroupBy(Filter(CommunityEvents, Category="Knowledge Sharing; Trainings and Certification" &&                                Status="Approved"), "Title", "GroupedItems"),
+                                "Count",CountRows(GroupedItems)
+                            ),
+                        "GroupedItems"
+                        )
+                    );
+                    ClearCollect(
+                        CommunityEngagement,
+                        DropColumns(
+                            AddColumns(
+                                GroupBy(Filter(CommunityEvents, Category="Community Engagement" &&                                Status="Approved"), "Title", "GroupedItems"),
+                                "Count",CountRows(GroupedItems)
+                            ),
+                        "GroupedItems"
+                        )
+                    );
+                    ClearCollect(
+                        ExpertEngagement,
+                        DropColumns(
+                            AddColumns(
+                                GroupBy(Filter(CommunityEvents, Category="Expert Engagement" &&                                Status="Approved"), "Title", "GroupedItems"),
+                                "Count",CountRows(GroupedItems)
+                            ),
+                        "GroupedItems"
+                        )
+                    );
+                    ClearCollect(
+                        DeliveryExcellence,
+                        DropColumns(
+                            AddColumns(
+                                GroupBy(Filter(CommunityEvents, Category="Delivery Excellence" &&                                Status="Approved"), "Title", "GroupedItems"),
+                                "Count",CountRows(GroupedItems)
+                            ),
+                        "GroupedItems"
+                        )
+                    );
+                    ClearCollect(
+                        CustomerAcademy,
+                        DropColumns(
+                            AddColumns(
+                                GroupBy(Filter(CommunityEvents, Category="Customer Academy" &&                                Status="Approved"), "Title", "GroupedItems"),
                                 "Count",CountRows(GroupedItems)
                             ),
                         "GroupedItems"
@@ -304,77 +374,6 @@
                 Y: =84
                 ZIndex: =3
 
-        DataCard26 As dataCard.blankCard:
-            BorderColor: =RGBA(0, 0, 0, 1)
-            BorderStyle: =BorderStyle.Solid
-            DisplayMode: =DisplayMode.Edit
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =535
-            Width: =1366
-            X: =0
-            Y: =2
-            ZIndex: =3
-
-            CompositeColumnChart3 As group:
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =1
-
-                Title6 As label:
-                    Align: =Align.Center
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FontWeight: =FontWeight.Bold
-                    Height: =45
-                    Text: |-
-                        ="Blogs Per Community
-                        "
-                    Width: =400
-                    X: =148
-                    Y: =56
-                    ZIndex: =2
-
-                ColumnChart4 As barChart:
-                    BorderColor: =RGBA(56, 56, 56, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    Height: =336
-                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                    Items: =GuildCommunities
-                    X: =148
-                    Y: =108
-                    ZIndex: =3
-
-            CompositeColumnChart5 As group:
-                Height: =5
-                Width: =5
-                X: =40
-                Y: =40
-                ZIndex: =4
-
-                Title9 As label:
-                    Align: =Align.Center
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledColor: =RGBA(166, 166, 166, 1)
-                    FontWeight: =FontWeight.Bold
-                    Height: =45
-                    Text: ="White Papers Per Community"
-                    Width: =400
-                    X: =775
-                    Y: =56
-                    ZIndex: =5
-
-                ColumnChart5 As barChart:
-                    BorderColor: =RGBA(56, 56, 56, 1)
-                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    Height: =373
-                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                    Items: =GuildCommunities
-                    X: =775
-                    Y: =84
-                    ZIndex: =6
-
         DataCard36 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -456,7 +455,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     Height: =360
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                    Items: =KnowledgeSharing
+                    Items: =CommunityEngagement
                     Width: =1265
                     X: =40
                     Y: =87
@@ -466,10 +465,157 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Height: =80
                     ItemColorSet: =ColumnChart5_2.ItemColorSet
-                    Items: =KnowledgeSharing
+                    Items: =CommunityEngagement
                     Width: =1012
                     X: =167
                     Y: =440
+                    ZIndex: =4
+
+        DataCard38 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =570
+            Width: =1366
+            X: =0
+            Y: =5
+            ZIndex: =6
+
+            CompositeColumnChart5_3 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title11_4 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =26
+                    Text: ="Expert Engagement"
+                    Width: =1265
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart5_3 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    Height: =327
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =ExpertEngagement
+                    Width: =1265
+                    X: =40
+                    Y: =79
+                    ZIndex: =3
+
+                Legend5_3 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =80
+                    ItemColorSet: =ColumnChart5_3.ItemColorSet
+                    Items: =ExpertEngagement
+                    Width: =1012
+                    X: =167
+                    Y: =400
+                    ZIndex: =4
+
+        DataCard39 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =537
+            Width: =1366
+            X: =0
+            Y: =6
+            ZIndex: =7
+
+            CompositeColumnChart5_4 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title11_5 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =26
+                    Text: ="Delivery Excellence"
+                    Width: =1265
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart5_4 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    Height: =274
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =DeliveryExcellence
+                    Width: =1265
+                    X: =40
+                    Y: =76
+                    ZIndex: =3
+
+                Legend5_4 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =55
+                    ItemColorSet: =ColumnChart5_4.ItemColorSet
+                    Items: =DeliveryExcellence
+                    Width: =1012
+                    X: =167
+                    Y: =386
+                    ZIndex: =4
+
+        DataCard40 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =547
+            Width: =1366
+            X: =0
+            Y: =7
+            ZIndex: =8
+
+            CompositeColumnChart5_5 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title11_6 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =26
+                    Text: ="Customer Academy"
+                    Width: =1265
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart5_5 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    Height: =274
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =CustomerAcademy
+                    Width: =1265
+                    X: =40
+                    Y: =76
+                    ZIndex: =3
+
+                Legend5_5 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =55
+                    ItemColorSet: =ColumnChart5_5.ItemColorSet
+                    Items: =CustomerAcademy
+                    Width: =1012
+                    X: =167
+                    Y: =386
                     ZIndex: =4
 
     Icon32 As icon.ArrowLeft:
