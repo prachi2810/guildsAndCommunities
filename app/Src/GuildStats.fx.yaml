@@ -231,7 +231,7 @@
                 HoverFill: =RGBA(153, 205, 255, .2)
                 InputFill: =RGBA(255, 255, 255, 1)
                 InvertedColor: =RGBA(255, 255, 255, 1)
-                Items: =EventsByPillars
+                Items: =CommunityEvents
                 LinkColor: =RGBA(0, 134, 208, 1)
                 PrimaryColor1: =RGBA(0, 51, 102, 1)
                 PrimaryColor2: =RGBA(0, 89, 178, 1)
@@ -251,26 +251,54 @@
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
-                    Order: =1
+                    Order: =3
                     Text: =ThisItem.Category
+                    Width: =100
+                    X: =14
+                    Y: =0
+                    ZIndex: =10
+
+                MemberName_Column1 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="MemberName"
+                    FieldName: ="MemberName"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =4
+                    Text: =ThisItem.MemberName
                     Width: =100
                     X: =0
                     Y: =0
-                    ZIndex: =4
+                    ZIndex: =11
 
-                Count_Column1 As dataTableColumn.textualColumn:
+                DateofEvent_Column1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="Activities Conducted"
-                    FieldName: ="Count"
+                    FieldDisplayName: ="DateofEvent"
+                    FieldName: ="DateofEvent"
+                    FieldVariantName: ="textualColumn"
+                    Height: =Parent.Height
+                    LayoutHeight: =Parent.Height
+                    Order: =5
+                    Text: =ThisItem.DateofEvent
+                    Width: =100
+                    X: =0
+                    Y: =0
+                    ZIndex: =12
+
+                Title_Column2 As dataTableColumn.textualColumn:
+                    DisplayMode: =DisplayMode.Edit
+                    FieldDisplayName: ="Title"
+                    FieldName: ="Title"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =2
-                    Text: =ThisItem.Count
+                    Text: =ThisItem.Title
                     Width: =100
-                    X: =0
+                    X: =503
                     Y: =0
-                    ZIndex: =5
+                    ZIndex: =13
 
         DataCard35 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
