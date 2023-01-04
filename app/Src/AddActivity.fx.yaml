@@ -558,7 +558,7 @@
                 'Members Attended': If(TextInput1_1.DisplayMode = DisplayMode.Edit, Value(TextInput1_1.Text), false),
                 Link: If(DataCardValue31.DisplayMode = DisplayMode.Edit, DataCardValue31.Text, false)
             }, Form2_1.Updates);
-            Notify("Your Activity has been Submitted and is currently under review!");
+            Notify("Your Activity has been Submitted and is currently under review!",NotificationType.Success,0.1);
             ResetForm(Form2_1);
             ResetForm(Form3_2);
             Reset(TextInput1_1);
