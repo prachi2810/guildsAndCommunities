@@ -2,7 +2,7 @@
     OnVisible: |+
         =ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title && Status="Approved"));
         /*ClearCollect(EventsByPillars, GroupBy(CommunityEvents, "Category", "data"));*/
-        ClearCollect(
+        /*ClearCollect(
             EventsByPillars,
             DropColumns(
                 AddColumns(
@@ -11,7 +11,7 @@
                 ),
             "GroupedItems"
             )
-        );
+        );*/
         ClearCollect(UserGuild, Filter(User, Guild=guildName));
         ClearCollect(
             GroupUsersByGuild,
@@ -280,7 +280,7 @@
                     Height: =Parent.Height
                     LayoutHeight: =Parent.Height
                     Order: =5
-                    Text: =ThisItem.DateofEvent
+                    Text: =ThisItem.'DateofEvent '
                     Width: =100
                     X: =0
                     Y: =0
