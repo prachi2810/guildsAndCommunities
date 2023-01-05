@@ -3,7 +3,7 @@
         =ClearCollect(EventStatusAdmin, Filter(User, Email=User().Email && Role="admin"));
         ClearCollect(EventStatus, Filter('Event Track Details',Status="Pending" && Teams_Channel_Name=Dropdown6.Selected.Communities
         ));
-        ClearCollect(
+        /*ClearCollect(
             BlogsPerMonth,
             DropColumns(
                 AddColumns(
@@ -28,7 +28,7 @@
                 ),
                 "GroupDate"
             )
-        );
+        );*/
         ClearCollect(
             ActivitiesPerMonth,
             DropColumns(
@@ -455,8 +455,8 @@
                     LineHeight: =1.5
                     Text: ="Activities Per Month"
                     Width: =512
-                    X: =51
-                    Y: =157
+                    X: =52
+                    Y: =141
                     ZIndex: =3
 
                 LineChart1_1 As lineChart:
@@ -466,8 +466,8 @@
                     Items: =ActivitiesPerMonth
                     Size: =11
                     Width: =512
-                    X: =51
-                    Y: =183
+                    X: =52
+                    Y: =167
                     ZIndex: =4
 
                 Legend1_1 As legend:
@@ -476,8 +476,8 @@
                     ItemColorSet: =LineChart1_1.ItemColorSet
                     Items: =LineChart1_1.SeriesLabels
                     Width: =410
-                    X: =103
-                    Y: =532
+                    X: =104
+                    Y: =516
                     ZIndex: =5
 
             CompositeColumnChart2_1 As group:
@@ -494,28 +494,28 @@
                     FontWeight: =FontWeight.Bold
                     Height: =22
                     Text: ="Top Communities"
-                    Width: =492
+                    Width: =512
                     X: =685
                     Y: =148
                     ZIndex: =7
 
                 "'Top Communities_1' As barChart":
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    Height: =364
+                    Height: =335
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =TopFiveCommunities
-                    Width: =492
-                    X: =714
-                    Y: =141
+                    Width: =497
+                    X: =700
+                    Y: =170
                     ZIndex: =8
 
                 Legend5_1 As legend:
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Height: =73
                     ItemColorSet: ='Top Communities_1'.ItemColorSet
-                    Items: ='Top Communities_1'.SeriesLabels
-                    Width: =393
-                    X: =714
+                    Items: =TopFiveCommunities
+                    Width: =409
+                    X: =715
                     Y: =528
                     ZIndex: =9
 
