@@ -1,6 +1,6 @@
 "allBlogs As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: |-
+    OnVisible: |
         =Refresh(Blog);
         ClearCollect(UserCommunity, { Communities: "All" });
         Collect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
@@ -195,7 +195,8 @@
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-            OnSelect: =Navigate(allBlogs)
+            OnSelect: |
+                =Navigate(allBlogs);
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
