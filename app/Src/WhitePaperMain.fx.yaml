@@ -142,15 +142,14 @@
                 Refresh(whitePapersWithCommunities);
                 If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
                 If(!IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities="empty")).Identifier).result));
-            Visible: |
+            Visible: |-
                 =If(
-                    !IsBlank(LookUp(whitePapersWithCommunities, (Name=ThisItem.Name) &&
-                    ('Modified By'.DisplayName=User().FullName) || !IsBlank(LookUp(User,Email=User().Email && Role="admin")))),
+                    !IsBlank(LookUp(whitePapersWithCommunities, 'Modified By'.Email=User().Email && Name=ThisItem.Name) ),
                     true,
                     false
                 )
-                
-                /*|| IsBlank(LookUp(User,Email=User().Email && Role="admin"))*/
+                //!IsBlank(LookUp(whitePapersWithCommunities,  (Name=ThisItem.Name) &&
+                //('Modified By'.DisplayName=User().FullName) || !IsBlank(LookUp(User,Email=User().Email && Role="admin" && //communities=ThisItem.communities))));
             Width: =51
             X: =551
             Y: =105
