@@ -139,7 +139,8 @@
             OnSelect: |-
                 =Remove(whitePapersWithCommunities,ThisItem);
                 Refresh(whitePapersWithCommunities);
-                Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities=currCommunity)).Identifier).result)
+                If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
+                Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result)
             Visible: |
                 =If(!IsBlank(LookUp(whitePapersWithCommunities, 'Modified By'.DisplayName=User().FullName)) ||
                 IsBlank(LookUp(User,Email=User().Email && Role="admin")),true,false)
