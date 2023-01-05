@@ -19,7 +19,7 @@
         BorderColor: =RGBA(0, 18, 107, 1)
         Fill: =RGBA(237, 237, 237, 1)
         Height: =584
-        Items: =Filter(whitePapersWithCommunities,communities=currCommunity)
+        Items: =val
         Layout: =Layout.Vertical
         OnSelect: =Set(varDocumentCurrent, GetDataURI.Run(Gallery3_1.Selected.Identifier).result);
         TemplateFill: =If(ThisItem.IsSelected, ColorFade(LightSkyBlue, 70%), White)
@@ -96,7 +96,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.'Modified By'.DisplayName
+            Text: =ThisItem.Sensitivity
             VerticalAlign: =VerticalAlign.Top
             Width: =233
             X: =160
@@ -140,7 +140,7 @@
             Height: =33
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.communities
+            Text: =ThisItem.Description
             Width: =210
             X: =160
             Y: =72
