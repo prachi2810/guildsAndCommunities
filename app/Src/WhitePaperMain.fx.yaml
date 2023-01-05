@@ -137,10 +137,11 @@
             Height: =51
             Icon: =Icon.Trash
             OnSelect: |-
-                =Remove(whitePapersWithCommunities,ThisItem);
+                =Select(Parent);
+                Remove(whitePapersWithCommunities,ThisItem);
                 Refresh(whitePapersWithCommunities);
                 If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
-                If(IsBlank(varDocumentCurrent) && !IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result));
+                If(!IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities="empty")).Identifier).result));
             Visible: |
                 =If(!IsBlank(LookUp(whitePapersWithCommunities, 'Modified By'.DisplayName=User().FullName)) ||
                 IsBlank(LookUp(User,Email=User().Email && Role="admin")),true,false)
