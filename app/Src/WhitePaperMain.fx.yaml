@@ -3,8 +3,9 @@
     OnVisible: |-
         =Refresh(whitePapersWithCommunities);
         ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+        ClearCollect(UserCommunities1,{Communities:"All"},UserCommunities);
         Set(currCommunity,Dropdown2_3.Selected.Communities);
-        Set(val,Filter(whitePapersWithCommunities,communities=currCommunity));
+        If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
         If(IsBlank(varDocumentCurrent) && !IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result));
 
     RectQuickActionBar2_1 As rectangle:
@@ -186,11 +187,12 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(186, 202, 226, 1)
-        Items: =UserCommunities
+        Items: =UserCommunities1
         OnChange: |-
             =Refresh(whitePapersWithCommunities);
             Set(currCommunity,Dropdown2_3.Selected.Communities);
-            Set(val,Filter(whitePapersWithCommunities,communities=currCommunity));
+            If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
+            Set(currCommunity,First(val).communities);
             If(!IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities="empty")).Identifier).result));
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 18, 107, 1)
