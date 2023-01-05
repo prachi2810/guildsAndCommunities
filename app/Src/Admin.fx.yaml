@@ -74,11 +74,24 @@
                 ),
             "GroupedItems"
         ));
+        
+        ClearCollect(WholeCommunityEngagement, DropColumns(
+                AddColumns(
+                    GroupBy(Filter('Event Track Details', Category="Community Engagement" && Status="Approved"),"Title","GroupedItems"),
+                    "Num",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ));
+        
+        ClearCollect(WholeExpertEngagement, DropColumns(
+                AddColumns(
+                    GroupBy(Filter('Event Track Details', Category="Expert Engagement" && Status="Approved"),"Title","GroupedItems"),
+                    "Num",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ));
+        
         /*ClearCollect( WholeKnowledgeSharing, Filter('Event Track Details', Category="Knowledge Sharing; Trainings and Certification" && Status="Approved"));*/
-        ClearCollect( WholeCommunityEngagement, Filter('Event Track Details', Category="Community Engagement"));
-        ClearCollect( WholeExpertEngagement, Filter('Event Track Details', Category="Expert Engagement"));
-        ClearCollect( WholeDeliveryExcellence, Filter('Event Track Details', Category="Delivery Excellence"));
-        ClearCollect( WholeCustomerAcademy, Filter('Event Track Details', Category="Customer Academy"));
 
     RectQuickActionBar9 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -673,6 +686,110 @@
                     Width: =1038
                     X: =169
                     Y: =510
+                    ZIndex: =4
+
+        DataCard41 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =569
+            Width: =1366
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+            CompositeColumnChart3_1 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title6_1 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =25
+                    Text: ="Knowledge Sharing; Trainings and Certification"
+                    Width: =1297
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart4_1 As barChart:
+                    BorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
+                    Height: =342
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =WholeCommunityEngagement
+                    ItemsGap: =30
+                    Width: =1297
+                    X: =40
+                    Y: =87
+                    ZIndex: =3
+
+                Legend3_1 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =112
+                    ItemColorSet: =ColumnChart4_1.ItemColorSet
+                    Items: =WholeCommunityEngagement
+                    Width: =1038
+                    X: =169
+                    Y: =470
+                    ZIndex: =4
+
+        DataCard42 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =504
+            Width: =1366
+            X: =0
+            Y: =5
+            ZIndex: =6
+
+            CompositeColumnChart3_2 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title6_2 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =27
+                    Text: ="Knowledge Sharing; Trainings and Certification"
+                    Width: =1297
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart4_2 As barChart:
+                    BorderColor: =RGBA(56, 56, 56, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
+                    Height: =364
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =WholeExpertEngagement
+                    ItemsGap: =30
+                    Width: =1297
+                    X: =40
+                    Y: =47
+                    ZIndex: =3
+
+                Legend3_2 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =112
+                    ItemColorSet: =ColumnChart4_2.ItemColorSet
+                    Items: =WholeExpertEngagement
+                    Width: =1038
+                    X: =169
+                    Y: =430
                     ZIndex: =4
 
     NavBarGr_2 As group:
