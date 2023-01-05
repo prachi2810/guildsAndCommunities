@@ -144,8 +144,8 @@
                 If(!IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities="empty")).Identifier).result));
             Visible: |
                 =If(
-                    !IsBlank(LookUp(whitePapersWithCommunities, 
-                    'Modified By'.DisplayName=User().FullName)),
+                    !IsBlank(LookUp(whitePapersWithCommunities, (Name=ThisItem.Name) &&
+                    ('Modified By'.DisplayName=User().FullName) || !IsBlank(LookUp(User,Email=User().Email && Role="admin")))),
                     true,
                     false
                 )
