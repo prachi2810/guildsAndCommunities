@@ -571,46 +571,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Admin.Button18_15.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.Button18_15.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 11,
-                  "charOffset": 9,
-                  "snippet": {
-                    "text": "WhitePapers"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Admin",
-                "type": "Admin.Button18_15"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "WhitePapers"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "allBlogs.Button18_19.OnSelect"
                 }
               ],
