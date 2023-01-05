@@ -105,24 +105,6 @@
             Y: =92
             ZIndex: =7
 
-    Button9 As button:
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Fill: =RGBA(0, 51, 102, 1)
-        FontWeight: =FontWeight.Semibold
-        Height: =67
-        HoverColor: =RGBA(255, 255, 255, 1)
-        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        OnSelect: |-
-            =Navigate(EventForm, None, { guildName: data });
-        Size: =15
-        Text: ="Create Event"
-        Width: =192
-        X: =558
-        Y: =30
-        ZIndex: =6
-
     Icon17 As icon.Cancel:
         BorderColor: =RGBA(0, 89, 178, 1)
         Color: =RGBA(0, 89, 178, 1)

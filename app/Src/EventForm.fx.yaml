@@ -53,7 +53,7 @@ EventForm As screen:
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Event],DataSourceInfo.DisplayName,"Guild")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =104
+            Height: =title
             MaxLength: =DataSourceInfo([@Event], DataSourceInfo.MaxLength, "Guild")
             Required: =false
             Update: =DataCardValue2.Text
