@@ -53,6 +53,33 @@
                 "GroupDate"
             )
         );
+        /*ClearCollect(UserActivities, Filter('Event Track Details', 'Created By'.DisplayName=User().FullName && Status="Approved"));*/
+        ClearCollect(
+            UserActivitiesPerMonth,
+            DropColumns(
+                AddColumns(
+                    GroupBy(
+                        AddColumns(
+                            SortByColumns(
+                                Filter('Event Track Details', 'Created By'.DisplayName=User().FullName && Status="Approved"),
+                                "Created",
+                                Ascending
+                            ),
+                            "dates",
+                            Text(
+                                ThisRecord.Created,
+                                "mmmm"
+                            )
+                        ),
+                        "dates",
+                        "GroupDate"
+                    ),
+                    "counts",
+                    CountRows(GroupDate)
+                ),
+                "GroupDate"
+            )
+        );
 
     RectQuickActionBar12 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -276,7 +303,7 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FontWeight: =FontWeight.Bold
                     Height: =18
-                    Text: ="Blogs/White Papers Posting Timeline"
+                    Text: ="Your Activities Timeline"
                     Width: =353
                     X: =925
                     Y: =40
@@ -286,7 +313,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     Height: =259
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                    Items: =UserBlogsPerMonth
+                    Items: =UserActivitiesPerMonth
                     Size: =11
                     Width: =353
                     X: =925
@@ -365,6 +392,7 @@
                     Height: =251
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =UserCommunity
+                    ItemsGap: =10
                     NumberOfSeries: =2
                     X: =40
                     Y: =59
