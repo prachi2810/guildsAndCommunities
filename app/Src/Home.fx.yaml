@@ -860,7 +860,7 @@
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDownHome,!DropDownHome)
         Width: =20
-        X: =175
+        X: =173
         Y: =29
         ZIndex: =27
 
@@ -1037,8 +1037,8 @@
             RadiusTopRight: =0
             Size: =15
             Text: ="Dashboard"
-            Width: =128
-            X: =599
+            Width: =168
+            X: =590
             Y: =5
             ZIndex: =24
 
@@ -1051,7 +1051,7 @@
             Fill: =RGBA(241, 241, 241, 1)
             Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
-            Height: =73
+            Height: =68
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Home)
@@ -1062,8 +1062,9 @@
             RadiusTopRight: =0
             Size: =15
             Text: ="Home"
-            Width: =128
+            Width: =125
             X: =77
+            Y: =5
             ZIndex: =26
 
     Image26 As image:
@@ -1090,8 +1091,8 @@
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
         Width: =20
-        X: =720
-        Y: =29
+        X: =731
+        Y: =28
         ZIndex: =35
 
     HomeDropDown As group:
