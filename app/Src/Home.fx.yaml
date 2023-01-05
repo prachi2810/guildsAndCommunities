@@ -1026,11 +1026,10 @@
             Fill: =RGBA(241, 241, 241, 1)
             Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
-            Height: =68
+            Height: =75
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =true
-            PaddingTop: =0
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -1039,7 +1038,6 @@
             Text: ="Dashboard"
             Width: =168
             X: =590
-            Y: =5
             ZIndex: =24
 
         Button20_5 As button:
@@ -1051,11 +1049,10 @@
             Fill: =RGBA(241, 241, 241, 1)
             Font: =Font.'Lato Black'
             FontWeight: =FontWeight.Semibold
-            Height: =68
+            Height: =75
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
             OnSelect: =Navigate(Home)
-            PaddingTop: =0
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -1064,7 +1061,6 @@
             Text: ="Home"
             Width: =125
             X: =77
-            Y: =5
             ZIndex: =26
 
     Image26 As image:
