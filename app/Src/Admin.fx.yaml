@@ -55,12 +55,30 @@
         ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 3));
         Set(DropDownDashboard,false);
         
-        ClearCollect( EventGroup, );
-        ClearCollect( WholeKnowledgeSharing, Filter('Event Track Details', Category="Knowledge Sharing; Trainings and Certification" && Status="Approved"));
-        ClearCollect( WholeCommunityEngagement, Filter('Event Track Details', Category="Community Engagement" && Status="Approved"));
-        ClearCollect( WholeExpertEngagement, Filter('Event Track Details', Category="Expert Engagement" && Status="Approved"));
-        ClearCollect( WholeDeliveryExcellence, Filter('Event Track Details', Category="Delivery Excellence" && Status="Approved"));
-        ClearCollect( WholeCustomerAcademy, Filter('Event Track Details', Category="Customer Academy" && Status="Approved"));
+        /*ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title && Status="Approved"));
+        ClearCollect(
+            KnowledgeSharing,
+            DropColumns(
+                AddColumns(
+                    GroupBy(Filter(CommunityEvents, Category="Knowledge Sharing; Trainings and Certification"), "Title", "GroupedItems"),
+                    "Count", CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+            )
+        );*/
+        
+        ClearCollect(WholeKnowledgeSharing, DropColumns(
+                AddColumns(
+                    GroupBy(Filter('Event Track Details', Category="Knowledge Sharing; Trainings and Certification" && Status="Approved"),"Title","GroupedItems"),
+                    "Num",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ));
+        /*ClearCollect( WholeKnowledgeSharing, Filter('Event Track Details', Category="Knowledge Sharing; Trainings and Certification" && Status="Approved"));*/
+        ClearCollect( WholeCommunityEngagement, Filter('Event Track Details', Category="Community Engagement"));
+        ClearCollect( WholeExpertEngagement, Filter('Event Track Details', Category="Expert Engagement"));
+        ClearCollect( WholeDeliveryExcellence, Filter('Event Track Details', Category="Delivery Excellence"));
+        ClearCollect( WholeCustomerAcademy, Filter('Event Track Details', Category="Customer Academy"));
 
     RectQuickActionBar9 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -611,7 +629,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =100
+            Height: =665
             Width: =1366
             X: =0
             Y: =3
@@ -649,12 +667,12 @@
 
                 Legend3 As legend:
                     DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =80
+                    Height: =112
                     ItemColorSet: =ColumnChart4.ItemColorSet
-                    Items: =ColumnChart4.SeriesLabels
+                    Items: =WholeKnowledgeSharing
                     Width: =1038
-                    X: =170
-                    Y: =480
+                    X: =169
+                    Y: =510
                     ZIndex: =4
 
     NavBarGr_2 As group:

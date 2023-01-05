@@ -1,7 +1,6 @@
 "GuildStats As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |+
-        =ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title && Status="Approved"));
-        /*ClearCollect(EventsByPillars, GroupBy(CommunityEvents, "Category", "data"));*/
+        =/*ClearCollect(EventsByPillars, GroupBy(CommunityEvents, "Category", "data"));*/
         /*ClearCollect(
             EventsByPillars,
             DropColumns(
@@ -24,12 +23,13 @@
             )
         );
         ClearCollect(GroupUsersByGuild, SortByColumns(GroupUsersByGuild, "Total Points", Descending));
+        ClearCollect(CommunityEvents, Filter('Event Track Details', Teams_Channel_Name=Dropdown7.Selected.Title && Status="Approved"));
         ClearCollect(
             KnowledgeSharing,
             DropColumns(
                 AddColumns(
                     GroupBy(Filter(CommunityEvents, Category="Knowledge Sharing; Trainings and Certification"), "Title", "GroupedItems"),
-                    "Count",CountRows(GroupedItems)
+                    "Count", CountRows(GroupedItems)
                 ),
             "GroupedItems"
             )

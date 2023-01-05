@@ -3784,7 +3784,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Labels\":\"Title\",\"Series1\":\"Count\",\"Series2\":\"EventId\",\"Series3\":\"ID\",\"Series4\":\"MemberId\",\"Series5\":\"MembersAttended\",\"Series6\":\"Training_x002f_SessionHours\",\"Series7\":\"Training_x002f_SessionHours\",\"Series8\":\"Training_x002f_SessionHours\",\"Series9\":\"Training_x002f_SessionHours\"}",
+          "NameMap": "{\"Series1\":\"Num\",\"Series2\":\"Num\",\"Series3\":\"Num\",\"Series4\":\"Num\",\"Series5\":\"Num\",\"Series6\":\"Num\",\"Series7\":\"Num\",\"Series8\":\"Num\",\"Series9\":\"Num\",\"Labels\":\"Num\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
@@ -7911,7 +7911,7 @@
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"Value\"}",
+          "NameMap": "{\"Value\":\"Title\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },

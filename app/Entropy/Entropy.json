@@ -816,7 +816,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/05/2023 04:28:13",
+  "HeaderLastSavedDateTimeUTC": "01/05/2023 04:47:30",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "3be7a2d9-4b8e-43dd-9da5-e5b07fb02f5d": "\"/providers/microsoft.powerapps/apis/shared_logicflows/connections/3ece7528804c4c759bb981cc97bac803\"",
@@ -981,7 +981,12 @@
     "UserCommunity": 65,
     "UserGuild": 66,
     "userprofile": 67,
-    "whitePapersWithCommunities": 34
+    "whitePapersWithCommunities": 34,
+    "WholeCommunityEngagement": 71,
+    "WholeCustomerAcademy": 68,
+    "WholeDeliveryExcellence": 69,
+    "WholeExpertEngagement": 70,
+    "WholeKnowledgeSharing": 72
   },
   "OrderGroupControls": {
     "CompositeColumnChart1": {
@@ -2085,7 +2090,7 @@
     "Canvas7": 360,
     "Canvas8": 393,
     "Canvas9": 564,
-    "Category_Column1": 680,
+    "Category_Column1": 679,
     "Circle1_1": 287,
     "ColumnChart1": 424,
     "ColumnChart2": 433,
@@ -2241,7 +2246,7 @@
     "DataTable4": 677,
     "Date_DataCard1": 480,
     "Date_DataCard2": 224,
-    "DateofEvent_Column1": 679,
+    "DateofEvent_Column1": 681,
     "DateofEvent_Column1_1": 627,
     "DatePicker1": 557,
     "DatePicker1_1": 648,
@@ -2597,7 +2602,7 @@
     "LineChart1_1": 528,
     "LineChart2": 618,
     "Link_DataCard1": 665,
-    "MemberName_Column1": 678,
+    "MemberName_Column1": 680,
     "Members_Column1": 539,
     "MicrosoftStream2": 43,
     "MonthDayGallery1_1": 283,
@@ -2727,7 +2732,7 @@
     "title": 295,
     "title_1": 398,
     "Title_Column1": 538,
-    "Title_Column2": 681,
+    "Title_Column2": 678,
     "Title_Column2_1": 626,
     "Title_DataCard1": 98,
     "Title_DataCard2": 465,
@@ -2869,7 +2874,7 @@
       "typedDataCard": 35
     },
     "DeserializationLoadTime": 8.6347228,
-    "ErrorCount": 42
+    "ErrorCount": 26
   },
   "WasLocalDatabaseReferencesEmpty": false
 }

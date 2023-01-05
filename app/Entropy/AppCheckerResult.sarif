@@ -331,600 +331,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 1563,
-                  "snippet": {
-                    "text": ")"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadToken",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charOffset": 2209,
-                  "snippet": {
-                    "text": ""
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Eof",
-              "ParenClose"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrExpectedFound-Ex-Fnd",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 10,
-                  "charOffset": 1551,
-                  "snippet": {
-                    "text": "EventGroup"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "EventGroup"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 21,
-                  "charOffset": 1581,
-                  "snippet": {
-                    "text": "WholeKnowledgeSharing"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "WholeKnowledgeSharing"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 147,
-                  "charOffset": 1567,
-                  "snippet": {
-                    "text": "ClearCollect( WholeKnowledgeSharing, Filter('Event Track Details', Category=\"Knowledge Sharing; Trainings and Certification\" && Status=\"Approved\"))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ClearCollect"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 24,
-                  "charOffset": 1731,
-                  "snippet": {
-                    "text": "WholeCommunityEngagement"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "WholeCommunityEngagement"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 124,
-                  "charOffset": 1717,
-                  "snippet": {
-                    "text": "ClearCollect( WholeCommunityEngagement, Filter('Event Track Details', Category=\"Community Engagement\" && Status=\"Approved\"))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ClearCollect"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 21,
-                  "charOffset": 1858,
-                  "snippet": {
-                    "text": "WholeExpertEngagement"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "WholeExpertEngagement"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 118,
-                  "charOffset": 1844,
-                  "snippet": {
-                    "text": "ClearCollect( WholeExpertEngagement, Filter('Event Track Details', Category=\"Expert Engagement\" && Status=\"Approved\"))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ClearCollect"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 23,
-                  "charOffset": 1979,
-                  "snippet": {
-                    "text": "WholeDeliveryExcellence"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "WholeDeliveryExcellence"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 122,
-                  "charOffset": 1965,
-                  "snippet": {
-                    "text": "ClearCollect( WholeDeliveryExcellence, Filter('Event Track Details', Category=\"Delivery Excellence\" && Status=\"Approved\"))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ClearCollect"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 20,
-                  "charOffset": 2104,
-                  "snippet": {
-                    "text": "WholeCustomerAcademy"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "WholeCustomerAcademy"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 116,
-                  "charOffset": 2090,
-                  "snippet": {
-                    "text": "ClearCollect( WholeCustomerAcademy, Filter('Event Track Details', Category=\"Customer Academy\" && Status=\"Approved\"))"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ClearCollect"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 1549,
-                  "snippet": {
-                    "text": "("
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "ClearCollect"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.OnVisible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 1,
-                  "charOffset": 1564,
-                  "snippet": {
-                    "text": ";"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "Admin",
-                "type": "Admin"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrBadType",
-          "ruleIndex": 6
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Admin.Canvas6.DataCard19.Gallery2_1.Button3_1.OnSelect"
                 }
               ],
@@ -958,7 +364,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 7
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -998,7 +404,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1038,7 +444,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1078,7 +484,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 7
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1118,7 +524,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1158,47 +564,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard26.ColumnChart4.Items"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard26.ColumnChart4.Items",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 21,
-                  "charOffset": 0,
-                  "snippet": {
-                    "text": "WholeKnowledgeSharing"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Items",
-                "module": "Admin",
-                "type": "Admin.Canvas6.DataCard26.ColumnChart4"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "WholeKnowledgeSharing"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 1
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1278,7 +644,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1318,7 +684,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 7
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1358,7 +724,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1398,7 +764,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1438,7 +804,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
-          "ruleIndex": 7
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -1478,7 +844,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1518,7 +884,7 @@
             "level": "Medium"
           },
           "ruleId": "app-SuggestRemoteExecutionHint",
-          "ruleIndex": 8
+          "ruleIndex": 4
         },
         {
           "locations": [
@@ -1559,7 +925,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 9
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1599,7 +965,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1640,7 +1006,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrColumnDoesNotExist-Name-Similar",
-          "ruleIndex": 9
+          "ruleIndex": 5
         },
         {
           "locations": [
@@ -1680,7 +1046,7 @@
             "level": "High"
           },
           "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 5
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1710,7 +1076,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1740,7 +1106,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1770,7 +1136,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1800,7 +1166,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1830,7 +1196,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1860,7 +1226,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1890,7 +1256,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1920,7 +1286,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1950,7 +1316,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -1980,7 +1346,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2010,7 +1376,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2040,7 +1406,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2070,7 +1436,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2100,7 +1466,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2130,7 +1496,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2160,7 +1526,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2190,7 +1556,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2220,7 +1586,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 12
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -2250,7 +1616,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2280,7 +1646,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2310,7 +1676,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2340,7 +1706,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2370,7 +1736,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2400,7 +1766,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2430,7 +1796,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2460,7 +1826,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2490,7 +1856,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2520,7 +1886,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2550,7 +1916,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2580,7 +1946,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2610,7 +1976,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2640,7 +2006,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2670,7 +2036,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2700,7 +2066,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2730,7 +2096,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2760,7 +2126,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2790,7 +2156,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2820,7 +2186,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2850,7 +2216,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2880,7 +2246,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2910,7 +2276,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2940,7 +2306,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -2970,7 +2336,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3000,7 +2366,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3030,7 +2396,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3060,7 +2426,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 12
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -3090,7 +2456,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3120,7 +2486,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3150,7 +2516,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3180,7 +2546,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3210,7 +2576,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3240,7 +2606,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3270,7 +2636,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3300,7 +2666,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3330,7 +2696,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3360,7 +2726,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3390,7 +2756,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3420,7 +2786,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3450,7 +2816,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3480,7 +2846,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3510,7 +2876,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3540,7 +2906,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3570,7 +2936,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3600,7 +2966,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3630,7 +2996,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3660,7 +3026,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3690,7 +3056,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3720,7 +3086,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3750,7 +3116,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3780,7 +3146,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3810,7 +3176,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3840,7 +3206,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3870,7 +3236,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3900,7 +3266,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3930,7 +3296,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -3960,7 +3326,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3990,7 +3356,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4020,7 +3386,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4050,7 +3416,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4080,7 +3446,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4110,7 +3476,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4140,7 +3506,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4170,7 +3536,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4200,7 +3566,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4230,7 +3596,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4260,7 +3626,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4290,7 +3656,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4320,7 +3686,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4350,7 +3716,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4380,7 +3746,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4410,7 +3776,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4440,7 +3806,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4470,7 +3836,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4500,7 +3866,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4530,7 +3896,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4560,7 +3926,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4590,7 +3956,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4620,7 +3986,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4650,7 +4016,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4680,7 +4046,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4710,7 +4076,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4740,7 +4106,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4770,7 +4136,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4800,7 +4166,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4830,7 +4196,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4860,7 +4226,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4890,7 +4256,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4920,7 +4286,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4950,7 +4316,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -4980,7 +4346,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5010,7 +4376,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5040,7 +4406,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5070,7 +4436,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5100,7 +4466,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5130,7 +4496,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5160,7 +4526,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5190,7 +4556,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5220,7 +4586,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5250,7 +4616,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5280,7 +4646,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5310,7 +4676,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5340,7 +4706,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5370,7 +4736,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5400,7 +4766,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5430,7 +4796,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5460,7 +4826,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5490,7 +4856,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5520,7 +4886,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5550,7 +4916,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5580,7 +4946,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5610,7 +4976,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5640,7 +5006,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5670,7 +5036,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5700,7 +5066,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5730,7 +5096,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5760,7 +5126,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5790,7 +5156,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5820,7 +5186,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5850,7 +5216,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5880,7 +5246,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5910,7 +5276,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5940,7 +5306,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5970,7 +5336,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6000,7 +5366,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6030,7 +5396,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6060,7 +5426,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6090,7 +5456,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6120,7 +5486,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6150,7 +5516,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6180,7 +5546,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6210,7 +5576,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6240,7 +5606,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6270,7 +5636,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6300,7 +5666,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6330,7 +5696,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6360,7 +5726,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6390,7 +5756,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6420,7 +5786,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6450,7 +5816,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6480,7 +5846,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6510,7 +5876,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6540,7 +5906,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6570,7 +5936,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6600,7 +5966,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6630,7 +5996,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6660,7 +6026,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6690,7 +6056,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6720,7 +6086,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6750,7 +6116,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6780,7 +6146,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6810,7 +6176,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6840,7 +6206,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6870,7 +6236,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6900,7 +6266,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6930,7 +6296,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -6960,7 +6326,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -6990,7 +6356,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-FocusBorderShouldBeVisible",
-          "ruleIndex": 12
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7020,7 +6386,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7050,7 +6416,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7080,7 +6446,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7110,7 +6476,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7140,7 +6506,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7170,7 +6536,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7200,7 +6566,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7230,7 +6596,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7260,7 +6626,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7290,7 +6656,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7320,7 +6686,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7350,7 +6716,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7380,7 +6746,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7410,7 +6776,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7440,7 +6806,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7470,7 +6836,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7500,7 +6866,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7530,7 +6896,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7560,7 +6926,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7590,7 +6956,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7620,7 +6986,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7650,7 +7016,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7680,7 +7046,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7710,7 +7076,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7740,7 +7106,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7770,7 +7136,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7800,7 +7166,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7830,7 +7196,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7860,7 +7226,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7890,7 +7256,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7920,7 +7286,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -7950,7 +7316,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -7980,7 +7346,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8010,7 +7376,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8040,7 +7406,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8070,7 +7436,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8100,7 +7466,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8130,7 +7496,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8160,7 +7526,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8190,7 +7556,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8220,7 +7586,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -8250,7 +7616,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8280,7 +7646,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 11
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -8310,7 +7676,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8340,7 +7706,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8370,7 +7736,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8400,7 +7766,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8430,7 +7796,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8460,7 +7826,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8490,7 +7856,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8520,7 +7886,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8550,7 +7916,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8580,7 +7946,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8610,7 +7976,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8640,7 +8006,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8670,7 +8036,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8700,7 +8066,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8730,7 +8096,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8760,7 +8126,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8790,7 +8156,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8820,7 +8186,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8850,7 +8216,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8880,7 +8246,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 10
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -8910,7 +8276,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -8940,7 +8306,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -8970,7 +8336,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedVariables",
-          "ruleIndex": 13
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -9000,7 +8366,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9030,7 +8396,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9060,7 +8426,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9090,7 +8456,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9120,7 +8486,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9150,7 +8516,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9180,7 +8546,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9210,7 +8576,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9240,7 +8606,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9270,7 +8636,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9300,7 +8666,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9330,7 +8696,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9360,7 +8726,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9390,7 +8756,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9420,7 +8786,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9450,7 +8816,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9480,7 +8846,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9510,7 +8876,7 @@
             "level": "Medium"
           },
           "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
+          "ruleIndex": 11
         },
         {
           "locations": [
@@ -9540,7 +8906,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 15
+          "ruleIndex": 12
         },
         {
           "locations": [
@@ -9570,7 +8936,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 15
+          "ruleIndex": 12
         }
       ],
       "tool": {
@@ -9629,68 +8995,6 @@
               }
             },
             {
-              "id": "app-ErrBadToken",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unexpected characters. Characters are used in the formula in an unexpected way."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or replace the unexpected characters."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrExpectedFound-Ex-Fnd",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unexpected characters. The formula contains '{0}' where '{1}' is expected."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove or replace the unexpected characters with an expected character."
-                ],
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrInvalidArgs-Func",
-              "messageStrings": {
-                "issue": {
-                  "text": "The function '{0}' has some invalid arguments."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
-              "id": "app-ErrBadType",
-              "messageStrings": {
-                "issue": {
-                  "text": "Invalid argument type."
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "level": "High",
-                "primaryCategory": "formula",
-                "whyFix": ""
-              }
-            },
-            {
               "id": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
               "messageStrings": {
                 "issue": {
@@ -9733,6 +9037,20 @@
               "messageStrings": {
                 "issue": {
                   "text": "The specified column '{0}' does not exist. The column with the most similar name is '{1}'."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
                 }
               },
               "properties": {
