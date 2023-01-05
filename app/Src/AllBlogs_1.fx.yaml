@@ -79,7 +79,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.ID
+            Text: ="By " & ThisItem.'Created By'.DisplayName
             VerticalAlign: =VerticalAlign.Top
             Width: =Title4.Width
             X: =Title4.X
