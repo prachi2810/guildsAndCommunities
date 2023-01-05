@@ -257,7 +257,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =295
+            Height: =489
             Width: =1366
             X: =0
             Y: =1
@@ -315,7 +315,7 @@
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     FontWeight: =FontWeight.Bold
-                    Height: =18
+                    Height: =24
                     Text: ="Points Per Community"
                     Width: =400
                     X: =464
@@ -324,21 +324,21 @@
 
                 PieChart4 As pieChart:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    Height: =255
+                    Height: =274
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =UserCommunity
                     X: =464
-                    Y: =59
+                    Y: =65
                     ZIndex: =7
 
                 Legend9 As legend:
                     DisabledColor: =RGBA(166, 166, 166, 1)
-                    Height: =63
+                    Height: =134
                     ItemColorSet: =PieChart4.ItemColorSet
-                    Items: =PieChart4.SeriesLabels
+                    Items: =UserCommunity
                     Width: =330
                     X: =497
-                    Y: =303
+                    Y: =339
                     ZIndex: =8
 
             CompositeColumnChart4 As group:
@@ -561,7 +561,7 @@
 
                 CommunityRole_Column1_1 As dataTableColumn.textualColumn:
                     DisplayMode: =DisplayMode.Edit
-                    FieldDisplayName: ="CommunityRole"
+                    FieldDisplayName: ="Community Role"
                     FieldName: ="CommunityRole"
                     FieldVariantName: ="textualColumn"
                     Height: =Parent.Height

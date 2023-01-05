@@ -622,7 +622,14 @@
         "FieldName",
         "Order",
         "FieldVariantName",
-        "FieldDisplayName",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "FieldDisplayName",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "LayoutHeight",
         "X",
         "Y",
@@ -6211,7 +6218,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Legend10",
-      "ParentIndex": 7,
+      "ParentIndex": 6,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6366,7 +6373,7 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Legend6_1",
-      "ParentIndex": 8,
+      "ParentIndex": 7,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -6528,12 +6535,12 @@
       "LayoutName": "",
       "MetaDataIDKey": "",
       "Name": "Legend9",
-      "ParentIndex": 6,
+      "ParentIndex": 8,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Data",
-          "NameMap": "{\"Value\":\"Value\"}",
+          "NameMap": "{\"Value\":\"Communities\"}",
           "PropertyName": "Items",
           "RuleProviderType": "Unknown"
         },
