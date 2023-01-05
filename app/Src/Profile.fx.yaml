@@ -80,6 +80,48 @@
                 "GroupDate"
             )
         );
+        ClearCollect(UserEvents, Filter('Event Track Details', MemberName=User().FullName && Status="Approved"));
+        ClearCollect(
+            UserKnowledgeSharing,
+            DropColumns(
+                AddColumns(
+                    GroupBy(Filter(UserEvents, Category="Knowledge Sharing; Trainings and Certification"), "Title", "GroupedItems"),
+                    "Count", CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+            )
+        );
+        ClearCollect(UserCommunityEngagement, DropColumns(
+                AddColumns(
+                    GroupBy(Filter(UserEvents, Category="Community Engagement"),"Title","GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ));
+        
+        ClearCollect(UserExpertEngagement, DropColumns(
+                AddColumns(
+                    GroupBy(Filter(UserEvents, Category="Expert Engagement"),"Title","GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ));
+        
+        ClearCollect(UserDeliveryExcellence, DropColumns(
+                AddColumns(
+                    GroupBy(Filter(UserEvents, Category="Delivery Excellence"),"Title","GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ));
+        
+        ClearCollect(UserCustomerAcademy, DropColumns(
+                AddColumns(
+                    GroupBy(Filter(UserEvents, Category="Customer Academy"),"Title","GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ));
 
     RectQuickActionBar12 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -535,7 +577,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =280
+            Height: =393
             Width: =1366
             X: =0
             Y: =3
@@ -555,7 +597,7 @@
                 HeadingFont: =Font.'Open Sans'
                 HeadingFontWeight: =FontWeight.Normal
                 HeadingSize: =13
-                Height: =154
+                Height: =229
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(186, 202, 226, .2)
                 InputFill: =RGBA(255, 255, 255, 1)
@@ -568,7 +610,7 @@
                 SelectedColor: =RGBA(0, 0, 0, 1)
                 SelectedFill: =RGBA(56, 96, 178, .2)
                 Size: =13
-                Width: =728
+                Width: =758
                 X: =87
                 Y: =132
                 ZIndex: =1
@@ -613,6 +655,271 @@
                 X: =40
                 Y: =40
                 ZIndex: =2
+
+        DataCard45 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =447
+            Width: =1366
+            X: =0
+            Y: =4
+            ZIndex: =5
+
+            CompositeColumnChart5_6 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title11_7 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =49
+                    Text: ="Knowledge Sharing; Trainings and Certification"
+                    Width: =1265
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart5_6 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
+                    Height: =389
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =UserKnowledgeSharing
+                    ItemsGap: =30
+                    Width: =1265
+                    X: =40
+                    Y: =43
+                    ZIndex: =3
+
+                Legend5_6 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =139
+                    ItemColorSet: =ColumnChart5_6.ItemColorSet
+                    Items: =KnowledgeSharing
+                    Size: =14
+                    Width: =1116
+                    X: =152
+                    Y: =456
+                    ZIndex: =4
+
+        DataCard46 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =626
+            Width: =1366
+            X: =0
+            Y: =5
+            ZIndex: =6
+
+            CompositeColumnChart5_7 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title11_8 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =49
+                    Text: ="Community Engagement"
+                    Width: =1265
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart5_7 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
+                    Height: =343
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =UserCommunityEngagement
+                    ItemsGap: =30
+                    Width: =1265
+                    X: =40
+                    Y: =89
+                    ZIndex: =3
+
+                Legend5_7 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =139
+                    ItemColorSet: =ColumnChart5_7.ItemColorSet
+                    Items: =KnowledgeSharing
+                    Size: =14
+                    Width: =1116
+                    X: =152
+                    Y: =456
+                    ZIndex: =4
+
+        DataCard47 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =585
+            Width: =1366
+            X: =0
+            Y: =6
+            ZIndex: =7
+
+            CompositeColumnChart5_8 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-10
+                ZIndex: =1
+
+                Title11_9 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =49
+                    Text: ="Expert Engagement"
+                    Width: =1265
+                    X: =40
+                    Y: =30
+                    ZIndex: =2
+
+                ColumnChart5_8 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
+                    Height: =343
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =UserExpertEngagement
+                    ItemsGap: =30
+                    Width: =1265
+                    X: =40
+                    Y: =79
+                    ZIndex: =3
+
+                Legend5_8 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =139
+                    ItemColorSet: =ColumnChart5_8.ItemColorSet
+                    Items: =KnowledgeSharing
+                    Size: =14
+                    Width: =1116
+                    X: =152
+                    Y: =446
+                    ZIndex: =4
+
+        DataCard48 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =547
+            Width: =1366
+            X: =0
+            Y: =7
+            ZIndex: =8
+
+            CompositeColumnChart5_9 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title11_10 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =49
+                    Text: ="Delivery Excellence"
+                    Width: =1265
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart5_9 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
+                    Height: =303
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =UserDeliveryExcellence
+                    ItemsGap: =30
+                    Width: =1265
+                    X: =40
+                    Y: =89
+                    ZIndex: =3
+
+                Legend5_9 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =139
+                    ItemColorSet: =ColumnChart5_9.ItemColorSet
+                    Items: =KnowledgeSharing
+                    Size: =14
+                    Width: =1116
+                    X: =152
+                    Y: =416
+                    ZIndex: =4
+
+        DataCard49 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =475
+            Width: =1366
+            X: =0
+            Y: =8
+            ZIndex: =8
+
+            CompositeColumnChart5_10 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =-40
+                ZIndex: =1
+
+                Title11_11 As label:
+                    Align: =Align.Center
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
+                    Height: =49
+                    Text: ="Customer Academy"
+                    Width: =1265
+                    X: =40
+                    Y: =40
+                    ZIndex: =2
+
+                ColumnChart5_10 As barChart:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
+                    Height: =303
+                    ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
+                    Items: =UserCustomerAcademy
+                    ItemsGap: =30
+                    Width: =1265
+                    X: =40
+                    Y: =89
+                    ZIndex: =3
+
+                Legend5_10 As legend:
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =139
+                    ItemColorSet: =ColumnChart5_10.ItemColorSet
+                    Items: =KnowledgeSharing
+                    Size: =14
+                    Width: =1116
+                    X: =152
+                    Y: =416
+                    ZIndex: =4
 
     Button5_2 As button:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
