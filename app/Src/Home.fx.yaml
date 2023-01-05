@@ -202,8 +202,8 @@
                         =Select(Parent);
                         Navigate(Community,Cover,{data:galPaginated.Selected});
                     Width: =44
-                    X: =216
-                    Y: =465
+                    X: =181
+                    Y: =499
                     ZIndex: =4
 
                 Icon26 As icon.Share:
@@ -211,14 +211,14 @@
                     Color: =RGBA(0, 89, 178, 1)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(244, 244, 244, 1)
-                    Height: =34
+                    Height: =26
                     Icon: =Icon.Share
                     OnSelect: |-
                         =Set(ShareItem,true);
                         Set(selectedId,ThisItem.ID);
-                    Width: =36
-                    X: =260
-                    Y: =491
+                    Width: =44
+                    X: =230
+                    Y: =497
                     ZIndex: =5
 
             Icon6 As icon.AddUser:
@@ -231,7 +231,7 @@
                 Icon: =Icon.AddUser
                 OnSelect: =Navigate('Guild Form')
                 Width: =49
-                X: =858
+                X: =818
                 ZIndex: =8
 
             ddPageSize As dropdown:
@@ -299,7 +299,7 @@
                 OnSelect: =Set(AllGuilds,true)
                 Size: =18
                 Text: ="See All"
-                X: =22
+                X: =44
                 ZIndex: =18
 
             "Gallery1 As gallery.'BrowseLayout_Vertical_OneTextVariant_ver4.0'":
