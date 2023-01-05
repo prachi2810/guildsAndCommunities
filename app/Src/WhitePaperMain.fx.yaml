@@ -140,7 +140,7 @@
                 =Remove(whitePapersWithCommunities,ThisItem);
                 Refresh(whitePapersWithCommunities);
                 If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
-                Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result)
+                If(IsBlank(varDocumentCurrent) && !IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result));
             Visible: |
                 =If(!IsBlank(LookUp(whitePapersWithCommunities, 'Modified By'.DisplayName=User().FullName)) ||
                 IsBlank(LookUp(User,Email=User().Email && Role="admin")),true,false)
