@@ -582,6 +582,7 @@
             DataTable3 As dataTable.datatable:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 BorderStyle: =BorderStyle.Solid
+                BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisplayMode: =DisplayMode.Edit
@@ -675,9 +676,10 @@
                     Align: =Align.Center
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
                     Height: =25
                     Text: ="Knowledge Sharing; Trainings and Certification"
-                    Width: =1297
+                    Width: =1264
                     X: =40
                     Y: =40
                     ZIndex: =2
@@ -689,7 +691,7 @@
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =WholeKnowledgeSharing
                     ItemsGap: =30
-                    Width: =1297
+                    Width: =1264
                     X: =40
                     Y: =70
                     ZIndex: =3
@@ -699,8 +701,8 @@
                     Height: =112
                     ItemColorSet: =ColumnChart4.ItemColorSet
                     Items: =WholeKnowledgeSharing
-                    Width: =1038
-                    X: =169
+                    Width: =1012
+                    X: =166
                     Y: =510
                     ZIndex: =4
 
@@ -726,9 +728,10 @@
                     Align: =Align.Center
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
                     Height: =32
                     Text: ="Community Engagement"
-                    Width: =1297
+                    Width: =1262
                     X: =40
                     Y: =40
                     ZIndex: =2
@@ -741,8 +744,8 @@
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =WholeCommunityEngagement
                     ItemsGap: =30
-                    Width: =1297
-                    X: =40
+                    Width: =1217
+                    X: =56
                     Y: =101
                     ZIndex: =3
 
@@ -751,8 +754,8 @@
                     Height: =168
                     ItemColorSet: =ColumnChart4_1.ItemColorSet
                     Items: =WholeCommunityEngagement
-                    Width: =1038
-                    X: =169
+                    Width: =1010
+                    X: =166
                     Y: =503
                     ZIndex: =4
 
@@ -778,6 +781,7 @@
                     Align: =Align.Center
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
                     Height: =27
                     Text: ="Expert Engagement"
                     Width: =1297
@@ -830,8 +834,9 @@
                     Align: =Align.Center
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
                     Height: =25
-                    Text: ="Knowledge Sharing; Trainings and Certification"
+                    Text: ="Delivery Excellence"
                     Width: =1297
                     X: =40
                     Y: =40
@@ -841,13 +846,13 @@
                     BorderColor: =RGBA(56, 56, 56, 1)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     GridStyle: =GridStyle.None
-                    Height: =342
+                    Height: =309
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =WholeDeliveryExcellence
                     ItemsGap: =30
                     Width: =1297
                     X: =40
-                    Y: =47
+                    Y: =79
                     ZIndex: =3
 
                 Legend3_3 As legend:
@@ -882,8 +887,9 @@
                     Align: =Align.Center
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
+                    FontWeight: =FontWeight.Bold
                     Height: =25
-                    Text: ="Knowledge Sharing; Trainings and Certification"
+                    Text: ="Customer Academy"
                     Width: =1297
                     X: =40
                     Y: =40
@@ -893,13 +899,13 @@
                     BorderColor: =RGBA(56, 56, 56, 1)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     GridStyle: =GridStyle.None
-                    Height: =367
+                    Height: =324
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =WholeCustomerAcademy
                     ItemsGap: =30
                     Width: =1297
                     X: =40
-                    Y: =22
+                    Y: =65
                     ZIndex: =3
 
                 Legend3_4 As legend:
