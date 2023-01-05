@@ -143,8 +143,14 @@
                 If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
                 If(!IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities="empty")).Identifier).result));
             Visible: |
-                =If(!IsBlank(LookUp(whitePapersWithCommunities, 'Modified By'.DisplayName=User().FullName)) ||
-                IsBlank(LookUp(User,Email=User().Email && Role="admin")),true,false)
+                =If(
+                    !IsBlank(LookUp(whitePapersWithCommunities, 
+                    'Modified By'.DisplayName=User().FullName)),
+                    true,
+                    false
+                )
+                
+                /*|| IsBlank(LookUp(User,Email=User().Email && Role="admin"))*/
             Width: =51
             X: =551
             Y: =105
