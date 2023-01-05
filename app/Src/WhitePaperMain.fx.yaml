@@ -83,8 +83,8 @@
             Text: =ThisItem.Modified
             VerticalAlign: =VerticalAlign.Top
             Width: =233
-            X: =386
-            Y: =114
+            X: =370
+            Y: =118
             ZIndex: =3
 
         Body3 As label:
@@ -96,7 +96,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.Sensitivity
+            Text: =ThisItem.'Created By'.DisplayName
             VerticalAlign: =VerticalAlign.Top
             Width: =233
             X: =160
@@ -140,7 +140,7 @@
             Height: =33
             OnSelect: =Select(Parent)
             Size: =13
-            Text: =ThisItem.Description
+            Text: =ThisItem.communities
             Width: =210
             X: =160
             Y: =72
