@@ -55,7 +55,12 @@
         ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 3));
         Set(DropDownDashboard,false);
         
+        ClearCollect( EventGroup, );
         ClearCollect( WholeKnowledgeSharing, Filter('Event Track Details', Category="Knowledge Sharing; Trainings and Certification" && Status="Approved"));
+        ClearCollect( WholeCommunityEngagement, Filter('Event Track Details', Category="Community Engagement" && Status="Approved"));
+        ClearCollect( WholeExpertEngagement, Filter('Event Track Details', Category="Expert Engagement" && Status="Approved"));
+        ClearCollect( WholeDeliveryExcellence, Filter('Event Track Details', Category="Delivery Excellence" && Status="Approved"));
+        ClearCollect( WholeCustomerAcademy, Filter('Event Track Details', Category="Customer Academy" && Status="Approved"));
 
     RectQuickActionBar9 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -633,8 +638,10 @@
                 ColumnChart4 As barChart:
                     BorderColor: =RGBA(56, 56, 56, 1)
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =WholeKnowledgeSharing
+                    ItemsGap: =30
                     Width: =1297
                     X: =40
                     Y: =70
