@@ -751,7 +751,7 @@
             "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Height: =403
-                Items: =Filter(Event,Guild)
+                Items: =Filter(Event,Guild=data.Title)
                 Layout: =Layout.Vertical
                 TemplatePadding: =0
                 TemplateSize: =Min(104, Self.Height - 60)
@@ -788,7 +788,7 @@
                     PaddingRight: =0
                     PaddingTop: =0
                     Size: =18
-                    Text: =ThisItem.ID
+                    Text: =ThisItem.Date
                     VerticalAlign: =VerticalAlign.Top
                     Width: =Parent.TemplateWidth - 104
                     X: =32

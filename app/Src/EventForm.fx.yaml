@@ -25,7 +25,7 @@ EventForm As screen:
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =SubmitForm(Form4);
-            Notify("Event added successfully");
+            Notify("Event added successfully",NotificationType.Success,0.3);
             Navigate(EventDetails);
             ResetForm(Form4)
         Size: =25
