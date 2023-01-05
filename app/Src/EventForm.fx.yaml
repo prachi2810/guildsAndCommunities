@@ -1,5 +1,4 @@
 EventForm As screen:
-    Fill: =RGBA(232, 232, 232, 1)
     OnVisible: =true
 
     Icon7 As icon.Cancel:
@@ -27,22 +26,23 @@ EventForm As screen:
         OnSelect: |-
             =SubmitForm(Form4);
             Notify("Event added successfully");
-            Navigate(EventDetails)
+            Navigate(EventDetails);
+            ResetForm(Form4)
         Size: =25
         Text: ="Submit"
         Width: =240
-        X: =558
-        Y: =607
+        X: =551
+        Y: =654
         ZIndex: =3
 
     Form4 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =Event
-        Height: =525
+        Height: =572
         Item: =Defaults(Event)
-        Width: =1227
+        Width: =1318
         X: =40
-        Y: =40
+        Y: =75
         ZIndex: =4
 
         Guild_DataCard1 As typedDataCard.textualEditCard:
@@ -57,7 +57,7 @@ EventForm As screen:
             MaxLength: =DataSourceInfo([@Event], DataSourceInfo.MaxLength, "Guild")
             Required: =false
             Update: =DataCardValue2.Text
-            Width: =409
+            Width: =439
             X: =1
             Y: =0
             ZIndex: =1
@@ -146,7 +146,7 @@ EventForm As screen:
             MaxLength: =DataSourceInfo([@Event], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue17.Text
-            Width: =409
+            Width: =439
             X: =0
             Y: =0
             ZIndex: =5
@@ -234,7 +234,7 @@ EventForm As screen:
             MaxLength: =DataSourceInfo([@Event], DataSourceInfo.MaxLength, "Description")
             Required: =false
             Update: =DataCardValue18.Text
-            Width: =409
+            Width: =439
             X: =2
             Y: =0
             ZIndex: =5
@@ -321,7 +321,7 @@ EventForm As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue20.SelectedDate
-            Width: =409
+            Width: =439
             X: =0
             Y: =1
             ZIndex: =5
@@ -404,7 +404,7 @@ EventForm As screen:
             Height: =50
             Required: =false
             Update: =DataCardValue21.Attachments
-            Width: =409
+            Width: =439
             X: =1
             Y: =1
             ZIndex: =5

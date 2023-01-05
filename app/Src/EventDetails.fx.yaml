@@ -1,5 +1,4 @@
 "EventDetails As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
-    Fill: =RGBA(232, 232, 232, 1)
     OnVisible: =Set(events,LookUp(Event,Date=_dateSelected))
 
     "Gallery2 As gallery.'BrowseLayout_Vertical_ThreeTextVariant_ver4.0'":

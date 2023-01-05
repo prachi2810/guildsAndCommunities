@@ -605,7 +605,8 @@
                 TabIndex: =0
                 Tooltip: ="View previous month"
                 Width: =59
-                X: =888
+                X: =969
+                Y: =1
                 ZIndex: =5
 
             iconNextMonth1_1 As icon.ChevronRight:
@@ -629,7 +630,7 @@
                 TabIndex: =0
                 Tooltip: ="View next month"
                 Width: =59
-                X: =1215
+                X: =1175
                 ZIndex: =6
 
             Icon35 As icon.Add:
@@ -638,25 +639,29 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Fill: =RGBA(0, 46, 92, 1)
-                Height: =41
+                Height: =35
                 Icon: =Icon.Add
                 OnSelect: |-
                     =Navigate(EventForm,None,{ guildName: data.Title });
-                Width: =46
-                X: =1278
+                Width: =40
+                X: =1255
+                Y: =2
                 ZIndex: =8
 
             Label49 As label:
-                Align: =Align.Center
+                Align: =Align.Right
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 80, 160, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                OnSelect: =Navigate(EventDetails)
+                FontWeight: =FontWeight.Bold
+                Height: =39
+                OnSelect: =Set(SeeAllEventPopUp,true)
                 Size: =20
                 Text: ="See All"
-                X: =1065
-                Y: =428
+                Width: =107
+                X: =877
+                Y: =2
                 ZIndex: =9
 
     Label12 As label:
@@ -718,4 +723,96 @@
         X: =1070
         Y: =110
         ZIndex: =11
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        Rectangle5 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(121, 121, 100, 0.2)
+            Height: =768
+            Visible: =SeeAllEventPopUp
+            Width: =1366
+            ZIndex: =12
+
+        Container6 As groupContainer.manualLayoutContainer:
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =466
+            Visible: =SeeAllEventPopUp
+            Width: =1002
+            X: =210
+            Y: =219
+            ZIndex: =15
+
+            "Gallery8 As gallery.'BrowseLayout_Vertical_TwoTextVariant_ver4.0'":
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Height: =403
+                Items: =Filter(Event,Guild)
+                Layout: =Layout.Vertical
+                TemplatePadding: =0
+                TemplateSize: =Min(104, Self.Height - 60)
+                Width: =995
+                Y: =36
+                ZIndex: =1
+
+                Title19 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Fill: =RGBA(214, 235, 255, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =20
+                    Text: =ThisItem.Title
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 104
+                    X: =32
+                    Y: =16
+                    ZIndex: =1
+
+                Subtitle10 As label:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Height: =Self.Size * 1.8
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =0
+                    PaddingLeft: =0
+                    PaddingRight: =0
+                    PaddingTop: =0
+                    Size: =18
+                    Text: =ThisItem.ID
+                    VerticalAlign: =VerticalAlign.Top
+                    Width: =Parent.TemplateWidth - 104
+                    X: =32
+                    Y: =Title19.Y + Title19.Height + 4
+                    ZIndex: =2
+
+                Separator10 As rectangle:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Fill: =RGBA(0, 89, 178, 1)
+                    Height: =1
+                    OnSelect: =Select(Parent)
+                    Width: =Parent.TemplateWidth
+                    Y: =Parent.TemplateHeight - 1
+                    ZIndex: =4
+
+            Icon37 As icon.CancelBadge:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 51, 102, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =37
+                Icon: =Icon.CancelBadge
+                OnSelect: =Set(SeeAllEventPopUp,false)
+                Width: =56
+                X: =946
+                ZIndex: =2
 
