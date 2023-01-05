@@ -735,6 +735,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             Fill: =RGBA(121, 121, 100, 0.2)
             Height: =768
+            OnSelect: =Set(SeeAllEventPopUp,false);
             Visible: =SeeAllEventPopUp
             Width: =1366
             ZIndex: =12
