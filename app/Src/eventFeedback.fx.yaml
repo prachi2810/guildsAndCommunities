@@ -225,6 +225,7 @@
                             Radio1 As radio:
                                 Align: =Align.Right
                                 BorderColor: =RGBA(0, 89, 178, 1)
+                                BorderStyle: =BorderStyle.None
                                 Color: =RGBA(0, 0, 0, 1)
                                 Height: =80
                                 HoverColor: =RGBA(0, 89, 178, 1)
@@ -265,6 +266,7 @@
                         Radio1_1 As radio:
                             Align: =Align.Right
                             BorderColor: =RGBA(0, 89, 178, 1)
+                            BorderStyle: =BorderStyle.None
                             Color: =RGBA(0, 0, 0, 1)
                             Height: =80
                             HoverColor: =RGBA(0, 89, 178, 1)
@@ -305,6 +307,7 @@
                         Radio1_2 As radio:
                             Align: =Align.Right
                             BorderColor: =RGBA(0, 89, 178, 1)
+                            BorderStyle: =BorderStyle.None
                             Color: =RGBA(0, 0, 0, 1)
                             Height: =80
                             HoverColor: =RGBA(0, 89, 178, 1)
@@ -393,6 +396,7 @@
                             Radio1_5 As radio:
                                 Align: =Align.Right
                                 BorderColor: =RGBA(0, 89, 178, 1)
+                                BorderStyle: =BorderStyle.None
                                 Color: =RGBA(0, 0, 0, 1)
                                 Height: =77
                                 HoverColor: =RGBA(0, 89, 178, 1)
@@ -434,6 +438,7 @@
                         Radio1_3 As radio:
                             Align: =Align.Right
                             BorderColor: =RGBA(0, 89, 178, 1)
+                            BorderStyle: =BorderStyle.None
                             Color: =RGBA(0, 0, 0, 1)
                             Height: =80
                             HoverColor: =RGBA(0, 89, 178, 1)
@@ -450,7 +455,7 @@
                             RadioBorderColor: =RGBA(0, 89, 178, 1)
                             RadioSize: =20
                             Size: =13
-                            Width: =782
+                            Width: =759
                             X: =257
                             Y: =15
                             ZIndex: =1
@@ -475,6 +480,7 @@
                         Radio1_4 As radio:
                             Align: =Align.Right
                             BorderColor: =RGBA(0, 89, 178, 1)
+                            BorderStyle: =BorderStyle.None
                             Color: =RGBA(0, 0, 0, 1)
                             Height: =80
                             HoverColor: =RGBA(0, 89, 178, 1)
@@ -491,7 +497,7 @@
                             RadioBorderColor: =RGBA(0, 89, 178, 1)
                             RadioSize: =20
                             Size: =13
-                            Width: =782
+                            Width: =757
                             X: =257
                             Y: =15
                             ZIndex: =1
@@ -523,6 +529,7 @@
                             Radio1_7 As radio:
                                 Align: =Align.Right
                                 BorderColor: =RGBA(0, 89, 178, 1)
+                                BorderStyle: =BorderStyle.None
                                 Color: =RGBA(0, 0, 0, 1)
                                 Height: =80
                                 HoverColor: =RGBA(0, 89, 178, 1)
@@ -539,7 +546,7 @@
                                 RadioBorderColor: =RGBA(0, 89, 178, 1)
                                 RadioSize: =20
                                 Size: =13
-                                Width: =782
+                                Width: =764
                                 X: =257
                                 Y: =15
                                 ZIndex: =1
@@ -565,6 +572,7 @@
                         Radio1_8 As radio:
                             Align: =Align.Right
                             BorderColor: =RGBA(0, 89, 178, 1)
+                            BorderStyle: =BorderStyle.None
                             Color: =RGBA(0, 0, 0, 1)
                             Height: =80
                             HoverColor: =RGBA(0, 89, 178, 1)
@@ -649,6 +657,7 @@
 
                             Radio1_9 As radio:
                                 BorderColor: =RGBA(0, 89, 178, 1)
+                                BorderStyle: =BorderStyle.None
                                 Color: =RGBA(0, 0, 0, 1)
                                 Height: =94
                                 HoverColor: =RGBA(0, 89, 178, 1)
@@ -710,7 +719,6 @@
 
                     TextInput15 As text:
                         BorderColor: =RGBA(0, 89, 178, 1)
-                        BorderThickness: =2
                         Color: =RGBA(0, 0, 0, 1)
                         Default: =""
                         DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -723,6 +731,7 @@
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(153, 205, 255, 1)
                         Mode: =TextMode.MultiLine
+                        OnChange: =If(TextInput15.Text="",Set(response,false),Set(response,true))
                         Size: =13
                         Width: =1030
                         Y: =82
@@ -783,8 +792,9 @@
 
                             Radio1_10 As radio:
                                 BorderColor: =RGBA(0, 89, 178, 1)
+                                BorderStyle: =BorderStyle.None
                                 Color: =RGBA(0, 0, 0, 1)
-                                Height: =109
+                                Height: =76
                                 HoverColor: =RGBA(0, 89, 178, 1)
                                 Items: |-
                                     =[
@@ -803,12 +813,13 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
-                    DisplayMode: =If((R1 &&R2&&R3&&R4&&R5 &&R6&&R7&&R8&&R10&&R9),DisplayMode.Edit,Disabled)
+                    DisplayMode: =If((R1 &&R2&&R3&&R4&&R5 &&R6&&R7&&R8&&R10&&R9&&response&&rating),DisplayMode.Edit,Disabled)
                     Fill: |
                         =RGBA(30, 27, 83, 1)
                     FontWeight: =FontWeight.Semibold
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                    OnSelect: =Patch(EventFeedback,Defaults(EventFeedback),{});
                     Size: =15
                     Text: ="Submit"
                     X: =498

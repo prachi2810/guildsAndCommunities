@@ -10679,36 +10679,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.rating"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.rating",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "rating",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.Anand V"
                 }
               ],
