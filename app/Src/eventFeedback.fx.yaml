@@ -26,7 +26,7 @@
             Container4 As groupContainer.manualLayoutContainer:
                 BorderStyle: =BorderStyle.None
                 Fill: =RGBA(250, 250, 250, 1)
-                Height: =2000
+                Height: =2597
                 Width: =1150
                 X: =92
                 Y: =46
@@ -76,7 +76,7 @@
 
                 Container9 As groupContainer.manualLayoutContainer:
                     Height: =476
-                    Width: =1032
+                    Width: =1030
                     X: =59
                     Y: =258
                     ZIndex: =7
@@ -84,7 +84,7 @@
                     Container10 As groupContainer.manualLayoutContainer:
                         Fill: =RGBA(241, 241, 241, 1)
                         Height: =82
-                        Width: =1032
+                        Width: =1030
                         ZIndex: =1
 
                         Label60 As label:
@@ -119,7 +119,7 @@
                         Height: =279
                         Image: =stars_image
                         ImagePosition: =ImagePosition.Fill
-                        Width: =1032
+                        Width: =1030
                         Y: =82
                         ZIndex: =2
 
@@ -162,6 +162,8 @@
                         FocusedBorderThickness: =2
                         Height: =40
                         HoverFill: =Self.Fill
+                        OnChange: =Set(rating,true);
+                        OnSelect: =Set(rating,true);
                         PressedFill: =Self.Fill
                         RatingFill: =RGBA(0, 89, 178, 1)
                         Width: =200
@@ -172,14 +174,14 @@
                 Container9_1 As groupContainer.manualLayoutContainer:
                     Height: =378
                     Width: =1032
-                    X: =59
-                    Y: =773
+                    X: =61
+                    Y: =748
                     ZIndex: =8
 
                     Container10_1 As groupContainer.manualLayoutContainer:
                         Fill: =RGBA(241, 241, 241, 1)
                         Height: =82
-                        Width: =1032
+                        Width: =1030
                         ZIndex: =1
 
                         Label60_1 As label:
@@ -209,7 +211,7 @@
 
                     Container11 As groupContainer.manualLayoutContainer:
                         Height: =265
-                        Width: =1032
+                        Width: =1030
                         Y: =82
                         ZIndex: =2
 
@@ -233,6 +235,8 @@
                                     "Very well",
                                     "Extremely well"]
                                 Layout: =Layout.Horizontal
+                                OnChange: =Set(R1,true);
+                                OnSelect: =Set(R1,true);
                                 RadioBorderColor: =RGBA(0, 89, 178, 1)
                                 RadioSize: =20
                                 Size: =13
@@ -271,6 +275,8 @@
                                 "Very well",
                                 "Extremely well"]
                             Layout: =Layout.Horizontal
+                            OnChange: =Set(R2,true);
+                            OnSelect: =Set(R2,true);
                             RadioBorderColor: =RGBA(0, 89, 178, 1)
                             RadioSize: =20
                             Size: =13
@@ -292,7 +298,7 @@
                     Container13_2 As groupContainer.manualLayoutContainer:
                         Fill: =RGBA(246, 246, 246, 1)
                         Height: =97
-                        Width: =1030
+                        Width: =1032
                         Y: =277
                         ZIndex: =4
 
@@ -309,6 +315,8 @@
                                 "Very well",
                                 "Extremely well"]
                             Layout: =Layout.Horizontal
+                            OnChange: =Set(R3,true);
+                            OnSelect: =Set(R3,true);
                             RadioBorderColor: =RGBA(0, 89, 178, 1)
                             RadioSize: =20
                             Size: =13
@@ -331,9 +339,9 @@
 
                 Container9_2 As groupContainer.manualLayoutContainer:
                     Height: =568
-                    Width: =1032
-                    X: =59
-                    Y: =1201
+                    Width: =1030
+                    X: =63
+                    Y: =1183
                     ZIndex: =9
 
                     Container10_2 As groupContainer.manualLayoutContainer:
@@ -396,6 +404,8 @@
                                     "Somewhat satisfied",
                                     "Very satisfied"]
                                 Layout: =Layout.Horizontal
+                                OnChange: =Set(R4,true);
+                                OnSelect: =Set(R4,true);
                                 RadioBorderColor: =RGBA(0, 89, 178, 1)
                                 RadioSize: =20
                                 Size: =13
@@ -435,6 +445,8 @@
                                 "Somewhat satisfied",
                                 "Very satisfied"]
                             Layout: =Layout.Horizontal
+                            OnChange: =Set(R5,true);
+                            OnSelect: =Set(R5,true);
                             RadioBorderColor: =RGBA(0, 89, 178, 1)
                             RadioSize: =20
                             Size: =13
@@ -452,49 +464,6 @@
                             Text: ="Materials provided"
                             Width: =257
                             ZIndex: =2
-
-                        Container9_3 As groupContainer.manualLayoutContainer:
-                            Height: =97
-                            Width: =1030
-                            ZIndex: =3
-
-                            Container13_6 As groupContainer.manualLayoutContainer:
-                                Fill: =RGBA(255, 255, 255, 1)
-                                Height: =97
-                                Width: =1030
-                                Y: =180
-                                ZIndex: =3
-
-                                Radio1_6 As radio:
-                                    Align: =Align.Right
-                                    BorderColor: =RGBA(0, 89, 178, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    Height: =80
-                                    HoverColor: =RGBA(0, 89, 178, 1)
-                                    Items: |-
-                                        =["Not well at all",
-                                        "Not very well",
-                                        "Somewhat well",
-                                        "Very well",
-                                        "Extremely well"]
-                                    Layout: =Layout.Horizontal
-                                    RadioBorderColor: =RGBA(0, 89, 178, 1)
-                                    RadioSize: =20
-                                    Size: =13
-                                    Width: =782
-                                    X: =248
-                                    Y: =15
-                                    ZIndex: =1
-
-                                Label64_6 As label:
-                                    BorderColor: =RGBA(0, 89, 178, 1)
-                                    Color: =RGBA(0, 0, 0, 1)
-                                    DisabledColor: =RGBA(166, 166, 166, 1)
-                                    Height: =95
-                                    Size: =13
-                                    Text: ="Maintained my interest throughout the duration of the event"
-                                    Width: =257
-                                    ZIndex: =2
 
                     Container13_4 As groupContainer.manualLayoutContainer:
                         Fill: =RGBA(246, 246, 246, 1)
@@ -517,6 +486,8 @@
                                 "Somewhat satisfied",
                                 "Very satisfied"]
                             Layout: =Layout.Horizontal
+                            OnChange: =Set(R6,true);
+                            OnSelect: =Set(R6,true);
                             RadioBorderColor: =RGBA(0, 89, 178, 1)
                             RadioSize: =20
                             Size: =13
@@ -536,13 +507,6 @@
                                 "
                             Width: =257
                             ZIndex: =2
-
-                    Container9_4 As groupContainer.manualLayoutContainer:
-                        Height: =97
-                        Width: =1030
-                        X: =2
-                        Y: =277
-                        ZIndex: =5
 
                     Container9_5 As groupContainer.manualLayoutContainer:
                         Height: =97
@@ -570,6 +534,8 @@
                                     "Somewhat satisfied",
                                     "Very satisfied"]
                                 Layout: =Layout.Horizontal
+                                OnChange: =Set(R7,true);
+                                OnSelect: =Set(R7,true);
                                 RadioBorderColor: =RGBA(0, 89, 178, 1)
                                 RadioSize: =20
                                 Size: =13
@@ -610,6 +576,8 @@
                                 "Somewhat satisfied",
                                 "Very satisfied"]
                             Layout: =Layout.Horizontal
+                            OnChange: =Set(R8,true);
+                            OnSelect: =Set(R8,true);
                             RadioBorderColor: =RGBA(0, 89, 178, 1)
                             RadioSize: =20
                             Size: =13
@@ -627,4 +595,222 @@
                             Text: ="Facilitator/Trainer"
                             Width: =257
                             ZIndex: =2
+
+                Container9_6 As groupContainer.manualLayoutContainer:
+                    Height: =183
+                    Width: =1030
+                    X: =63
+                    Y: =1800
+                    ZIndex: =10
+
+                    Container10_3 As groupContainer.manualLayoutContainer:
+                        Fill: =RGBA(241, 241, 241, 1)
+                        Height: =82
+                        Width: =1030
+                        ZIndex: =1
+
+                        Label60_3 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 89, 178, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(30,27,83,1)
+                            Font: =Font.Georgia
+                            Height: =42
+                            Size: =13
+                            Text: ="4"
+                            Width: =47
+                            ZIndex: =1
+
+                        Label61_3 As label:
+                            BorderColor: =RGBA(0, 89, 178, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =42
+                            Size: =13
+                            Text: ="Were your expectations of the training met?"
+                            Width: =722
+                            X: =74
+                            ZIndex: =2
+
+                    Container11_2 As groupContainer.manualLayoutContainer:
+                        Height: =130
+                        Width: =1032
+                        Y: =82
+                        ZIndex: =2
+
+                        Container13_9 As groupContainer.manualLayoutContainer:
+                            Fill: =RGBA(246, 246, 246, 1)
+                            Height: =111
+                            Width: =1030
+                            Y: =2
+                            ZIndex: =1
+
+                            Radio1_9 As radio:
+                                BorderColor: =RGBA(0, 89, 178, 1)
+                                Color: =RGBA(0, 0, 0, 1)
+                                Height: =109
+                                HoverColor: =RGBA(0, 89, 178, 1)
+                                Items: |-
+                                    =[
+                                    "Beyond my expectations"
+                                    
+                                    ,"Met as expected
+                                    
+                                    ","Below my expectations"]
+                                OnChange: =Set(R9,true);
+                                OnSelect: =Set(R9,true);
+                                RadioBorderColor: =RGBA(0, 89, 178, 1)
+                                RadioSize: =20
+                                Size: =13
+                                Width: =275
+                                Y: =6
+                                ZIndex: =1
+
+                Container9_7 As groupContainer.manualLayoutContainer:
+                    Height: =245
+                    Width: =1030
+                    X: =61
+                    Y: =2223
+                    ZIndex: =11
+
+                    Container10_4 As groupContainer.manualLayoutContainer:
+                        Fill: =RGBA(241, 241, 241, 1)
+                        Height: =82
+                        Width: =1030
+                        ZIndex: =1
+
+                        Label60_4 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 89, 178, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(30,27,83,1)
+                            Font: =Font.Georgia
+                            Height: =42
+                            Size: =13
+                            Text: ="5"
+                            Width: =47
+                            ZIndex: =1
+
+                        Label61_4 As label:
+                            BorderColor: =RGBA(0, 89, 178, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =61
+                            Size: =13
+                            Text: |-
+                                ="How could the training be improved, and what other trainings would you like to attend? 
+                                Please share your suggestions/thoughts "
+                            Width: =934
+                            X: =86
+                            ZIndex: =2
+
+                    TextInput15 As text:
+                        BorderColor: =RGBA(0, 89, 178, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(0, 0, 0, 1)
+                        Default: =""
+                        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                        DisabledColor: =RGBA(166, 166, 166, 1)
+                        DisabledFill: =RGBA(244, 244, 244, 1)
+                        FocusedBorderThickness: =4
+                        Height: =162
+                        HintText: ="Add your response"
+                        HoverBorderColor: =RGBA(0, 89, 178, 1)
+                        HoverColor: =RGBA(0, 0, 0, 1)
+                        HoverFill: =RGBA(153, 205, 255, 1)
+                        Mode: =TextMode.MultiLine
+                        Size: =13
+                        Width: =1030
+                        Y: =82
+                        ZIndex: =2
+
+                Container9_8 As groupContainer.manualLayoutContainer:
+                    Height: =130
+                    Width: =1030
+                    X: =63
+                    Y: =2041
+                    ZIndex: =12
+
+                    Container10_5 As groupContainer.manualLayoutContainer:
+                        Fill: =RGBA(241, 241, 241, 1)
+                        Height: =82
+                        Width: =1030
+                        ZIndex: =1
+
+                        Label60_5 As label:
+                            Align: =Align.Center
+                            BorderColor: =RGBA(0, 89, 178, 1)
+                            Color: =RGBA(255, 255, 255, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            Fill: =RGBA(30,27,83,1)
+                            Font: =Font.Georgia
+                            Height: =42
+                            Size: =13
+                            Text: ="4"
+                            Width: =47
+                            ZIndex: =1
+
+                        Label61_5 As label:
+                            BorderColor: =RGBA(0, 89, 178, 1)
+                            Color: =RGBA(0, 0, 0, 1)
+                            DisabledColor: =RGBA(166, 166, 166, 1)
+                            FontWeight: =FontWeight.Semibold
+                            Height: =42
+                            Size: =13
+                            Text: |-
+                                ="Are you willing to conduct any session as a part of this series?
+                                "
+                            Width: =722
+                            X: =74
+                            ZIndex: =2
+
+                    Container11_3 As groupContainer.manualLayoutContainer:
+                        Height: =130
+                        Width: =1030
+                        Y: =53
+                        ZIndex: =2
+
+                        Container13_10 As groupContainer.manualLayoutContainer:
+                            Fill: =RGBA(246, 246, 246, 1)
+                            Height: =111
+                            Width: =1030
+                            Y: =2
+                            ZIndex: =1
+
+                            Radio1_10 As radio:
+                                BorderColor: =RGBA(0, 89, 178, 1)
+                                Color: =RGBA(0, 0, 0, 1)
+                                Height: =109
+                                HoverColor: =RGBA(0, 89, 178, 1)
+                                Items: |-
+                                    =[
+                                    "Yes",
+                                    "No"]
+                                OnChange: =Set(R10,true);
+                                OnSelect: =Set(R10,true);
+                                RadioBorderColor: =RGBA(0, 89, 178, 1)
+                                RadioSize: =20
+                                Size: =13
+                                Width: =275
+                                Y: =2
+                                ZIndex: =1
+
+                Button23 As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: |
+                        =RGBA(30, 27, 83, 1)
+                    FontWeight: =FontWeight.Semibold
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                    Size: =15
+                    Text: ="Submit"
+                    X: =498
+                    Y: =2527
+                    ZIndex: =13
 

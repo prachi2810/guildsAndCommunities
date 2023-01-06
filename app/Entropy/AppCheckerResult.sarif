@@ -10469,19 +10469,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container13_3.Container9_3.Container13_6.Radio1_6.AccessibleLabel"
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container9_5.Container13_7.Radio1_7.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container13_3.Container9_3.Container13_6.Radio1_6.AccessibleLabel",
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container9_5.Container13_7.Radio1_7.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "eventFeedback",
-                "type": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container13_3.Container9_3.Container13_6.Radio1_6"
+                "type": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container9_5.Container13_7.Radio1_7"
               }
             }
           ],
@@ -10499,19 +10499,79 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container9_5.Container13_7.Radio1_7.AccessibleLabel"
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_6.Container11_2.Container13_9.Radio1_9.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container9_5.Container13_7.Radio1_7.AccessibleLabel",
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_6.Container11_2.Container13_9.Radio1_9.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "eventFeedback",
-                "type": "eventFeedback.Canvas13.DataCard50.Container4.Container9_2.Container9_5.Container13_7.Radio1_7"
+                "type": "eventFeedback.Canvas13.DataCard50.Container4.Container9_6.Container11_2.Container13_9.Radio1_9"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_7.TextInput15.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_7.TextInput15.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "eventFeedback",
+                "type": "eventFeedback.Canvas13.DataCard50.Container4.Container9_7.TextInput15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_8.Container11_3.Container13_10.Radio1_10.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "eventFeedback.Canvas13.DataCard50.Container4.Container9_8.Container11_3.Container13_10.Radio1_10.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "eventFeedback",
+                "type": "eventFeedback.Canvas13.DataCard50.Container4.Container9_8.Container11_3.Container13_10.Radio1_10"
               }
             }
           ],
@@ -10630,6 +10690,306 @@
               },
               "properties": {
                 "member": "EventPopUp",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.rating"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.rating",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "rating",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R2"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R2",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R2",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R3"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R3",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R3",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R4"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R4",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R4",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R5"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R5",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R5",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R6"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R6",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R6",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R7"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R7",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R7",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R8"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R8",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R8",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R9"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R9",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R9",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.R10"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.R10",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "R10",
                 "module": "App",
                 "type": "App"
               }
