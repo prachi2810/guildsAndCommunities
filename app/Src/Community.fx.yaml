@@ -811,15 +811,16 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =If(ThisItem.Date<Now(), DisplayMode.Disabled, DisplayMode.Edit)
                     Fill: =RGBA(255, 191, 0, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =36
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-                    OnSelect: |-
+                    OnSelect: |
                         =Select(Parent);
                         Set(Register,true);
-                        ClearCollect(eventName, LookUp(GuildEvents, Title=ThisItem.Title))
+                        ClearCollect(eventName, LookUp(GuildEvents, Title=ThisItem.Title));
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -830,6 +831,31 @@
                     X: =803
                     Y: =16
                     ZIndex: =5
+
+                Button9_1 As button:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =If(ThisItem.Date>Now(), DisplayMode.Disabled, DisplayMode.Edit)
+                    Fill: =RGBA(255, 191, 0, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =36
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                    OnSelect: |+
+                        =Select(Parent);
+                        
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =15
+                    Text: ="Feedback"
+                    Width: =120
+                    X: =652
+                    Y: =16
+                    ZIndex: =6
 
             Icon37 As icon.CancelBadge:
                 BorderColor: =RGBA(0, 89, 178, 1)
@@ -884,13 +910,14 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
             OnSelect: |-
-                =Patch(EventDetails_1,Defaults(EventDetails_1),{
+                =Patch(EventDetail, Defaults(EventDetail), {
                     Title: First(eventName).Title,
                     Guild: data.Title,
                     Date: First(eventName).Date,
-                    'user E-mail': User().Email,
-                    Feedback: "Feedback"
-                })
+                    Email: User().Email
+                });
+                Notify("Registered Successfully",NotificationType.Success,0.4);
+                Set(Register,false);
             Size: =15
             Text: ="Yes"
             Visible: =Register
@@ -906,6 +933,7 @@
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: =Set(Register,false)
             Size: =15
             Text: ="No"
             Visible: =Register

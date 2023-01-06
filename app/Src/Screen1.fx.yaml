@@ -1,0 +1,25 @@
+Screen1 As screen:
+    Fill: =RGBA(232, 232, 232, 1)
+
+    Button21 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Patch(EventDetails_1, Defaults(EventDetails_1), {
+                Title: First(event).Title,
+                Guild: guild.Title,
+                Date: First(event).Date,
+                'user E-mail': User().Email,
+                Feedback: "Feedback"
+            })
+        Size: =15
+        Text: ="Button"
+        X: =546
+        Y: =330
+        ZIndex: =1
+
