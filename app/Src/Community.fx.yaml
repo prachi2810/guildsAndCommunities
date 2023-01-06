@@ -905,8 +905,9 @@
                 HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                 OnSelect: |-
                     =Patch(EventFeedback,Defaults(EventFeedback),{
-                        Title:"Title",
-                        Feedback:TextInput8
+                        Title:First(eventName).Title,
+                        
+                        Feedback:TextInput8.Text
                     })
                 Size: =15
                 Text: ="Submit"
