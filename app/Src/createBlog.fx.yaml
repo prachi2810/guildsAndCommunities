@@ -144,6 +144,7 @@
                 Title: "Creating white papers/ blogs",
                 Category: "Expert Engagement",
                 Count: 25,
+                comments: "Search For Title: '" & title.Text & "' in the blogs section!",
                 'DateofEvent ': Now(),
                 EventId: LookUp(Points, Title="Creating white papers/ blogs").ID,
                 MemberName: User().FullName,
