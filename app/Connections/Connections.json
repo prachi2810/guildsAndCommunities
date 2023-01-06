@@ -101,6 +101,9 @@
           "EventDetails_1": {
             "tableName": "c64fe3de-52f2-4648-9582-5506485d1149"
           },
+          "EventFeedback": {
+            "tableName": "f426b907-cb06-41c0-81c1-13fe6b3459a1"
+          },
           "Guild": {
             "tableName": "fd2f121a-49eb-4e79-80ba-02382fec8763"
           },
@@ -150,7 +153,8 @@
       "Guild_1",
       "whitePapersWithCommunities",
       "EventDetails_1",
-      "EventDetail"
+      "EventDetail",
+      "EventFeedback"
     ],
     "dependencies": {},
     "dependents": [

@@ -845,6 +845,8 @@
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                     OnSelect: |+
                         =Select(Parent);
+                        Set(feedback,true);
+                        ClearCollect(eventName, LookUp(GuildEvents, Title=ThisItem.Title));
                         
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
@@ -868,6 +870,88 @@
                 Width: =56
                 X: =946
                 ZIndex: =2
+
+            Rectangle13 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Fill: =RGBA(255, 255, 255, 1)
+                Height: =284
+                Visible: =feedback
+                Width: =722
+                X: =122
+                Y: =102
+                ZIndex: =3
+
+            Label52 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =45
+                Size: =23
+                Text: ="Feedback"
+                Visible: =feedback
+                Width: =165
+                X: =122
+                Y: =102
+                ZIndex: =4
+
+            Button22 As button:
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(0, 51, 102, 1)
+                FontWeight: =FontWeight.Semibold
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                OnSelect: |-
+                    =Patch(EventFeedback,Defaults(EventFeedback),{
+                        Title:First(eventName).Title,
+                        Feedback:TextInput8
+                    })
+                Size: =15
+                Text: ="Submit"
+                Visible: =feedback
+                X: =388
+                Y: =326
+                ZIndex: =5
+
+            Icon39 As icon.CancelBadge:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =24
+                Icon: =Icon.CancelBadge
+                OnSelect: =Set(feedback,false);
+                Visible: =feedback
+                Width: =44
+                X: =800
+                Y: =102
+                ZIndex: =6
+
+            TextInput8 As text:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                BorderThickness: =2
+                Color: =RGBA(0, 0, 0, 1)
+                Default: =""
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                FocusedBorderThickness: =4
+                Height: =155
+                HintText: |-
+                    ="Write Feedback Here
+                    "
+                HoverBorderColor: =RGBA(0, 89, 178, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Mode: =TextMode.MultiLine
+                Size: =13
+                Visible: =feedback
+                Width: =667
+                X: =149
+                Y: =159
+                ZIndex: =7
 
     Group4 As group:
         Height: =5
