@@ -2,8 +2,8 @@
     Fill: =RGBA(232, 232, 232, 1)
     OnVisible: |
         =Refresh(Blog);
-        ClearCollect(UserCommunity, { Communities: "All" });
-        Collect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
+        ClearCollect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
+        ClearCollect(UserCommunity1, { Communities: "All" }, UserCommunity);
         SortByColumns(UserCommunity, "Communities", Ascending);
         Set(DropDown,false);
 
@@ -528,7 +528,7 @@
         DisabledFill: =RGBA(244, 244, 244, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =UserCommunity
+        Items: =UserCommunity1
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 89, 178, 1)
         SelectionFill: =RGBA(0, 51, 102, 1)
