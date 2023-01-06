@@ -95,6 +95,9 @@
           "Event Track Details": {
             "tableName": "385d1bfa-3e9d-4a32-868f-9b0fcba72a44"
           },
+          "EventDetails_1": {
+            "tableName": "c64fe3de-52f2-4648-9582-5506485d1149"
+          },
           "Guild": {
             "tableName": "fd2f121a-49eb-4e79-80ba-02382fec8763"
           },
@@ -142,7 +145,8 @@
       "Points",
       "Event Track Details",
       "Guild_1",
-      "whitePapersWithCommunities"
+      "whitePapersWithCommunities",
+      "EventDetails_1"
     ],
     "dependencies": {},
     "dependents": [

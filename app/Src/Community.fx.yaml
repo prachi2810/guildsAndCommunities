@@ -7,6 +7,7 @@
         Set(_calendarVisible, true);
         ClearCollect(GuildCommunities ,Filter(Community_1, Guild=data.Title));
         ClearCollect(GuildEvents,Filter(Event,Guild=data.Title));
+        ClearCollect(GuildData,Filter(Event,Guild=data.Title));
 
     Canvas2 As fluidGrid.fluidGridWithBlankCard:
         BorderThickness: =0
@@ -818,6 +819,7 @@
                     OnSelect: |-
                         =Select(Parent);
                         Set(Register,true);
+                        ClearCollect(eventName, LookUp(GuildEvents, Title=ThisItem.Title))
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
                     RadiusTopLeft: =0
@@ -881,6 +883,13 @@
             FontWeight: =FontWeight.Semibold
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            OnSelect: |-
+                =Patch(EventDetails_1,Defaults(EventDetails_1),{
+                    Title: First(eventName).Title,
+                    Guild: data.Title,
+                    Date: First(eventName).Date,
+                    'user E-mail': User().Email
+                })
             Size: =15
             Text: ="Yes"
             Visible: =Register
