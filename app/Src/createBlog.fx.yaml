@@ -141,12 +141,12 @@
             );*/
             
             Patch('Event Track Details',Defaults('Event Track Details'), {
-                Title: "Creating white papers/ blogs",
+                Title: "Creating blogs",
                 Category: "Expert Engagement",
                 Count: 25,
                 comments: "Search For Title: '" & title.Text & "' in the blogs section!",
                 'DateofEvent ': Now(),
-                EventId: LookUp(Points, Title="Creating white papers/ blogs").ID,
+                EventId: LookUp(Points, Title="Creating blogs").ID,
                 MemberName: User().FullName,
                 Status: "Pending",
                 Teams_Channel_Name: Dropdown2.Selected.Communities

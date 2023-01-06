@@ -103,6 +103,22 @@
                  Dropdown1_2.Selected.Communities
              );
             
+            Patch('Event Track Details',Defaults('Event Track Details'), {
+                Title: "Creating white papers",
+                Category: "Expert Engagement",
+                Count: 25,
+                /*comments: "Search For Title: '" & title.Text & "' in the blogs section!",*/
+                'DateofEvent ': Now(),
+                EventId: LookUp(Points, Title="Creating white papers").ID,
+                MemberName: User().FullName,
+                Status: "Pending",
+                Teams_Channel_Name: Dropdown1_2.Selected.Communities
+            });
+            
+            Patch(Community_1, LookUp(Community_1, Title=Dropdown1_2.Selected.Title), {
+                'White Papers': LookUp(Community_1, Title=Dropdown1_2.Selected.Title).'White Papers' + 1
+            });
+            
             Reset(DataCardValue2_1);
             Navigate(WhitePaperMain);
             Refresh(whitePapersWithCommunities);

@@ -113,7 +113,7 @@
                 Size: =28
                 Text: =data.Title
                 Width: =955
-                X: =335
+                X: =388
                 Y: =30
                 ZIndex: =4
 
@@ -216,8 +216,8 @@
                 Height: =351
                 Image: =If(!IsBlank(data.Image.Large), data.Image, SampleImage)
                 Width: =1310
-                X: =21
-                Y: =18
+                X: =34
+                Y: =36
                 ZIndex: =1
 
         DataCard17 As dataCard.blankCard:
@@ -434,8 +434,8 @@
         OnSelect: |-
             =Remove(Like, LookUp(Like, BlogID=data.ID));
             Remove(Comment,  LookUp(Comment, BlogID=data.ID));
-            Patch(User, LookUp(User, Email=data.'Created By'.Email), {
-                Points: LookUp(User, Email=data.'Created By'.Email).Points - 100
+            Patch(User, LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags), {
+                Points: LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags).Points - 25
             });
             Remove(Blog, LookUp(Blog, ID=data.ID));
             Navigate(allBlogs);

@@ -3,7 +3,16 @@
         =ClearCollect(Activities, Filter('Event Track Details', MemberName=User().FullName && Status=Dropdown1_1.Selected.Value));
         ClearCollect(DropdownColumn, ["Approved", "Pending", "Rejected"]);
         ClearCollect(UserCommunity, Filter(User, Name=User().FullName));
-        ClearCollect(UserBlogAndWhitePapers, Filter('Event Track Details', MemberName=User().FullName && (Title="Creating blogs" || Title="Creating white papers") && Status="Approved"));
+        ClearCollect(UserBlogAndWhitePapers, 
+            DropColumns(
+                AddColumns(
+                    GroupBy(
+                        Filter('Event Track Details', MemberName=User().FullName && (Title="Creating blogs" ||                                     Title="Creating white papers") && Status="Approved"), 
+                        "Title", 
+                        "GroupedItems"), 
+                    "Count", CountRows(GroupedItems)
+                    ), 
+                "GroupedItems"));
         ClearCollect(
             GroupUsers,
             DropColumns(
@@ -378,11 +387,12 @@
 
                 ColumnChart3 As barChart:
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                    Height: =251
+                    GridStyle: =GridStyle.None
+                    Height: =218
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
-                    Items: =UserCommunity
+                    Items: =UserBlogAndWhitePapers
                     ItemsGap: =10
-                    NumberOfSeries: =2
+                    Width: =375
                     X: =40
                     Y: =59
                     ZIndex: =11
@@ -391,7 +401,7 @@
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     Height: =50
                     ItemColorSet: =ColumnChart3.ItemColorSet
-                    Items: =ColumnChart3.SeriesLabels
+                    Items: =UserBlogAndWhitePapers
                     Width: =320
                     X: =80
                     Y: =316
