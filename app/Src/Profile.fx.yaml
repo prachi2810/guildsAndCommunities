@@ -3,6 +3,7 @@
         =ClearCollect(Activities, Filter('Event Track Details', MemberName=User().FullName && Status=Dropdown1_1.Selected.Value));
         ClearCollect(DropdownColumn, ["Approved", "Pending", "Rejected"]);
         ClearCollect(UserCommunity, Filter(User, Name=User().FullName));
+        ClearCollect(UserBlogAndWhitePapers, Filter('Event Track Details', MemberName=User().FullName && (Title="Creating blogs" || Title="Creating white papers") && Status="Approved"));
         ClearCollect(
             GroupUsers,
             DropColumns(
@@ -26,7 +27,7 @@
         );
         Sort(Ranks, Descending);
         Set(UserRank, LookUp(Ranks, UserName=User().FullName).No);
-        ClearCollect(UserBlog, Filter(Blog, 'Created By'.DisplayName=User().FullName));
+        /*ClearCollect(UserBlog, Filter(Blog, 'Created By'.DisplayName=User().FullName));
         ClearCollect(
             UserBlogsPerMonth,
             DropColumns(
@@ -52,7 +53,7 @@
                 ),
                 "GroupDate"
             )
-        );
+        );*/
         /*ClearCollect(UserActivities, Filter('Event Track Details', 'Created By'.DisplayName=User().FullName && Status="Approved"));*/
         ClearCollect(
             UserActivitiesPerMonth,
