@@ -1,0 +1,101 @@
+"eventFeedback As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    BackgroundImage: ='729b2062-0098-49f3-bc46-234aaeba7ca7'
+    Fill: =RGBA(232, 232, 232, 1)
+    ImagePosition: =ImagePosition
+    OnVisible: =Set(R1,false);
+
+    Canvas13 As fluidGrid.fluidGridWithBlankCard:
+        BorderThickness: =0
+        Height: =Parent.Height - Self.Y
+        Width: =Parent.Width
+        Y: =RectQuickActionBar10.Y + RectQuickActionBar10.Height
+        ZIndex: =3
+
+        DataCard50 As dataCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            BorderThickness: =0
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =Parent.Height - 100
+            Width: =Parent.Width
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            Container4 As groupContainer.manualLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                Fill: =RGBA(250, 250, 250, 1)
+                Height: =1000
+                Width: =1005
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+                TextInput12 As text:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(0, 0, 0, 1)
+                    Default: ="Text input"
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    FocusedBorderThickness: =4
+                    HoverBorderColor: =RGBA(0, 89, 178, 1)
+                    HoverColor: =RGBA(0, 0, 0, 1)
+                    HoverFill: =RGBA(153, 205, 255, 1)
+                    Size: =13
+                    X: =82
+                    Y: =348
+                    ZIndex: =1
+
+                Label53 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Size: =13
+                    Text: =event.Title
+                    X: =82
+                    Y: =252
+                    ZIndex: =2
+
+                Button23 As button:
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =If(R1 ,DisplayMode.Edit,DisplayMode.Disabled)
+                    Fill: =RGBA(0, 51, 102, 1)
+                    FontWeight: =FontWeight.Semibold
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                    Size: =15
+                    Text: ="Submit"
+                    X: =94
+                    Y: =460
+                    ZIndex: =3
+
+                Label54 As label:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    Size: =13
+                    Text: =
+                    X: =82
+                    Y: =172
+                    ZIndex: =4
+
+                Radio1 As radio:
+                    BorderColor: =RGBA(0, 89, 178, 1)
+                    Color: =RGBA(0, 0, 0, 1)
+                    Height: =148
+                    HoverColor: =RGBA(0, 89, 178, 1)
+                    Items: =["a","b"]
+                    Layout: =Layout.Horizontal
+                    OnSelect: =Set(R1,true);
+                    RadioBorderColor: =RGBA(0, 89, 178, 1)
+                    Size: =13
+                    Width: =242
+                    X: =501
+                    Y: =292
+                    ZIndex: =5
+

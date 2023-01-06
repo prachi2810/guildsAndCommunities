@@ -845,8 +845,8 @@
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                     OnSelect: |+
                         =Select(Parent);
-                        Set(feedback,true);
                         ClearCollect(eventName, LookUp(GuildEvents, Title=ThisItem.Title));
+                        Navigate(eventFeedback,None,{event:Gallery8.Selected});
                         
                     RadiusBottomLeft: =0
                     RadiusBottomRight: =0
