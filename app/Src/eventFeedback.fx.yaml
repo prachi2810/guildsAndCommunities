@@ -803,6 +803,7 @@
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
                     DisabledFill: =RGBA(244, 244, 244, 1)
+                    DisplayMode: =If((R1 &&R2&&R3&&R4&&R5 &&R6&&R7&&R8&&R9 &&R10),DisplayMode.Edit,Disabled)
                     Fill: |
                         =RGBA(30, 27, 83, 1)
                     FontWeight: =FontWeight.Semibold
