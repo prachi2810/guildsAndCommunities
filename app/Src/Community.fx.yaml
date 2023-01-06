@@ -763,7 +763,7 @@
                 Title19 As label:
                     Color: =RGBA(0, 0, 0, 1)
                     DisabledColor: =RGBA(166, 166, 166, 1)
-                    Fill: =RGBA(214, 235, 255, 1)
+                    Fill: =RGBA(102, 133, 163, 1)
                     FontWeight: =FontWeight.Semibold
                     Height: =Self.Size * 1.8
                     OnSelect: =Select(Parent)
@@ -805,6 +805,30 @@
                     Y: =Parent.TemplateHeight - 1
                     ZIndex: =4
 
+                Button9 As button:
+                    Color: =RGBA(0, 0, 0, 1)
+                    DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    DisabledColor: =RGBA(166, 166, 166, 1)
+                    DisabledFill: =RGBA(244, 244, 244, 1)
+                    Fill: =RGBA(255, 191, 0, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =36
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                    OnSelect: |-
+                        =Select(Parent);
+                        Set(Register,true);
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =15
+                    Text: ="Register"
+                    Width: =120
+                    X: =803
+                    Y: =16
+                    ZIndex: =5
+
             Icon37 As icon.CancelBadge:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 51, 102, 1)
@@ -816,4 +840,80 @@
                 Width: =56
                 X: =946
                 ZIndex: =2
+
+    Group4 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =21
+
+        Rectangle11 As rectangle:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Fill: =RGBA(0, 46, 92, 1)
+            Height: =210
+            Visible: =Register
+            Width: =560
+            X: =412
+            Y: =356
+            ZIndex: =16
+
+        Label51 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Fill: =RGBA(0, 46, 92, 1)
+            Height: =92
+            Overflow: =Overflow.Scroll
+            Size: =23
+            Text: ="Are you sure you want to register for this event?"
+            Visible: =Register
+            Width: =542
+            X: =412
+            Y: =379
+            ZIndex: =17
+
+        Button19 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(54, 176, 75, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            Size: =15
+            Text: ="Yes"
+            Visible: =Register
+            X: =464
+            Y: =482
+            ZIndex: =18
+
+        Button20 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(255, 0, 0, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+            Size: =15
+            Text: ="No"
+            Visible: =Register
+            X: =694
+            Y: =482
+            ZIndex: =19
+
+        Icon38 As icon.CancelBadge:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =23
+            Icon: =Icon.CancelBadge
+            OnSelect: =Set(Register,false)
+            Visible: =Register
+            Width: =31
+            X: =941
+            Y: =356
+            ZIndex: =20
 
