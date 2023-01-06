@@ -1040,3 +1040,30 @@
             Y: =356
             ZIndex: =20
 
+    Icon40 As icon.EmojiSmile:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =0
+        Height: =40
+        Icon: =Icon.EmojiSmile
+        Visible: =Register
+        Width: =44
+        X: =467
+        Y: =482
+        ZIndex: =21
+
+    Icon41 As icon.EmojiFrown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =40
+        Icon: =Icon.EmojiFrown
+        Visible: =Register
+        Width: =51
+        X: =694
+        Y: =482
+        ZIndex: =22
+
