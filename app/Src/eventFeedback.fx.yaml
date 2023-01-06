@@ -826,3 +826,14 @@
                     Y: =2527
                     ZIndex: =13
 
+        DataCard51 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =1
+            ZIndex: =2
+
