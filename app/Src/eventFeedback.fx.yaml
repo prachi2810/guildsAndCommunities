@@ -819,7 +819,12 @@
                     FontWeight: =FontWeight.Semibold
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-                    OnSelect: =Patch(EventFeedback,Defaults(EventFeedback),{});
+                    OnSelect: |-
+                        =Patch(EventFeedback,Defaults(EventFeedback),{Title:event.Title,Feedback:feedbackInput.Text,eventID:event.ID,rating:Rating1.Value,'facilitator or trainer:-answered questions':Radio1_2.Selected.Value,'facilitator or trainer:-Presented Concepts':Radio1.Selected.Value,'facilitator or trainer:-maintained interest ':Radio1_1.Selected.Value,'Facilitator/Trainer':Radio1_5.Selected.Value,'material provided':Radio1_3.Selected.Value,'topic relevance':Radio1_4.Selected.Value,'overall content':Radio1_7.Selected.Value,'time management':Radio1_8.Selected.Value,expectations:Radio1_7.Selected.Value,'willing to conduct any session ':Radio1_10.Selected.Value});
+                        
+                         
+                        
+                        Navigate(Home)
                     Size: =15
                     Text: ="Submit"
                     X: =498
