@@ -271,13 +271,14 @@
                 DisabledColor: =RGBA(244, 244, 244, 1)
                 Height: =61
                 Icon: =Icon.Send
-                OnSelect: |-
-                    =Patch(Comment, Defaults(Comment), {
+                OnSelect: |
+                    =If(!IsBlank(TextInput5.Text) ,Patch(Comment, Defaults(Comment), {
                         'User Image':User().Image,
                         Comment: TextInput5.Text,
                         BlogID: data.ID
-                    }); 
+                    });
                     ClearCollect(BlogComments, Filter(Comment, BlogID=data.ID));
+                    , Notify("Please enter a comment first.")); 
                 Width: =48
                 X: =757
                 Y: =150
