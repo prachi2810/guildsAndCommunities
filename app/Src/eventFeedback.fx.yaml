@@ -8,7 +8,7 @@
         BorderThickness: =0
         Height: =Parent.Height - Self.Y
         Width: =Parent.Width
-        Y: =RectQuickActionBar10.Y + RectQuickActionBar10.Height
+        Y: =
         ZIndex: =3
 
         DataCard50 As dataCard:
@@ -107,8 +107,8 @@
                             FontWeight: =FontWeight.Semibold
                             Height: =42
                             Size: =13
-                            Text: ="Overall, how satisfied are you with the RPP Training Event?"
-                            Width: =565
+                            Text: ="Overall, how satisfied are you with the RPP Knowledge Session / Event / Training?"
+                            Width: =710
                             X: =74
                             ZIndex: =2
 
@@ -130,7 +130,7 @@
                         FontWeight: =FontWeight.Semibold
                         Height: =32
                         Size: =13
-                        Text: ="Extremely dissatisfied"
+                        Text: ="Extremely satisfied"
                         Width: =232
                         X: =36
                         Y: =396
@@ -717,7 +717,7 @@
                             X: =86
                             ZIndex: =2
 
-                    TextInput15 As text:
+                    FeedbackInput As text:
                         BorderColor: =RGBA(0, 89, 178, 1)
                         Color: =RGBA(0, 0, 0, 1)
                         Default: =""
@@ -731,7 +731,7 @@
                         HoverColor: =RGBA(0, 0, 0, 1)
                         HoverFill: =RGBA(153, 205, 255, 1)
                         Mode: =TextMode.MultiLine
-                        OnChange: =If(TextInput15.Text="",Set(response,false),Set(response,true))
+                        OnChange: =If(FeedbackInput.Text="",Set(response,false),Set(response,true))
                         Size: =13
                         Width: =1030
                         Y: =82
@@ -820,7 +820,7 @@
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
                     OnSelect: |-
-                        =Patch(EventFeedback,Defaults(EventFeedback),{Title:event.Title,Feedback:feedbackInput.Text,eventID:event.ID,rating:Rating1.Value,'facilitator or trainer:-answered questions':Radio1_2.Selected.Value,'facilitator or trainer:-Presented Concepts':Radio1.Selected.Value,'facilitator or trainer:-maintained interest ':Radio1_1.Selected.Value,'Facilitator/Trainer':Radio1_5.Selected.Value,'material provided':Radio1_3.Selected.Value,'topic relevance':Radio1_4.Selected.Value,'overall content':Radio1_7.Selected.Value,'time management':Radio1_8.Selected.Value,expectations:Radio1_7.Selected.Value,'willing to conduct any session ':Radio1_10.Selected.Value});
+                        =Patch(EventFeedback,Defaults(EventFeedback),{Title:event.Title,Feedback:FeedbackInput.Text,eventID:event.ID,rating:Rating1.Value,'facilitator or trainer:-answered questions':Radio1_2.Selected.Value,'facilitator or trainer:-Presented Concepts':Radio1.Selected.Value,'facilitator or trainer:-maintained interest ':Radio1_1.Selected.Value,'Facilitator/Trainer':Radio1_5.Selected.Value,'material provided':Radio1_3.Selected.Value,'topic relevance':Radio1_4.Selected.Value,'overall content':Radio1_7.Selected.Value,'time management':Radio1_8.Selected.Value,expectations:Radio1_7.Selected.Value,'willing to conduct any session ':Radio1_10.Selected.Value});
                         
                          
                         
@@ -841,4 +841,17 @@
             X: =0
             Y: =1
             ZIndex: =2
+
+    Icon42 As icon.ArrowLeft:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =44
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate(Community)
+        Width: =36
+        X: =96
+        Y: =48
+        ZIndex: =4
 
