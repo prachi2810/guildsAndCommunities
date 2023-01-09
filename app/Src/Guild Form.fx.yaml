@@ -37,11 +37,11 @@
     Form1_1 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =Guild
-        Height: =648
+        Height: =618
         Item: =Defaults(Guild)
         Width: =1320
         X: =38
-        Y: =18
+        Y: =48
         ZIndex: =3
 
         "'Short Description_DataCard2' As typedDataCard.textualEditCard":
