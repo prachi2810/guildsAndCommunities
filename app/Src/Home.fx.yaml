@@ -872,7 +872,7 @@
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-            OnSelect: =true
+            OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -895,7 +895,9 @@
             Height: =70
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-            OnSelect: =Navigate(Home)
+            OnSelect: |-
+                =Navigate(Home);
+                Set(DropDownHome,!DropDownHome);
             RadiusBottomLeft: =0
             RadiusBottomRight: =0
             RadiusTopLeft: =0
@@ -947,8 +949,8 @@
             Height: =337
             Visible: =DropDownHome
             Width: =138
-            X: =77
-            Y: =75
+            X: =70
+            Y: =65
             ZIndex: =29
 
         Button1 As button:
@@ -971,8 +973,8 @@
             Text: ="Leaders Message"
             Visible: =DropDownHome
             Width: =128
-            X: =81
-            Y: =275
+            X: =74
+            Y: =265
             ZIndex: =30
 
         Button1_2 As button:
@@ -996,8 +998,8 @@
             Text: ="About"
             Visible: =DropDownHome
             Width: =130
-            X: =81
-            Y: =75
+            X: =74
+            Y: =65
             ZIndex: =31
 
         Button1_3 As button:
@@ -1020,8 +1022,8 @@
             Text: ="L&D Team"
             Visible: =DropDownHome
             Width: =128
-            X: =81
-            Y: =352
+            X: =74
+            Y: =342
             ZIndex: =32
 
         Button1_4 As button:
@@ -1044,8 +1046,8 @@
             Text: ="Upcoming Guilds"
             Visible: =DropDownHome
             Width: =128
-            X: =81
-            Y: =200
+            X: =74
+            Y: =190
             ZIndex: =33
 
         Button1_5 As button:
@@ -1068,8 +1070,8 @@
             Text: ="Explore Communities"
             Visible: =DropDownHome
             Width: =134
-            X: =81
-            Y: =123
+            X: =74
+            Y: =113
             ZIndex: =34
 
     DtopDownDash As group:
@@ -1355,7 +1357,7 @@
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-        OnSelect: =Navigate(Home)
+        OnSelect: =Set(DropDown,!DropDown)
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -1390,7 +1392,9 @@
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-        OnSelect: =Navigate(Home)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com/:b:/p/p_tolsankar/EdZQ7adEc2lCkCTMPL5iTfsBswbPCaYBsqaCGvXm_sX0mA?e=zeQTPR
+            ")
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
@@ -1413,7 +1417,9 @@
         Height: =70
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
-        OnSelect: =Navigate(Home)
+        OnSelect: |-
+            =Launch("https://zensar-my.sharepoint.com.office.prod.zensar.myshn.net/:p:/p/p_tolsankar/Eab9JQSuFR9FmzSzK1ypztwBU1hPasrLLLKk15ay6hi7Iw?e=hCMMdC
+            ")
         RadiusBottomLeft: =0
         RadiusBottomRight: =0
         RadiusTopLeft: =0
