@@ -316,6 +316,7 @@
                     =/*If(LookUp(Points, Title=Dropdown3.Selected.Title).Attended, DisplayMode.Edit, DisplayMode.Disabled)*/
                     DisplayMode.Edit
                 FocusedBorderThickness: =4
+                Format: =TextFormat.Number
                 HoverBorderColor: =RGBA(0, 18, 107, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(186, 202, 226, 1)

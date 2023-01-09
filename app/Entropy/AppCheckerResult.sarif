@@ -10045,49 +10045,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28.AccessibleLabel"
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "detailBlog",
-                "type": "detailBlog.Canvas7.DataCard17.Icon28"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28.TabIndex",
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "detailBlog",
-                "type": "detailBlog.Canvas7.DataCard17.Icon28"
+                "type": "detailBlog.Canvas7.DataCard17.Icon28_1"
               }
             }
           ],
@@ -10099,6 +10069,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "detailBlog.Canvas7.DataCard17.Icon28_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "detailBlog",
+                "type": "detailBlog.Canvas7.DataCard17.Icon28_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
         },
         {
           "locations": [

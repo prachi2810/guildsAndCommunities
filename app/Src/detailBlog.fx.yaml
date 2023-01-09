@@ -225,7 +225,7 @@
             BorderStyle: =BorderStyle.Solid
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =218
+            Height: =290
             Width: =1366
             X: =0
             Y: =3
@@ -241,7 +241,7 @@
                 RadiusTopLeft: =50
                 RadiusTopRight: =50
                 X: =56
-                Y: =90
+                Y: =132
                 ZIndex: =1
 
             TextInput5 As text:
@@ -261,7 +261,7 @@
                 Size: =13
                 Width: =517
                 X: =198
-                Y: =111
+                Y: =153
                 ZIndex: =2
 
             Icon10 As icon.Send:
@@ -280,7 +280,7 @@
                     ClearCollect(BlogComments, Filter(Comment, BlogID=data.ID));
                 Width: =48
                 X: =757
-                Y: =108
+                Y: =150
                 ZIndex: =3
 
             Label18 As label:
@@ -293,7 +293,7 @@
                 Text: ="Comments"
                 Width: =171
                 X: =56
-                Y: =21
+                Y: =72
                 ZIndex: =4
 
             Icon13 As icon.ThumbsUp:
@@ -323,7 +323,7 @@
                     )
                 Width: =44
                 X: =824
-                Y: =17
+                Y: =65
                 ZIndex: =5
 
             Label21 As label:
@@ -335,11 +335,11 @@
                 Size: =20
                 Text: =If(IsBlank(LookUp(Like, Email=User().Email && BlogID=data.ID)), LookUp(Blog, ID=data.ID).Likes & " people liked this blog", "You and " & LookUp(Blog, ID=data.ID).Likes - 1 & " others liked this blog")
                 Width: =448
-                X: =888
-                Y: =28
+                X: =882
+                Y: =70
                 ZIndex: =6
 
-            Icon28 As icon.Share:
+            Icon28_1 As icon.Share:
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
@@ -350,8 +350,8 @@
                     =Set(ShareItem,true);
                 Width: =42
                 X: =763
-                Y: =28
-                ZIndex: =7
+                Y: =65
+                ZIndex: =8
 
     Icon1 As icon.Draw:
         BorderColor: =RGBA(0, 89, 178, 1)
