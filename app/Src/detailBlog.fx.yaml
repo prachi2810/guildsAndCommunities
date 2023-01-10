@@ -308,12 +308,12 @@
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =43
+                Height: =51
                 Icon: =Icon.Share
                 OnSelect: |
                     =Set(ShareItem,true);
-                Width: =42
-                X: =763
+                Width: =59
+                X: =745
                 Y: =65
                 ZIndex: =8
 
