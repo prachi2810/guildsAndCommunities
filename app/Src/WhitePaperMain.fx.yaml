@@ -294,7 +294,7 @@
                 If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
                 If(!IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result),Set(varDocumentCurrent, GetDataURI.Run(First(Filter(whitePapersWithCommunities,communities="empty")).Identifier).result));
                 Set(openPopup,false);
-                 Notify( "Paper Deleted Successfully" , NotificationType.Success, 300)
+                 Notify( "Paper Deleted Successfully" , NotificationType.Success, 1000)
             Size: =15
             Text: ="Delete"
             X: =38
