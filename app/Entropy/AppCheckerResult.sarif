@@ -2046,6 +2046,86 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "WhitePaperMain.Container7.Button24.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WhitePaperMain.Container7.Button24.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 172,
+                  "snippet": {
+                    "text": "communities"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "WhitePaperMain",
+                "type": "WhitePaperMain.Container7.Button24"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "communities"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "WhitePaperMain.Container7.Button24.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "WhitePaperMain.Container7.Button24.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 183,
+                  "snippet": {
+                    "text": "<>"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "WhitePaperMain",
+                "type": "WhitePaperMain.Container7.Button24"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Filter"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "NavBar.Gallery11.AccessibleLabel"
                 }
               ],
