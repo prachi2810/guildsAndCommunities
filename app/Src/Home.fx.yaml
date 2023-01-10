@@ -733,7 +733,7 @@
         Rectangle2 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             Fill: =RGBA(241, 241, 241, 1)
-            Height: =221
+            Height: =262
             Visible: =DropDown
             Width: =140
             X: =209
@@ -1438,4 +1438,28 @@
         X: =310
         Y: =30
         ZIndex: =51
+
+    Button18_16 As button:
+        Align: =Align.Left
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 241, 241, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =39
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Newsletter"
+        Visible: =DropDown
+        Width: =140
+        X: =209
+        Y: =293
+        ZIndex: =52
 
