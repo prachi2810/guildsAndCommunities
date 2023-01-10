@@ -7,6 +7,7 @@
         Set(currCommunity,Dropdown2_3.Selected.Communities);
         If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
         If(IsBlank(varDocumentCurrent) && !IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result));
+        Set(openPopup,false);
 
     RectQuickActionBar2_1 As rectangle:
         BorderColor: =RGBA(0, 18, 107, 1)
