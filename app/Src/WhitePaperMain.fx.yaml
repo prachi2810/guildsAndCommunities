@@ -63,7 +63,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =20
-            Text: =Upper(ThisItem.Name)
+            Text: =ThisItem.title
             VerticalAlign: =VerticalAlign.Top
             Width: =Parent.TemplateWidth - Image8_2.Width - 104
             X: =160
