@@ -5,6 +5,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(IsBlank(DataCardValue1.Text) && IsBlank(DataCardValue3_1.Text) && IsBlank(DataCardValue26.Text) && IsBlank(DataCardValue4_1.Text) && IsBlank(DataCardValue5_1.Text) && IsBlank(DataCardValue8.Text) && IsBlank(DataCardValue9.Text) && IsBlank(DataCardValue25.Text) && IsBlank(DataCardValue27.Text) && IsBlank(DataCardValue23.Text) && IsBlank(DataCardValue28.Text),DisplayMode.Disabled,DisplayMode.Edit)
         Fill: =RGBA(0, 51, 102, 1)
         FontWeight: =FontWeight.Semibold
         Height: =72

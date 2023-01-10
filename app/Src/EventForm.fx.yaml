@@ -18,16 +18,20 @@ EventForm As screen:
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayMode: =If(IsBlank(DataCardValue17.Text), DisplayMode.Disabled, DisplayMode.Edit)
         Fill: =RGBA(0, 51, 102, 1)
         FontWeight: =FontWeight.Semibold
         Height: =72
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =SubmitForm(Form4);
-            Notify("Event added successfully",NotificationType.Success,0.3);
-            Navigate(EventDetails);
-            ResetForm(Form4)
+            =If(!(DataCardValue20.SelectedDate < Today()),
+                SubmitForm(Form4);
+                Notify("Event added successfully",NotificationType.Success,0.3);
+                Navigate(EventDetails);
+                ResetForm(Form4), 
+                Notify("Previous Dates are not allowed!")
+            );
         Size: =25
         Text: ="Submit"
         Width: =240
