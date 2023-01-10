@@ -39,6 +39,20 @@
         ItemHoverFill: =RGBA(186, 202, 226, 1)
         Items: =Blank()
         MaxAttachments: =1
+        OnAddFile: |-
+            =If(
+                Not(
+                    EndsWith(
+                        First(Self.Attachments).Name,
+                        ".pdf"
+                    )
+                ),
+                Notify(
+                    "Only Text and docx files are allowed",
+                    NotificationType.Error
+                );
+                Reset(Self)
+            )
         PaddingBottom: =5
         PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
         PaddingRight: =5
