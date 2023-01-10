@@ -42,7 +42,7 @@
             Height: =HtmlText2.Height
             Width: =1344
             X: =0
-            Y: =2
+            Y: =3
             ZIndex: =1
 
             HtmlText2 As htmlViewer:
@@ -51,8 +51,8 @@
                 Height: =2965
                 HtmlText: =data.Content
                 Size: =18
-                Width: =1315
-                X: =21
+                Width: =1272
+                X: =46
                 ZIndex: =1
 
         DataCard9 As dataCard.blankCard:
@@ -66,41 +66,6 @@
             Y: =0
             ZIndex: =2
 
-            Label15 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Bold
-                Height: =62
-                Size: =18
-                Text: =data.'Created By'.DisplayName
-                Width: =249
-                X: =100
-                Y: =41
-                ZIndex: =1
-
-            Image17 As image:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Image: =data.'Created By'.Picture
-                RadiusBottomLeft: =50
-                RadiusBottomRight: =50
-                RadiusTopLeft: =50
-                RadiusTopRight: =50
-                Y: =30
-                ZIndex: =2
-
-            Label16 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Size: =13
-                Text: =Text(data.Created, DateTimeFormat.ShortDate)
-                X: =100
-                Y: =90
-                ZIndex: =3
-
             Label17 As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 89, 178, 1)
@@ -111,8 +76,8 @@
                 Height: =145
                 Size: =28
                 Text: =data.Title
-                Width: =955
-                X: =369
+                Width: =1349
+                X: =17
                 ZIndex: =4
 
         DataCard20 As dataCard.blankCard:
@@ -123,7 +88,7 @@
             Height: =100
             Width: =1366
             X: =0
-            Y: =4
+            Y: =5
             ZIndex: =3
 
             "Gallery7 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
@@ -226,7 +191,7 @@
             Height: =290
             Width: =1366
             X: =0
-            Y: =3
+            Y: =4
             ZIndex: =5
 
             Image16 As image:
@@ -343,14 +308,63 @@
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(244, 244, 244, 1)
-                Height: =43
+                Height: =51
                 Icon: =Icon.Share
                 OnSelect: |
                     =Set(ShareItem,true);
-                Width: =42
-                X: =763
+                Width: =59
+                X: =745
                 Y: =65
                 ZIndex: =8
+
+        DataCard52 As dataCard.blankCard:
+            BorderColor: =RGBA(0, 0, 0, 1)
+            BorderStyle: =BorderStyle.Solid
+            DisplayMode: =DisplayMode.Edit
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =100
+            Width: =1366
+            X: =0
+            Y: =2
+            ZIndex: =6
+
+            Image17_1 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =73
+                Image: =data.'Created By'.Picture
+                RadiusBottomLeft: =50
+                RadiusBottomRight: =50
+                RadiusTopLeft: =50
+                RadiusTopRight: =50
+                Width: =70
+                X: =40
+                Y: =13
+                ZIndex: =1
+
+            Label15_1 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Bold
+                Height: =73
+                Size: =18
+                Text: =data.'Created By'.DisplayName
+                Width: =396
+                X: =110
+                Y: =13
+                ZIndex: =2
+
+            Label16_2 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Size: =13
+                Text: =Text(data.Created, DateTimeFormat.ShortDate)
+                X: =110
+                Y: =60
+                ZIndex: =3
 
     Icon1 As icon.Draw:
         BorderColor: =RGBA(0, 89, 178, 1)
