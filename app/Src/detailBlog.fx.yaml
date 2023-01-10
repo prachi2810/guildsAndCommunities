@@ -74,9 +74,9 @@
                 Height: =62
                 Size: =18
                 Text: =data.'Created By'.DisplayName
-                Width: =322
-                X: =123
-                Y: =30
+                Width: =249
+                X: =100
+                Y: =41
                 ZIndex: =1
 
             Image17 As image:
@@ -88,7 +88,6 @@
                 RadiusBottomRight: =50
                 RadiusTopLeft: =50
                 RadiusTopRight: =50
-                X: =23
                 Y: =30
                 ZIndex: =2
 
@@ -98,8 +97,8 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
                 Text: =Text(data.Created, DateTimeFormat.ShortDate)
-                X: =123
-                Y: =75
+                X: =100
+                Y: =90
                 ZIndex: =3
 
             Label17 As label:
@@ -109,12 +108,11 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.'Lato Black'
                 FontWeight: =FontWeight.Bold
-                Height: =100
+                Height: =145
                 Size: =28
                 Text: =data.Title
                 Width: =955
-                X: =388
-                Y: =30
+                X: =369
                 ZIndex: =4
 
         DataCard20 As dataCard.blankCard:
