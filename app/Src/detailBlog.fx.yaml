@@ -179,8 +179,8 @@
                 Height: =351
                 Image: =If(!IsBlank(data.Image.Large), data.Image, SampleImage)
                 Width: =1310
-                X: =34
-                Y: =36
+                X: =20
+                Y: =22
                 ZIndex: =1
 
         DataCard17 As dataCard.blankCard:
