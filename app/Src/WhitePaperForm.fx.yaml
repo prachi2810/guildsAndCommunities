@@ -1,6 +1,8 @@
 "WhitePaperForm As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+    OnVisible: |-
+        =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+        Reset(TextInput12);
 
     RectQuickActionBar1_1 As rectangle:
         BorderColor: =RGBA(0, 18, 107, 1)
@@ -115,7 +117,8 @@
                      contentBytes: First(DataCardValue2_1.Attachments).Value,
                      name: First(DataCardValue2_1.Attachments).Name
                  },
-                 Dropdown1_2.Selected.Communities
+                 Dropdown1_2.Selected.Communities,
+                 TextInput12.Text
              );
             
             Patch('Event Track Details',Defaults('Event Track Details'), {
@@ -135,6 +138,7 @@
             });
             
             Reset(DataCardValue2_1);
+            Reset(TextInput12);
             Navigate(WhitePaperMain);
             Refresh(whitePapersWithCommunities);
         Size: =15
