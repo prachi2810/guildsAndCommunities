@@ -839,7 +839,7 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"TorchImage3")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50IsBlank(AddPicture1) ||
+            Height: =50
             Required: =true
             Update: =Image28.Image
             Width: =440
