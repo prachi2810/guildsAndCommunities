@@ -48,7 +48,7 @@
                     )
                 ),
                 Notify(
-                    "Only Text and docx files are allowed",
+                    "Only Pdf file is allowed",
                     NotificationType.Error
                 );
                 Reset(Self)
