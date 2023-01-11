@@ -91,6 +91,9 @@
           "User": {
             "tableName": "e1f12d43-e289-4b40-905c-e56517a00822"
           },
+          "whitepapers": {
+            "tableName": "959b3282-4a5a-4cdd-a7aa-4a98379191bb"
+          },
           "whitePapersWithCommunities": {
             "tableName": "5e04de24-d048-4189-a5b9-7d8c13c61dc7"
           }
@@ -118,7 +121,8 @@
       "EventDetails_1",
       "EventDetail",
       "EventFeedback",
-      "Newsletter_1"
+      "Newsletter_1",
+      "whitepapers"
     ],
     "dependencies": {},
     "dependents": [
