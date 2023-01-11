@@ -77,7 +77,14 @@
             )
         );
         ClearCollect(TopFiveUsers, FirstN(SortByColumns(Ranks, "No", Ascending), 5));
-        ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));
+        /*ClearCollect(TopFiveCommunities, FirstN(SortByColumns(Community_1, "Blogs", Descending), 5));*/
+        ClearCollect(TopFiveCommunities, FirstN(SortByColumns(DropColumns(
+                AddColumns(
+                    GroupBy(Filter('Event Track Details', Status="Approved"),"Teams_Channel_Name","GroupedItems"),
+                    "Count",CountRows(GroupedItems)
+                ),
+            "GroupedItems"
+        ),"Count", Descending),3));
         ClearCollect(TopFivePopularGuilds, FirstN(SortByColumns(Guild, "Members", Descending), 3));
         Set(DropDownDashboard,false);
         
@@ -501,6 +508,7 @@
 
                 "'Top Communities_1' As barChart":
                     DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                    GridStyle: =GridStyle.None
                     Height: =335
                     ItemColorSet: =[RGBA(49, 130, 93, 1),RGBA(48,166,103, 1), RGBA(94,193,108,1), RGBA(246,199,144,1), RGBA(247,199,114,1), RGBA(247,180,91,1), RGBA(246,143,100,1), RGBA(212,96,104,1), RGBA(148, 110, 176, 1), RGBA(118, 154, 204, 1), RGBA(96, 197, 234, 1)]
                     Items: =TopFiveCommunities
@@ -514,7 +522,7 @@
                     Height: =73
                     ItemColorSet: ='Top Communities_1'.ItemColorSet
                     Items: =TopFiveCommunities
-                    Width: =409
+                    Width: =459
                     X: =715
                     Y: =528
                     ZIndex: =9
