@@ -261,6 +261,7 @@
             HoverFill: =ColorFade(Red, -20%)
             OnSelect: |-
                 =Remove(whitepapers,currPaper);
+                Notify( "Paper Deleted Successfully" , NotificationType.Success, 1000);
                 Refresh(whitepapers);
                 Set(currCommunity,Dropdown2_5.Selected.Communities);
                 If(currCommunity="All",Set(paperList,whitepapers),Set(paperList,Filter(whitepapers,Community=currCommunity)));
