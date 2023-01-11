@@ -280,23 +280,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
         OnSelect: |-
-            =/*
-            If(addedFile,
-            Patch(whitepapers, Defaults(whitepapers),{
-                Title: DataCardValue1.Text,
-                Community:Dropdown1.Selected.Communities
-            }, Form1.Updates);
-            
-            ResetForm(Form1);
-            Navigate(Screen2);
-            Refresh(whitepapers);
-            ,
-            Notify(
-                    "All Fields are required",
-                    NotificationType.Error
-                );
-            );
-            */
+            =
             If(addedFile&& !IsBlank(DataCardValue1_2),
             Patch(whitepapers, Defaults(whitepapers),{
                 Title: DataCardValue1_2.Text,
@@ -305,6 +289,7 @@
             
             ResetForm(Form1_2);
             Navigate(whitePaperHome);
+            Notify( "Paper Uploaded Successfully" , NotificationType.Success, 1000)
             ,
             Notify(
                     "All Fields are required",
