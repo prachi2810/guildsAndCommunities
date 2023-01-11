@@ -3964,46 +3964,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "whitePaperFill.Button2_7.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "whitePaperFill.Button2_7.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 7,
-                  "charOffset": 547,
-                  "snippet": {
-                    "text": "Screen2"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "whitePaperFill",
-                "type": "whitePaperFill.Button2_7"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Screen2"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "NavBar.Gallery11.AccessibleLabel"
                 }
               ],
