@@ -448,9 +448,13 @@
             =Remove(Like, LookUp(Like, BlogID=data.ID));
             Remove(Comment,  LookUp(Comment, BlogID=data.ID));
             
-            Patch(User, LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags), {
-                Points: LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags).Points - 25
-            });
+            If(
+                !IsBlank(LookUp('Event Track Details', ID=LookUp(Blog, ID=data.ID).EventId).Status = "Approved"),
+                Patch(User, LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags), {
+                    Points: LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags).Points - 25
+                }),
+                false
+            );
             
             Remove(Blog, LookUp(Blog, ID=data.ID));
             Navigate(allBlogs);

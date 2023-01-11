@@ -1975,8 +1975,88 @@
                   "relativeAddress": 0
                 },
                 "region": {
+                  "charLength": 8,
+                  "charOffset": 174,
+                  "snippet": {
+                    "text": ".EventId"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "detailBlog",
+                "type": "detailBlog.Button8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "detailBlog.Button8.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "detailBlog.Button8.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 149,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "detailBlog",
+                "type": "detailBlog.Button8"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "detailBlog.Button8.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "detailBlog.Button8.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
                   "charLength": 11,
-                  "charOffset": 157,
+                  "charOffset": 269,
                   "snippet": {
                     "text": "Communities"
                   }
@@ -2016,7 +2096,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 168,
+                  "charOffset": 280,
                   "snippet": {
                     "text": "="
                   }
@@ -2056,7 +2136,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 154,
+                  "charOffset": 266,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2096,7 +2176,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 242,
+                  "charOffset": 358,
                   "snippet": {
                     "text": "Communities"
                   }
@@ -2136,7 +2216,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 253,
+                  "charOffset": 369,
                   "snippet": {
                     "text": "="
                   }
@@ -2176,7 +2256,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 239,
+                  "charOffset": 355,
                   "snippet": {
                     "text": "&&"
                   }
