@@ -348,11 +348,11 @@
                 Color: =RGBA(0, 0, 0, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Bold
-                Height: =73
+                Height: =44
                 Size: =18
                 Text: =data.'Created By'.DisplayName
-                Width: =396
-                X: =110
+                Width: =986
+                X: =125
                 Y: =13
                 ZIndex: =2
 
@@ -362,8 +362,8 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
                 Text: =Text(data.Created, DateTimeFormat.ShortDate)
-                X: =110
-                Y: =60
+                X: =125
+                Y: =46
                 ZIndex: =3
 
     Icon1 As icon.Draw:
