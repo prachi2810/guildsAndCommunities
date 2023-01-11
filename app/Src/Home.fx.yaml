@@ -879,6 +879,7 @@
             RadiusTopRight: =0
             Size: =15
             Text: ="Dashboard"
+            Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
             Width: =167
             X: =590
             ZIndex: =24
@@ -931,6 +932,7 @@
         Height: =19
         Icon: =Icon.ChevronDown
         OnSelect: =Set(DropDownDashboard,!DropDownDashboard)
+        Visible: =If(!IsBlank(LookUp(User, Email=User().Email && Role="admin")), true, false)
         Width: =20
         X: =731
         Y: =28

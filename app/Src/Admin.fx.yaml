@@ -372,8 +372,10 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Font: =Font.Lato
                 FontWeight: =FontWeight.Semibold
+                Height: =35
                 Size: =20
-                Text: ="Admin"
+                Text: =LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'
+                Width: =442
                 X: =358
                 Y: =120
                 ZIndex: =5
