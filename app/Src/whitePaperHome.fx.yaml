@@ -178,7 +178,7 @@
             =
             If(CountRows(UserCommunities) = 0, false, true)
         X: =1119
-        Y: =40
+        Y: =24
         ZIndex: =4
 
     Label2_2 As label:
@@ -285,4 +285,15 @@
             X: =296
             Y: =111
             ZIndex: =3
+
+    Icon28 As icon.Home:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.Home
+        OnSelect: =Navigate(Home);
+        X: =62
+        Y: =12
+        ZIndex: =9
 
