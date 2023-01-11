@@ -3,7 +3,7 @@
     OnVisible: |-
         =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
         ClearCollect(UserCommunities1,{Communities:"All"},UserCommunities);
-        Set(currCommunity,Dropdown2.Selected.Communities);
+        Set(currCommunity,Dropdown2_5.Selected.Communities);
         If(currCommunity="All",Set(paperList,whitepapers),Set(paperList,Filter(whitepapers,Community=currCommunity)));
 
     RectQuickActionBar10 As rectangle:
