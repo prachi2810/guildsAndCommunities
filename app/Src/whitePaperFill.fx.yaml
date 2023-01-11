@@ -1,5 +1,6 @@
 "whitePaperFill As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: =Set(addedFile,false)
 
     RectQuickActionBar14 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -23,7 +24,9 @@
         BorderColor: =RGBA(0, 18, 107, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         Fill: =RGBA(255, 255, 255, 1)
-        OnSelect: =Navigate(whitePaperHome);
+        OnSelect: |-
+            =Navigate(whitePaperHome);
+            ResetForm(Form1_2);
         X: =77
         Y: =21
         ZIndex: =3
