@@ -129,7 +129,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If((T1&&C1 ),DisplayMode.Edit,Disabled)
+        DisplayMode: =If((IsBlank(title.Text)&&IsBlank(content.HtmlText) ), DisplayMode.Edit, DisplayMode.Disabled)
         Fill: =RGBA(0, 51, 102, 1)
         FontWeight: =FontWeight.Semibold
         Height: =48
@@ -166,7 +166,8 @@
                 Title:title.Text,
                 Content:content.HtmlText,
                 Image:Image8.Image,
-                Tags: Dropdown2.Selected.Communities
+                Tags: Dropdown2.Selected.Communities,
+                EventId: Last('Event Track Details').ID
             });
             
             Notify("Blog Successfully Posted!");

@@ -339,7 +339,7 @@
                 RadiusTopLeft: =50
                 RadiusTopRight: =50
                 Width: =70
-                X: =40
+                X: =55
                 Y: =13
                 ZIndex: =1
 
@@ -352,7 +352,7 @@
                 Size: =18
                 Text: =data.'Created By'.DisplayName
                 Width: =986
-                X: =125
+                X: =147
                 Y: =13
                 ZIndex: =2
 
@@ -362,7 +362,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 Size: =13
                 Text: =Text(data.Created, DateTimeFormat.ShortDate)
-                X: =125
+                X: =147
                 Y: =46
                 ZIndex: =3
 
@@ -447,9 +447,11 @@
         OnSelect: |-
             =Remove(Like, LookUp(Like, BlogID=data.ID));
             Remove(Comment,  LookUp(Comment, BlogID=data.ID));
+            
             Patch(User, LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags), {
                 Points: LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags).Points - 25
             });
+            
             Remove(Blog, LookUp(Blog, ID=data.ID));
             Navigate(allBlogs);
         Size: =15

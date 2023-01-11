@@ -1976,7 +1976,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 155,
+                  "charOffset": 157,
                   "snippet": {
                     "text": "Communities"
                   }
@@ -2016,7 +2016,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 166,
+                  "charOffset": 168,
                   "snippet": {
                     "text": "="
                   }
@@ -2056,7 +2056,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 152,
+                  "charOffset": 154,
                   "snippet": {
                     "text": "&&"
                   }
@@ -2096,7 +2096,7 @@
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 240,
+                  "charOffset": 242,
                   "snippet": {
                     "text": "Communities"
                   }
@@ -2136,7 +2136,7 @@
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 251,
+                  "charOffset": 253,
                   "snippet": {
                     "text": "="
                   }
@@ -2176,7 +2176,7 @@
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 237,
+                  "charOffset": 239,
                   "snippet": {
                     "text": "&&"
                   }
@@ -12344,6 +12344,66 @@
               },
               "properties": {
                 "member": "EventPopUp",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.T1"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.T1",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "T1",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 13
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.C1"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.C1",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "C1",
                 "module": "App",
                 "type": "App"
               }

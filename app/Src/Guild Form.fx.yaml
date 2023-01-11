@@ -6,7 +6,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: |-
-            =If(IsBlank(DataCardValue1.Text) || IsBlank(DataCardValue3_1.Text) || IsBlank(DataCardValue26.Text) || IsBlank(DataCardValue4_1.Text) || IsBlank(DataCardValue5_1.Text) || IsBlank(DataCardValue8.Text) || IsBlank(DataCardValue9.Text) || IsBlank(DataCardValue25.Text) || IsBlank(DataCardValue27.Text) || IsBlank(DataCardValue23.Text) || IsBlank(DataCardValue28.Text) || IsBlank(AddPicture5_1) || IsBlank(AddPicture1) ||IsBlank(AddPicture5) || IsBlank(AddPicture7) || IsBlank(AddPicture8) ||IsBlank(AddPicture9) ||IsBlank(AddPicture10),
+            =If(IsBlank(DataCardValue1.Text) || IsBlank(DataCardValue3_1.Text) || IsBlank(DataCardValue26.Text) || IsBlank(DataCardValue4_1.Text) || IsBlank(DataCardValue5_1.Text) || IsBlank(DataCardValue8.Text) || IsBlank(DataCardValue9.Text) || IsBlank(DataCardValue25.Text) || IsBlank(DataCardValue27.Text) || IsBlank(DataCardValue23.Text) || IsBlank(DataCardValue28.Text) || IsBlank(AddPicture5_1) || IsBlank(AddPicture1) ||IsBlank(AddPicture5) || IsBlank(AddPicture7) || IsBlank(AddPicture8) ||IsBlank(AddPicture9) ||IsBlank(AddPicture10) || IsBlank(ErrorMessage1.Text),
             DisplayMode.Disabled,
             DisplayMode.Edit)
         Fill: =RGBA(0, 51, 102, 1)
@@ -1497,7 +1497,7 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =Parent.Error
+                Text: =If(!IsBlank(LookUp(Guild,Title=DataCardValue1.Text)),"This Guild is Already existed", "")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
