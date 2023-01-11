@@ -5,7 +5,7 @@
         ClearCollect(UserCommunities,Filter(User,Email=User().Email));
         ClearCollect(UserCommunities1,{Communities:"All"},UserCommunities);
         Set(currCommunity,Dropdown2_4.Selected.Communities);
-        If(currCommunity="All",Set(val,Filter(whitePapersWithCommunities,communities<>"empty")),Set(val,Filter(whitePapersWithCommunities,communities=currCommunity)));
+        If(currCommunity="All",Set(val,Filter(Newsletter_1,communities<>"empty")),Set(val,Filter(Newsletter_1,communities=currCommunity)));
         If(IsBlank(varDocumentCurrent) && !IsEmpty(val),Set(varDocumentCurrent, GetDataURI.Run(First(val).Identifier).result));
         Set(openPopup,false);
 
