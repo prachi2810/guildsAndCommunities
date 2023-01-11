@@ -26,13 +26,13 @@
 
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 18, 107, 1)
-        Height: =572
+        Height: =556
         Items: =paperList
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
-        Width: =1123
-        X: =156
+        Width: =1175
+        X: =104
         Y: =196
         ZIndex: =3
 
@@ -293,7 +293,7 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.Home
         OnSelect: =Navigate(Home);
-        X: =62
+        X: =104
         Y: =12
         ZIndex: =9
 
