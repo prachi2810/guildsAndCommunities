@@ -129,7 +129,7 @@
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
-        DisplayMode: =If(!IsBlank(Trim(title.Text)) && !IsBlank(Trim(content.HtmlText)), DisplayMode.Edit, DisplayMode.Disabled)
+        DisplayMode: =If(!IsBlank(Trim(title.Text)) && !IsEmpty(Trim(content.HtmlText)), DisplayMode.Edit, DisplayMode.Disabled)
         Fill: =RGBA(0, 51, 102, 1)
         FontWeight: =FontWeight.Semibold
         Height: =48
