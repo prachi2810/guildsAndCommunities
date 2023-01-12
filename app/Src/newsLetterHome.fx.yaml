@@ -136,7 +136,7 @@
         Subtitle2_2 As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =37
+            Height: =30
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -145,15 +145,15 @@
             Size: =18
             Text: =ThisItem.'Created By'.DisplayName
             VerticalAlign: =VerticalAlign.Top
-            Width: =221
+            Width: =465
             X: =160
-            Y: =111
+            Y: =118
             ZIndex: =3
 
         Body1_2 As label:
             Color: =RGBA(0, 0, 0, 1)
             DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =36
+            Height: =30
             OnSelect: =Select(Parent)
             PaddingBottom: =0
             PaddingLeft: =0
@@ -162,9 +162,9 @@
             Size: =16
             Text: =ThisItem.Community
             VerticalAlign: =VerticalAlign.Top
-            Width: =260
+            Width: =452
             X: =160
-            Y: =52
+            Y: =58
             ZIndex: =4
 
         NextArrow2_1 As icon.ChevronRight:
@@ -203,7 +203,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Icon: =Icon.Download
             OnSelect: |
-                =//Download(First(ThisItem.Attachments).AbsoluteUri);
+                =Download(First(ThisItem.Attachments).AbsoluteUri);
             X: =928
             Y: =54
             ZIndex: =7
@@ -218,12 +218,12 @@
                 =Set(currPaper,ThisItem);
                 Set(openPopup,true);
             Visible: |-
-                =/*If(
+                =If(
                     !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
                     !IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Community && Role="admin")),
                     true,
                     false
-                );*/
+                )
             X: =800
             Y: =54
             ZIndex: =8
