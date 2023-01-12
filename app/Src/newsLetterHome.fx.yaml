@@ -301,6 +301,7 @@
             HoverFill: =ColorFade(Red, -20%)
             OnSelect: |-
                 =Remove(newsletters,currNewsLetter);
+                Notify( "NewsLetter Deleted Successfully" , NotificationType.Success, 1000);
                 Refresh(newsletters);
                 Set(currCommunity,Dropdown2_4.Selected.Communities);
                 If(currCommunity="All",Set(newsLetterList,newsletters),Set(paperList,Filter(newsletters,Community=currCommunity)));
