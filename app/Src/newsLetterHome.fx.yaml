@@ -143,7 +143,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.Author.DisplayName
+            Text: =ThisItem.'Created By'.DisplayName
             VerticalAlign: =VerticalAlign.Top
             Width: =221
             X: =160
