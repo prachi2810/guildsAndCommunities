@@ -281,7 +281,7 @@
         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
         OnSelect: |-
             =
-            If(addedFile&& !IsBlank(DataCardValue1_2),
+            If(addedFile&& !IsBlank(DataCardValue1_2)&&IsBlank(LookUp(whitepapers,Title=DataCardValue1_2.Text)),
             Patch(whitepapers, Defaults(whitepapers),{
                 Title: DataCardValue1_2.Text,
                 Community:Dropdown1_4.Selected.Communities
