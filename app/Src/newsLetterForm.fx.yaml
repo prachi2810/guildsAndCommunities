@@ -285,7 +285,7 @@
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
             =
-            If(addedNewsLetter&& !IsBlank(DataCardValue3.Text) && IsBlank(LookUp(newsletters,Title=DataCardValue3.Text)),
+            If(addedNewsLetter&& !IsBlank(Trim(DataCardValue3.Text)) && IsBlank(LookUp(newsletters,Title=DataCardValue3.Text)),
             Patch(newsletters, Defaults(newsletters),{
                 Title: DataCardValue3.Text,
                 Community:Dropdown8.Selected.Communities
