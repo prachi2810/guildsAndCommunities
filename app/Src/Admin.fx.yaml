@@ -1004,7 +1004,7 @@
         Rectangle2_3 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
             Fill: =RGBA(241, 241, 241, 1)
-            Height: =221
+            Height: =248
             Visible: =DropDown
             Width: =140
             X: =209
@@ -1058,7 +1058,7 @@
             Visible: =DropDown
             Width: =140
             X: =209
-            Y: =113
+            Y: =293
             ZIndex: =19
 
         Button18_13 As button:
@@ -1080,8 +1080,8 @@
             Text: ="Case Study"
             Visible: =DropDown
             Width: =140
-            X: =209
-            Y: =155
+            X: =208
+            Y: =111
             ZIndex: =20
 
         Button18_14 As button:
@@ -1104,7 +1104,7 @@
             Visible: =DropDown
             Width: =140
             X: =209
-            Y: =195
+            Y: =209
             ZIndex: =21
 
         Button18_15 As button:
@@ -1128,7 +1128,7 @@
             Visible: =DropDown
             Width: =140
             X: =209
-            Y: =235
+            Y: =151
             ZIndex: =22
 
         Button20_3 As button:
@@ -1324,4 +1324,29 @@
         X: =310
         Y: =30
         ZIndex: =34
+
+    Button18_17 As button:
+        Align: =Align.Left
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(241, 241, 241, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =42
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(4, 166, 235, 1), -20%)
+        OnSelect: =Navigate(Newsletter)
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =15
+        Text: ="Newsletter"
+        Visible: =DropDown
+        Width: =140
+        X: =209
+        Y: =251
+        ZIndex: =35
 
