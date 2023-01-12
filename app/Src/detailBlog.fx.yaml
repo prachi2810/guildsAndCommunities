@@ -1,6 +1,7 @@
 "detailBlog As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |-
-        =Set(liked, If(
+        =Refresh('Event Track Details');
+        Set(liked, If(
             IsBlank(LookUp(Like, Email=User().Email && BlogID=data.ID)),
             false,
             true
@@ -446,13 +447,15 @@
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =Remove(Like, LookUp(Like, BlogID=data.ID));
-            Remove(Comment,  LookUp(Comment, BlogID=data.ID));
+            Remove(Comment, LookUp(Comment, BlogID=data.ID));
             
             If(
-                !IsBlank(LookUp('Event Track Details', ID=LookUp(Blog, ID=data.ID).EventId).Status = "Approved"),
+                LookUp('Event Track Details', ID=data.EventId).Status = "Approved",
                 Patch(User, LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags), {
                     Points: LookUp(User, Email=data.'Created By'.Email && Communities=data.Tags).Points - 25
-                }),
+                });
+                Remove('Event Track Details',LookUp('Event Track Details', ID=data.EventId));
+                ,
                 false
             );
             
