@@ -171,6 +171,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =152
                 Image: =data.TorchImage1
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =182
                 X: =162
                 Y: =101
@@ -182,6 +186,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
                 Image: =data.TorchImage3
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =150
                 X: =1017
                 Y: =101
@@ -193,6 +201,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
                 Image: =data.TorchImage2
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =167
                 X: =600
                 Y: =97
@@ -237,6 +249,39 @@
                 Y: =268
                 ZIndex: =20
 
+            Image19 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =185
+                Image: =Torchbearer
+                Width: =183
+                X: =161
+                Y: =83
+                ZIndex: =21
+
+            Image19_1 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =185
+                Image: =Torchbearer
+                Width: =183
+                X: =1000
+                Y: =84
+                ZIndex: =22
+
+            Image19_2 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =185
+                Image: =Torchbearer
+                Width: =183
+                X: =581
+                Y: =84
+                ZIndex: =23
+
         DataCard25 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
             BorderStyle: =BorderStyle.Solid
@@ -254,6 +299,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
                 Image: =data.TrendImage1
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =162
                 X: =159
                 Y: =4
@@ -265,6 +314,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =182
                 Image: =data.TrendImage2
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =155
                 X: =589
                 ZIndex: =2
@@ -275,6 +328,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
                 Image: =data.TrendImage3
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =165
                 X: =1043
                 ZIndex: =3
@@ -316,6 +373,36 @@
                 X: =623
                 Y: =176
                 ZIndex: =6
+
+            Image33 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =182
+                Image: =Trendsetter
+                Width: =219
+                X: =136
+                ZIndex: =7
+
+            Image33_1 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =182
+                Image: =Trendsetter
+                Width: =219
+                X: =1016
+                ZIndex: =8
+
+            Image33_2 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =182
+                Image: =Trendsetter
+                Width: =219
+                X: =541
+                ZIndex: =9
 
         DataCard33 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)

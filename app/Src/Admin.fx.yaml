@@ -326,7 +326,8 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =200
-                Image: =User().Image
+                Image: |
+                    =User().Image
                 RadiusBottomLeft: =100
                 RadiusBottomRight: =100
                 RadiusTopLeft: =100
@@ -420,6 +421,20 @@
                 X: =980
                 Y: =201
                 ZIndex: =7
+
+            Image35 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =238
+                Image: |-
+                    =If(LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role' = "Pole Star" ,Polestar,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role' = "Trend Setter" , Trendsetter,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'="Torch Bearer" ,Torchbearer,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'="Community Member",logo,"")
+                    /*If(LookUp(User,Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'=
+                    "Community Member" ,Polestar)*/
+                Width: =240
+                X: =52
+                Y: =40
+                ZIndex: =8
 
         DataCard22 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
