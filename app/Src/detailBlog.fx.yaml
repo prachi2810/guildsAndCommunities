@@ -456,7 +456,7 @@
                 });
                 Remove('Event Track Details',LookUp('Event Track Details', ID=data.EventId));
                 ,
-                false
+                Remove('Event Track Details',LookUp('Event Track Details', ID=data.EventId));
             );
             
             Remove(Blog, LookUp(Blog, ID=data.ID));
