@@ -98,7 +98,7 @@
         ContentLanguage: =data.Content
         Default: =data.Content
         Height: =300
-        OnChange: |-
+        OnChange: |
             =Set(contentInput,content_1.HtmlText);
             Set(lenOfInput,Len(Trim(Substitute(Substitute(Substitute(contentInput,"&nbsp;",""),"<p>",""),"</p>",""))));
             If(lenOfInput=0,Set(validInput,false),Set(validInput,true));
