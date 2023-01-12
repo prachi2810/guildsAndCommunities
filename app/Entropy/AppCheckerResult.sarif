@@ -373,46 +373,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Home.Button18_16.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "Home.Button18_16.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 10,
-                  "charOffset": 9,
-                  "snippet": {
-                    "text": "Newsletter"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "Home",
-                "type": "Home.Button18_16"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Newsletter"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "Profile.Canvas10.DataCard27.Label3_5.Text"
                 }
               ],
