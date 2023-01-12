@@ -38,6 +38,8 @@
         OnSelect: =Navigate(newsLetterForm);
         Size: =18
         Text: ="Add Newsletter"
+        Visible: |
+            =If(CountRows(UserCommunities) = 0, false, true)
         Width: =192
         X: =1039
         Y: =18
