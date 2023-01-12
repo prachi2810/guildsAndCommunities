@@ -224,8 +224,8 @@
                 Size: =20
                 Text: =User().FullName
                 Width: =324
-                X: =614
-                Y: =74
+                X: =397
+                Y: =72
                 ZIndex: =6
 
             Label3_5 As label:
@@ -237,8 +237,8 @@
                 Size: =20
                 Text: =Sum(Filter(User, Email=User().Email), Points)
                 Width: =135
-                X: =614
-                Y: =124
+                X: =397
+                Y: =129
                 ZIndex: =7
 
             Label5_2 As label:
