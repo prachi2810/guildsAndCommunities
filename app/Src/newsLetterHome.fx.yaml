@@ -219,7 +219,7 @@
                 Set(openPopup,true);
             Visible: |-
                 =If(
-                    !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
+                    !IsBlank(LookUp(newsletters, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
                     !IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Community && Role="admin")),
                     true,
                     false
