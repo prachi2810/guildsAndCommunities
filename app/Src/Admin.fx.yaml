@@ -375,7 +375,9 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =35
                 Size: =20
-                Text: =LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'
+                Text: |-
+                    =/*LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'*/
+                    "Admin"
                 Width: =442
                 X: =358
                 Y: =120

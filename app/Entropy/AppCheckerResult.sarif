@@ -3562,26 +3562,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Label10_1.Text"
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Label10_1.Text",
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 11,
-                  "charOffset": 35,
+                  "charOffset": 38,
                   "snippet": {
                     "text": "Communities"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "Image",
                 "module": "Admin",
-                "type": "Admin.Canvas6.DataCard19.Label10_1"
+                "type": "Admin.Canvas6.DataCard19.Image35"
               }
             }
           ],
@@ -3602,26 +3602,26 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Label10_1.Text"
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Label10_1.Text",
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 1,
-                  "charOffset": 46,
+                  "charOffset": 49,
                   "snippet": {
                     "text": "="
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "Image",
                 "module": "Admin",
-                "type": "Admin.Canvas6.DataCard19.Label10_1"
+                "type": "Admin.Canvas6.DataCard19.Image35"
               }
             }
           ],
@@ -3642,26 +3642,386 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Label10_1.Text"
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Label10_1.Text",
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
                   "relativeAddress": 0
                 },
                 "region": {
                   "charLength": 2,
-                  "charOffset": 32,
+                  "charOffset": 35,
                   "snippet": {
                     "text": "&&"
                   }
                 }
               },
               "properties": {
-                "member": "Text",
+                "member": "Image",
                 "module": "Admin",
-                "type": "Admin.Canvas6.DataCard19.Label10_1"
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 158,
+                  "snippet": {
+                    "text": "Communities"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Communities"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 169,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 155,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 285,
+                  "snippet": {
+                    "text": "Communities"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Communities"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 296,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 282,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 11,
+                  "charOffset": 409,
+                  "snippet": {
+                    "text": "Communities"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Communities"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint-OpNotSupportedByColumn",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 1,
+                  "charOffset": 420,
+                  "snippet": {
+                    "text": "="
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "LookUp"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-SuggestRemoteExecutionHint",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "Admin.Canvas6.DataCard19.Image35.Image",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 2,
+                  "charOffset": 406,
+                  "snippet": {
+                    "text": "&&"
+                  }
+                }
+              },
+              "properties": {
+                "member": "Image",
+                "module": "Admin",
+                "type": "Admin.Canvas6.DataCard19.Image35"
               }
             }
           ],
@@ -13091,36 +13451,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "createBlog.Icon15.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "createBlog.Icon15.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "createBlog",
-                "type": "createBlog.Icon15"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 10
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "createBlog.Icon15.AccessibleLabel"
                 }
               ],
@@ -13145,6 +13475,36 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "createBlog.Icon15.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "createBlog.Icon15.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "createBlog",
+                "type": "createBlog.Icon15"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -13942,66 +14302,6 @@
               },
               "properties": {
                 "member": "testomonial",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.Torchbearer"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.Torchbearer",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Torchbearer",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedMediaResources",
-          "ruleIndex": 14
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "App.Trendsetter"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.Trendsetter",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Trendsetter",
                 "module": "App",
                 "type": "App"
               }
