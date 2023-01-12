@@ -238,7 +238,7 @@
                 Text: =Sum(Filter(User, Email=User().Email), Points)
                 Width: =135
                 X: =397
-                Y: =129
+                Y: =125
                 ZIndex: =7
 
             Label5_2 As label:
