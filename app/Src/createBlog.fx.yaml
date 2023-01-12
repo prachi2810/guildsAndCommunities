@@ -295,7 +295,7 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.ArrowLeft
         OnSelect: |-
-            =eset(title);
+            =Reset(title);
             Reset(content);
             Navigate(allBlogs)
         Tooltip: ="Back"
