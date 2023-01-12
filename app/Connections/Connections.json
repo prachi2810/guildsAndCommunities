@@ -85,6 +85,9 @@
           "Newsletter_1": {
             "tableName": "ac726706-5e21-4b7a-a70a-ee34cb9df8ea"
           },
+          "newsletters": {
+            "tableName": "550d5194-4172-47bc-b414-89b48822abe1"
+          },
           "Points": {
             "tableName": "524d759a-316a-46bc-bc54-c5cf39728d0f"
           },
@@ -122,7 +125,8 @@
       "EventDetail",
       "EventFeedback",
       "Newsletter_1",
-      "whitepapers"
+      "whitepapers",
+      "newsletters"
     ],
     "dependencies": {},
     "dependents": [
