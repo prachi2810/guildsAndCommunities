@@ -41,7 +41,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =If(!IsBlank(Trim(title_1.Text)) && Len(Trim(contentInput)=7), DisplayMode.Edit, DisplayMode.Disabled)
+                DisplayMode: =If(!IsBlank(Trim(title_1.Text)) && validInput, DisplayMode.Edit, DisplayMode.Disabled)
                 Fill: =RGBA(0, 51, 102, 1)
                 FontWeight: =FontWeight.Semibold
                 HoverColor: =RGBA(255, 255, 255, 1)
@@ -70,16 +70,6 @@
                 X: =742
                 Y: =128
                 ZIndex: =2
-
-            Label56 As label:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                Color: =RGBA(0, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Size: =13
-                Text: =p
-                X: =298
-                Y: =476
-                ZIndex: =3
 
     Label11_2 As label:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -110,7 +100,8 @@
         Height: =300
         OnChange: |-
             =Set(contentInput,content_1.HtmlText);
-            Set(p,Len(Trim(Substitute(Substitute(Substitute(contentInput,"&nbsp;",""),"<p>",""),"</p>",""))))
+            Set(lenOfInput,Len(Trim(Substitute(Substitute(Substitute(contentInput,"&nbsp;",""),"<p>",""),"</p>",""))));
+            If(lenOfInput=0,Set(validInput,false),Set(validInput,true));
         Width: =444
         X: =222
         Y: =217
