@@ -430,12 +430,12 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =238
                 Image: |-
-                    =If(LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role' = "Pole Star" ,Polestar,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role' = "Trend Setter" , Trendsetter,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'="Torch Bearer" ,Torchbearer,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'="Community Member",logo,"")
+                    =If(LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role' = "Pole Star" ,Polestar,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role' = "Trend Setter" , Trendsetter,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'="Torch Bearer" ,Torchbearer,LookUp(User, Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'="Community Member",Community_Member,"")
                     /*If(LookUp(User,Email=User().Email && Communities=Dropdown6.Selected.Communities).'Community Role'=
                     "Community Member" ,Polestar)*/
                 Width: =240
-                X: =52
-                Y: =40
+                X: =47
+                Y: =44
                 ZIndex: =8
 
         DataCard22 As dataCard.blankCard:
