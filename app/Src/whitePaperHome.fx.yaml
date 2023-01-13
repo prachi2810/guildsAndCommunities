@@ -68,7 +68,7 @@
             Size: =18
             Text: =ThisItem.Author.DisplayName
             VerticalAlign: =VerticalAlign.Top
-            Width: =221
+            Width: =393
             X: =160
             Y: =111
             ZIndex: =3
@@ -651,8 +651,8 @@
         Visible: |
             =
             If(CountRows(UserCommunities) = 0, false, true)
-        X: =1181
-        Y: =17
+        X: =1119
+        Y: =19
         ZIndex: =32
 
     Button18_28 As button:
