@@ -614,7 +614,7 @@
         Visible: |
             =If(CountRows(UserCommunities) = 0, false, true)
         Width: =192
-        X: =1141
+        X: =1027
         Y: =9
         ZIndex: =33
 
