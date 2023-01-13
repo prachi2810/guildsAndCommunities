@@ -130,8 +130,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: |+
-            =
-            If(IsBlank(Trim(title.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(content.HtmlText,"&nbsp;",""),"<p>",""),"</p>",""))))||(If(LookUp(Blog, Title=title.Text, true),true,false)), DisplayMode.Disabled, DisplayMode.Edit)
+            =If(IsBlank(Trim(title.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(content.HtmlText,"&nbsp;",""),"<p>",""),"</p>",""))))||(If(LookUp(Blog, Title=title.Text, true),true,false)), DisplayMode.Disabled, DisplayMode.Edit)
             
         Fill: =RGBA(0, 51, 102, 1)
         FontWeight: =FontWeight.Semibold
