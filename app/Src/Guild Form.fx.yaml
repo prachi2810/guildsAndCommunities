@@ -1498,7 +1498,7 @@
                 PaddingLeft: =0
                 PaddingRight: =0
                 PaddingTop: =0
-                Text: =If(!IsBlank(LookUp(Guild,Title=DataCardValue1.Text)),"This Guild is Already existed", "")
+                Text: =If(!IsBlank(LookUp(Guild,Title=DataCardValue1.Text)),"This Guild is Already exist", "")
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
@@ -1564,8 +1564,8 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =146
-                Width: =350
+                Height: =250
+                Width: =250
                 X: =30
                 Y: =DataCardKey14.Y + DataCardKey14.Height + 5
                 ZIndex: =3
