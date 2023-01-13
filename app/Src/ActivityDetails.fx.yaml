@@ -348,7 +348,12 @@
                 ItemFill: =RGBA(56, 96, 178, 1)
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(186, 202, 226, 1)
-                Items: =LookUp('Event Track Details', ID=data.ID).Attachments
+                Items: |-
+                    =If(
+                        !IsBlank(LookUp('Event Track Details', ID=data.ID).Title = "Creating white papers"),
+                        LookUp(whitepapers, EventId=data.ID).Attachments,
+                        LookUp('Event Track Details', ID=data.ID).Attachments
+                    )
                 NoAttachmentsText: ="No attachments"
                 PaddingBottom: =5
                 PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)

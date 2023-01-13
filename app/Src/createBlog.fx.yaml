@@ -136,7 +136,7 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
-            =If(LookUp(User, Email=User().Email, true), 
+            =/*If(LookUp(User, Email=User().Email, true), 
                 Patch(User,LookUp(User, Email=User().Email), { Points: LookUp(User, Email=User().Email).Points + 100 }),
                 Patch(User,Defaults(User), {
                     Title: User().FullName,
@@ -144,7 +144,7 @@
                     Email: User().Email,
                     Points: 100
                 })
-            );
+            );*/
             
             Patch('Event Track Details',Defaults('Event Track Details'), {
                 Title: "Creating blogs",

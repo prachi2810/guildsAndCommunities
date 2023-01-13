@@ -26,14 +26,20 @@
 
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 18, 107, 1)
-        Height: =556
-        Items: =paperList
+        Height: =508
+        Items: |-
+            =If(
+                Dropdown2_5.Selected.Communities = "All", 
+                Search(whitepapers, TextInput13.Text, "Title"),
+                Search(Filter(whitepapers, Community=Dropdown2_5.Selected.Communities), TextInput13.Text, "Title")
+            )
+            //paperList
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(168, Self.Height - 60)
         Width: =1175
         X: =104
-        Y: =196
+        Y: =228
         ZIndex: =3
 
         Image2_1 As image:
@@ -77,7 +83,7 @@
             PaddingRight: =0
             PaddingTop: =0
             Size: =18
-            Text: =ThisItem.'Created By'.DisplayName
+            Text: =ThisItem.Author.DisplayName
             VerticalAlign: =VerticalAlign.Top
             Width: =221
             X: =160
@@ -109,7 +115,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =60
             Icon: =Icon.ChevronRight
-            OnSelect: =Download(First(ThisItem.Attachments).AbsoluteUri);
+            OnSelect: =Download(First(ThisItem.'{Attachments}').AbsoluteUri);
             PaddingBottom: =10
             PaddingLeft: =10
             PaddingRight: =10
@@ -137,7 +143,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Icon: =Icon.Download
             OnSelect: |
-                =Download(First(ThisItem.Attachments).AbsoluteUri);
+                =Download(First(ThisItem.'{Attachments}').AbsoluteUri);
             X: =928
             Y: =54
             ZIndex: =7
@@ -153,12 +159,12 @@
                 Set(openPopup,true);
             Visible: |-
                 =If(
-                    !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
+                    !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.'{Name}')) ||
                     !IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Community && Role="admin")),
                     true,
                     false
                 )
-            X: =800
+            X: =838
             Y: =54
             ZIndex: =8
 
@@ -183,7 +189,7 @@
 
     Label2_2 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 0, 0, 1)
+        Color: =RGBA(0, 51, 102, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Height: =24
         Size: =16
@@ -260,7 +266,17 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Red, -20%)
             OnSelect: |-
-                =Remove(whitepapers,currPaper);
+                =If(
+                    LookUp('Event Track Details', ID=currPaper.EventId).Status = "Approved",
+                    Patch(User, LookUp(User, Email=currPaper.Author.Email && Communities=currPaper.Community), {
+                        Points: LookUp(User, Email=currPaper.Author.Email && Communities=currPaper.Community).Points - 25
+                    });
+                    Remove('Event Track Details',LookUp('Event Track Details', ID=currPaper.EventId));
+                    ,
+                    Remove('Event Track Details',LookUp('Event Track Details', ID=currPaper.EventId));
+                );
+                
+                Remove(whitepapers,currPaper);
                 Notify( "Paper Deleted Successfully" , NotificationType.Success, 1000);
                 Refresh(whitepapers);
                 Set(currCommunity,Dropdown2_5.Selected.Communities);
@@ -294,7 +310,36 @@
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.Home
         OnSelect: =Navigate(Home);
-        X: =104
+        X: =54
         Y: =12
         ZIndex: =9
+
+    TextInput13 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        X: =118
+        Y: =158
+        ZIndex: =10
+
+    Label2_7 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 51, 102, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =24
+        Size: =16
+        Text: ="Search a white paper"
+        Width: =230
+        X: =118
+        Y: =119
+        ZIndex: =11
 

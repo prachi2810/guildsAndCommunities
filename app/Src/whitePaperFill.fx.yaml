@@ -280,11 +280,24 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(56, 96, 178, 1), -20%)
         OnSelect: |-
-            =
-            If(addedFile&& !IsBlank(Trim(DataCardValue1_2))&&IsBlank(LookUp(whitepapers,Title=DataCardValue1_2.Text)),
+            =If(addedFile&& !IsBlank(Trim(DataCardValue1_2))&&IsBlank(LookUp(whitepapers,Title=DataCardValue1_2.Text)),
+            
+            Patch('Event Track Details',Defaults('Event Track Details'), {
+                Title: "Creating white papers",
+                Category: "Expert Engagement",
+                Count: 25,
+                comments: "Search For Title: '" & DataCardValue1_2.Text & "' in the white papers section!",
+                'DateofEvent ': Now(),
+                EventId: LookUp(Points, Title="Creating blogs").ID,
+                MemberName: User().FullName,
+                Status: "Pending",
+                Teams_Channel_Name: Dropdown1_4.Selected.Communities
+            });
+            
             Patch(whitepapers, Defaults(whitepapers),{
                 Title: DataCardValue1_2.Text,
-                Community:Dropdown1_4.Selected.Communities
+                Community:Dropdown1_4.Selected.Communities,
+                EventId: Last('Event Track Details').ID
             }, Form1_2.Updates);
             
             ResetForm(Form1_2);
