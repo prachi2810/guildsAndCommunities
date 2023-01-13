@@ -305,8 +305,9 @@
             Notify( "Paper Uploaded Successfully" , NotificationType.Success, 1000)
             ,
             Notify(
-                    "All Fields are required",
-                    NotificationType.Error
+                    "Title and Attachements are Empty OR Paper With Same Name Already Exixts",
+                    NotificationType.Error,
+                    3000
                 );
             );
         Size: =15
