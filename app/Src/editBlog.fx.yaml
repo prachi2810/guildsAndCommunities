@@ -42,7 +42,7 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 DisplayMode: |+
-                    =If(IsBlank(Trim(title_1.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(content_1.HtmlText,"&nbsp;",""),"<p>",""),"</p>","")))), DisplayMode.Disabled, DisplayMode.Edit)
+                    =If(IsBlank(Trim(title_1.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(content_1.HtmlText,"&nbsp;",""),"<p>",""),"</p>",""))))||(If(LookUp(Blog, Title=title_1.Text, true),true,false)), DisplayMode.Disabled, DisplayMode.Edit)
                     
                 Fill: =RGBA(0, 51, 102, 1)
                 FontWeight: =FontWeight.Semibold
@@ -118,6 +118,7 @@
         HoverBorderColor: =RGBA(0, 89, 178, 1)
         HoverColor: =RGBA(0, 0, 0, 1)
         HoverFill: =RGBA(153, 205, 255, 1)
+        OnChange: =
         Size: =13
         Width: =444
         X: =222
