@@ -297,7 +297,8 @@
             ,
             Notify(
                     "All Fields Are Required OR Another Paper With Same Name Already Exists",
-                    NotificationType.Error
+                    NotificationType.Error,
+                    2000
                 );
             );
         Size: =15

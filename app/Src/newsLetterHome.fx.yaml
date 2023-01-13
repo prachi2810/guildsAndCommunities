@@ -50,7 +50,7 @@
         Height: =572
         Items: |-
             =If(
-                Dropdown2_5.Selected.Communities = "All", 
+                Dropdown2_4.Selected.Communities = "All", 
                 Search(newsletters, TextInput14.Text, "Title"),
                 Search(Filter(newsletters, Community=Dropdown2_4.Selected.Communities), TextInput14.Text, "Title")
             )
