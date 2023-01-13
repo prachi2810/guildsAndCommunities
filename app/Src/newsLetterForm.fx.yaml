@@ -296,8 +296,9 @@
             Notify( "NewsLetter Added Successfully" , NotificationType.Success, 1000);
             ,
             Notify(
-                    "All Fields Are Required OR Another Paper With Same Name Already Exists",
-                    NotificationType.Error
+                    "Title and Attachments Fields Are Empty OR Another NewsLetter With Same Name Already Exists",
+                    NotificationType.Error,
+                    3000
                 );
             );
         Size: =15
