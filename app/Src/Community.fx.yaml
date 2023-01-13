@@ -60,7 +60,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =239
                 Image: =data.'Polestar Image'
-                Width: =270
+                Width: =251
                 X: =83
                 Y: =12
                 ZIndex: =1
@@ -103,7 +103,7 @@
                 Size: =15
                 Text: =data.Designation1
                 Width: =359
-                X: =353
+                X: =351
                 Y: =28
                 ZIndex: =11
 
@@ -111,9 +111,9 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =207
-                Image: =data.Image2
-                Width: =199
+                Height: =223
+                Image: =data.Polestar_Image2
+                Width: =215
                 X: =710
                 Y: =28
                 ZIndex: =12
@@ -135,10 +135,37 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =271
+                Height: =267
                 Image: =Polestar
-                Width: =456
+                Width: =423
+                Y: =4
                 ZIndex: =14
+
+            Image36 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =248
+                Image: =If(!IsBlank(data.Polestar_Image2) ,Polestar, "")
+                Width: =247
+                X: =693
+                Y: =23
+                ZIndex: =15
+
+            Label29_1 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =Font.Lato
+                FontWeight: =FontWeight.Semibold
+                Height: =182
+                LineHeight: =1.5
+                Size: =15
+                Text: =data.Designation2
+                Width: =359
+                X: =940
+                Y: =28
+                ZIndex: =16
 
         DataCard23 As dataCard.blankCard:
             BorderColor: =RGBA(0, 0, 0, 1)
