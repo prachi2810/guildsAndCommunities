@@ -1,6 +1,7 @@
 "ActivityDetails As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     OnVisible: |-
-        =ClearCollect(userprofile,Office365Users.SearchUser({searchTerm: data.MemberName}))
+        =ClearCollect(userprofile,Office365Users.SearchUser({searchTerm: data.MemberName}));
+        Set(whitePaperLink, LookUp(whitepapers, EventId=data.ID).Attachments);
 
     RectQuickActionBar11 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -269,9 +270,14 @@
                 HoverColor: =
                 HoverFill: |
                     =
-                OnSelect: =Launch(data.Link)
+                OnSelect: |-
+                    =If(
+                        IsBlank(whitePaperLink),
+                        Launch(data.Link) ,
+                        Download(First(whitePaperLink).AbsoluteUri)
+                    )
                 Size: =15
-                Text: =If(!IsBlank(data.Link), "Click on this Link" , "No links available")
+                Text: =If(!IsBlank(data.Link) || !IsBlank(whitePaperLink), "Click on this Link" , "No links available")
                 Width: =204
                 X: =1076
                 Y: =483
@@ -350,8 +356,7 @@
                 ItemHoverFill: =RGBA(186, 202, 226, 1)
                 Items: |-
                     =If(
-                        !IsBlank(LookUp('Event Track Details', ID=data.ID).Title = "Creating white papers"),
-                        LookUp(whitepapers, EventId=data.ID).Attachments,
+                        IsBlank(LookUp('Event Track Details', ID=data.ID).Title = "Creating white papers"),
                         LookUp('Event Track Details', ID=data.ID).Attachments
                     )
                 NoAttachmentsText: ="No attachments"
