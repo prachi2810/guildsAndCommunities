@@ -41,7 +41,10 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =If(!IsBlank(Trim(title_1.Text)) && validInput, DisplayMode.Edit, DisplayMode.Disabled)
+                DisplayMode: |+
+                    =
+                    If(IsBlank(Trim(title_1.Text)) || (IsBlank(Trim(Substitute(Substitute(Substitute(content_1.HtmlText,"&nbsp;",""),"<p>",""),"</p>","")))), DisplayMode.Disabled, DisplayMode.Edit)
+                    
                 Fill: =RGBA(0, 51, 102, 1)
                 FontWeight: =FontWeight.Semibold
                 HoverColor: =RGBA(255, 255, 255, 1)
@@ -98,10 +101,6 @@
         ContentLanguage: =data.Content
         Default: =data.Content
         Height: =300
-        OnChange: |
-            =Set(contentInput,content_1.HtmlText);
-            Set(lenOfInput,Len(Trim(Substitute(Substitute(Substitute(contentInput,"&nbsp;",""),"<p>",""),"</p>",""))));
-            If(lenOfInput=0,Set(validInput,false),Set(validInput,true));
         Width: =444
         X: =222
         Y: =217
