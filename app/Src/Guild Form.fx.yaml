@@ -1226,8 +1226,8 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =200
-                Width: =Parent.Width - 60
+                Height: =150
+                Width: =350
                 X: =30
                 Y: =DataCardKey8.Y + DataCardKey8.Height + 5
                 ZIndex: =3
@@ -1309,8 +1309,8 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =200
-                Width: =Parent.Width - 60
+                Height: =150
+                Width: =350
                 X: =30
                 Y: =DataCardKey9.Y + DataCardKey9.Height + 5
                 ZIndex: =3
@@ -1392,8 +1392,9 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =200
-                Width: =Parent.Width - 60
+                Height: |
+                    =150
+                Width: =350
                 X: =30
                 Y: =DataCardKey10.Y + DataCardKey10.Height + 5
                 ZIndex: =3
@@ -1646,8 +1647,8 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 0, 0, 1)
                 Fill: =RGBA(255, 255, 255, 1)
-                Height: =200
-                Width: =Parent.Width - 60
+                Height: =150
+                Width: =350
                 X: =30
                 Y: =DataCardKey15.Y + DataCardKey15.Height + 5
                 ZIndex: =3
