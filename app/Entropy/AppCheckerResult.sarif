@@ -13790,36 +13790,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.torchImage1"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.torchImage1",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "torchImage1",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 15
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.Anand V"
                 }
               ],

@@ -31,7 +31,7 @@
             BorderThickness: =0
             DisplayMode: =DisplayMode.Edit
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =Parent.Height - 100
+            Height: = Parent .Height-100
             Width: =Parent.Width
             X: =0
             Y: =0
@@ -72,7 +72,7 @@
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
                 Items: =MicrosoftTeams.GetChannelsForGroup(LookUp(MicrosoftTeams.GetAllTeams().value,description=Dropdown9.Selected.description).id).value.displayName
-                OnChange: =Set(Chid,LookUp(MicrosoftTeams.GetChannelsForGroup("e0ab29a0-c7e8-4b1d-9a52-3d7c90fa8601").value,
+                OnChange: =Set(Chid,LookUp(MicrosoftTeams.GetChannelsForGroup(Gid).value,displayName=Dropdown10.Selected.displayName).id);
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(0, 89, 178, 1)
                 SelectionFill: =RGBA(0, 51, 102, 1)
@@ -124,7 +124,19 @@
                 Size: =13
                 Text: =Gid
                 Width: =898
-                X: =379
-                Y: =409
+                X: =101
+                Y: =344
                 ZIndex: =8
+
+            Label62 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =85
+                Size: =13
+                Text: =Chid
+                Width: =372
+                X: =101
+                Y: =436
+                ZIndex: =9
 
