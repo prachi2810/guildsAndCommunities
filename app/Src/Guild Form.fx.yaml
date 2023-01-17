@@ -1785,102 +1785,12 @@
                 Y: =DataCardKey17.Y
                 ZIndex: =4
 
-    "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Height: =354
-        Items: |-
-            =Office365Users.SearchUserV2({searchTerm:TextInput15.Text,top:5,isSearchTermRequired:true}).value
-        Layout: =Layout.Vertical
-        TemplatePadding: =0
-        TemplateSize: =Min(160, Self.Height - 60)
-        Visible: =popUpImage
-        Width: =507
-        X: =575
-        Y: =278
-        ZIndex: =8
-
-        Image39 As image:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledFill: =RGBA(244, 244, 244, 1)
-            Height: =128
-            Image: =If(!IsBlank(Office365Users.UserPhotoV2(ThisItem.Id)), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
-            OnSelect: =Select(Parent)
-            Width: =128
-            X: =16
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =1
-
-        Title16 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            FontWeight: =FontWeight.Semibold
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =20
-            Text: =ThisItem.DisplayName
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Parent.TemplateWidth - Image39.Width - 104
-            X: =Image39.X + Image39.Width + 24
-            Y: =44
-            ZIndex: =2
-
-        Subtitle4 As label:
-            Color: =RGBA(0, 0, 0, 1)
-            DisabledColor: =RGBA(166, 166, 166, 1)
-            Height: =Self.Size * 1.8
-            OnSelect: =Select(Parent)
-            PaddingBottom: =0
-            PaddingLeft: =0
-            PaddingRight: =0
-            PaddingTop: =0
-            Size: =18
-            Text: =ThisItem.JobTitle
-            VerticalAlign: =VerticalAlign.Top
-            Width: =Title16.Width
-            X: =Title16.X
-            Y: =Title16.Y + Title16.Height + 4
-            ZIndex: =3
-
-        NextArrow4 As icon.ChevronRight:
-            AccessibleLabel: =Self.Tooltip
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 89, 178, 1)
-            DisabledBorderColor: =RGBA(166, 166, 166, 1)
-            DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =60
-            Icon: =Icon.ChevronRight
-            OnSelect: =Select(Parent);
-            PaddingBottom: =10
-            PaddingLeft: =10
-            PaddingRight: =10
-            PaddingTop: =10
-            TabIndex: =0
-            Tooltip: ="View item details"
-            Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
-            ZIndex: =4
-
-        Separator8 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(0, 89, 178, 1)
-            Height: =1
-            OnSelect: =Select(Parent)
-            Width: =Parent.TemplateWidth
-            Y: =Parent.TemplateHeight - 1
-            ZIndex: =5
-
     Group5 As group:
         Height: =5
         Width: =5
         X: =40
         Y: =40
-        ZIndex: =8
+        ZIndex: =10
 
         Rectangle12 As rectangle:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -1912,14 +1822,108 @@
             Y: =168
             ZIndex: =7
 
-    Icon43 As icon.Cancel:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 89, 178, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(244, 244, 244, 1)
-        Icon: =Icon.Cancel
-        OnSelect: =Set(popUpImage,false)
-        X: =1018
-        Y: =168
-        ZIndex: =9
+        "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Height: =354
+            Items: |-
+                =Office365Users.SearchUserV2({searchTerm:TextInput15.Text,top:5,isSearchTermRequired:true}).value
+            Layout: =Layout.Vertical
+            TemplatePadding: =0
+            TemplateSize: =Min(160, Self.Height - 60)
+            Visible: =popUpImage
+            Width: =507
+            X: =575
+            Y: =278
+            ZIndex: =8
+
+            Image39 As image:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =128
+                Image: =If(!IsBlank(Office365Users.UserPhotoV2(ThisItem.Id)), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
+                OnSelect: =Select(Parent)
+                Width: =128
+                X: =16
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            Title16 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =20
+                Text: =ThisItem.DisplayName
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Parent.TemplateWidth - Image39.Width - 104
+                X: =Image39.X + Image39.Width + 24
+                Y: =44
+                ZIndex: =2
+
+            Subtitle4 As label:
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =Self.Size * 1.8
+                OnSelect: =Select(Parent)
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =18
+                Text: =ThisItem.JobTitle
+                VerticalAlign: =VerticalAlign.Top
+                Width: =Title16.Width
+                X: =Title16.X
+                Y: =Title16.Y + Title16.Height + 4
+                ZIndex: =3
+
+            NextArrow4 As icon.ChevronRight:
+                AccessibleLabel: =Self.Tooltip
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =60
+                Icon: =Icon.ChevronRight
+                OnSelect: =Select(Parent);
+                PaddingBottom: =10
+                PaddingLeft: =10
+                PaddingRight: =10
+                PaddingTop: =10
+                TabIndex: =0
+                Tooltip: ="View item details"
+                Width: =60
+                X: =Parent.TemplateWidth - Self.Width - 5
+                Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+                ZIndex: =4
+
+            Separator8 As rectangle:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Fill: =RGBA(0, 89, 178, 1)
+                Height: =1
+                OnSelect: =Select(Parent)
+                Width: =Parent.TemplateWidth
+                Y: =Parent.TemplateHeight - 1
+                ZIndex: =5
+
+        Icon43 As icon.Cancel:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 89, 178, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =26
+            Icon: =Icon.Cancel
+            OnSelect: |
+                =Set(popUpImage,false);
+            Visible: =popUpImage
+            Width: =36
+            X: =1046
+            Y: =168
+            ZIndex: =9
 

@@ -542,7 +542,7 @@
     "Group2": 130,
     "Group3": 592,
     "Group4": 131,
-    "Group5": 381,
+    "Group5": 1130,
     "Guild Form": 258,
     "Guild_DataCard1": 224,
     "GuildStats": 382,
@@ -1140,7 +1140,7 @@
   },
   "FunctionParamsInvariantScripts": {},
   "FunctionParamsInvariantScriptsOnInstances": {},
-  "HeaderLastSavedDateTimeUTC": "01/17/2023 10:28:40",
+  "HeaderLastSavedDateTimeUTC": "01/17/2023 10:32:35",
   "IsLegacyComponentAllowGlobalScopeCase": false,
   "LocalConnectionIDReferences": {
     "55bd11ce-1540-4e1d-8336-43032c5b7e78": "\"/providers/microsoft.powerapps/apis/shared_office365/connections/e5e0684babb74ce59751a6b026425614\"",
@@ -1534,8 +1534,10 @@
       "Rectangle11": 0
     },
     "Group5": {
-      "Rectangle12": 0,
-      "TextInput15": 1
+      "Gallery6": 3,
+      "Icon43": 0,
+      "Rectangle12": 1,
+      "TextInput15": 2
     },
     "HomeDropDown": {
       "Button1": 1,
@@ -3303,7 +3305,7 @@
     "Group2": 257,
     "Group3": 10,
     "Group4": 333,
-    "Group5": 214,
+    "Group5": 0,
     "Guild Form": 622,
     "Guild_DataCard1": 232,
     "GuildStats": 734,
