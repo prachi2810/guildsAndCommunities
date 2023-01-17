@@ -437,7 +437,7 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
+                Default: =torchInfo1
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
@@ -1793,8 +1793,8 @@
         ZIndex: =10
 
         Rectangle12 As rectangle:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            Fill: =RGBA(0, 51, 102, 1)
+            BorderColor: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(255, 255, 255, 1)
             Height: =464
             Visible: =popUpImage
             Width: =507
@@ -1814,12 +1814,12 @@
             HoverBorderColor: =RGBA(0, 89, 178, 1)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(153, 205, 255, 1)
-            OnChange: |-
+            OnChange: |
                 =ClearCollect(Polestars, Office365Users.SearchUserV2({searchTerm:TextInput15.Text,top:5,isSearchTermRequired:true}));
             Size: =13
             Visible: =popUpImage
-            X: =575
-            Y: =168
+            X: =681
+            Y: =194
             ZIndex: =7
 
         "Gallery6 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
@@ -1828,6 +1828,9 @@
             Items: |-
                 =Office365Users.SearchUserV2({searchTerm:TextInput15.Text,top:5,isSearchTermRequired:true}).value
             Layout: =Layout.Vertical
+            OnSelect: |-
+                =Set(torchInfo1,ThisItem.DisplayName);
+                Set(torchImage1,Office365Users.UserPhotoV2(ThisItem.Mail));
             TemplatePadding: =0
             TemplateSize: =Min(160, Self.Height - 60)
             Visible: =popUpImage
@@ -1921,6 +1924,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImage,false);
+                Reset(Gallery6)
             Visible: =popUpImage
             Width: =36
             X: =1046
