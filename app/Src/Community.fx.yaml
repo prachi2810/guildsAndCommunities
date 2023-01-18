@@ -837,7 +837,8 @@
                 Fill: =RGBA(250, 250, 250, 1)
                 Height: =51
                 Icon: =Icon.AddUser
-                OnSelect: =Navigate('Community Form')
+                OnSelect: |-
+                    =Navigate('Community Form',Cover,{data:data});
                 Tooltip: ="Create Community"
                 Width: =49
                 X: =805
