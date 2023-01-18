@@ -59,7 +59,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =239
-                Image: =data.'Polestar Image'
+                Image: =data.Image1
                 Width: =251
                 X: =83
                 Y: =12
@@ -112,7 +112,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =223
-                Image: =data.Polestar_Image2
+                Image: =data.Image2
                 Width: =215
                 X: =710
                 Y: =28
@@ -146,7 +146,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =248
-                Image: =If(!IsBlank(data.Polestar_Image2) ,Polestar, "")
+                Image: =If(!IsBlank(data.Image2) ,Polestar, "")
                 Width: =247
                 X: =693
                 Y: =23

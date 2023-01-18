@@ -1535,7 +1535,7 @@
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
             DataField: ="Image1"
-            Default: =ThisItem.'Polestar Image'
+            Default: =ThisItem.Image1
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Image1")
             Fill: =RGBA(0, 0, 0, 0)
