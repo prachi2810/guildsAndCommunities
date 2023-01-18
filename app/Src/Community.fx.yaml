@@ -618,7 +618,7 @@
                             });
                         
                             Refresh(Community_1);
-                            Launch(ThisItem.'Link To Join');, 
+                            Launch(data.'Link To Join');, 
                             Notify("You are already a member of this community!"));
                     RadiusBottomLeft: =50
                     RadiusBottomRight: =50
