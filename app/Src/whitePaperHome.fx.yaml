@@ -12,7 +12,7 @@
             teamId,
             channelId,
             {
-                content:"<a href="&First(Last(whitepapers).Attachments).AbsoluteUri &"target=_blank>Click Here to View Paper</a></br>",
+                content:"<a href="&First(Last(whitepapers).Attachments).AbsoluteUri &" target=_blank>Click Here to View Paper</a>",
                 contentType:"html"
             },
             {subject:"New White Paper Added"}
