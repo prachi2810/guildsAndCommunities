@@ -62,8 +62,12 @@
                 Image: |-
                     =/*data.Image1*/
                     Office365Users.UserPhotoV2(data.Polestar1)
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =251
-                X: =83
+                X: =70
                 Y: =12
                 ZIndex: =1
 
@@ -108,7 +112,9 @@
                 Height: =182
                 LineHeight: =1.5
                 Size: =15
-                Text: =data.Designation1
+                Text: |
+                    =//data.Designation1
+                    First(Office365Users.SearchUser({searchTerm:data.Polestar1})).JobTitle
                 Width: =359
                 X: =351
                 Y: =28
@@ -119,7 +125,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =223
-                Image: =data.Image2
+                Image: =If(!IsBlank(data.Polestar2),Office365Users.UserPhotoV2(data.Polestar2),"")
                 Width: =215
                 X: =710
                 Y: =28
@@ -132,7 +138,9 @@
                 FontWeight: =FontWeight.Bold
                 Height: =41
                 Size: =23
-                Text: =data.Polestar2
+                Text: |-
+                    =If(!IsBlank(data.Polestar2) ,First(Office365Users.SearchUser({searchTerm:data.Polestar2})).DisplayName
+                    , "")
                 Width: =294
                 X: =940
                 Y: =56
@@ -142,10 +150,10 @@
                 BorderColor: =RGBA(0, 89, 178, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =267
+                Height: =259
                 Image: =Polestar
-                Width: =423
-                Y: =4
+                Width: =380
+                Y: =12
                 ZIndex: =14
 
             Image36 As image:
@@ -153,7 +161,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =248
-                Image: =If(!IsBlank(data.Image2) ,Polestar, "")
+                Image: =If(!IsBlank(data.Polestar2) ,Polestar, "")
                 Width: =247
                 X: =693
                 Y: =23
@@ -168,7 +176,9 @@
                 Height: =182
                 LineHeight: =1.5
                 Size: =15
-                Text: =data.Designation2
+                Text: |-
+                    =If(!IsBlank(data.Polestar2) ,First(Office365Users.SearchUser({searchTerm:data.Polestar2})).JobTitle
+                    , "")
                 Width: =359
                 X: =940
                 Y: =28
@@ -204,7 +214,9 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =152
-                Image: =data.TorchImage1
+                Image: |-
+                    =//data.TorchImage1
+                    Office365Users.UserPhotoV2(data.'Torch Bearers1')
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -219,11 +231,13 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
-                Image: =data.TorchImage3
+                Image: =Office365Users.UserPhotoV2(data.'Torch Bearers3')
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
                 RadiusTopRight: =90
+                Tooltip: |
+                    =If(!IsBlank(data.'Torch Bearers3'),Office365Users.UserPhotoV2(data.'Torch Bearers3'),"")
                 Width: =150
                 X: =1017
                 Y: =101
@@ -234,7 +248,8 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
-                Image: =data.TorchImage2
+                Image: |
+                    =If(!IsBlank(data.'Torch Bearers2'),Office365Users.UserPhotoV2(data.'Torch Bearers2'),"")
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -251,10 +266,11 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =42
                 Size: =15
-                Text: =data.'Torch Bearers2'
+                Text: |-
+                    =If(!IsBlank(data.'Torch Bearers2'),First(Office365Users.SearchUser({searchTerm:data.'Torch Bearers2'})).DisplayName,"")
                 Width: =248
                 X: =589
-                Y: =249
+                Y: =269
                 ZIndex: =18
 
             Label6_5 As label:
@@ -264,10 +280,11 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =42
                 Size: =15
-                Text: =data.'Torch Bearers3'
+                Text: |-
+                    =If(!IsBlank(data.'Torch Bearers3'),First(Office365Users.SearchUser({searchTerm:data.'Torch Bearers3'})).DisplayName,"")
                 Width: =186
-                X: =1001
-                Y: =253
+                X: =998
+                Y: =269
                 ZIndex: =19
 
             Label6_7 As label:
@@ -277,7 +294,8 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =42
                 Size: =15
-                Text: =data.'Torch Bearers1'
+                Text: |-
+                    =If(!IsBlank(data.'Torch Bearers1'),First(Office365Users.SearchUser({searchTerm:data.'Torch Bearers1'})).DisplayName,"")
                 Width: =248
                 X: =162
                 Y: =268
@@ -332,7 +350,8 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
-                Image: =data.TrendImage1
+                Image: |
+                    =If(!IsBlank(data.'Trend Setters1'),Office365Users.UserPhotoV2(data.'Trend Setters1'),"")
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -347,7 +366,8 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =182
-                Image: =data.TrendImage2
+                Image: |
+                    =If(!IsBlank(data.'Trend Setters2'),Office365Users.UserPhotoV2(data.'Trend Setters2'),"")
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -361,7 +381,8 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
-                Image: =data.TrendImage3
+                Image: |
+                    =If(!IsBlank(data.'Trend Setters3'),Office365Users.UserPhotoV2(data.'Trend Setters3'),"")
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -376,7 +397,8 @@
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 FontWeight: =FontWeight.Semibold
                 Size: =15
-                Text: =data.'Trend Setters1'
+                Text: |-
+                    =If(!IsBlank(data.'Trend Setters1'),First(Office365Users.SearchUser({searchTerm:data.'Trend Setters1'})).DisplayName,"")
                 Width: =165
                 X: =159
                 Y: =199
@@ -389,7 +411,8 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =62
                 Size: =15
-                Text: =data.'Trend Setters3'
+                Text: |-
+                    =If(!IsBlank(data.'Trend Setters3'),First(Office365Users.SearchUser({searchTerm:data.'Trend Setters3'})).DisplayName,"")
                 Width: =195
                 X: =1013
                 Y: =182
@@ -402,10 +425,11 @@
                 FontWeight: =FontWeight.Semibold
                 Height: =85
                 Size: =15
-                Text: =data.'Trend Setters2'
+                Text: |-
+                    =If(!IsBlank(data.'Trend Setters2'),First(Office365Users.SearchUser({searchTerm:data.'Trend Setters2'})).DisplayName,"")
                 Width: =162
-                X: =623
-                Y: =176
+                X: =589
+                Y: =186
                 ZIndex: =6
 
             Image33 As image:
