@@ -244,8 +244,8 @@
                     ClearCollect(BlogComments, Filter(Comment, BlogID=data.ID));
                     , Notify("Please enter a comment first.")); 
                 Width: =48
-                X: =757
-                Y: =150
+                X: =782
+                Y: =151
                 ZIndex: =3
 
             Label18 As label:
