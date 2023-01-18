@@ -126,6 +126,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =223
                 Image: =If(!IsBlank(data.Polestar2),Office365Users.UserPhotoV2(data.Polestar2),"")
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =215
                 X: =710
                 Y: =28
@@ -162,6 +166,10 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =248
                 Image: =If(!IsBlank(data.Polestar2) ,Polestar, "")
+                RadiusBottomLeft: =90
+                RadiusBottomRight: =90
+                RadiusTopLeft: =90
+                RadiusTopRight: =90
                 Width: =247
                 X: =693
                 Y: =23
@@ -214,9 +222,9 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =152
-                Image: |-
+                Image: |
                     =//data.TorchImage1
-                    Office365Users.UserPhotoV2(data.'Torch Bearers1')
+                    If(!IsBlank(data.'Torch Bearers1'),Office365Users.UserPhotoV2(data.'Torch Bearers1'),placeholder)
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -237,7 +245,7 @@
                 RadiusTopLeft: =90
                 RadiusTopRight: =90
                 Tooltip: |
-                    =If(!IsBlank(data.'Torch Bearers3'),Office365Users.UserPhotoV2(data.'Torch Bearers3'),"")
+                    =If(!IsBlank(data.'Torch Bearers3'),Office365Users.UserPhotoV2(data.'Torch Bearers3'),placeholder)
                 Width: =150
                 X: =1017
                 Y: =101
@@ -249,7 +257,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =148
                 Image: |
-                    =If(!IsBlank(data.'Torch Bearers2'),Office365Users.UserPhotoV2(data.'Torch Bearers2'),"")
+                    =If(!IsBlank(data.'Torch Bearers2'),Office365Users.UserPhotoV2(data.'Torch Bearers2'),placeholder)
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -351,7 +359,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
                 Image: |
-                    =If(!IsBlank(data.'Trend Setters1'),Office365Users.UserPhotoV2(data.'Trend Setters1'),"")
+                    =If(!IsBlank(data.'Trend Setters1'),Office365Users.UserPhotoV2(data.'Trend Setters1'),placeholder)
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -367,7 +375,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =182
                 Image: |
-                    =If(!IsBlank(data.'Trend Setters2'),Office365Users.UserPhotoV2(data.'Trend Setters2'),"")
+                    =If(!IsBlank(data.'Trend Setters2'),Office365Users.UserPhotoV2(data.'Trend Setters2'),placeholder)
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -382,7 +390,7 @@
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =172
                 Image: |
-                    =If(!IsBlank(data.'Trend Setters3'),Office365Users.UserPhotoV2(data.'Trend Setters3'),"")
+                    =If(!IsBlank(data.'Trend Setters3'),Office365Users.UserPhotoV2(data.'Trend Setters3'),placeholder)
                 RadiusBottomLeft: =90
                 RadiusBottomRight: =90
                 RadiusTopLeft: =90
@@ -820,6 +828,20 @@
                 X: =877
                 Y: =2
                 ZIndex: =9
+
+            Icon6_1 As icon.AddUser:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(250, 250, 250, 1)
+                Height: =51
+                Icon: =Icon.AddUser
+                OnSelect: =Navigate('Community Form')
+                Width: =49
+                X: =805
+                Y: =2
+                ZIndex: =10
 
     Label12 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
