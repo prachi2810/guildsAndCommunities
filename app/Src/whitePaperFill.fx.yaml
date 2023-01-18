@@ -300,7 +300,24 @@
                 EventId: Last('Event Track Details').ID
             }, Form1_2.Updates);
             
+            Set(currentGuildName, LookUp(Community_1, Title=Dropdown1_4.Selected.Communities).Guild);
+            Set(currentGuild, LookUp(Guild, Title=currentGuildName));
+            
+            Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
+            Set(teamId,First(Split(currentGuild.Team,"\")).Result);
+            /*
+            MicrosoftTeams.PostMessageToChannelV3(
+                teamId,
+                channelId,
+                {
+                    content:"<a href=https://learn.microsoft.com/en-us/connectors/teams/#post-message-in-a-chat-or-channel target=_blank>Click here</a></br>" & "New White Paper has been added in this community",
+                    contentType:"html"
+                },
+                {subject:"New White Paper"}
+            );
+            */
             ResetForm(Form1_2);
+            Set(isWhitePaperAdded, true);
             Navigate(whitePaperHome);
             Notify( "Paper Uploaded Successfully" , NotificationType.Success, 1000)
             ,

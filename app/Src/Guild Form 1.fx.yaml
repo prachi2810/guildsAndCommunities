@@ -1,5 +1,9 @@
 "'Guild Form 1' As screen":
     Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |-
+        =Set(teamsList,MicrosoftTeams.GetAllTeams().value);
+        Set(currTeam,Dropdown11.Selected);
+        Set(channelList,MicrosoftTeams.GetChannelsForGroup(currTeam.id).value);
 
     Form7 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -1166,7 +1170,7 @@
             Height: =50
             MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Team")
             Required: =false
-            Update: =DataCardValue52.Text
+            Update: =
             Width: =430
             X: =0
             Y: =4
@@ -1185,33 +1189,6 @@
                 Y: =10
                 ZIndex: =1
 
-            DataCardValue52 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                HoverBorderColor: =RGBA(0, 89, 178, 1)
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =13
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey75.Y + DataCardKey75.Height + 5
-                ZIndex: =2
-
             ErrorMessage75 As label:
                 AutoHeight: =true
                 Color: =RGBA(168, 0, 0, 1)
@@ -1227,7 +1204,7 @@
                 Visible: =Parent.DisplayMode=DisplayMode.Edit
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardValue52.Y + DataCardValue52.Height
+                Y: =
                 ZIndex: =3
 
             StarVisible75 As label:
@@ -1243,93 +1220,60 @@
                 Y: =DataCardKey75.Y
                 ZIndex: =4
 
-        Channel_DataCard1 As typedDataCard.textualEditCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="Channel"
-            Default: =ThisItem.Channel
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Channel")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
-            MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Channel")
-            Required: =false
-            Update: =DataCardValue53.Text
-            Width: =430
-            X: =1
-            Y: =4
-            ZIndex: =2
-
-            DataCardKey76 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =10
-                ZIndex: =1
-
-            DataCardValue53 As text:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
-                DelayOutput: =true
+            Dropdown11 As dropdown:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
                 HoverFill: =RGBA(153, 205, 255, 1)
-                MaxLength: =Parent.MaxLength
-                PaddingLeft: =5
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
+                Items: =teamsList
+                OnChange: |
+                    =Set(currTeam,Dropdown11.Selected);
+                    Set(channelList,MicrosoftTeams.GetChannelsForGroup(currTeam.id).value);
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                SelectionFill: =RGBA(0, 51, 102, 1)
                 Size: =13
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardKey76.Y + DataCardKey76.Height + 5
-                ZIndex: =2
+                X: =40
+                Y: =54
+                ZIndex: =5
 
-            ErrorMessage76 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue53.Y + DataCardValue53.Height
-                ZIndex: =3
-
-            StarVisible76 As label:
-                Align: =Align.Center
+            Label68 As label:
+                BorderColor: =RGBA(0, 89, 178, 1)
                 Color: =RGBA(0, 89, 178, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey76.Height
                 Size: =13
-                Text: ="*"
-                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey76.Y
-                ZIndex: =4
+                Text: ="Channel"
+                X: =30
+                Y: =105
+                ZIndex: =6
+
+            Dropdown13 As dropdown:
+                BorderColor: =RGBA(0, 89, 178, 1)
+                ChevronBackground: =RGBA(0, 51, 102, 1)
+                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+                ChevronHoverFill: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                Items: =channelList
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                SelectionFill: =RGBA(0, 51, 102, 1)
+                Size: =13
+                X: =40
+                Y: =156
+                ZIndex: =7
 
         "'Guild Cover Image_DataCard2' As typedDataCard.addLargePictureCard":
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -1343,7 +1287,7 @@
             Required: =false
             Update: =Image50.Image
             Width: =430
-            X: =2
+            X: =1
             Y: =4
             ZIndex: =2
 
@@ -1427,8 +1371,8 @@
             Required: =false
             Update: =DataCardValue54.Attachments
             Width: =430
-            X: =0
-            Y: =5
+            X: =2
+            Y: =4
             ZIndex: =2
 
             DataCardKey77 As label:
