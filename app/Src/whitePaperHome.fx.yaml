@@ -16,7 +16,7 @@
                 contentType:"html"
             },
             {subject:"New White Paper Added"}
-        );Set(lastPaperDetails,First(Last(whitepapers).Attachments).AbsoluteUri);, false);
+        ), false);
         Set(isWhitePaperAdded, false);
 
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":

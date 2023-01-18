@@ -17715,36 +17715,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.lastPaperDetails"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "App.lastPaperDetails",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "lastPaperDetails",
-                "module": "App",
-                "type": "App"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 12
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "App.Anand V"
                 }
               ],

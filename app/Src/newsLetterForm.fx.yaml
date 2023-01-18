@@ -229,15 +229,15 @@
 
     Icon1_1 As icon.ArrowLeft:
         BorderColor: =RGBA(0, 18, 107, 1)
-        Color: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(250, 250, 250, 1)
         DisabledBorderColor: =RGBA(166, 166, 166, 1)
         DisabledColor: =RGBA(244, 244, 244, 1)
         Icon: =Icon.ArrowLeft
         OnSelect: |-
             =ResetForm(Form1);
             Navigate(newsLetterHome);
-        X: =72
-        Y: =112
+        X: =26
+        Y: =12
         ZIndex: =4
 
     Dropdown8 As dropdown:
@@ -290,8 +290,15 @@
                 Title: DataCardValue3.Text,
                 Community:Dropdown8.Selected.Communities
             }, Form1.Updates);
+            Set(currentGuildName, LookUp(Community_1, Title=Dropdown1_4.Selected.Communities).Guild);
+            Set(currentGuild, LookUp(Guild, Title=currentGuildName));
+            
+            Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
+            Set(teamId,First(Split(currentGuild.Team,"\")).Result);
             
             ResetForm(Form1);
+            Set(isNewsLetterAdded, true);
+            
             Navigate(newsLetterHome);
             Notify( "NewsLetter Added Successfully" , NotificationType.Success, 1000);
             ,

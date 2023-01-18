@@ -7,6 +7,19 @@
         If(currCommunity="All",Set(newsLetterList,newsletters),Set(newsLetterList,Filter(newsletters,Community=currCommunity)));
         Set(openPopup,false);
         Set(DropDown,false);
+        
+        If(isNewsLetterAdded, 
+        
+        MicrosoftTeams.PostMessageToChannelV3(
+            teamId,
+            channelId,
+            {
+                content:"<a href="&First(Last(newsletters).Attachments).AbsoluteUri &" target=_blank>Click Here to View NewsLetter</a>",
+                contentType:"html"
+            },
+            {subject:"New NewsLetter Added"}
+        ), false);
+        Set(isNewsLetterAdded, false);
 
     Label2_6 As label:
         BorderColor: =RGBA(0, 18, 107, 1)
