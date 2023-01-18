@@ -59,7 +59,9 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =239
-                Image: =data.Image1
+                Image: |-
+                    =/*data.Image1*/
+                    Office365Users.UserPhotoV2(data.Polestar1)
                 Width: =251
                 X: =83
                 Y: =12
@@ -86,10 +88,15 @@
                 FontWeight: =FontWeight.Bold
                 Height: =41
                 Size: =23
-                Text: =data.Polestar1
+                Text: |-
+                    =
+                    First(Office365Users.SearchUser({searchTerm:data.Polestar1})).DisplayName
+                    
+                    //First(Office365Users.(data.Polestar1).DisplayName)
+                    //Office365Users.SearchUser({searchTerm:data.Polestar1})
                 Width: =345
-                X: =353
-                Y: =56
+                X: =365
+                Y: =41
                 ZIndex: =8
 
             Label29 As label:
