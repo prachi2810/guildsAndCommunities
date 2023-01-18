@@ -7,16 +7,16 @@
         If(currCommunity="All",Set(paperList,whitepapers),Set(paperList,Filter(whitepapers,Community=currCommunity)));
         Set(DropDown,false);
         If(isWhitePaperAdded, 
-        /*
+        
         MicrosoftTeams.PostMessageToChannelV3(
             teamId,
             channelId,
             {
-                content:"<a href=https://learn.microsoft.com/en-us/connectors/teams/#post-message-in-a-chat-or-channel target=_blank>Click here</a></br>" & "New White Paper has been added in this community",
+                content:"<a href="&First(Last(whitepapers).Attachments).AbsoluteUri &"target=_blank>Click Here to View Paper</a></br>",
                 contentType:"html"
             },
-            {subject:"New White Paper"}
-        )*/teamId=100000, false);
+            {subject:"New White Paper Added"}
+        );Set(lastPaperDetails,First(Last(whitepapers).Attachments).AbsoluteUri);, false);
         Set(isWhitePaperAdded, false);
 
     "Gallery1_1 As gallery.'BrowseLayout_Vertical_ThreeTextOneImageVariant_ver4.0'":
@@ -691,24 +691,4 @@
         X: =208
         Y: =258
         ZIndex: =33
-
-    Label70 As label:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Size: =13
-        Text: =channelId
-        X: =134
-        Y: =728
-        ZIndex: =34
-
-    Label70_1 As label:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        Color: =RGBA(0, 0, 0, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        Size: =13
-        Text: =teamId
-        X: =486
-        Y: =711
-        ZIndex: =35
 
