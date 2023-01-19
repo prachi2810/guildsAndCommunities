@@ -594,6 +594,7 @@
 
         Icon27_2 As icon.Search:
             BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(250, 250, 250, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Height: =46
@@ -611,7 +612,7 @@
             Fill: =RGBA(0, 36, 71, 1)
             Height: =46
             Size: =13
-            Text: ="Share this blog as an email"
+            Text: =" Share this blog by an email"
             Width: =773
             X: =278
             Y: =46
@@ -719,7 +720,7 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
             OnSelect: |-
-                =MicrosoftTeams.PostMessageToChannel(Gid,Chid, {body:{content:"Hello World Test",contentType:0}});
+                =MicrosoftTeams.PostMessageToChannel(Gid,Chid, {body:{content:$"<a href=https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?blog={data.ID}>Please check this blog on {data.Title}</a>",contentType:1}});
                 Set(shareOnTeams,false);
                 Notify("Blog has shared on teams")
             Size: =15
