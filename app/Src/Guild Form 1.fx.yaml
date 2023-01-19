@@ -2526,6 +2526,7 @@
             
             Notify("Guild Created Successfully",NotificationType.Success,0.3);
             ResetForm(Form7);
+            Navigate(Home)
         Size: =15
         Text: ="Submit"
         X: =558
