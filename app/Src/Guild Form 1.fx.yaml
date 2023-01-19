@@ -2505,7 +2505,25 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |
-            =SubmitForm(Form7);
+            =//SubmitForm(Form7);
+            Patch(Guild,Defaults(Guild), {
+                    Title: DataCardValue38.Text,
+                    FullDescription:DataCardValue39.Text,
+                    'Short Description':DataCardValue46.Text,
+                    Polestar1:DataCardValue41.Text,
+                    Polestar2:DataCardValue43.Text,
+                    'Trend Setters1':DataCardValue44.Text,
+                    'Trend Setters2':DataCardValue49.Text,
+                    'Trend Setters3':DataCardValue50.Text,
+                    'Torch Bearers1':DataCardValue45.Text,
+                    'Torch Bearers2':DataCardValue47.Text,
+                    'Torch Bearers3':DataCardValue48.Text,
+                    'Link To Join':DataCardValue51.Text,
+                    Team:Dropdown11.Selected.id & "\" & Dropdown11.Selected.description & "\" & Dropdown11.Selected.displayName,
+                    Channel:Dropdown13.Selected.id & "\" & Dropdown13.Selected.description & "\" & Dropdown13.Selected.displayName,   
+                    'Guild Cover Image':Image50.Image
+                }, Form7.Updates);
+            
             Notify("Guild Created Successfully",NotificationType.Success,0.3);
             ResetForm(Form7);
         Size: =15
