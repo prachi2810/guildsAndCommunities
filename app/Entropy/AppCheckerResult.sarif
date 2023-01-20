@@ -6137,19 +6137,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Short Description_DataCard3'.DataCardValue46.AccessibleLabel"
+                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Short Description_DataCard1'.DataCardValue6.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Short Description_DataCard3'.DataCardValue46.AccessibleLabel",
+                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Short Description_DataCard1'.DataCardValue6.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Guild Form 1",
-                "type": "'Guild Form 1'.Form7.'Short Description_DataCard3'.DataCardValue46"
+                "type": "'Guild Form 1'.Form7.'Short Description_DataCard1'.DataCardValue6"
               }
             }
           ],
@@ -6707,19 +6707,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.DataCardValue47.AccessibleLabel"
+                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard2'.DataCardValue22.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.DataCardValue47.AccessibleLabel",
+                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard2'.DataCardValue22.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "Guild Form 1",
-                "type": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.DataCardValue47"
+                "type": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard2'.DataCardValue22"
               }
             }
           ],
@@ -6731,66 +6731,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.Icon28_7.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.Icon28_7.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "Guild Form 1",
-                "type": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.Icon28_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.Icon28_7.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.Icon28_7.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "Guild Form 1",
-                "type": "'Guild Form 1'.Form7.'Torch Bearers2_DataCard3'.Icon28_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 9
         },
         {
           "locations": [
@@ -17535,6 +17475,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.TB222"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.TB222",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TB222",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.EventPopUp"
                 }
               ],
@@ -18254,6 +18224,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "'Guild Form 1'.Button26.DisplayMode"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'Guild Form 1'.Button26.DisplayMode",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DisplayMode",
+                "module": "Guild Form 1",
+                "type": "'Guild Form 1'.Button26"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 15
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "EventForm.Form4.Guild_DataCard1.Height"
                 }
               ],
@@ -18565,7 +18565,7 @@
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
-                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Guild Form 1\" is 368, which exceeds the maximum threshold recommended (300)."
+                "whyFix": "Each control consumes resources, and an app may become slow or unresponsive if a screen has too many controls. The estimated complexity of \"Guild Form 1\" is 366, which exceeds the maximum threshold recommended (300)."
               }
             },
             {
