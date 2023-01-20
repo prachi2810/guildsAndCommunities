@@ -10517,49 +10517,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newsLetterHome.Icon3_14.AccessibleLabel"
+                  "fullyQualifiedName": "newsLetterHome.Icon3_15.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "newsLetterHome.Icon3_14.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "newsLetterHome",
-                "type": "newsLetterHome.Icon3_14"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 8
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "newsLetterHome.Icon3_14.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "newsLetterHome.Icon3_14.TabIndex",
+                  "fullyQualifiedName": "newsLetterHome.Icon3_15.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "newsLetterHome",
-                "type": "newsLetterHome.Icon3_14"
+                "type": "newsLetterHome.Icon3_15"
               }
             }
           ],
@@ -10607,19 +10577,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "newsLetterHome.Icon3_15.TabIndex"
+                  "fullyQualifiedName": "newsLetterHome.Icon3_14.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "newsLetterHome.Icon3_15.TabIndex",
+                  "fullyQualifiedName": "newsLetterHome.Icon3_14.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "newsLetterHome",
-                "type": "newsLetterHome.Icon3_15"
+                "type": "newsLetterHome.Icon3_14"
               }
             }
           ],
@@ -10631,6 +10601,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "newsLetterHome.Icon3_14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "newsLetterHome.Icon3_14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "newsLetterHome",
+                "type": "newsLetterHome.Icon3_14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
         },
         {
           "locations": [
