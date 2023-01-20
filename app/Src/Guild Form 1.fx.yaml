@@ -8,7 +8,7 @@
     Form7 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =Guild
-        Height: =644
+        Height: =624
         Item: =Defaults(Guild)
         Width: =1292
         X: =74
@@ -137,12 +137,12 @@
                 BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                 BorderThickness: =2
                 Color: =RGBA(0, 0, 0, 1)
-                Default: =Parent.Default
+                Default: =TB222
                 DelayOutput: =true
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -258,7 +258,7 @@
                 Tooltip: =Parent.DisplayName
                 Width: =Parent.Width - 60
                 X: =30
-                Y: =DataCardKey60.Y + DataCardKey60.Height + 5
+                Y: =44
                 ZIndex: =2
 
             ErrorMessage60 As label:
@@ -388,7 +388,7 @@
             DisplayMode: =Parent.DisplayMode
             DisplayName: =DataSourceInfo([@Guild],DataSourceInfo.DisplayName,"Polestar1")
             Fill: =RGBA(0, 0, 0, 0)
-            Height: =50
+            Height: =79
             MaxLength: =DataSourceInfo([@Guild], DataSourceInfo.MaxLength, "Polestar1")
             Required: =true
             Update: =DataCardValue41.Text
@@ -419,7 +419,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -507,7 +507,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -608,7 +608,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -709,7 +709,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -797,7 +797,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -898,7 +898,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -999,7 +999,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
+                DisplayMode: =DisplayMode.Disabled
                 FocusedBorderThickness: =4
                 HoverBorderColor: =RGBA(0, 89, 178, 1)
                 HoverColor: =RGBA(0, 0, 0, 1)
@@ -1548,6 +1548,8 @@
                     =Select(Parent);
                     Set(TB1, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Set(popUpImage,false);
+                    Reset(TextInput15_1)
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -1577,7 +1579,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImage,false);
-                Reset(Gallery6_1)
+                Reset(TextInput15_1)
             Visible: =popUpImage
             Width: =36
             X: =911
@@ -1698,6 +1700,7 @@
                     =Select(Parent);
                     Set(TR22, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Set(popUpImageTR2,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -1727,7 +1730,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageTR2,false);
-                Reset(Gallery6_2)
+                Reset(TextInput15_2)
             Visible: =popUpImageTR2
             Width: =32
             X: =895
@@ -1848,6 +1851,7 @@
                     =Select(Parent);
                     Set(TR33, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Set(popUpImageTR3,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -1877,7 +1881,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageTR3,false);
-                Reset(Gallery6_3)
+                Reset(TextInput15_3)
             Visible: =popUpImageTR3
             Width: =32
             X: =1334
@@ -1998,6 +2002,8 @@
                     =Select(Parent);
                     Set(TP11, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Reset(TextInput15_4);
+                    Set(popUpImageP1,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -2027,7 +2033,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageP1,false);
-                Reset(Gallery6_4)
+                Reset(TextInput15_4);
             Visible: =popUpImageP1
             Width: =32
             X: =897
@@ -2148,6 +2154,8 @@
                     =Select(Parent);
                     Set(TP22, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Set(popUpImageP2,false);
+                    Reset(TextInput15_5);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -2177,7 +2185,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageP2,false);
-                Reset(Gallery6_5)
+                Reset(TextInput15_5)
             Visible: =popUpImageP2
             Width: =32
             X: =1334
@@ -2298,6 +2306,8 @@
                     =Select(Parent);
                     Set(TB111, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Set(popUpImageTB1,false);
+                    Reset(TextInput15_6);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -2327,7 +2337,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageTB1,false);
-                Reset(Gallery6_6)
+                Reset(TextInput15_6)
             Visible: =popUpImageTB1
             Width: =32
             X: =915
@@ -2448,6 +2458,8 @@
                     =Select(Parent);
                     Set(TB222, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Reset(TextInput15_7);
+                    Set(popUpImageTB2,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -2477,7 +2489,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageTB2,false);
-                Reset(Gallery6_7)
+                Reset(TextInput15_7)
             Visible: =popUpImageTB2
             Width: =32
             X: =895
@@ -2489,7 +2501,7 @@
         DisabledColor: =RGBA(166, 166, 166, 1)
         DisabledFill: =RGBA(244, 244, 244, 1)
         DisplayMode: |-
-            =If(IsBlank(DataCardValue38.Text) || IsBlank(DataCardValue39.Text) || IsBlank(DataCardValue6.Text) || IsBlank(DataCardValue41.Text) || IsBlank(DataCardValue43.Text) || IsBlank(DataCardValue44.Text) || IsBlank(DataCardValue22.Text) || IsBlank(DataCardValue48.Text) || IsBlank(DataCardValue51.Text) || IsBlank(DataCardValue49.Text) || IsBlank(DataCardValue50.Text) || IsBlank(DataCardValue45) || IsBlank(AddPicture20) || IsBlank(ErrorMessage1) || IsBlank(Dropdown11) || IsBlank(Dropdown13),
+            =If(IsBlank(DataCardValue38.Text) || IsBlank(DataCardValue39.Text) || IsBlank(DataCardValue6.Text) || IsBlank(DataCardValue41.Text) || IsBlank(DataCardValue43.Text) || IsBlank(DataCardValue44.Text) || IsBlank(DataCardValue22.Text) || IsBlank(DataCardValue48.Text) || IsBlank(DataCardValue51.Text) || IsBlank(DataCardValue49.Text) || IsBlank(DataCardValue50.Text) || IsBlank(DataCardValue45) || IsBlank(AddPicture20) || IsBlank(Dropdown11.Selected.displayName) || IsBlank(Dropdown13.Selected) || !IsBlank(ErrorMessage60),
             DisplayMode.Disabled,
             DisplayMode.Edit)
         Fill: =RGBA(0, 51, 102, 1)
@@ -2639,6 +2651,8 @@
                     =Select(Parent);
                     Set(TB333, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Reset(TextInput15_8);
+                        Set(popUpImageTB3,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
                 PaddingRight: =10
@@ -2668,7 +2682,7 @@
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageTB3,false);
-                Reset(Gallery6_8)
+                Reset(TextInput15_8)
             Visible: =popUpImageTB3
             Width: =32
             X: =1334
@@ -2685,6 +2699,15 @@
         OnSelect: |
             =
             ResetForm(Form7);
+            Set(TP11, "");
+            Set(TP22, "");
+            Set(TP33, "");
+            Set(TB1, "");
+            Set(TB111, "");
+            Set(TB333, "");
+            Set(TR111, "");
+            Set(TR222, "");
+            Set(TR333, "");
             Navigate(Home);
         Width: =44
         X: =1322
