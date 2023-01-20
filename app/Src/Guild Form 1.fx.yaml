@@ -1700,6 +1700,7 @@
                     =Select(Parent);
                     Set(TR22, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Reset(TextInput15_2);
                     Set(popUpImageTR2,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
@@ -1747,9 +1748,9 @@
         Rectangle12_3 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =464
+            Height: =454
             Visible: =popUpImageTR3
-            Width: =447
+            Width: =430
             X: =919
             Y: =66
             ZIndex: =10
@@ -1763,6 +1764,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
+            Height: =39
             HoverBorderColor: =RGBA(0, 89, 178, 1)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(153, 205, 255, 1)
@@ -1770,14 +1772,14 @@
                 =ClearCollect(Polestars, Office365Users.SearchUserV2({searchTerm:TextInput15_3.Text,top:5,isSearchTermRequired:true}));
             Size: =13
             Visible: =popUpImageTR3
-            Width: =282
-            X: =1012
-            Y: =88
+            Width: =271
+            X: =1008
+            Y: =87
             ZIndex: =11
 
         "Gallery6_3 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             BorderColor: =RGBA(0, 89, 178, 1)
-            Height: =354
+            Height: =346
             Items: |-
                 =Office365Users.SearchUserV2({searchTerm:TextInput15_3.Text,top:5,isSearchTermRequired:true}).value
             Layout: =Layout.Vertical
@@ -1787,9 +1789,9 @@
             TemplatePadding: =0
             TemplateSize: =Min(160, Self.Height - 60)
             Visible: =popUpImageTR3
-            Width: =447
+            Width: =430
             X: =919
-            Y: =172
+            Y: =170
             ZIndex: =12
 
             Image39_3 As image:
@@ -1851,6 +1853,7 @@
                     =Select(Parent);
                     Set(TR33, ThisItem.Mail);
                     Set(popUpImage,false);
+                    Reset(TextInput15_3);
                     Set(popUpImageTR3,false);
                 PaddingBottom: =10
                 PaddingLeft: =10
@@ -1877,14 +1880,14 @@
             Color: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =26
+            Height: =25
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageTR3,false);
                 Reset(TextInput15_3)
             Visible: =popUpImageTR3
-            Width: =32
-            X: =1334
+            Width: =31
+            X: =1318
             Y: =62
             ZIndex: =13
 
@@ -2558,9 +2561,9 @@
         Rectangle12_8 As rectangle:
             BorderColor: =RGBA(255, 255, 255, 1)
             Fill: =RGBA(255, 255, 255, 1)
-            Height: =464
+            Height: =446
             Visible: =popUpImageTB3
-            Width: =447
+            Width: =430
             X: =919
             Y: =172
             ZIndex: =30
@@ -2574,6 +2577,7 @@
             DisabledColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             FocusedBorderThickness: =4
+            Height: =38
             HoverBorderColor: =RGBA(0, 89, 178, 1)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(153, 205, 255, 1)
@@ -2581,14 +2585,14 @@
                 =ClearCollect(Polestars, Office365Users.SearchUserV2({searchTerm:TextInput15_8.Text,top:5,isSearchTermRequired:true}));
             Size: =13
             Visible: =popUpImageTB3
-            Width: =282
-            X: =1012
-            Y: =194
+            Width: =271
+            X: =1008
+            Y: =193
             ZIndex: =31
 
         "Gallery6_8 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
             BorderColor: =RGBA(0, 89, 178, 1)
-            Height: =354
+            Height: =340
             Items: |-
                 =Office365Users.SearchUserV2({searchTerm:TextInput15_8.Text,top:5,isSearchTermRequired:true}).value
             Layout: =Layout.Vertical
@@ -2598,9 +2602,9 @@
             TemplatePadding: =0
             TemplateSize: =Min(160, Self.Height - 60)
             Visible: =popUpImageTB3
-            Width: =447
+            Width: =430
             X: =919
-            Y: =278
+            Y: =274
             ZIndex: =32
 
             Image39_8 As image:
@@ -2689,14 +2693,14 @@
             Color: =RGBA(0, 89, 178, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
-            Height: =26
+            Height: =25
             Icon: =Icon.Cancel
             OnSelect: |
                 =Set(popUpImageTB3,false);
                 Reset(TextInput15_8)
             Visible: =popUpImageTB3
-            Width: =32
-            X: =1334
+            Width: =31
+            X: =1318
             Y: =168
             ZIndex: =33
 
