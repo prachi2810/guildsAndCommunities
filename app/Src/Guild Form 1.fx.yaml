@@ -1494,7 +1494,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =If(!IsBlank(Office365Users.UserPhotoV2(ThisItem.Id)), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
@@ -1646,7 +1646,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =If(!IsBlank(Office365Users.UserPhotoV2(ThisItem.Id)), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
@@ -1799,7 +1799,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =If(!IsBlank(Office365Users.UserPhotoV2(ThisItem.Id)), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
@@ -1951,7 +1951,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =If(!IsBlank(Office365Users.UserPhotoV2(ThisItem.Id)), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
@@ -2113,7 +2113,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =If(!IsBlank(Office365Users.UserPhotoV2(ThisItem.Id)), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
@@ -2265,7 +2265,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
@@ -2417,7 +2417,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
@@ -2622,7 +2622,7 @@
                 DisabledBorderColor: =RGBA(166, 166, 166, 1)
                 DisabledFill: =RGBA(244, 244, 244, 1)
                 Height: =128
-                Image: =
+                Image: =If(!IsBlank(ThisItem.Id), Office365Users.UserPhotoV2(ThisItem.Id), SampleImage)
                 OnSelect: =Select(Parent)
                 Width: =128
                 X: =16
