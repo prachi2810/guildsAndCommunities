@@ -2528,6 +2528,17 @@
                     'Guild Cover Image':Image50.Image
                 }, Form7.Updates);
             
+            Set(TP11, "");
+            Set(TP22, "");
+            Set(TP33, "");
+            Set(TB1, "");
+            Set(TB222, "");
+            Set(TB111, "");
+            Set(TB333, "");
+            Set(TR111, "");
+            Set(TR22, "");
+            Set(TR33, "");
+            
             Notify("Guild Created Successfully",NotificationType.Success,0.3);
             ResetForm(Form7);
             Navigate(Home)
@@ -2703,11 +2714,12 @@
             Set(TP22, "");
             Set(TP33, "");
             Set(TB1, "");
+            Set(TB222, "");
             Set(TB111, "");
             Set(TB333, "");
             Set(TR111, "");
-            Set(TR222, "");
-            Set(TR333, "");
+            Set(TR22, "");
+            Set(TR33, "");
             Navigate(Home);
         Width: =44
         X: =1322
