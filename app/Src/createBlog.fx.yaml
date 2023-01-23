@@ -161,7 +161,7 @@
             });
             
             Patch(Community_1, LookUp(Community_1, Title=Dropdown2.Selected.Title), {
-                Blogs: LookUp(Community_1, Title=Dropdown2.Selected.Title).Blogs + 1
+                Blogs: LookUp(Community_1, Title=Dropdown2.Selected.Communities).Blogs + 1
             });
             
             Patch(Blog,Defaults(Blog),{
