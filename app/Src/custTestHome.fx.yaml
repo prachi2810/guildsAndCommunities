@@ -1,0 +1,37 @@
+"custTestHome As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+
+    RectQuickActionBar15 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName12 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =88
+        Size: =25
+        Text: ="Customer Testimonial"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Button24 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =54
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        Size: =18
+        Text: ="Add Customer Testimonial"
+        Width: =246
+        X: =1076
+        Y: =17
+        ZIndex: =3
+
