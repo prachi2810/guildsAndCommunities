@@ -16955,6 +16955,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "App.newBlogAdded"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.newBlogAdded",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "newBlogAdded",
+                "module": "App",
+                "type": "App"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 12
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "App.Anand V"
                 }
               ],
