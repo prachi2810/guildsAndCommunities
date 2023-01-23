@@ -44,12 +44,16 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =
-            If(addedFile&& !IsBlank(DataCardValue29.Text) && IsBlank(LookUp(caseStudy,Title=DataCardValue29.Text)),
-            Set(selectedcommunityval,Dropdown14.Selected.Communities);
-            Patch(case, Defaults(case),{
+            =If(addedFile && !IsBlank(DataCardValue29.Text) && IsBlank(LookUp(caseStudy,Title=DataCardValue29.Text)),
+            Set(selectedcommunityval,Dropdown12.Selected.Communities);
+            /*Patch(case, Defaults(case),{
                 Title: DataCardValue29.Text,
                 Community:Dropdown14.Selected.Communities
+            }, Form8.Updates);*/
+            
+            Patch(caseStudy, Defaults(caseStudy), {
+                Title: DataCardValue29.Text,
+                Community: Dropdown12.Selected.Communities
             }, Form8.Updates);
             
             ResetForm(Form8);
@@ -66,40 +70,14 @@
         Y: =605
         ZIndex: =5
 
-    Dropdown14 As dropdown:
-        BorderColor: =RGBA(0, 89, 178, 1)
-        ChevronBackground: =RGBA(0, 51, 102, 1)
-        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-        ChevronHoverFill: =RGBA(255, 255, 255, 1)
-        DisabledBorderColor: =RGBA(166, 166, 166, 1)
-        DisabledColor: =RGBA(166, 166, 166, 1)
-        DisabledFill: =RGBA(244, 244, 244, 1)
-        Height: =44
-        HoverColor: =RGBA(0, 0, 0, 1)
-        HoverFill: =RGBA(153, 205, 255, 1)
-        Items: =UserCommunities
-        OnChange: =Set(selectedcommunityval,Dropdown14.Selected.Communities);
-        PressedColor: =RGBA(255, 255, 255, 1)
-        PressedFill: =RGBA(0, 89, 178, 1)
-        SelectionFill: =RGBA(0, 51, 102, 1)
-        Size: =13
-        Width: =344
-        X: =465
-        Y: =299
-        ZIndex: =6
-
     Form8 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =caseStudy
-        Height: =439
         Item: =Defaults(caseStudy)
         NumberOfColumns: =1
-        Width: =407
-        X: =432
-        Y: =151
-        ZIndex: =7
+        X: =237
+        Y: =105
+        ZIndex: =6
 
         Title_DataCard7 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
@@ -113,10 +91,10 @@
             MaxLength: =DataSourceInfo([@caseStudy], DataSourceInfo.MaxLength, "Title")
             Required: =true
             Update: =DataCardValue29.Text
-            Width: =407
+            Width: =800
             X: =0
             Y: =0
-            ZIndex: =8
+            ZIndex: =7
 
             DataCardKey41 As label:
                 AutoHeight: =true
@@ -189,94 +167,6 @@
                 Y: =DataCardKey41.Y
                 ZIndex: =4
 
-        Attachments_DataCard5 As typedDataCard.attachmentsEditCard:
-            BorderColor: =RGBA(0, 89, 178, 1)
-            BorderStyle: =BorderStyle.Solid
-            DataField: ="{Attachments}"
-            Default: =ThisItem.Attachments
-            DisplayMode: =Parent.DisplayMode
-            DisplayName: =DataSourceInfo([@caseStudy],DataSourceInfo.DisplayName,"{Attachments}")
-            Fill: =RGBA(0, 0, 0, 0)
-            Height: =251
-            Required: =false
-            Update: =DataCardValue32.Attachments
-            Width: =407
-            X: =0
-            Y: =2
-            ZIndex: =8
-
-            DataCardKey44 As label:
-                AutoHeight: =true
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =34
-                Size: =13
-                Text: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                Wrap: =false
-                X: =30
-                Y: =60
-                ZIndex: =1
-
-            DataCardValue32 As attachments:
-                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                BorderThickness: =2
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                DisplayMode: =Parent.DisplayMode
-                FocusedBorderThickness: =4
-                Height: =140
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                IsInDataCard: =true
-                ItemColor: =RGBA(255, 255, 255, 1)
-                ItemFill: =RGBA(0, 51, 102, 1)
-                ItemHoverColor: =RGBA(0, 0, 0, 1)
-                ItemHoverFill: =RGBA(153, 205, 255, 1)
-                Items: =Parent.Default
-                PaddingBottom: =5
-                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                PaddingRight: =5
-                PaddingTop: =5
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 89, 178, 1)
-                Tooltip: =Parent.DisplayName
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =109
-                ZIndex: =2
-
-            ErrorMessage44 As label:
-                AutoHeight: =true
-                Color: =RGBA(168, 0, 0, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                FontWeight: =FontWeight.Semibold
-                Height: =10
-                Live: =Live.Assertive
-                PaddingBottom: =0
-                PaddingLeft: =0
-                PaddingRight: =0
-                PaddingTop: =0
-                Text: =Parent.Error
-                Visible: =Parent.DisplayMode=DisplayMode.Edit
-                Width: =Parent.Width - 60
-                X: =30
-                Y: =DataCardValue32.Y + DataCardValue32.Height
-                ZIndex: =3
-
-            StarVisible44 As label:
-                Align: =Align.Center
-                Color: =RGBA(0, 89, 178, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                Height: =DataCardKey44.Height
-                Size: =13
-                Text: ="*"
-                Width: =30
-                Wrap: =false
-                Y: =DataCardKey44.Y
-                ZIndex: =4
-
         Community_DataCard1 As typedDataCard.textualEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
@@ -289,10 +179,10 @@
             MaxLength: =DataSourceInfo([@caseStudy], DataSourceInfo.MaxLength, "Community")
             Required: =true
             Update: =
-            Width: =407
+            Width: =800
             X: =0
             Y: =1
-            ZIndex: =8
+            ZIndex: =7
 
             DataCardKey42 As label:
                 AutoHeight: =true
@@ -304,6 +194,7 @@
                 Width: =Parent.Width - 60
                 Wrap: =false
                 X: =30
+                Y: =10
                 ZIndex: =1
 
             ErrorMessage42 As label:
@@ -336,4 +227,130 @@
                 Wrap: =false
                 Y: =DataCardKey42.Y
                 ZIndex: =4
+
+        Attachments_DataCard5 As typedDataCard.attachmentsEditCard:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@caseStudy],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue32.Attachments
+            Width: =800
+            X: =0
+            Y: =2
+            ZIndex: =7
+
+            DataCardKey44 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =34
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue32 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(0, 51, 102, 1)
+                ItemHoverColor: =RGBA(0, 0, 0, 1)
+                ItemHoverFill: =RGBA(153, 205, 255, 1)
+                Items: =Parent.Default
+                OnAddFile: |
+                    =
+                    If(
+                        Not(
+                            EndsWith(
+                                First(Self.Attachments).Name,
+                                ".pdf"
+                            )
+                        ),
+                        Notify(
+                            "Only Pdf file is allowed",
+                            NotificationType.Error
+                        );
+                        Reset(Self),
+                        Set(addedFile,true);
+                    );
+                OnRemoveFile: =Set(addedFile,true);
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey44.Y + DataCardKey44.Height + 5
+                ZIndex: =2
+
+            ErrorMessage44 As label:
+                AutoHeight: =true
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue32.Y + DataCardValue32.Height
+                ZIndex: =3
+
+            StarVisible44 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey44.Height
+                Size: =13
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey44.Y
+                ZIndex: =4
+
+    Dropdown12 As dropdown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =UserCommunities
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        X: =998
+        Y: =682
+        ZIndex: =7
 
