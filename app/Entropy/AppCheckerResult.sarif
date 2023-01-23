@@ -16535,19 +16535,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "custTestForm.Form8.Title_DataCard7.DataCardValue29.AccessibleLabel"
+                  "fullyQualifiedName": "caseStudyForm.Form8.Attachments_DataCard7.DataCardValue35.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "custTestForm.Form8.Title_DataCard7.DataCardValue29.AccessibleLabel",
+                  "fullyQualifiedName": "caseStudyForm.Form8.Attachments_DataCard7.DataCardValue35.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "custTestForm",
-                "type": "custTestForm.Form8.Title_DataCard7.DataCardValue29"
+                "module": "caseStudyForm",
+                "type": "caseStudyForm.Form8.Attachments_DataCard7.DataCardValue35"
               }
             }
           ],
@@ -16565,19 +16565,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "custTestForm.Form8.Attachments_DataCard5.DataCardValue32.AccessibleLabel"
+                  "fullyQualifiedName": "caseStudyForm.Form8.Title_DataCard8.DataCardValue33.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "custTestForm.Form8.Attachments_DataCard5.DataCardValue32.AccessibleLabel",
+                  "fullyQualifiedName": "caseStudyForm.Form8.Title_DataCard8.DataCardValue33.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "custTestForm",
-                "type": "custTestForm.Form8.Attachments_DataCard5.DataCardValue32"
+                "module": "caseStudyForm",
+                "type": "caseStudyForm.Form8.Title_DataCard8.DataCardValue33"
               }
             }
           ],
@@ -16595,19 +16595,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "custTestForm.Form8.Community_DataCard1.Dropdown12.AccessibleLabel"
+                  "fullyQualifiedName": "caseStudyForm.Icon29.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "custTestForm.Form8.Community_DataCard1.Dropdown12.AccessibleLabel",
+                  "fullyQualifiedName": "caseStudyForm.Icon29.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "custTestForm",
-                "type": "custTestForm.Form8.Community_DataCard1.Dropdown12"
+                "module": "caseStudyForm",
+                "type": "caseStudyForm.Icon29"
               }
             }
           ],
@@ -16619,6 +16619,66 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "caseStudyForm.Form8.Community_DataCard2.Dropdown14.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "caseStudyForm.Form8.Community_DataCard2.Dropdown14.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "caseStudyForm",
+                "type": "caseStudyForm.Form8.Community_DataCard2.Dropdown14"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 8
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "caseStudyForm.Icon29.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "caseStudyForm.Icon29.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "caseStudyForm",
+                "type": "caseStudyForm.Icon29"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 9
         },
         {
           "locations": [

@@ -43,6 +43,9 @@
           "Blog_1": {
             "tableName": "e906b85c-c7f1-49c6-8521-2726ca9cfc69"
           },
+          "caseStudy": {
+            "tableName": "6efb9fca-729a-44a5-8e37-34eb3def8ac3"
+          },
           "Comment": {
             "tableName": "debaacae-cb2b-4d75-bf53-16470368f1e2"
           },
@@ -51,9 +54,6 @@
           },
           "Community_2": {
             "tableName": "e3e59fbf-0c7d-4482-bbea-7239f2499602"
-          },
-          "customerTestimonials": {
-            "tableName": "6efb9fca-729a-44a5-8e37-34eb3def8ac3"
           },
           "eLearning": {
             "tableName": "56dbdd0d-e1eb-4936-892d-9abdca22e302"
@@ -129,8 +129,8 @@
       "Newsletter_1",
       "whitepapers",
       "newsletters",
-      "customerTestimonials",
-      "eLearning"
+      "eLearning",
+      "caseStudy"
     ],
     "dependencies": {},
     "dependents": [],
