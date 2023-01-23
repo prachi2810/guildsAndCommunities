@@ -336,7 +336,7 @@
             If(addedFile&& !IsBlank(DataCardValue33.Text) && IsBlank(LookUp(caseStudy,Title=DataCardValue33.Text)),
             Patch(caseStudy, Defaults(caseStudy),{
                 Title: DataCardValue33.Text,
-                Community:Dropdown14.Selected.Communities
+                Community:Dropdown14.Selected.Text
             }, Form8.Updates);
             
             ResetForm(Form8);
