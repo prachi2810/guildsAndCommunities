@@ -1,5 +1,10 @@
 "caseStudyHome As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |
+        =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+        ClearCollect(UserCommunities1,{Communities:"All"},UserCommunities);
+        Set(currCommunity,Dropdown2_6.Selected.Communities);
+        If(currCommunity="All",Set(caseStudyList,caseStudy),Set(caseStudyList,Filter(caseStudy,Community=currCommunity)));
 
     RectQuickActionBar15 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -38,13 +43,19 @@
 
     "Gallery10 As gallery.'BrowseLayout_Vertical_TwoTextOneImageVariant_ver4.0'":
         BorderColor: =RGBA(0, 89, 178, 1)
-        Items: =caseStudy
+        Height: =533
+        Items: |-
+            =If(
+                Dropdown2_6.Selected.Communities = "All", 
+                Search(caseStudy, TextInput13_1.Text, "Title"),
+                Search(Filter(caseStudy, Community=Dropdown2_6.Selected.Communities), TextInput13_1.Text, "Title")
+            )
         Layout: =Layout.Vertical
         TemplatePadding: =0
         TemplateSize: =Min(160, Self.Height - 60)
-        Width: =1100
-        X: =195
-        Y: =193
+        Width: =1066
+        X: =213
+        Y: =234
         ZIndex: =4
 
         Image38 As image:
@@ -52,6 +63,8 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledFill: =RGBA(244, 244, 244, 1)
             Height: =128
+            Image: |-
+                ="data:image/svg+xml;utf8, %3Csvg%20%20viewBox%3D%270%200%202048%202048%27%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%3E%3Cpath%20d%3D%27M1920%201664h-128v384H128v-384H0V640h128V0h1243l421%20421v219h128v1024zM1408%20384h165l-165-165v165zM256%20640h1408V512h-384V128H256v512zm1408%201024H256v256h1408v-256zm128-896H128v768h1664V768zM448%20896q40%200%2075%2015t61%2041%2041%2061%2015%2075q0%2040-15%2075t-41%2061-61%2041-75%2015h-64v128H256V896h192zm0%20256q26%200%2045-19t19-45q0-26-19-45t-45-19h-64v128h64zm448-256q53%200%2099%2020t82%2055%2055%2081%2020%20100q0%2053-20%2099t-55%2082-81%2055-100%2020H768V896h128zm0%20384q27%200%2050-10t40-27%2028-41%2010-50q0-27-10-50t-27-40-41-28-50-10v256zm384-384h320v128h-192v128h192v128h-192v128h-128V896z%27%20fill%3D%27%23d13438%27%3E%3C%2Fpath%3E%3C%2Fsvg%3E"
             OnSelect: =Select(Parent)
             Width: =128
             X: =16
@@ -121,4 +134,69 @@
             Width: =Parent.TemplateWidth
             Y: =Parent.TemplateHeight - 1
             ZIndex: =5
+
+    Label2_3 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 51, 102, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =24
+        Size: =16
+        Text: ="Select A Community"
+        Width: =230
+        X: =951
+        Y: =119
+        ZIndex: =5
+
+    Dropdown2_6 As dropdown:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        ChevronBackground: =RGBA(56, 96, 178, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(56, 96, 178, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(186, 202, 226, 1)
+        Items: =UserCommunities1
+        OnChange: |-
+            =Set(currCommunity,Dropdown2_6.Selected.Communities);
+            If(currCommunity="All",Set(paperList,whitepapers),Set(paperList,Filter(whitepapers,Community=currCommunity)));
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 18, 107, 1)
+        SelectionFill: =RGBA(56, 96, 178, 1)
+        Size: =13
+        X: =951
+        Y: =158
+        ZIndex: =6
+
+    TextInput13_1 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        X: =213
+        Y: =158
+        ZIndex: =7
+
+    Label2_8 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(0, 51, 102, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =24
+        Size: =16
+        Text: ="Search a Testimonial"
+        Width: =230
+        X: =213
+        Y: =120
+        ZIndex: =8
 

@@ -4,6 +4,7 @@
         =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
         Set(addedFile,false);
         ResetForm(Form8);
+        Reset(TextInput12);
 
     RectQuickActionBar17 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -30,6 +31,7 @@
         Icon: =Icon.ArrowLeft
         OnSelect: |-
             =ResetForm(Form8);
+            Reset(TextInput12);
             Navigate(caseStudyHome);
         X: =66
         Y: =12
@@ -52,6 +54,7 @@
             }, Form8.Updates);
             
             ResetForm(Form8);
+            Reset(TextInput12);
             Navigate(caseStudyHome);
             ,
             Notify(
@@ -122,6 +125,7 @@
                 ItemHoverColor: =RGBA(0, 0, 0, 1)
                 ItemHoverFill: =RGBA(153, 205, 255, 1)
                 Items: =Parent.Default
+                MaxAttachments: =1
                 OnAddFile: |
                     =
                     If(
@@ -228,7 +232,7 @@
         Color: =RGBA(0, 89, 178, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Size: =13
-        Text: ="*    Community"
+        Text: =" *   Community"
         X: =483
         Y: =252
         ZIndex: =9
@@ -238,7 +242,7 @@
         Color: =RGBA(0, 89, 178, 1)
         DisabledColor: =RGBA(166, 166, 166, 1)
         Size: =13
-        Text: ="*     Title"
+        Text: =" *   Title"
         X: =483
         Y: =153
         ZIndex: =10

@@ -6,6 +6,8 @@
         Set(currCommunity,Dropdown2_5.Selected.Communities);
         If(currCommunity="All",Set(paperList,whitepapers),Set(paperList,Filter(whitepapers,Community=currCommunity)));
         Set(DropDown,false);
+        Set(openPopup,false);
+        
         If(isWhitePaperAdded, 
         
         MicrosoftTeams.PostMessageToChannelV3(
