@@ -142,21 +142,21 @@
             Y: =66
             ZIndex: =7
 
-        Icon36 As icon.Trash:
+        Icon48 As icon.Trash:
             BorderColor: =RGBA(0, 89, 178, 1)
-            Color: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(255, 0, 0, 1)
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Icon: =Icon.Trash
-            OnSelect: =Select(Parent)
+            OnSelect: =
             Visible: |-
                 =If(
-                    !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
+                    !IsBlank(LookUp(caseStudy, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
                     !IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Community && Role="admin")),
                     true,
                     false
                 )
-            X: =822
+            X: =803
             Y: =66
             ZIndex: =8
 
