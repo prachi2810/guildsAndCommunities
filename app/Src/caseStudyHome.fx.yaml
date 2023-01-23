@@ -1,10 +1,12 @@
 "caseStudyHome As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: |
+    OnVisible: |+
         =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
         ClearCollect(UserCommunities1,{Communities:"All"},UserCommunities);
         Set(currCommunity,Dropdown2_6.Selected.Communities);
         If(currCommunity="All",Set(caseStudyList,caseStudy),Set(caseStudyList,Filter(caseStudy,Community=currCommunity)));
+        Set(openPopup,false);
+        
 
     RectQuickActionBar15 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
@@ -73,13 +75,6 @@
             Size: =18
             Text: =ThisItem.'Created By'.DisplayName
             VerticalAlign: =VerticalAlign.Top
-            Visible: |-
-                =If(
-                    !IsBlank(LookUp(whitepapers, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
-                    !IsBlank(LookUp(User, Email=User().Email && Communities=ThisItem.Community && Role="admin")),
-                    true,
-                    false
-                )
             Width: =Title12.Width
             X: =Title12.X
             Y: =Title12.Y + Title12.Height + 2
@@ -148,7 +143,9 @@
             DisabledBorderColor: =RGBA(166, 166, 166, 1)
             DisabledColor: =RGBA(244, 244, 244, 1)
             Icon: =Icon.Trash
-            OnSelect: =
+            OnSelect: |-
+                =Set(currCaseStudy,ThisItem);
+                Set(openPopup,true);
             Visible: |-
                 =If(
                     !IsBlank(LookUp(caseStudy, 'Modified By'.Email=User().Email && Name=ThisItem.Name)) ||
@@ -252,4 +249,60 @@
         X: =213
         Y: =120
         ZIndex: =8
+
+    Container12_1 As groupContainer.manualLayoutContainer:
+        Fill: =RGBA(167, 182, 203, 1)
+        Visible: =openPopup
+        X: =419
+        Y: =283
+        ZIndex: =9
+
+        Label56_1 As label:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            Color: =RGBA(0, 51, 102, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FontWeight: =FontWeight.Bold
+            Height: =55
+            Size: =18
+            Text: ="Do You Want To Delete A NewsLetter"
+            Width: =461
+            X: =24
+            Y: =45
+            ZIndex: =1
+
+        Button3_4 As button:
+            DisabledBorderColor: =RGBA(255, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(255, 0, 0, 1)
+            Fill: =RGBA(255, 0, 0, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Red, -20%)
+            OnSelect: |-
+                =Remove(caseStudy,currCaseStudy);
+                Notify( "Case Study Deleted Successfully" , NotificationType.Success, 1000);
+                Set(openPopup,false);
+                Refresh(caseStudy);
+                Set(currCommunity,Dropdown2_6.Selected.Communities);
+                If(currCommunity="All",Set(caseStudyList,caseStudy),Set(caseStudyList,Filter(caseStudy,Community=currCommunity)));
+            Size: =15
+            Text: ="Delete"
+            X: =24
+            Y: =119
+            ZIndex: =2
+
+        Button4_4 As button:
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(67, 110, 7, 1)
+            FontWeight: =FontWeight.Semibold
+            HoverColor: =RGBA(255, 255, 255, 1)
+            HoverFill: =ColorFade(Green, -20%)
+            OnSelect: =Set(openPopup,false);
+            Size: =15
+            Text: ="Cancel"
+            X: =306
+            Y: =119
+            ZIndex: =3
 

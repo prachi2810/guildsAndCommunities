@@ -56,6 +56,8 @@
             ResetForm(Form8);
             Reset(TextInput12);
             Navigate(caseStudyHome);
+            Notify( "NewsLetter Added Successfully" , NotificationType.Success, 1000);
+            
             ,
             Notify(
                     "All Fields Are Required OR Another Case Study With Same Name Already Exists",
