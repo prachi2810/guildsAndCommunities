@@ -744,3 +744,23 @@
             Y: =16
             ZIndex: =9
 
+    Button30 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |-
+            =Remove(Blog,LookUp(Blog,ID=data.ID));
+            Set(openPopup,false);
+            Navigate(allBlogs);
+            Notify("Blog has deleted successfully");
+        Size: =15
+        Text: ="Delete"
+        Visible: =openPopup
+        X: =692
+        Y: =352
+        ZIndex: =16
+

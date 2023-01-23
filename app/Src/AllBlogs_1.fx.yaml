@@ -10,7 +10,7 @@
                 content:$"<a href=https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?blog={Last(Blog).ID}>Please checkout here </a>",
                 contentType:"html"
             },
-            {subject:"New blog has added"}
+            {subject:$"I have written a blog on,{Last(Blog).Title}"}
         ), false);
         Set(newBlogAdded, false);
         
@@ -40,8 +40,8 @@
             )*/
             If(
                 Dropdown1.Selected.Communities = "All", 
-                Search(Blog, TextInput6.Text, "Title"),
-                Search(Filter(Blog, Tags=Dropdown1.Selected.Communities), TextInput6.Text, "Title")
+              Sort(  Search(Blog, TextInput6.Text, "Title"),ID,Descending),
+              Sort(  Search(Filter(Blog, Tags=Dropdown1.Selected.Communities), TextInput6.Text, "Title"),ID,Descending)
             )
         Layout: =Layout.Vertical
         TemplatePadding: =0
