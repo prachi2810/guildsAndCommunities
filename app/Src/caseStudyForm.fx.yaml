@@ -46,6 +46,7 @@
         OnSelect: |-
             =
             If(addedFile&& !IsBlank(DataCardValue29.Text) && IsBlank(LookUp(caseStudy,Title=DataCardValue29.Text)),
+            Set(selectedcommunityval,Dropdown14.Selected.Communities);
             Patch(case, Defaults(case),{
                 Title: DataCardValue29.Text,
                 Community:Dropdown14.Selected.Communities
@@ -92,7 +93,7 @@
     Form8 As form:
         BorderColor: =RGBA(0, 89, 178, 1)
         DataSource: =caseStudy
-        Height: =494
+        Height: =449
         NumberOfColumns: =1
         Width: =407
         X: =432
