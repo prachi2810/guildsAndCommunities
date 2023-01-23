@@ -641,8 +641,9 @@
             Height: =47
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(153, 205, 255, 1)
-            Items: =MicrosoftTeams.GetAllTeams().value.description
-            OnChange: =Set(Gid,LookUp(MicrosoftTeams.GetAllTeams().value,description=Dropdown9_1.Selected.description).id)
+            Items: =MicrosoftTeams.GetAllTeams().value.displayName
+            OnChange: =Set(Gid,LookUp(MicrosoftTeams.GetAllTeams().value,displayName=Dropdown9_1.Selected.displayName).id)
+            OnSelect: =Set(Gid,LookUp(MicrosoftTeams.GetAllTeams().value,displayName=Dropdown9_1.Selected.displayName).id)
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 89, 178, 1)
             SelectionFill: =RGBA(0, 51, 102, 1)
@@ -663,8 +664,9 @@
             DisabledFill: =RGBA(244, 244, 244, 1)
             HoverColor: =RGBA(0, 0, 0, 1)
             HoverFill: =RGBA(153, 205, 255, 1)
-            Items: =MicrosoftTeams.GetChannelsForGroup(LookUp(MicrosoftTeams.GetAllTeams().value,description=Dropdown9_1.Selected.description).id).value.displayName
+            Items: =MicrosoftTeams.GetChannelsForGroup(LookUp(MicrosoftTeams.GetAllTeams().value,displayName=Dropdown9_1.Selected.displayName).id).value.displayName
             OnChange: =Set(Chid,LookUp(MicrosoftTeams.GetChannelsForGroup(Gid).value,displayName=Dropdown10_1.Selected.displayName).id);
+            OnSelect: =Set(Chid,LookUp(MicrosoftTeams.GetChannelsForGroup(Gid).value,displayName=Dropdown10_1.Selected.displayName).id);
             PressedColor: =RGBA(255, 255, 255, 1)
             PressedFill: =RGBA(0, 89, 178, 1)
             SelectionFill: =RGBA(0, 51, 102, 1)

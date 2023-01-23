@@ -54,7 +54,7 @@
             
             Patch(caseStudy, Defaults(caseStudy), {
                 Title: TextInput12.Text,
-                'Community': "banking"
+                Community: "banking"
             }, Form8.Updates);
             
             ResetForm(Form8);
