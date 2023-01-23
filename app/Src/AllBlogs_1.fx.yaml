@@ -1,7 +1,20 @@
 "allBlogs As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
     OnVisible: |
-        =Refresh(Blog);
+        =If(newBlogAdded, 
+        
+        MicrosoftTeams.PostMessageToChannelV3(
+            teamId,
+            channelId,
+            {
+                content:$"<a href=https://web.powerapps.com/apps/74aaf625-5c51-4fef-b53b-11bbac0ef01c?blog={Last(Blog).ID}>Please checkout here </a>",
+                contentType:"html"
+            },
+            {subject:"New blog has added"}
+        ), false);
+        Set(newBlogAdded, false);
+        
+        Refresh(Blog);
         ClearCollect(UserCommunity, ShowColumns(Filter(User, Name=User().FullName), "Communities"));
         ClearCollect(UserCommunity1, { Communities: "All" }, UserCommunity);
         SortByColumns(UserCommunity, "Communities", Ascending);
