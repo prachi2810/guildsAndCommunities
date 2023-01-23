@@ -1,0 +1,241 @@
+"eLearningForm As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
+    Fill: =RGBA(232, 232, 232, 1)
+    OnVisible: |
+        =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
+        ResetForm(Form1_3);
+        Reset(TextInput12_1);
+        Set(addedELearning,false);
+
+    RectQuickActionBar20 As rectangle:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        Height: =88
+        Width: =Parent.Width
+        ZIndex: =1
+
+    LblAppName17 As label:
+        Align: =Align.Center
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =88
+        Size: =18
+        Text: ="Learning Form"
+        Width: =Parent.Width
+        ZIndex: =2
+
+    Form1_3 As form:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        DataSource: =eLearning
+        Height: =216
+        Item: =Defaults(newsletters)
+        NumberOfColumns: =1
+        Width: =432
+        X: =467
+        Y: =376
+        ZIndex: =3
+
+        Attachments_DataCard8 As typedDataCard.attachmentsEditCard:
+            BorderColor: =RGBA(0, 89, 178, 1)
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="{Attachments}"
+            Default: =ThisItem.Attachments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@eLearning],DataSourceInfo.DisplayName,"{Attachments}")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =139
+            Required: =false
+            Update: =DataCardValue36.Attachments
+            Width: =432
+            X: =0
+            Y: =0
+            ZIndex: =4
+
+            DataCardKey48 As label:
+                AutoHeight: =true
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =34
+                Size: =13
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue36 As attachments:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =2
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =Parent.DisplayMode
+                FocusedBorderThickness: =4
+                Height: =150
+                HoverColor: =RGBA(0, 0, 0, 1)
+                HoverFill: =RGBA(153, 205, 255, 1)
+                IsInDataCard: =true
+                ItemColor: =RGBA(255, 255, 255, 1)
+                ItemFill: =RGBA(0, 51, 102, 1)
+                ItemHoverColor: =RGBA(0, 0, 0, 1)
+                ItemHoverFill: =RGBA(153, 205, 255, 1)
+                Items: =Parent.Default
+                PaddingBottom: =5
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                PaddingRight: =5
+                PaddingTop: =5
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(0, 89, 178, 1)
+                Tooltip: =Parent.DisplayName
+                Width: =386
+                X: =32
+                Y: =46
+                ZIndex: =2
+
+            ErrorMessage48 As label:
+                AutoHeight: =true
+                Color: =RGBA(168, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue36.Y + DataCardValue36.Height
+                ZIndex: =3
+
+            StarVisible48 As label:
+                Align: =Align.Center
+                Color: =RGBA(0, 89, 178, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Height: =DataCardKey48.Height
+                Size: =13
+                Text: ="*"
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey48.Y
+                ZIndex: =4
+
+    Icon1_2 As icon.ArrowLeft:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(250, 250, 250, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: |
+            =ResetForm(Form1_3);
+            Navigate(eLearningHome);
+        X: =26
+        Y: =12
+        ZIndex: =4
+
+    Dropdown8_1 As dropdown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =46
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =UserCommunities
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =383
+        X: =504
+        Y: =330
+        ZIndex: =5
+
+    Label55_1 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Height: =43
+        Size: =13
+        Text: =" *   Community"
+        Width: =155
+        X: =467
+        Y: =287
+        ZIndex: =6
+
+    Button28_1 As button:
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(0, 51, 102, 1)
+        FontWeight: =FontWeight.Semibold
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        OnSelect: |
+            =If(addedELearning && !IsBlank(Trim(TextInput12_1.Text)) && IsBlank(LookUp(eLearning,Title=TextInput12_1)),
+            
+            Patch(eLearning, Defaults(eLearning),{
+                Title: TextInput12_1.Text,
+                Community:Dropdown8_1.Selected.Communities
+            }, Form1_3.Updates);
+            
+            Set(currentGuildName, LookUp(Community_1, Title=Dropdown8_1.Selected.Communities).Guild);
+            Set(currentGuild, LookUp(Guild, Title=currentGuildName));
+            
+            Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
+            Set(teamId,First(Split(currentGuild.Team,"\")).Result);
+            ResetForm(Form1_3);
+            //Set(isELearningAdded, true);
+            
+            Navigate(eLearningHome);
+            
+            Notify( "NewsLetter Added Successfully" , NotificationType.Success, 1000);
+            ,
+            Notify(
+                    "Title and Attachments Fields Are Empty OR Another E Learning With Same Name Already Exists",
+                    NotificationType.Error,
+                    3000
+                );
+            );
+        Size: =15
+        Text: ="Submit"
+        X: =603
+        Y: =608
+        ZIndex: =7
+
+    TextInput12_1 As text:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        BorderThickness: =2
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Height: =43
+        HoverBorderColor: =RGBA(0, 89, 178, 1)
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Size: =13
+        Width: =380
+        X: =507
+        Y: =244
+        ZIndex: =8
+
+    Label16_3 As label:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        Color: =RGBA(0, 89, 178, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Size: =13
+        Text: =" *   Title"
+        X: =472
+        Y: =206
+        ZIndex: =9
+

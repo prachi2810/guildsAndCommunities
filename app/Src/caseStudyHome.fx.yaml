@@ -212,7 +212,7 @@
         Items: =UserCommunities1
         OnChange: |-
             =Set(currCommunity,Dropdown2_6.Selected.Communities);
-            If(currCommunity="All",Set(paperList,whitepapers),Set(paperList,Filter(whitepapers,Community=currCommunity)));
+            If(currCommunity="All",Set(caseStudyList,caseStudy),Set(caseStudyList,Filter(caseStudy,Community=currCommunity)));
         PressedColor: =RGBA(255, 255, 255, 1)
         PressedFill: =RGBA(0, 18, 107, 1)
         SelectionFill: =RGBA(56, 96, 178, 1)
@@ -305,4 +305,18 @@
             X: =306
             Y: =119
             ZIndex: =3
+
+    Label3_8 As label:
+        BorderColor: =RGBA(0, 18, 107, 1)
+        Color: =RGBA(255, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        FontWeight: =FontWeight.Semibold
+        Height: =155
+        Size: =22
+        Text: ="No Case Study For This Selection, Please Look For Another Community"
+        Visible: =If(CountRows(caseStudyList)=0, true, false) 
+        Width: =1013
+        X: =239
+        Y: =328
+        ZIndex: =10
 
