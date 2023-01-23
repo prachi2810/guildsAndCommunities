@@ -3964,128 +3964,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "caseStudyForm.Button25.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "caseStudyForm.Button25.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 5,
-                  "charOffset": 214,
-                  "snippet": {
-                    "text": ".Text"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "caseStudyForm",
-                "type": "caseStudyForm.Button25"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Text"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidName",
-          "ruleIndex": 5
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "caseStudyForm.Button25.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "caseStudyForm.Button25.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 131,
-                  "charOffset": 107,
-                  "snippet": {
-                    "text": "Patch(caseStudy, Defaults(caseStudy),{\r\n    Title: DataCardValue33.Text,\r\n    Community:Dropdown14.Selected.Text\r\n}, Form8.Updates)"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "caseStudyForm",
-                "type": "caseStudyForm.Button25"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Patch"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrInvalidArgs-Func",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "caseStudyForm.Button25.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "caseStudyForm.Button25.OnSelect",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 78,
-                  "charOffset": 144,
-                  "snippet": {
-                    "text": "{\r\n    Title: DataCardValue33.Text,\r\n    Community:Dropdown14.Selected.Text\r\n}"
-                  }
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "caseStudyForm",
-                "type": "caseStudyForm.Button25"
-              }
-            }
-          ],
-          "message": {
-            "arguments": [
-              "Community",
-              "Text",
-              "Error"
-            ],
-            "id": "issue"
-          },
-          "properties": {
-            "level": "High"
-          },
-          "ruleId": "app-ErrTypeError-Arg-Expected-Found",
-          "ruleIndex": 7
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "allBlogs.Gallery4.Items"
                 }
               ],
@@ -16747,19 +16625,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "caseStudyForm.Form8.Community_DataCard2.Dropdown14.AccessibleLabel"
+                  "fullyQualifiedName": "caseStudyForm.Dropdown14.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "caseStudyForm.Form8.Community_DataCard2.Dropdown14.AccessibleLabel",
+                  "fullyQualifiedName": "caseStudyForm.Dropdown14.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "caseStudyForm",
-                "type": "caseStudyForm.Form8.Community_DataCard2.Dropdown14"
+                "type": "caseStudyForm.Dropdown14"
               }
             }
           ],

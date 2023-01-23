@@ -195,29 +195,6 @@
                 Y: =DataCardKey46.Y
                 ZIndex: =4
 
-            Dropdown14 As dropdown:
-                BorderColor: =RGBA(0, 89, 178, 1)
-                ChevronBackground: =RGBA(0, 51, 102, 1)
-                ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
-                ChevronDisabledFill: =RGBA(244, 244, 244, 1)
-                ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
-                ChevronHoverFill: =RGBA(255, 255, 255, 1)
-                DisabledBorderColor: =RGBA(166, 166, 166, 1)
-                DisabledColor: =RGBA(166, 166, 166, 1)
-                DisabledFill: =RGBA(244, 244, 244, 1)
-                Height: =49
-                HoverColor: =RGBA(0, 0, 0, 1)
-                HoverFill: =RGBA(153, 205, 255, 1)
-                Items: =UserCommunities
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(0, 89, 178, 1)
-                SelectionFill: =RGBA(0, 51, 102, 1)
-                Size: =13
-                Width: =358
-                X: =30
-                Y: =54
-                ZIndex: =5
-
         Attachments_DataCard7 As typedDataCard.attachmentsEditCard:
             BorderColor: =RGBA(0, 89, 178, 1)
             BorderStyle: =BorderStyle.Solid
@@ -336,7 +313,7 @@
             If(addedFile&& !IsBlank(DataCardValue33.Text) && IsBlank(LookUp(caseStudy,Title=DataCardValue33.Text)),
             Patch(caseStudy, Defaults(caseStudy),{
                 Title: DataCardValue33.Text,
-                Community:Dropdown14.Selected.Text
+                Community:Dropdown14.Selected.Communities
             }, Form8.Updates);
             
             ResetForm(Form8);
@@ -352,4 +329,27 @@
         X: =637
         Y: =610
         ZIndex: =5
+
+    Dropdown14 As dropdown:
+        BorderColor: =RGBA(0, 89, 178, 1)
+        ChevronBackground: =RGBA(0, 51, 102, 1)
+        ChevronDisabledBackground: =RGBA(166, 166, 166, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =ColorFade(RGBA(0, 51, 102, 1), -20%)
+        ChevronHoverFill: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Height: =49
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(153, 205, 255, 1)
+        Items: =UserCommunities
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =RGBA(0, 89, 178, 1)
+        SelectionFill: =RGBA(0, 51, 102, 1)
+        Size: =13
+        Width: =358
+        X: =538
+        Y: =324
+        ZIndex: =6
 
