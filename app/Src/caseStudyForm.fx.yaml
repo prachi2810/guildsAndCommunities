@@ -45,16 +45,10 @@
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
             =If(addedFile && !IsBlank(TextInput12.Text) && IsBlank(LookUp(caseStudy,Title=TextInput12.Text)),
-            //If(!IsBlank(textinput12.Text) && IsBlank(LookUp(caseStudy,Title=textinput12.Text)),
-            Set(selectedcommunityval,Dropdown12.Selected.Communities);
-            /*Patch(case, Defaults(case),{
-                Title: textinput12.Text,
-                Community:Dropdown14.Selected.Communities
-            }, Form8.Updates);*/
             
             Patch(caseStudy, Defaults(caseStudy), {
                 Title: TextInput12.Text,
-                Community: "banking"
+                Community: Dropdown12.Selected.Communities
             }, Form8.Updates);
             
             ResetForm(Form8);
