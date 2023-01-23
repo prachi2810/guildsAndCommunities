@@ -1,8 +1,9 @@
 "caseStudyForm As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: |
+    OnVisible: |-
         =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
         Set(addedFile,false);
+        ResetForm(Form8);
 
     RectQuickActionBar17 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)
