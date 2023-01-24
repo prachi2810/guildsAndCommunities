@@ -1,12 +1,26 @@
 "caseStudyHome As screen.'phoneLayout_FluidGridWithHeaderPageLayout_ver3.0'":
     Fill: =RGBA(232, 232, 232, 1)
-    OnVisible: |+
+    OnVisible: |-
         =ClearCollect(UserCommunities,Filter(User,Email=User().Email));
         ClearCollect(UserCommunities1,{Communities:"All"},UserCommunities);
         Set(currCommunity,Dropdown2_6.Selected.Communities);
         If(currCommunity="All",Set(caseStudyList,caseStudy),Set(caseStudyList,Filter(caseStudy,Community=currCommunity)));
         Set(openPopup,false);
         
+        //Set(DropDown,false);
+        
+        If(isCaseStudyAdded, 
+        
+        MicrosoftTeams.PostMessageToChannelV3(
+            teamId,
+            channelId,
+            {
+                content:"<a href="&First(Last(caseStudy).Attachments).AbsoluteUri &" target=_blank>Click Here to View Case Study</a>",
+                contentType:"html"
+            },
+            {subject:"New Case Study Added"}
+        ), false);
+        Set(isCaseStudyAdded, false);
 
     RectQuickActionBar15 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)

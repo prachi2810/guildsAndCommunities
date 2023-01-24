@@ -46,17 +46,26 @@
         HoverColor: =RGBA(255, 255, 255, 1)
         HoverFill: =ColorFade(RGBA(0, 51, 102, 1), -20%)
         OnSelect: |-
-            =If(addedFile && !IsBlank(TextInput12.Text) && IsBlank(LookUp(caseStudy,Title=TextInput12.Text)),
+            =If(addedFile && !IsBlank(Trim(TextInput12.Text)) && IsBlank(LookUp(caseStudy,Title=TextInput12.Text)),
             
             Patch(caseStudy, Defaults(caseStudy), {
                 Title: TextInput12.Text,
                 Community: Dropdown12.Selected.Communities
             }, Form8.Updates);
             
+            
+            Set(currentGuildName, LookUp(Community_1, Title=Dropdown12.Selected.Communities).Guild);
+            Set(currentGuild, LookUp(Guild, Title=currentGuildName));
+            
+            Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
+            Set(teamId,First(Split(currentGuild.Team,"\")).Result);
+            
+            
             ResetForm(Form8);
             Reset(TextInput12);
+            Set(isCaseStudyAdded, true);
             Navigate(caseStudyHome);
-            Notify( "NewsLetter Added Successfully" , NotificationType.Success, 1000);
+            Notify( "Case Study Added Successfully" , NotificationType.Success, 1000);
             
             ,
             Notify(
