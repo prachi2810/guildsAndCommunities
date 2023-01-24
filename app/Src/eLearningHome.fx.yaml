@@ -8,19 +8,19 @@
         Set(openPopup,false);
         //Set(DropDown,false);
         
-        /*
-        If(isNewsLetterAdded, 
+        
+        If(isELearningAdded, 
         
         MicrosoftTeams.PostMessageToChannelV3(
             teamId,
             channelId,
             {
-                content:"<a href="&First(Last(newsletters).Attachments).AbsoluteUri &" target=_blank>Click Here to View NewsLetter</a>",
+                content:"<a href="&First(Last(caseStudy).Attachments).AbsoluteUri &" target=_blank>Click Here to View Learning</a>",
                 contentType:"html"
             },
-            {subject:"New NewsLetter Added"}
+            {subject:"New E-Learning Added"}
         ), false);
-        Set(isNewsLetterAdded, false);*/
+        Set(isELearningAdded, false);
 
     RectQuickActionBar19 As rectangle:
         BorderColor: =RGBA(0, 89, 178, 1)

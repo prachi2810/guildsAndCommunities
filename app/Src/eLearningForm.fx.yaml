@@ -210,7 +210,7 @@
             Set(channelId,First(Split(currentGuild.Channel,"\")).Result);
             Set(teamId,First(Split(currentGuild.Team,"\")).Result);
             ResetForm(Form1_3);
-            //Set(isELearningAdded, true);
+            Set(isELearningAdded, true);
             
             Navigate(eLearningHome);
             
