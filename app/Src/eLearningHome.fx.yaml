@@ -206,7 +206,7 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Icon: =Icon.Trash
             OnSelect: |-
-                =Set(currNewsLetter,ThisItem);
+                =Set(currELearning,ThisItem);
                 Set(openPopup,true);
             Visible: |-
                 =If(
@@ -226,9 +226,9 @@
         FontWeight: =FontWeight.Semibold
         Height: =155
         Size: =22
-        Text: ="No NewsLetter For This Selection, Please Look For Another Community"
+        Text: ="No E-Learning's For This Selection, Please Look For Another Community"
         Visible: =If(CountRows(eLearningList)=0, true, false) 
-        Width: =1013
+        Width: =1055
         X: =176
         Y: =306
         ZIndex: =6
@@ -262,12 +262,12 @@
             HoverColor: =RGBA(255, 255, 255, 1)
             HoverFill: =ColorFade(Red, -20%)
             OnSelect: |-
-                =Remove(newsletters,currNewsLetter);
-                Notify( "NewsLetter Deleted Successfully" , NotificationType.Success, 1000);
+                =Remove(eLearning,currELearning);
+                Notify( "E-Learning Deleted Successfully" , NotificationType.Success, 1000);
                 Set(openPopup,false);
-                Refresh(newsletters);
+                Refresh(eLearning);
                 Set(currCommunity,Dropdown2_7.Selected.Communities);
-                If(currCommunity="All",Set(newsLetterList,newsletters),Set(paperList,Filter(newsletters,Community=currCommunity)));
+                If(currCommunity="All",Set(eLearningList,eLearning),Set(eLearningList,Filter(eLearning,Community=currCommunity)));
             Size: =15
             Text: ="Delete"
             X: =24
