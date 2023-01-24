@@ -127,8 +127,8 @@
             TabIndex: =0
             Tooltip: ="View item details"
             Width: =60
-            X: =Parent.TemplateWidth - Self.Width - 5
-            Y: =(Parent.TemplateHeight / 2) - (Self.Height / 2)
+            X: =1006
+            Y: =54
             ZIndex: =5
 
         Separator6 As rectangle:
@@ -147,8 +147,8 @@
             DisabledColor: =RGBA(244, 244, 244, 1)
             Icon: =Icon.Download
             OnSelect: =Download(First(ThisItem.Attachments).AbsoluteUri);
-            X: =930
-            Y: =66
+            X: =917
+            Y: =52
             ZIndex: =7
 
         Icon48 As icon.Trash:
@@ -167,8 +167,8 @@
                     true,
                     false
                 )
-            X: =803
-            Y: =66
+            X: =795
+            Y: =52
             ZIndex: =8
 
     LblAppName12 As label:
